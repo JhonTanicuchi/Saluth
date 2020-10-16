@@ -1,0 +1,4 @@
+En nuestro País, según el Instituto Nacional de Estadísticas y Censos (INEC) refiere que seis de las 10 causas más importantes de muerte en el país se deben a enfermedades no transmisibles, es decir aproximadamente 71.000 muertes están relacionadas con problemas del corazón, diabetes y otros tipos de cáncer. Se debe a que gran parte de la población no tiene un cuidado en su alimentación, no tienen tiempo disponible para acudir a una cita médica o no puede acceder al sistema de Salud; además por el desconocimiento de las enfermedades no se puede diferenciar los síntomas.
+A través de nuestro proyecto queremos motivar y ayudar a las personas que tengan un mejor cuidado de su salud, esto lo realizamos a través de una página web que permita a los usuarios tener una mejor información sobre las enfermedades. 
+ 
+
