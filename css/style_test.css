@@ -4,7 +4,11 @@
 
 body{
     background: rgb(207, 207, 207);
+    font-family: 'Roboto', sans-serif;
+
 }
+
+/* NAVEGACION */
 
 nav{
     text-align: right;
@@ -34,7 +38,6 @@ nav > a:hover{
     top:50%;
     left:50%;
     transform: translate(-50%, -50%);
-    font-family: 'Roboto', sans-serif;
     border-radius: 5px;
 }
 
@@ -90,18 +93,15 @@ nav > a:hover{
     width: 55%;
     height: 90%;
     border-radius: 0px 5px 5px 0px;
-    display: flex;
-    align-items: center;
     justify-content: center;
     text-align: center;
     padding: 20px;
 }
 
-.contenido-lateral-derecho .texto-preguntas p ,h3{
-    margin: 50px 25px;
+.contenido-lateral-derecho .texto-preguntas p, .texto-preguntas h3{
+    margin: 40px 25px;
     text-align: left;
 }
-
 
 .contenido-lateral-izquierdo{
     position: absolute;
@@ -113,10 +113,23 @@ nav > a:hover{
     border-radius: 5px 0px 0px 5px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    
 }
 
-.boton-inicio{
+.contenido-lateral-izquierdo ul{
+    list-style: none;
+    margin-left: 10px;
+}
+
+.contenido-lateral-izquierdo ul li{
+    margin: 25px 0;
+}
+
+.contenido-lateral-izquierdo ul li input{
+    margin-right: 20px;
+}
+
+.boton-preguntas{
     width: 150px;
     height: 50px;
     background: rgb(75, 70, 71);
@@ -124,4 +137,13 @@ nav > a:hover{
     outline: none;
     border: none;
     border-radius: 19px;
+    margin: 10px;
+}
+
+.botones-check{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 20px;
+    margin: auto;
 }
