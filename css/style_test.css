@@ -1,0 +1,127 @@
+.ocultar{
+    display: none;
+}
+
+body{
+    background: rgb(207, 207, 207);
+}
+
+nav{
+    text-align: right;
+    padding: 30px 50px 0 0;
+    
+}
+
+nav > a{
+    color:#fff;
+    font-weight: 300;
+    text-decoration: none;
+    margin-right: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    transition: all 0.3s linear;
+}
+
+nav > a:hover{
+    background: rgb(221, 124, 164);
+}
+
+.contenedor-test{
+    box-shadow: 0px 0px 10px .5px rgba(0,0,0,0.3);
+    width: 700px;
+    height: 400px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Roboto', sans-serif;
+    border-radius: 5px;
+}
+
+/* PANTALLA UNO (BIENVENIDA) */
+
+.contenido-superior{
+    position: absolute;
+    top: 0;
+    background: white;
+    height: 70%;
+    border-radius: 5px 5px 0px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.contenido-superior .texto-bienvenida p{
+    margin: 50px 50px;
+    text-align: justify;
+}
+
+.contenido-inferior{
+    position: absolute;
+    bottom: 0;
+    background: rgb(75, 180, 175);
+    width: 100%;
+    height: 30%;
+    border-radius: 0px 0px 5px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.boton-inicio{
+    width: 150px;
+    height: 50px;
+    background: rgb(75, 70, 71);
+    color: white;
+    outline: none;
+    border: none;
+    border-radius: 19px;
+}
+
+/* PANTALLA DOS (PREGUNTAS) */
+
+.contenido-lateral-derecho{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: white;
+    width: 55%;
+    height: 90%;
+    border-radius: 0px 5px 5px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.contenido-lateral-derecho .texto-preguntas p ,h3{
+    margin: 50px 25px;
+    text-align: left;
+}
+
+
+.contenido-lateral-izquierdo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgb(75, 180, 175);
+    width: 40%;
+    height: 100%;
+    border-radius: 5px 0px 0px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.boton-inicio{
+    width: 150px;
+    height: 50px;
+    background: rgb(75, 70, 71);
+    color: white;
+    outline: none;
+    border: none;
+    border-radius: 19px;
+}
