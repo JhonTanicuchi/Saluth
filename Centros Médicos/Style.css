@@ -1,0 +1,67 @@
+body{
+    background: url(/Imágenes/Fondo.jpg) ;
+    background-size: cover;
+}
+
+/* Centros Médicos */
+nav ul a{
+    color: #072041;
+    text-decoration: none;
+    font:verdana;
+    padding: 10px;
+    text-align: right;    
+}
+
+.Buscador{
+    width: 250px;
+    height:20px;
+    background:#4DCAD8;
+    border-radius: 5px;
+    position: relative;
+    left: 450px;
+    top: 30px;
+}
+
+.Buscar{
+    width: 75px;
+    background:#81D867;
+    position: relative;
+    left: 500px;
+    top: 30px;
+}
+
+.Bordes{
+    width: 500px;
+    height:200px;
+    background: #3E8ACC;
+    border-radius: 20px;
+    position: relative;
+    top:50px;
+    left:400px;
+}
+
+.Imagen{
+    width: 100px;
+    height:100px;
+    background: white;
+    border-radius: 20px;
+    position: relative; 
+    left:20px;
+    top:40px;
+}
+
+.Información{
+    width: 340px;
+    height:100px;
+    background:#4DCAD8;
+    border-radius: 20px;
+    position: absolute;
+    left: 145px;
+    top: 40px;
+}
+
+.Texto{
+    position: absolute;
+    left: 10px;
+    top: 10px; 
+}
