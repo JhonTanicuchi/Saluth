@@ -3,11 +3,15 @@
 
 <head>
     <meta charset="UTF-8">
+    <link rel="shortcut icon" href="../Img/logo-simple.png" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Salute | Test</title>
     <!-- ESTILOS -->
-    <link rel="stylesheet" href="../css/style_test.css">
-    <link rel="stylesheet" href="../css/variables.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="../Our Salute_Test/css/style_test.css">
+    <link rel="stylesheet" href="../Our Salute_Test/css/variables.css">
+
+    <script src="https://kit.fontawesome.com/35db202371.js"></script>
 
 </head>
 
@@ -17,11 +21,27 @@
 
     <header id="header">
 
-        <nav>
-            <a href="#">Inicio</a>
-            <a href="#">Enfermedades</a>
-            <a href="#">Test</a>
-            <a href="#">Centros Médicos</a>
+        <nav class="menu">
+            <div class="logo">
+                <img class="logo-simple" src="../Img/logo.png" alt="">
+            </div>
+
+            <div class="lista-menu">
+                <ul class="listas">
+                    <li><a  href="../Our Salute_Home/index.html">Inicio</a></li>
+                    <li><a class="disabled" href="">Enfermedades<i class="fas fa-angle-down"></i></a>
+                        <ul class="sub-lista">
+                            <li><a href="">Diabetes</a></li>
+                            <li><a href="">Apendicitis</a></li>
+                            <li><a href="">Colelitiasis</a></li>
+                            <li><a href="">Neumonía</a></li>
+                            <li><a href="">Gastroenteritis</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="active" href="">Test</a></li>
+                    <li><a href="">Centros Médicos</a></li>
+                </ul>
+            </div>
         </nav>
 
     </header>
@@ -33,7 +53,7 @@
 
     <!-- pantalla uno (BIENVENIDA) -->
 
-            <div class="pantalla-uno ocultar">
+            <div class="pantalla-uno ">
                 <div class="contenido-superior">
                     <div class="texto-bienvenida">
                         <h3>Diagnostica tu Salud</h3>
@@ -47,7 +67,7 @@
 
     <!-- pantalla dos (PREGUNTAS) -->
 
-            <div class="pantalla-dos ">
+            <div class="pantalla-dos ocultar ">
                 <div class="contenido-lateral-derecho">
                     <div class="texto-preguntas">
                         <h3>PREGUNTA...?</h3>
@@ -90,14 +110,9 @@
         </div>
 
         <div class="contenido-lateral-izquierdo">
-            <ul>
-                <li><input type="checkbox"></input>Sintoma</li>
-                <li><input type="checkbox"></input>Sintoma</li>
-                <li><input type="checkbox"></input>Sintoma</li>
-                <li><input type="checkbox"></input>Sintoma</li>
-                <li><input type="checkbox"></input>Sintoma</li>
-                <li><input type="checkbox"></input>Sintoma</li>
-            </ul>
+            <div>
+                <p></p>
+            </div>
         </div>
     </div>
     <!-- pantalla cuatro (DIAGNOSTICO) -->

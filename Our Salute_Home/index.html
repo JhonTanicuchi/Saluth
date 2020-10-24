@@ -4,30 +4,42 @@
 <head>
     <meta charset="UTF-8">
     <title>Our Salute</title>
-    <link rel="shortcut icon" href="" type="image/x-icon">
+    <link rel="shortcut icon" href="../Img/logo-simple.png" type="image/x-icon">
     <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/effect-figure.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=swap" rel="stylesheet"> 
+
+    <script src="https://kit.fontawesome.com/35db202371.js"></script>
 </head>
 
 <body>
     <header>
-        <nav>
-            <a href="#">Inicio</a>
-            <a href="#"><select name="" id="">
-                <option value="">Enfermedades</option>
-                <option value=""><a href="">Diabetes</a></option>
-                <option value="">Enfermedades</option>
-                <option value="">Enfermedades</option>
-                <option value="">Enfermedades</option>
+        <nav class="menu">
+            <div class="logo">
+                <img src="" alt="">
+            </div>
 
-            </select></a>
-            <a href="#">Test</a>
-            <a href="#">Centros Médicos</a>
+            <div class="lista-menu">
+                <ul class="listas">
+                    <li><a class="active" href="../Our Salute_Home/index.html">Inicio</a></li>
+                    <li><a class="disabled" href="">Enfermedades<i class="fas fa-angle-down"></i></a>
+                        <ul class="sub-lista">
+                            <li><a href="">Diabetes</a></li>
+                            <li><a href="">Apendicitis</a></li>
+                            <li><a href="">Colelitiasis</a></li>
+                            <li><a href="">Neumonía</a></li>
+                            <li><a href="">Gastroenteritis</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../Our Salute_Test/test.html">Test</a></li>
+                    <li><a href="">Centros Médicos</a></li>
+                </ul>
+            </div>
         </nav>
         <section class="textos-header">
             <!-- <h1>Our Salute</h1>
             <h2>Cuida tu salud</h2> -->
-            <img src="lllRecurso 3.png" alt="">
+            <img src="../Img/logo.png" alt="">
         </section>
         <div class="wave" style="height: 150px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M-0.84,10.36 C104.68,176.14 404.91,183.05 500.84,7.41 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: rgb(255, 255, 255);"></path></svg></div>
     </header>
@@ -35,7 +47,7 @@
         <section class="contenedor sobre-nosotros">
             <h2 class="titulo">Conócenos...</h2>
             <div class="contenedor-sobre-nosotros">
-                <img src="" alt="" class="imagen-about-us">
+                <img src="/Img/saluteRecurso 2.png" alt="" class="imagen-about-us">
                 <div class="contenido-textos">
                     <h3><span>1</span>Misión</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt veniam eius aspernatur ad
@@ -48,88 +60,44 @@
                 </div>
             </div>
         </section>
-        <!-- <section class="portafolio">
-            <div class="contenedor">
-                <h2 class="titulo">Sintomas</h2>
-                <div class="galeria-port">
-                    <div class="imagen-port">
-                        <img src="img/img1.jpg" alt="">
-                        <div class="hover-galeria">
-                            <img src="img/icono1.png" alt="">
-                            <p>Nuestro trabajo</p>
-                        </div>
-                    </div>
-                    <div class="imagen-port">
-                        <img src="img/img2.jpg" alt="">
-                        <div class="hover-galeria">
-                            <img src="img/icono1.png" alt="">
-                            <p>Nuestro trabajo</p>
-                        </div>
-                    </div>
-                    <div class="imagen-port">
-                        <img src="img/img3.jpg" alt="">
-                        <div class="hover-galeria">
-                            <img src="img/icono1.png" alt="">
-                            <p>Nuestro trabajo</p>
-                        </div>
-                    </div>
-                    <div class="imagen-port">
-                        <img src="img/img1.jpg" alt="">
-                        <div class="hover-galeria">
-                            <img src="img/icono1.png" alt="">
-                            <p>Nuestro trabajo</p>
-                        </div>
-                    </div>
-                    <div class="imagen-port">
-                        <img src="img/img4.jpg" alt="">
-                        <div class="hover-galeria">
-                            <img src="img/icono1.png" alt="">
-                            <p>Nuestro trabajo</p>
-                        </div>
-                    </div>
-                    <div class="imagen-port">
-                        <img src="img/img5.jpg" alt="">
-                        <div class="hover-galeria">
-                            <img src="img/icono1.png" alt="">
-                            <p>Nuestro trabajo</p>
-                        </div>
-                    </div>
-                    <div class="imagen-port">
-                        <img src="img/img6.jpg" alt="">
-                        <div class="hover-galeria">
-                            <img src="img/icono1.png" alt="">
-                            <p>Nuestro trabajo</p>
-                        </div>
-                    </div>
-                    <div class="imagen-port">
-                        <img src="img/img7.jpg" alt="">
-                        <div class="hover-galeria">
-                            <img src="img/icono1.png" alt="">
-                            <p>Nuestro trabajo</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section> -->
-      
+        
+
         <section class="about-services">
-            <div class="contenedor">
+            
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1366 126"><defs><style>.cls-1{fill:#fff;}</style></defs><title>llllRecurso 1</title><g id="Capa_2" data-name="Capa 2"><g id="Capa_1-2" data-name="Capa 1"><path class="cls-1" d="M683,126s-275.1-1.22-495-54C123.73,56.58,68,33,68,33A729.42,729.42,0,0,1,0,0H1366a856.22,856.22,0,0,1-80,38,1001.76,1001.76,0,0,1-99,34C989.56,127.36,683,126,683,126Z"/></g></g></svg>
+           
+<div class="contenedor">
                 <h2 class="titulo">Ofrecemos...</h2>
                 <div class="servicio-cont">
-                    <div class="servicio-ind">
-                        <img src="img/ilustracion1.svg" alt="">
-                        <h3>Enfermedades</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, qui?</p>
+                    <div class="grid">
+                        <figure class="effect-oscar">
+                            <img src="../Img/enfermedades.jpg" alt="img09"/>
+                            <figcaption>
+                                <h2>Enfermedades</h2>
+                                <p>Oscar is a decent man. He used to clean porches with pleasure.</p>
+                                <a href="#">View more</a>
+                            </figcaption>			
+                        </figure>
                     </div>
-                    <div class="servicio-ind">
-                        <img src="img/ilustracion4.svg" alt="">
-                        <h3>Test</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, qui?</p>
+                    <div class="grid">
+                        <figure class="effect-oscar">
+                            <img src="../Img/test.jpg" alt="img09"/>
+                            <figcaption>
+                                <h2>Test</h2>
+                                <p>Oscar is a decent man. He used to clean porches with pleasure.</p>
+                                <a href="#">View more</a>
+                            </figcaption>			
+                        </figure>
                     </div>
-                    <div class="servicio-ind">
-                        <img src="img/ilustracion3.svg" alt="">
-                        <h3>Centros Médicos</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, qui?</p>
+                    <div class="grid">
+                        <figure class="effect-oscar">
+                            <img src="../Img/centros_medicos.jpg" alt="img09"/>
+                            <figcaption>
+                                <h2>Centros Médicos</h2>
+                                <p>Oscar is a decent man. He used to clean porches with pleasure.</p>
+                                <a href="#">View more</a>
+                            </figcaption>			
+                        </figure>
                     </div>
                 </div>
             </div>
@@ -153,7 +121,13 @@
                 <p>8296312</p>
             </div>
         </div>
-        <h2 class="titulo-final">&copy; Our Salute - 2020 | Todos los derechos reservados.</h2>
+        <div class="icons">
+            <a href=""><i class="fab fa-facebook"></i></a>
+            <a href=""><i id="i" class="fab fa-instagram"></i></a>
+            <a href=""><i id="tw" class="fab fa-twitter"></i></a>
+            <a href=""><i class="fab fa-github"></i></a>
+          </div>
+        <h2 class="titulo-final">&copy;2020 Our Salute. Reservados todos los derechos</h2>
     </footer>
 </body>
 
