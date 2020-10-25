@@ -127,6 +127,7 @@ margin-left: 30px;
     position: absolute;
     top: 0;
     background: white;
+    background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(194,192,194,1) 100%);
     height: 70%;
     border-radius: 5px 5px 0px 0px;
     display: flex;
@@ -148,7 +149,8 @@ margin-left: 30px;
 .contenido-inferior{
     position: absolute;
     bottom: 0;
-    background: rgb(75, 180, 175);
+    background: #4bb4af;
+    background: linear-gradient(to bottom, rgba(72,219,212,1) 0%, rgba(75,180,175,1) 100%);
     width: 100%;
     height: 30%;
     border-radius: 0px 0px 5px 5px;
@@ -157,23 +159,14 @@ margin-left: 30px;
     justify-content: center;
 }
 
-.boton-inicio{
-    width: 150px;
-    height: 50px;
-    background: rgb(75, 70, 71);
-    color: white;
-    outline: none;
-    border: none;
-    border-radius: 19px;
-}
-
 /* PANTALLA DOS (PREGUNTAS) */
 
-.contenido-lateral-derecho{
+.pantalla-dos .contenido-lateral-derecho{
     position: absolute;
     top: 0;
     right: 0;
     background: white;
+    background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(219,219,219,1) 100%);
     width: 60%;
     height: 100%;
     border-radius: 0px 5px 5px 0px;
@@ -182,12 +175,12 @@ margin-left: 30px;
     padding: 20px;
 }
 
-.contenido-lateral-derecho .texto-preguntas p, .texto-preguntas h3{
+.pantalla-dos .texto-preguntas p,.pantalla-dos .texto-preguntas h3{
     margin: 40px 25px;
     text-align: left;
 }
 
-.contenido-lateral-izquierdo{
+.pantalla-dos .contenido-lateral-izquierdo{
     position: absolute;
     top: 0;
     left: 0;
@@ -200,20 +193,137 @@ margin-left: 30px;
     
 }
 
-.contenido-lateral-izquierdo ul{
+.pantalla-dos .contenido-lateral-izquierdo ul{
     list-style: none;
     margin-left: 50px;
 }
 
-.contenido-lateral-izquierdo ul li{
+.pantalla-dos .contenido-lateral-izquierdo ul li{
     margin: 25px 0;
 }
 
-.contenido-lateral-izquierdo ul li input{
+.pantalla-dos .contenido-lateral-izquierdo ul li input{
     margin-right: 20px;
 }
 
-.boton-preguntas{
+/* PANTALLA TRES (RESULTADOS) */
+
+.pantalla-tres .contenido-lateral-derecho{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: white;
+    width: 60%;
+    height: 100%;
+    border-radius: 0px 5px 5px 0px;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.pantalla-tres  .contenido_porcentajes div{
+    border: 1.5px solid rgb(75, 70, 71);
+    height: 50px;
+    margin: 15px 30px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pantalla-tres .texto-preguntas p,.pantalla-tres .texto-preguntas h3{
+    margin: 40px 25px;
+    text-align: center;
+}
+
+.pantalla-tres .contenido-lateral-izquierdo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgb(75, 180, 175);
+    width: 40%;
+    height: 100%;
+    border-radius: 5px 0px 0px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.pantalla-tres .contenido-lateral-izquierdo img{
+    width: 80px;
+    margin: 30px;
+}
+
+/* PANTALLA CUATRO (DIAGNOSTICO) */
+
+.pantalla-cuatro .contenido-lateral-derecho{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: rgb(75, 180, 175);
+    width: 30%;
+    height: 100%;
+    border-radius: 0px 5px 5px 0px;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.pantalla-cuatro .contenido-lateral-derecho .contenido_porcentajes div{
+    background: rgba(255, 255, 255, 0.61);
+    border: 1.5px solid rgb(255, 255, 255);
+    width: 170px;
+    height: 60px;
+    margin: 15px 30px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+.pantalla-cuatro .contenido-lateral-izquierdo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgb(255, 255, 255);
+    width: 70%;
+    height: 100%;
+    border-radius: 5px 0px 0px 5px;
+    padding: 30px 40px;
+    text-align: center;
+}
+
+.pantalla-cuatro .contenido-lateral-izquierdo  h3{
+    text-align: center;
+}
+
+.pantalla-cuatro .contenido-lateral-izquierdo h4{
+    text-align: left;
+}
+
+.pantalla-cuatro .contenido-lateral-izquierdo  p{
+    text-align: justify;
+}
+
+.pantalla-cuatro .contenido-lateral-izquierdo table{
+    margin: 40px auto;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+/* BOTONES */
+
+.contenido-botones{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 20px;
+    margin: auto;
+}
+
+.boton{
     width: 150px;
     height: 50px;
     background: rgb(75, 70, 71);
@@ -222,12 +332,6 @@ margin-left: 30px;
     border: none;
     border-radius: 19px;
     margin: 10px;
+    cursor: pointer;
 }
 
-.botones-check{
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 20px;
-    margin: auto;
-}

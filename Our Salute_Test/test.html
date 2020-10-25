@@ -53,7 +53,7 @@
 
     <!-- pantalla uno (BIENVENIDA) -->
 
-            <div class="pantalla-uno ">
+            <div class="pantalla-uno" id="pantalla-uno" >
                 <div class="contenido-superior">
                     <div class="texto-bienvenida">
                         <h3>Diagnostica tu Salud</h3>
@@ -61,21 +61,21 @@
                     </div>
                 </div>
                 <div class="contenido-inferior">
-                    <button class="boton-inicio">INICIAR</button>
+                    <button class="boton" onclick="iniciar()">INICIAR</button>
                 </div>
             </div>
 
     <!-- pantalla dos (PREGUNTAS) -->
 
-            <div class="pantalla-dos ocultar ">
+            <div class="pantalla-dos ocultar" id="pantalla-dos">
                 <div class="contenido-lateral-derecho">
                     <div class="texto-preguntas">
                         <h3>PREGUNTA...?</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae rerum laudantium eveniet a in dolores assumenda similique repudiandae excepturi, ipsum amet, autem, sequi tenetur porro nam qui? Odio, velit expedita enim similique autem alias exercitationem facilis vitae, eveniet quam dolorem.</p>
                         
-                        <div class="botones-check">
-                            <button class="boton-preguntas">ACEPTAR</button>
-                            <button class="boton-preguntas ocultar">REGRESAR</button>
+                        <div class="contenido-botones">
+                            <button class="boton">ACEPTAR</button>
+                            <button class="boton ocultar">REGRESAR</button>
                         </div>
                         
                     </div>
@@ -95,15 +95,22 @@
 
     <!-- pantalla tres (RESULTADOS) -->
 
-    <div class="pantalla-tres ocultar">
+    <div class="pantalla-tres ocultar" id="pantalla-tres">
         <div class="contenido-lateral-derecho">
             <div class="texto-preguntas">
-                <h3>PREGUNTA...?</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae rerum laudantium eveniet a in dolores assumenda similique repudiandae excepturi, ipsum amet, autem, sequi tenetur porro nam qui? Odio, velit expedita enim similique autem alias exercitationem facilis vitae, eveniet quam dolorem.</p>
+                <h3>RESULTADOS</h3>
+
+                <div class="contenido_porcentajes">
+                    <div>
+                        <p>Diabetes</p>
+                        <p>30%</p>
+                    </div>
+                    <div></div>
+                    <div></div>
+                </div>
                 
-                <div class="botones-check">
-                    <button class="boton-preguntas">ACEPTAR</button>
-                    <button class="boton-preguntas ocultar">REGRESAR</button>
+                <div class="contenido-botones">
+                    <button class="boton">Diagnóstico</button>
                 </div>
                 
             </div>
@@ -111,24 +118,61 @@
 
         <div class="contenido-lateral-izquierdo">
             <div>
-                <p></p>
+                <h3>!Alerta¡</h3>
+                <img src="../Img/alerta_amarilla.png" alt="">
+                <h3>Tu riesgo es alto</h3>
             </div>
         </div>
     </div>
     <!-- pantalla cuatro (DIAGNOSTICO) -->
 
-            <div class="pantalla-cuatro ocultar">
-                <div class="contenido-superior">
-                    <div class="texto-bienvenida">
-                        <h3>Diagnostica tu Salud</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis quaerat autem, ut in repellat facilis dicta nostrum sunt voluptatibus quod nam amet. Repellendus, cumque dolores, reprehenderit asperiores repudiandae porro quasi maiores corrupti eligendi at saepe iste animi iusto totam exercitationem praesentium provident quo sunt libero ducimus.</p>
-                    </div>
+    <div class="pantalla-cuatro ocultar" id="pantalla-cuatro">
+        <div class="contenido-lateral-derecho">
+ 
+            <div class="contenido_porcentajes">
+                <div>
+                    <p>Diabetes</p>
+                    <p>30%</p>
                 </div>
-                <div class="contenido-inferior">
-                    <button class="boton-inicio">INICIAR</button>
-                </div>
+                <div></div>
+                <div></div>
             </div>
 
+        </div>
+
+        <div class="contenido-lateral-izquierdo">
+            <div>
+               <h3>DIAGNÓSITCO</h3>
+
+               <table class="egt">
+
+                <tr>
+                    <th>Sintomas</th>
+                    <th>Riesgo</th>
+                </tr>
+                <tr>
+                  <td>Diabetes</td>
+                  <td>Alto</td>
+                </tr>
+                <tr>
+                  <td>Diabetes</td>
+                  <td>Medio</td>
+                </tr>
+                <tr>
+                    <td>Diabetes</td>
+                    <td>Bajo</td>
+                  </tr>
+              
+              </table>
+
+               <h4>Recomendación:</h4>
+               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio non nihil ipsum voluptate, aut molestiae veniam eligendi labore reprehenderit perferendis.</p>
+            </div>
+            <div class="contenido-botones">
+                <button class="boton">Finalizar</button>
+            </div>
+        </div>
+    </div>
 
         </div>
 
@@ -137,8 +181,12 @@
 </body>
 
 <!-- SCRIPTS -->
-<script src="../js/arrays.js"></script>
-<script src="../js/variables.js"></script>
-<script src="../js/funciones.js"></script>
+
+<script src="../Our Salute_Test/js/arrays.js"></script>
+<script src="../Our Salute_Test/js/variables.js"></script>
+<script src="../Our Salute_Test/js/interaccion.js"></script>
+<script src="../Our Salute_Test/js/funciones.js"></script>
+
+
 
 </html>
