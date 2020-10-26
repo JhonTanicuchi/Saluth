@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="/Centros Médicos/Html/Busqueda.html" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centros Médicos</title>
+    <!-- ESTILOS -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/Css/Style.css">
+    <script src="https://kit.fontawesome.com/35db202371.js"></script>
+    <script src="https://kit.fontawesome.com/35db202371.js"></script>
+    <script src="/Java Script/Variables.js"></script>
+    <script src="/Java Script/Funciones.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <nav class="menu">
+            <div class="logo ">
+                <img id="Logo-Simple" class="Logo-Simple Ocultar" src="/Imágenes/logo.png" alt="">
+            </div>
+            <div id="BuscadorC" class="BuscadorC Ocultar">
+                <input class="Buscando " id="Buscador" type="text" placeholder="Ingresa tu barrio">
+                <button class="Busca "><i class="fas fa-search-location"></i></button>
+            </div>
+
+            <div class="lista-menu">
+                <ul class="listas">
+                    <li><a href="/Home/Html/index.html">Inicio</a></li>
+                    <li><a class="disabled" href="">Enfermedades<i class="fas fa-angle-down"></i></a>
+                        <ul class="sub-lista">
+                            <li><a href="/Diabetes.Pantalla de Inicio/Html/Diabetes.html">Diabetes</a></li>
+                            <li><a href="">Apendicitis</a></li>
+                            <li><a href="">Colelitiasis</a></li>
+                            <li><a href="">Neumonía</a></li>
+                            <li><a href="">Gastroenteritis</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="active" href="/Test/Html/test.html">Test</a></li>
+                    <li><a href="/Centros Médicos/Html/Busqueda.html">Centros Médicos</a></li>
+                </ul>
+            </div>
+        </nav>
+        <main>
+            <div id="Contenedor" class="Contenedor">
+                <img class="logo-simple" src="/Imágenes/logo.png" alt="">
+                <input class="Buscador" id="Buscador" type="text" placeholder="Ingresa tu barrio">
+                <button class="Buscar" onclick="Buscar()"><i class="fas fa-search-location"></i></button>
+            </div>
+            <div id="Bordes" class="Bordes Ocultar">
+                <div class="Imagen">
+                </div>
+                <div class="Información">
+                    <div class="Texto">
+                        <div class="TextoA">
+                            <div id="Dirección">Dirección:</div>
+                            <div id="Barrio">Teléfono:</div>
+                            <div id="CalleP">Especialidades:</div>
+                            <div id="CalleP">Horarios:</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </header>
+
+</body>
+
+</html>
