@@ -28,7 +28,7 @@ header {
     width: 100%;
     height: 562px;
     background:url(../img/fondo_home.jpg);
-    background: linear-gradient(to right, hsla(192, 85%, 61%, 0.336), hsla(298, 100%, 75%, 0.384)), url(../img/fondo_home.jpg);
+    background: linear-gradient(to right, hsla(192, 85%, 61%, 0.521), hsla(298, 100%, 75%, 0.568)), url(../img/fondo_home.jpg);
     background-size: cover;
     background-attachment: fixed;
     position: relative;

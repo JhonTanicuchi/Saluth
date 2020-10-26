@@ -3,21 +3,25 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="shortcut icon" href="../Img/logo-simple.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../Img/favicon.png" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Salute | Test</title>
+
+    <!-- ------- -->
     <!-- ESTILOS -->
+    <!-- ------- -->
+
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,100' rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="../Our Salute_Test/css/style_test.css">
     <link rel="stylesheet" href="../Our Salute_Test/css/variables.css">
-
-    <script src="https://kit.fontawesome.com/35db202371.js"></script>
-
 </head>
 
 <body>
 
+    <!-- ---------- -->
     <!-- ENCABEZADO -->
+    <!-- ---------- -->
 
     <header id="header">
 
@@ -44,14 +48,23 @@
             </div>
         </nav>
 
+        <div class="img-header"></div>
+
     </header>
 
+
+    <!-- --------- -->
     <!-- CONTENIDO -->
+    <!-- --------- -->
+
     <main>
 
         <div class="contenedor-test">
 
+
+    <!-- ------------------------- -->
     <!-- pantalla uno (BIENVENIDA) -->
+    <!-- ------------------------- -->
 
             <div class="pantalla-uno" id="pantalla-uno" >
                 <div class="contenido-superior">
@@ -65,12 +78,15 @@
                 </div>
             </div>
 
+
+    <!-- ------------------------ -->
     <!-- pantalla dos (PREGUNTAS) -->
+    <!-- ------------------------ -->
 
             <div class="pantalla-dos ocultar" id="pantalla-dos">
                 <div class="contenido-lateral-derecho">
                     <div class="texto-preguntas">
-                        <h3>PREGUNTA...?</h3>
+                        <h3>Selecciona todos los sintomas que presentes</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae rerum laudantium eveniet a in dolores assumenda similique repudiandae excepturi, ipsum amet, autem, sequi tenetur porro nam qui? Odio, velit expedita enim similique autem alias exercitationem facilis vitae, eveniet quam dolorem.</p>
                         
                         <div class="contenido-botones">
@@ -82,111 +98,113 @@
                 </div>
 
                 <div class="contenido-lateral-izquierdo">
-                    <ul>
-                        <li><input type="checkbox"></input>Sintoma</li>
-                        <li><input type="checkbox"></input>Sintoma</li>
-                        <li><input type="checkbox"></input>Sintoma</li>
-                        <li><input type="checkbox"></input>Sintoma</li>
-                        <li><input type="checkbox"></input>Sintoma</li>
-                        <li><input type="checkbox"></input>Sintoma</li>
-                    </ul>
+                    <ul id="lista-sintomas"></ul>
                 </div>
+
             </div>
 
+
+    <!-- -------------------------- -->
     <!-- pantalla tres (RESULTADOS) -->
+    <!-- -------------------------- -->
 
-    <div class="pantalla-tres ocultar" id="pantalla-tres">
-        <div class="contenido-lateral-derecho">
-            <div class="texto-preguntas">
-                <h3>RESULTADOS</h3>
+            <div class="pantalla-tres ocultar" id="pantalla-tres">
+                <div class="contenido-lateral-derecho">
+                    <div class="texto-preguntas">
+                        <h3>RESULTADOS</h3>
 
-                <div class="contenido_porcentajes">
-                    <div>
-                        <p>Diabetes</p>
-                        <p>30%</p>
+                        <div class="contenido_porcentajes">
+                            <div>
+                                <p>Diabetes</p>
+                                <p>30%</p>
+                            </div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        
+                        <div class="contenido-botones">
+                            <button class="boton">Diagnóstico</button>
+                        </div>
+                        
                     </div>
-                    <div></div>
-                    <div></div>
                 </div>
-                
-                <div class="contenido-botones">
-                    <button class="boton">Diagnóstico</button>
-                </div>
-                
-            </div>
-        </div>
 
-        <div class="contenido-lateral-izquierdo">
-            <div>
-                <h3>!Alerta¡</h3>
-                <img src="../Img/alerta_amarilla.png" alt="">
-                <h3>Tu riesgo es alto</h3>
+                <div class="contenido-lateral-izquierdo">
+                    <div>
+                        <h3>!Alerta¡</h3>
+                        <img src="../Img/alerta_amarilla.png" alt="">
+                        <h3>Tu riesgo es alto</h3>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
+
+
+    <!-- ----------------------------- -->
     <!-- pantalla cuatro (DIAGNOSTICO) -->
+    <!-- ----------------------------- -->
 
-    <div class="pantalla-cuatro ocultar" id="pantalla-cuatro">
-        <div class="contenido-lateral-derecho">
- 
-            <div class="contenido_porcentajes">
-                <div>
-                    <p>Diabetes</p>
-                    <p>30%</p>
+            <div class="pantalla-cuatro ocultar" id="pantalla-cuatro">
+                <div class="contenido-lateral-derecho">
+        
+                    <div class="contenido_porcentajes">
+                        <div>
+                            <p>Diabetes</p>
+                            <p>30%</p>
+                        </div>
+                        <div></div>
+                        <div></div>
+                    </div>
+
                 </div>
-                <div></div>
-                <div></div>
+
+                <div class="contenido-lateral-izquierdo">
+                    <div>
+                    <h3>DIAGNÓSITCO</h3>
+
+                    <table class="egt">
+
+                        <tr>
+                            <th>Sintomas</th>
+                            <th>Riesgo</th>
+                        </tr>
+                        <tr>
+                        <td>Diabetes</td>
+                        <td>Alto</td>
+                        </tr>
+                        <tr>
+                        <td>Diabetes</td>
+                        <td>Medio</td>
+                        </tr>
+                        <tr>
+                            <td>Diabetes</td>
+                            <td>Bajo</td>
+                        </tr>
+                    
+                    </table>
+
+                    <h4>Recomendación:</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio non nihil ipsum voluptate, aut molestiae veniam eligendi labore reprehenderit perferendis.</p>
+                    </div>
+                    <div class="contenido-botones">
+                        <button class="boton">Finalizar</button>
+                    </div>
+                </div>
             </div>
 
-        </div>
-
-        <div class="contenido-lateral-izquierdo">
-            <div>
-               <h3>DIAGNÓSITCO</h3>
-
-               <table class="egt">
-
-                <tr>
-                    <th>Sintomas</th>
-                    <th>Riesgo</th>
-                </tr>
-                <tr>
-                  <td>Diabetes</td>
-                  <td>Alto</td>
-                </tr>
-                <tr>
-                  <td>Diabetes</td>
-                  <td>Medio</td>
-                </tr>
-                <tr>
-                    <td>Diabetes</td>
-                    <td>Bajo</td>
-                  </tr>
-              
-              </table>
-
-               <h4>Recomendación:</h4>
-               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio non nihil ipsum voluptate, aut molestiae veniam eligendi labore reprehenderit perferendis.</p>
-            </div>
-            <div class="contenido-botones">
-                <button class="boton">Finalizar</button>
-            </div>
-        </div>
-    </div>
 
         </div>
-
     </main>
-
 </body>
+    
 
+<!-- ------- -->
 <!-- SCRIPTS -->
+<!-- ------- -->
 
+<script src="https://kit.fontawesome.com/35db202371.js"></script>
 <script src="../Our Salute_Test/js/arrays.js"></script>
 <script src="../Our Salute_Test/js/variables.js"></script>
 <script src="../Our Salute_Test/js/interaccion.js"></script>
 <script src="../Our Salute_Test/js/funciones.js"></script>
-
-
 
 </html>
