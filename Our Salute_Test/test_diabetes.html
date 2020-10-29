@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Healt & Welfare System | Test</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../img/logos/logo_celeste.png" type="image/x-icon" />
+
+    <!-- ESTILOS CSS -->
+
+    <link rel="stylesheet" href="../css/style_test.css"/>
+    <link rel="stylesheet" href="../css/styles_progreso.css"/>
+    <link rel="stylesheet" href="../css/style.css"/>
+    <link rel="stylesheet" href="../css/style_menu.css">
+    <link rel="stylesheet" href="../css/style_wave.css">
+    <link rel="stylesheet" href="../css/style_whatsapp.css">
+    <link rel="stylesheet" href="../css/style_asistente.css">
+    <link rel="stylesheet" href="../css/style_ventanas.css">
+    <link rel="stylesheet" href="../css/style_popup.css">
+    <link rel="stylesheet" href="../css/style_boton.css">
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/hint.min.css">
+    <link rel="stylesheet" href="../css/style_popup_descarga.css">
+    <link rel="stylesheet" href="../css/style_popup_activar.css">
+
+
+    <!-- ESTILOS CSS BLIBLIOTECAS -->
+
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,100' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Red+Hat+Text:400,500,700&display=swap"rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=swap" rel="stylesheet"> 
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+  <div class="contenido-padre">
+
+    <!-- MENU DE NAVEGACION -->
+
+    <header id="header">
+        <nav class="menu">
+          <div class="boton-asistente-menu">
+            
+
+
+           
+            <div class="icono-menu" id="icono-menu" onclick="transform()">
+                <span class="figura-menu-1"></span>
+                <span class="figura-menu-2"></span>
+                <span class="figura-menu-3"></span>
+            </div>
+  
+          </div>
+          <div class="lista-menu">
+            <ul class="lists">
+              <li><a class="lista" href="index.html">Inicio</a></li>
+              <li><a class="lista active" href="test.html">Test COVID-19</a></li>
+              <li><a class="lista" href="prevencion.html">Prevención</a></li>
+              <li><a class="lista" href="sintomas.html">Síntomas</a></li>
+              <li><a class="lista" href="tratamientos.html">Tratamientos</a></li>
+              <li><a class="lista" href="contacto.html">Contacto</a></li>
+            </ul>
+          </div>
+        </nav >
+  
+        <div class="img-header">
+          <div class="texto-header">
+            
+          </div>
+  
+        </div>
+          
+      </header>
+
+    <main>
+    
+      <div class="contenedor-test">
+
+        <div class="contenidoTrasero">
+            <div  id="inicio" class="inicio">
+                <div class="contenido">
+                    <div id="pregunta">
+                    </div>
+                    <div id="presentacion">
+                        <img data-aos="zoom-in"
+                        data-aos-anchor="#example-anchor"
+                        data-aos-offset="0"
+                        data-aos-delay="200"
+                        data-aos-duration="500" src="../img/logos/logo_celeste.png" alt="" width="80px" >
+                        <h2 data-aos="fade-left"
+                        data-aos-anchor="#example-anchor"
+                        data-aos-offset="0"
+                        data-aos-delay="500"
+                        data-aos-duration="500" class="titulo">HEALT & WELFARE SYSTEM</h2>
+                        <p data-aos="fade-left"
+                        data-aos-anchor="#example-anchor"
+                        data-aos-offset="0"
+                        data-aos-delay="650"
+                        data-aos-duration="500" id="pregunta">TEST COVID-19</p>
+                        <button data-aos="zoom-in"
+                        data-aos-anchor="#example-anchor"
+                        data-aos-offset="0"
+                        data-aos-delay="700"
+                        data-aos-duration="500" class=" buttonEdit1 bubbly-button" id="iniciar" onclick="boton1(),soundTestInicio()" >Empezar</button>
+                    </div>
+                </div>
+            </div>
+            <div  id="validacion" class="validacion visible">
+                <div class="contenido">
+                    <div id="guardar">
+                        <h2>Ayudanos con tus datos</h2>
+                        <p>Es recomedable que ingreses datos reales para ayudarte con tus resultados.</p>
+                       
+                        <div class="boton" >
+                            <button class="bubbly-button"form="formulario" id="guardar" type="submit" onclick="soundTestDatos()">Iniciar Test</button>
+                        </div>
+                         <hr>
+                        <h6>*Recuerda tus resultados son aproximados y no sustituyen a un examen medico.</h4>
+                    </div>
+                </div>
+            </div>    
+        </div>
+
+        <div  id="contenidoFrontal" class="contenidoFrontal">
+
+            <div id="nota" class="nota ocultar">
+
+                <div id="interface">
+                  <div id="preguntas-contenidoFrontal"></div>
+                  
+                  <div id="botones-iniciartest"  class="iniciartest">
+                    <button class="bubbly-button" id="iniciar" onclick="click1(),soundTestPreguntas()" >SI<i class="fas fa-check-circle"></i></button>
+                    <button class="bubbly-button" id="iniciar" onclick="click2(),soundTestPreguntas()" >NO<i class="fas fa-times-circle"></i></button>
+                  </div>
+
+                </div>
+
+                <div id="botones-resultados-test" class="ocultar"> 
+                  
+                  <button class="bubbly-button" id="boton-descarga" onclick="soundTestDescargar(),descargarPdf()" >Descargar</button>
+                  <button class="bubbly-button" onclick="finalizarTest(),soundTestFin()" >Continuar</button>
+                </div>
+
+                <div id="botones-finalizar-test" class="ocultar"> 
+                  <button  class="bubbly-button" onclick="window.location.href='../html/index.html'">Finalizar</button>
+                </div>
+
+                <div id="progreso-preguntas"></div>
+
+                <div  class="img-alertas" id="img-alertas">
+
+                  <div class="hint--bottom-left hint--bounce hint--success" id="img-alertas-1">
+                    <img src="../img/test/iconos_preguntas/alerta_verde.png" alt="">
+                  </div>
+
+
+                  <div  class="hint--bottom-left hint--bounce hint--warning" id="img-alertas-2">
+                    <img  src="../img/test/iconos_preguntas/alerta_amarilla.png" alt="">
+                  </div>
+
+                  <div class="hint--bottom-left hint--bounce hint--error" id="img-alertas-3">
+                    <img src="../img/test/iconos_preguntas/alerta_roja.png" alt="">
+                  </div>
+
+                  
+                </div>
+
+                <img class="barra-colores" src="../img/test/colores.png" alt="">
+                <img class="logo-ventana-test" src="../img/logos/logo_celeste.png" alt="">
+                <p class="texto1-ventana-test">Healt &</p>
+                <p class="texto2-ventana-test">Welfare System</p>
+
+                  <div class="img-Fin" id="img-recomendaciones-finales">
+
+                    <div class="hint--bottom hint--bounce" aria-label="Cuando salgas usa mascarilla">
+                      <img  src="../img/test/iconos_preguntas/recomendaciones_finales3.png" alt="">
+                    </div>
+                    <div class="hint--bottom hint--bounce" aria-label="Lavate frecuentemente las manos">
+                      <img  src="../img/test/iconos_preguntas/recomendaciones_finales2.png" alt="">
+                    </div>
+                    <div class="hint--bottom hint--bounce" aria-label="Manten una distancia de 2 metros">
+                      <img  src="../img/test/iconos_preguntas/recomendaciones_finales1.png" alt="">
+                    </div>
+
+                  </div>
+
+
+            </div>
+
+            <div id="bienvenida" class="bienvenida">
+                <div id="bienvenida-contenido">
+                  <h2>Bienvenido</h2>
+                  <p>Este test esta diseñado para ayudarte a tomar la mejor desicion en caso de que tengas sintomas o dudas del covid-19</p>
+                  <h5 class="texto">Tus resultados se mostraran una ves finalices el test y al final podrás descargarlos.</h5>
+                </div>
+               
+            </div>
+            <div id="form" class="form ocultar">
+                <div id="contenido-form">
+                  <h2>Datos Personales</h2>
+                  <form id="formulario" onsubmit="validar()">
+                      <div class="pregunta">
+                        <div id="respuesta">
+                          <input
+                            class="input"
+                            type="text"
+                            name="name"
+                            id="name"
+                            required
+                            autocomplete="off"
+                            spellcheck="false"
+                            maxlength="25"
+                            pattern="[A-Za-z]{3,10} [A-Za-z]{4,10}"
+                            title="Introduzca Nombre y Apellido, Ejemplo Jhon Tanicuchi"
+                            placeholder="Ingresa tu nombre*"
+                          />
+                          <input
+                            class="input"
+                            type="tel"
+                            name="tel"
+                            id="tel"
+                            required
+                            autocomplete="off"
+                            spellcheck="false"
+                            pattern="[0-9]{10}"
+                            title="Introduzca diez digitos, Ejemplo 0401418462"
+                            placeholder="Ingresa tu número de cédula*"
+                           />
+                  
+                         <select class="input" id="provincias" required>
+                          <option value="">Elige tu provincia:*</option>
+                        </select>
+                  
+                        <select class="input" id="cantones" required>
+                          <option value="" >Elige tu cantón:*</option>
+                        </select>
+                       
+                        </div>
+                      </div>
+                  
+                  </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    
+  </div>
+  </body>
+
+  <!-- SCRIPTS -->
+  <script src="https://unpkg.com/scrollreveal@4"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://kit.fontawesome.com/35db202371.js"></script>
+
+  <script src="../js/test/arrays.js"></script>
+  <script src="../js/sound.js"></script>
+  <script src="../js/test/variables.js"></script>
+  <script src="../js/test/select.js"></script>
+  <script src="../js/test/funciones.js"></script>
+  <script src="../js/html/menu.js"></script>
+  <script src="../js/html/effects.js"></script>
+  <script src="../js/test/progreso.js"></script>
+  <script src="../js/html/boton.js"></script>
+  <script src="../js/test/efectts-ventana.js"></script>
+ 
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" crossorigin="anonymous"></script>
+  
+</html>

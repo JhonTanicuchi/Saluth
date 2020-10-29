@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="../Img/favicon.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Salute | Test</title>
+
+    <!-- ------- -->
+    <!-- ESTILOS -->
+    <!-- ------- -->
+
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,100' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=swap" rel="stylesheet"> 
+
+
+    <link rel="stylesheet" href="/Our Salute_Test/css/style_boton.css">
+    <link rel="stylesheet" href="../Our Salute_Test/css/style_test_home.css">
+    <link rel="stylesheet" href="../Our Salute_Test/css/style_pop_enfermedades.css">
+
+    
+
+</head>
+
+<body>
+
+    <!-- ------------------ -->
+    <!-- VENTANA MODAL ENFERMEDADES-->
+    <!-- ------------------ -->
+    <div class="fondo-popup" id="fondo-popup">
+    <div class="contenedor-test" id="contenedor-test" >
+        <div class="pantalla-dos " id="pantalla-dos">
+            <div class="contenido-lateral-derecho">
+                <div class="texto-preguntas">
+                    <h3>Selecciona la enfermedad que deseas diagnosticar</h3>
+                    <hr>
+                    <p>A continuación te encontraras con un test que te ayudará a saber el porcentaje de probabilidad.</p>
+                    
+                    <div class="contenido-botones">
+                        <button  onclick="cancelar();" class="boton">Cancelar</button>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="contenido-lateral-izquierdo">
+                <div class="lista-enfermedades">
+                   <a href="">Diabetes</a>
+                   <a href="">Apendicitis</a>
+                   <a href="">Colelitiasis</a>
+                   <a href="">Neumonía</a>
+                   <a href="">Gastroenteritis</a>
+            
+                </div>
+            </div>
+
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ---------- -->
+    <!-- ENCABEZADO -->
+    <!-- ---------- -->
+
+    <header id="header">
+
+        <nav class="menu">
+            <div class="logo">
+                <img class="logo-simple" src="../Img/logo.png" alt="">
+            </div>
+
+            <div class="lista-menu">
+                <ul class="listas">
+                    <li><a  href="../Our Salute_Home/index.html">Inicio</a></li>
+                    <li><a class="disabled" href="">Enfermedades<i class="fas fa-angle-down"></i></a>
+                        <ul class="sub-lista">
+                            <li><a href="">Diabetes</a></li>
+                            <li><a href="">Apendicitis</a></li>
+                            <li><a href="">Colelitiasis</a></li>
+                            <li><a href="">Neumonía</a></li>
+                            <li><a href="">Gastroenteritis</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="active" href="../Our Salute_Test/test_home.html">Test</a></li>
+                    <li><a href="">Centros Médicos</a></li>
+                </ul>
+            </div>
+        </nav>
+        
+        <div class="img-header">
+
+            <section class="textos-header">
+                <h1>Evalúa tu salud</h1>
+                <hr>
+                <p>Y disfruta la vida, con paz y alegría</p>
+            </section>
+    
+        </div>
+
+
+        <div class="wave" style="height: 150px; overflow: hidden">
+            <svg
+              viewBox="0 0 500 150"
+              preserveAspectRatio="none"
+              style="height: 100%; width: 100%"
+            >
+              <path
+                d="M-0.84,10.36 C104.68,176.14 404.91,183.05 500.84,7.41 L500.00,150.00 L0.00,150.00 Z"
+                style="stroke: none; fill: rgb(255, 255, 255)"
+              ></path>
+            </svg>
+          </div>
+    </header>
+
+
+    <!-- --------- -->
+    <!-- CONTENIDO -->
+    <!-- --------- -->
+
+    <main>
+
+        <section class="contenedor"><button class="bubbly-button" onclick="comenzarTest();">Comenzar</button></section>
+     
+    </main>
+
+
+
+    <!-- ------ -->
+    <!-- FOOTER -->
+    <!-- ------ -->
+
+    <footer>
+        <div class="contenedor-footer">
+          <div class="content-foo">
+            <h4>Cantáctanos</h4>
+            <p>Telf 1: 0981853479</p>
+            <p>Telf 2: </p>
+            <p>Telf 3: </p>
+            <p>Telf 4: </p>
+            <p>Correo: oursalute@gmail.com</p>
+          </div>
+        </div>
+        <div class="icons">
+          <a href=""><i class="fab fa-facebook"></i></a>
+          <a href=""><i id="i" class="fab fa-instagram"></i></a>
+          <a href=""><i id="tw" class="fab fa-twitter"></i></a>
+          <a href=""><i class="fab fa-github"></i></a>
+        </div>
+        <h2 class="titulo-final">
+          &copy;2020 Our Salute. Reservados todos los derechos
+        </h2>
+      </footer>
+</body>
+    
+
+<!-- ------- -->
+<!-- SCRIPTS -->
+<!-- ------- -->
+
+<script src="https://kit.fontawesome.com/35db202371.js"></script>
+<script src="../Our Salute_Test/js/boton.js"></script>
+    <script src="../Our Salute_Test/js/popup_enfermedades.js"></script>
+
+</html>

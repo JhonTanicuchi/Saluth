@@ -38,7 +38,7 @@
 	height: 400px;
 	top: 0;
 	background: rgba(14,189,201,1);
-	background: linear-gradient(to right, rgba(14,189,201,1) 0%, rgba(0,171,184,1) 100%);
+	background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
 }
 
 .popup .cerrar-popup {
@@ -60,11 +60,11 @@
 }
 
 .fondo_modal{
-	opacity: 15%;
-    width: 200px;
+	opacity: 12%;
+    width: 300px;
     position: fixed;
     top: 0;
-    bottom: 150px;
+    bottom: 0;
     left: 0;
     right: 0;
     margin: auto;
@@ -77,18 +77,9 @@
 	align-items: center;
 	justify-content: center;
 	position: relative;
-    height: 250px;
+    height: 330px;
 }
 
-
-.contenido-boton{
-	background: transparent;
-	height: 150px;
-	border-radius: 0px 0px 5px 5px ;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
 
 .popup h3 {
 	font-size: 25px;
@@ -112,15 +103,25 @@
 
 
 .boton{
-    width: 150px;
-    height: 50px;
-    background: rgb(75, 70, 71);
-    background: linear-gradient(to bottom, #323232 0%, #3F3F3F 40%, #1C1C1C 150%), linear-gradient(to top, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.25) 200%);
-    background-blend-mode: multiply;
-    color: white;
-    outline: none;
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: auto;
+    bottom: 0px;
     border: none;
-    border-radius: 19px;
-    margin: 10px;
     cursor: pointer;
+	outline: none;
+	padding: 15px 20px;
+	background: #323536;
+    box-shadow: 0 2px 12px #181a1bad;
+	color: white;
+	border-radius: 5px;
+    transition: all .2s ;
+
 }
+
+.boton:active {
+    transform: scale(0.82);
+    background-color: #252a2cd3;
+    box-shadow: 0 2px 25px #17191a;
+  }
