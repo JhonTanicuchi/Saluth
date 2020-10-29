@@ -1,7 +1,3 @@
-.ocultar{
-    display: none;  
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -11,13 +7,12 @@
 body {
     font-family: 'open sans';
     background:url(../Centros\ Médicos/Imágenes/fondo_home);
-    background: linear-gradient(to right, hsla(192, 85%, 61%, 0.336), hsla(298, 100%, 75%, 0.384)), url(../Centros\ Médicos/Imágenes/fondo_home);
+    background: linear-gradient(to right, hsla(192, 85%, 61%, 0.336), hsla(236, 57%, 44%, 0.384)), url(../Centros\ Médicos/Imágenes/fondo_home);
 }
 
 header {
     width: 100%;
-    height: 653px;
-    
+    height: 653px;    
     background-size: cover;
     background-attachment: fixed;
     position: relative;
@@ -27,10 +22,8 @@ header {
     top:0;
     right: 0;
     width: 100%;
-    padding: 10px 0;
-    
+    padding: 10px 0;    
     background:transparent;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -100,61 +93,112 @@ header {
 }
 
 .logo-simple{
-width: 120px;
+width: 500px;
 margin-left: 30px;
+position: relative;
+left: 390px;
+top:40px ;
 }
+
 .Buscador{
-    width: 260px;
-    height:30px;
-    background: linear-gradient(rgb(144, 183, 233),rgb(54, 134, 233));
-    border-radius: 5px;
-    position: relative;
-    left: 490px;
-    top: 30px;
+    width:510px;
+    height:40px;
+    background: rgb(241, 232, 205) ;
+    border-radius: 20px;
+    border: none;
+    position: absolute;
+    left: 400px;
+    top: 390px;
+    padding: 0px 15px;    
+    transition: all 1.0s ease-in;
 }
 
 .Buscar{
-    width: 160px;
-    height: 30px;
-    background:#81D867;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    background:#8fcfec;
+    font-size: 20px;
     position: relative;
-    left: 520px;
-    top: 30px;
-    
+    left: 390px;
+    top: 120px;
+    transition: all 1.0s ease-in;
+}
+
+.Logo-Simple{
+    width: 120px;
+    margin-left: 30px;
+
 }
 
 .Bordes{
-    width: 600px;
+    width: 90%;
     height:400px;
     background: linear-gradient(rgb(117, 167, 233),rgb(9, 44, 88));
-    border-radius: 50px;
-    position: relative;
-    top:50px;
-    left:400px;
-}
-
-.Imagen{
-    width: 200px;
-    height:120px;
-    background: white;
-    border-radius: 20px;
-    position: relative; 
-    left:200px;
-    top:20px;
-}
-
-.Información{
-    width: 430px;
-    height:230px;
-    background: linear-gradient(rgb(78, 189, 174),rgb(10, 85, 72));
-    border-radius: 20px;
+    border-radius: 15px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: absolute;
-    left: 90px;
-    top: 150px;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
 }
+    
+    .Imagen{
+        width: 400px;
+        height:340px;
+        background: white;
+        border-radius: 20px;
+        margin: 20px;
+        
+    }
+    
+.TextoA div{
+    width: 700px;
+    height: 40px;
+    background: rgb(163, 115, 202);
+    border-radius: 5px;
+    margin: 10px 0;
+    }
 
 .Texto{
+    display: flex;
+    align-items: center;
+    margin: 20px;
+
+}
+
+
+
+.ActivarInput{
+    width:300px;
+    height:30px;
+    background: rgb(241, 232, 205) ;
+    border-radius: 20px;
+    border: none;
+    padding: 0px 15px;
     position: absolute;
-    left: 10px;
-    top: 10px; 
+    top: 30px;
+    left: 200px;
+}
+
+.ActivarButton{
+    width: 30px;
+    height: 30px;
+    border-radius: 20px;
+    border: none;
+    background:#8fcfec;
+    font-size: 15px;
+    position: absolute;
+    top: 30px;
+    left: 505px;
+}
+
+
+
+.Ocultar{
+    display: none;
 }

@@ -1,0 +1,2 @@
+var buscador;
+var numero;

@@ -12,7 +12,10 @@
     <script src="https://kit.fontawesome.com/35db202371.js"></script>
     <script src="https://kit.fontawesome.com/35db202371.js"></script>
     <script src="/Java Script/Variables.js"></script>
-    <script src="/Java Script/Funciones.js"></script>
+    <script src="/Java Script/Arrays.js"></script>
+    <script src="/Java Script/Asignación.js"></script>
+    <script src="/Java Script/Buscar.js"></script>
+
 
 </head>
 
@@ -22,11 +25,6 @@
             <div class="logo ">
                 <img id="Logo-Simple" class="Logo-Simple Ocultar" src="/Imágenes/logo.png" alt="">
             </div>
-            <div id="BuscadorC" class="BuscadorC Ocultar">
-                <input class="Buscando " id="Buscador" type="text" placeholder="Ingresa tu barrio">
-                <button class="Busca "><i class="fas fa-search-location"></i></button>
-            </div>
-
             <div class="lista-menu">
                 <ul class="listas">
                     <li><a href="/Home/Html/index.html">Inicio</a></li>
@@ -39,27 +37,49 @@
                             <li><a href="">Gastroenteritis</a></li>
                         </ul>
                     </li>
-                    <li><a class="active" href="/Test/Html/test.html">Test</a></li>
-                    <li><a href="/Centros Médicos/Html/Busqueda.html">Centros Médicos</a></li>
+                    <li><a href="/Test/Html/test.html">Test</a></li>
+                    <li><a class="active" href="/Centros Médicos/Html/Busqueda.html">Centros Médicos</a></li>
                 </ul>
             </div>
         </nav>
         <main>
             <div id="Contenedor" class="Contenedor">
-                <img class="logo-simple" src="/Imágenes/logo.png" alt="">
-                <input class="Buscador" id="Buscador" type="text" placeholder="Ingresa tu barrio">
-                <button class="Buscar" onclick="Buscar()"><i class="fas fa-search-location"></i></button>
+                <img id="LogoC" class="logo-simple" src="/Imágenes/logo.png" alt="">
+                <input class="Buscador" id="buscador" type="text" placeholder="Ingresa tu barrio" required>
+                <button id="Buscar" class="Buscar" onclick="Buscar();"><i class="fas fa-search-location"></i></button>
             </div>
             <div id="Bordes" class="Bordes Ocultar">
                 <div class="Imagen">
                 </div>
                 <div class="Información">
                     <div class="Texto">
-                        <div class="TextoA">
-                            <div id="Dirección">Dirección:</div>
-                            <div id="Barrio">Teléfono:</div>
-                            <div id="CalleP">Especialidades:</div>
-                            <div id="CalleP">Horarios:</div>
+                        <div id="TextoA" class="TextoA">
+
+                            <div>
+                                <section id="Select0">
+                                    <p>Dirección:</p>
+                                    <p></p>
+                                </section>
+                            </div>
+                            <div>
+                                <section id="Select1">
+                                    <p>Teléfono:</p>
+                                    <p></p>
+                                </section>
+                            </div>
+                            <div>
+                                <section id="Select2">
+                                    <p>Especialidades:</p>
+                                    <p></p>
+                                </section>
+                            </div>
+                            <div>
+                                <section id="Select3">
+                                    <p>Horario:</p>
+                                    <p></p>
+                                </section>
+                            </div>
+
                         </div>
                     </div>
                 </div>
