@@ -109,12 +109,14 @@
 
 .contenido-botones button{
     position: absolute;
-    right: 40px;
+    right: 35px;
     bottom: 20px;
     border: none;
     border-bottom: 1px solid rgba(0, 0, 0, 0.63);
     cursor: pointer;
     outline: none;
+    background: transparent;
+    padding: 5px;
 }
 
 .contenido-botones button:hover{

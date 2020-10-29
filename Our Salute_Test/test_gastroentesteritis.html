@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Our Salute | Test Gastroentestiritis</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../Img/favicon.png" type="image/x-icon">
+
+
+    <!-- ESTILOS CSS -->
+
+    <link rel="stylesheet" href="../Our Salute_Test/css/style_test copy.css"/>
+    <link rel="stylesheet" href="../Our Salute_Test/css/styles_progreso.css"/>
+    <link rel="stylesheet" href="../Our Salute_Test/css/style_boton_azul.css">
+    <link rel="stylesheet" href="../Our Salute_Test/css/variables.css">
+
+
+
+    <!-- ESTILOS CSS BLIBLIOTECAS -->
+
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,100' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Red+Hat+Text:400,500,700&display=swap"rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=swap" rel="stylesheet"> 
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+  
+    <a class="boton_cancelar" href="../Our Salute_Test/test_home.html">Salir</a>
+    <!-- MENU DE NAVEGACION -->
+
+    <header id="header">
+        <div class="img-header"></div>
+      </header>
+
+    <main>
+    
+      <div class="contenedor-test">
+
+        <div class="contenidoTrasero">
+            <div  id="inicio" class="inicio">
+                <div class="contenido" id="contenido">
+                    <div id="pregunta">
+                    </div>
+                    <div id="presentacion">
+                        <img data-aos="zoom-in"
+                        data-aos-anchor="#example-anchor"
+                        data-aos-offset="0"
+                        data-aos-delay="200"
+                        data-aos-duration="500" src="../Img/logo-simple.png" alt="" width="80px" >
+                        <h2 data-aos="fade-left"
+                        data-aos-anchor="#example-anchor"
+                        data-aos-offset="0"
+                        data-aos-delay="500"
+                        data-aos-duration="500" class="titulo">OUR SALUTE</h2>
+                        <p data-aos="fade-left"
+                        data-aos-anchor="#example-anchor"
+                        data-aos-offset="0"
+                        data-aos-delay="650"
+                        data-aos-duration="500" id="pregunta">Test de Gastroentestiritis</p>
+                        <button data-aos="zoom-in"
+                        data-aos-anchor="#example-anchor"
+                        data-aos-offset="0"
+                        data-aos-delay="700"
+                        data-aos-duration="500" class=" buttonEdit1 bubbly-button" id="iniciar" onclick="boton1(),validar()" >Empezar</button>
+                    </div>
+                    <div  class="img-alertas" id="img-alertas">
+
+                        <div  id="img-alertas-1">
+                          <img src="../Img/alerta_verde.png" alt="">
+                        </div>
+      
+      
+                        <div   id="img-alertas-2">
+                          <img  src="../Img/alerta_amarilla.png" alt="">
+                        </div>
+      
+                        <div  id="img-alertas-3">
+                          <img src="../Img/alerta_roja.png" alt="">
+                        </div>
+      
+                        
+                      </div>
+                    <div id="botones-finalizar-test" class="ocultar"> 
+                        <button  class="bubbly-button" onclick="window.location.href='../Our Salute_Test/test_home.html'">Finalizar</button>
+                    </div>
+                </div>
+            </div>
+            <div  id="validacion" class="validacion visible">
+                <div class="contenido">
+                      <div id="guardar">
+                        <div id="preguntas-contenidoFrontal"></div>
+                <div id="progreso-preguntas"></div>
+
+                    </div>
+                </div>
+            </div>    
+        </div>
+
+        <div  id="contenidoFrontal" class="contenidoFrontal">
+
+
+            <div id="bienvenida" class="bienvenida">
+                <div id="bienvenida-contenido">
+                  <h2>Bienvenido</h2>
+                  <p>Este test esta diseñado para ayudarte con un porcentaje de probabilidad en caso de que tengas síntomas de la Gastroentestiritis.</p>
+                  <h5 class="texto">Tus resultados se mostraran una ves finalices el test.</h5>
+                </div>
+               
+            </div>
+            <div id="form" class="form ocultar">
+                <div class="contenido-form" id="contenido-form">
+                  <div id="botones-iniciartest"  class="iniciartest">
+                    <button class="bubbly-button" id="iniciar" onclick="click1()" >SI<i class="fas fa-check-circle"></i></button>
+                    <button class="bubbly-button" id="iniciar" onclick="click2()" >NO<i class="fas fa-times-circle"></i></button>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+  </div>
+  </body>
+
+  <!-- SCRIPTS -->
+  <script src="https://unpkg.com/scrollreveal@4"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://kit.fontawesome.com/35db202371.js"></script>
+
+  
+  <script src="../Our Salute_Test/js/variables.js"></script>
+  <script src="../Our Salute_Test/js/arrays_gastroentetesteritis.js"></script>
+  <script src="../Our Salute_Test/js/enunciados.js"></script>
+  <script src="../Our Salute_Test/js/funciones.js"></script>
+  <script src="../Our Salute_Test/js/efectts-ventana.js"></script>
+  <script src="../Our Salute_Test/js/progreso.js"></script>
+  <script src="../Our Salute_Test/js/boton.js"></script>
+  <script src="../Our Salute_Test/js/effects.js"></script>
+
+ 
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" crossorigin="anonymous"></script>
+  
+</html>

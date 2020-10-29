@@ -1,0 +1,463 @@
+body{
+  margin: 0;
+}
+
+
+/** IMAGEN HEADER **/
+
+.img-header {
+    height: 100vh !important;
+    background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+    background-size: cover!important;
+}
+
+.texto-header{
+	background: rgba(0, 0, 0, 0.747)!important;
+}
+
+
+.contenedor-test{
+    width: 700px;
+    height: 400px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.contenidoTrasero{
+	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+  background: rgba(60,65,71,1);
+  background: linear-gradient(to bottom, rgba(60,65,71,1) 0%, rgba(77,76,76,1) 100%);
+    width: 100%;
+    height: 90%;
+    position: absolute;
+    transform: translate(0,-50%);
+    top:50%;
+    display:flex;
+    align-content: center;
+    border-radius: 5px;
+}
+
+.contenidoFrontal{
+	box-shadow: 0px 0px 100px -10px black;
+  background: rgba(255,255,255,1);
+  background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(194,194,194,1) 100%);
+    border-radius: 5px;
+    height: 100%;
+    width: 47%;
+    z-index: 10;
+    position: absolute;
+    right:0;
+    margin-right: 3%;
+    margin-left: 3%;
+    transition: right 1.5s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.movimiento{
+  right:47%;
+}
+
+.frontalCompleto{
+  width: 94%;
+  left:0%;
+}
+
+.contenidoTrasero #presentacion h2{
+    margin: 20px 0;
+}
+
+.nota{
+text-align: center;
+}
+
+.bienvenida .texto{
+    margin: 25px 0;
+}
+
+.botonedit2{
+  margin: 50px auto 0px auto;
+}
+.alarmes{
+  margin-bottom: 50px;
+}
+
+
+.logo{
+  display: inline-block;
+}
+
+.inicio,.validacion{
+    width: 50%;
+    height: 100%;
+    font-size: 15px;
+    box-sizing: border-box;
+    align-content: center;
+    display: flex;
+}
+
+.inicio p,.validacion p{
+    font-weight: 100;
+}
+
+.contenido{
+    color:white;
+    padding: 20px;
+    margin: auto;
+    text-align: center;
+    align-items: center;
+
+}
+
+.contenido i{
+  margin: 0px 0px 0px 5px;
+  font-size: 19px;
+}
+
+.contenido hr{
+  width: 80%;
+  height: 1px;
+  border: none;
+  background: white;
+  margin: 30px auto 10px auto;
+}
+.contenido h6{
+  font-weight: 200;
+  font-size: 12px;
+}
+
+.validacion h2{
+    text-align: center;
+   margin-bottom: 20px;
+}
+
+
+.boton{
+    display: flex;
+    justify-content: center;
+}
+
+.form,.bienvenida{
+    padding: 20px;
+    text-align: center;
+   width: 100%;
+}
+
+.form h2,.bienvenida h2{
+    color: #29aeb7;
+    font-size:24px;
+    margin: 0 0 30px 0;
+}
+.input option{
+    background:transparent;
+}
+
+
+
+  .bienvenida p {
+      font-size: 16px;
+      color: #404040;
+
+  }
+
+  .inicio,.validacion{
+    transition: opacity 1.5s ease;
+  }
+  
+
+  .guardar{
+    position: relative;
+  }
+
+  .buttonEdit{
+    margin: 50px auto 50px auto;
+    width: 110px;
+  }
+
+  .buttonEdit1{
+    padding: 0;
+    margin: 30px auto 0 auto;
+    width: 120px;
+  }
+
+  .logo-test{
+   margin-bottom: 20px;
+    width: 100px;
+  }
+
+  #bienvenida-contenido{
+    margin-bottom: 40px;
+  }
+
+
+  .barra-colores{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-radius: 0 0 5px 5px;
+  }
+
+  .logo-ventana-test{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    margin: 20px;
+    opacity: 70%;
+  }
+
+  .texto1-ventana-test{
+    position: absolute;
+    top: 30px;
+    left: 75px;
+    font-size: 12px;
+    opacity: 70%;
+
+  }
+
+  .texto2-ventana-test{
+    position: absolute;
+    top: 45px;
+    left: 75px;
+    font-size: 12px;
+    opacity: 70%;
+
+
+  }
+
+
+  .preguntas-test{
+    width: 100%;
+    margin-bottom: 100px;
+font-size: 22px;
+transition: all 2s;
+font-family: 'Red Hat Text', sans-serif;
+font-weight: 400;
+letter-spacing: -1px;
+word-spacing: 3px;
+  }
+
+  .img-preguntas-test{
+width: 200px;
+transition: all 2s;
+  }
+
+  .contenido-form{
+    display: flex;
+    justify-content: center;
+  }
+  
+
+  #botones-iniciartest button{
+    width: 100px;
+display: block;
+margin: 60px 20px;
+padding: 12px 10px;
+  }
+
+  #botones-iniciartest button i{
+margin: 0 5px;
+font-size: 15px;
+font-weight: 100;
+z-index: -1000;
+  }
+
+
+.animacion-ventana-test{
+  animation: ventana ease-in-out .7s 
+}
+
+  @keyframes ventana{
+    0%{
+      transform: scale(1);
+    }
+    50%{
+      transform: scale(.97);
+    }
+    100%{
+      transform: scale(1);
+    }
+  }
+
+
+
+.porcentaje-test{
+font-size: 70px;
+}
+
+
+.enunciados-test{
+margin: 20px;
+font-weight: 600;
+}
+
+.telefonos-test{
+  font-size: 12px;
+
+}
+
+
+.numeros-Tel-test{
+  font-size: 17px;
+margin: 15px 0 ;
+font-weight: 600;
+}
+
+.recuerda{
+  font-size: 11px;
+  margin-bottom: 30px;
+  font-weight: 500;
+}
+
+
+#botones-resultados-test{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-radius: 0 0 5px 5px;
+  display: none;
+  justify-content: space-between;
+  padding: 30px 40px;
+}
+
+
+#botones-resultados-test button{
+  padding: 8px 15px;
+}
+
+
+.img-alertas div{
+  display: none;
+}
+
+.img-alertas img{
+  width: 100px;
+  margin: auto;
+  padding: 30px 0 60px 0;
+  transition: all .5s;
+}
+
+.img-alertas img:hover{
+  transform: scale(1.2);
+}
+
+
+
+.animacion-fin{
+  animation: animacionFin .5s;
+}
+
+@keyframes animacionFin{
+  0%{
+    opacity: 0%;
+    transform: scale(.97);
+  }
+  100%{
+    opacity: 100%;
+    transform: scale(1);
+  }
+}
+
+.finalizar-test{
+padding: 30px;
+}
+
+.finalizar-test p{
+  font-size: 15px;
+}
+
+#botones-finalizar-test{
+  width: 100%;
+  
+}
+
+#botones-finalizar-test button{
+  margin: auto;
+  padding: 7px 15px;
+}
+
+
+.agradecimiento-texto1{
+font-size: 19px !important; 
+font-weight: 600;
+}
+
+.agradecimiento-texto2{
+  font-size: 15px !important;
+  font-weight: 400;
+  margin: 5px 0 160px 0;
+
+}
+
+.agradecimiento-texto3{
+  font-size: 15px !important;
+  font-weight: 300;
+  margin: 5px;
+}
+
+.agradecimiento-texto4{
+  font-size: 15px !important;
+  font-weight: 400;
+  margin: 7px 0 10px 0;
+}
+
+.agradecimiento-hr{
+  height: 1px;
+  border: none;
+  background: black;
+  opacity: 40%;
+}
+
+.img-Fin{
+  position: absolute;
+  top: 62px;
+  left: 0;
+  width: 100%;
+  padding: 40px;
+  display: none;
+}
+
+.img-Fin img{
+  width: 150px;
+  margin: 20px;
+  transition: all .5s ease;
+}
+
+.img-Fin img:hover{
+  transform: scale(.9);
+  opacity: 85%;
+}
+
+
+.boton_cancelar{
+  display: flex;
+  position: fixed;
+  right: 40px;
+  bottom: 20px;
+  border: none;
+  border: 1px solid rgba(0, 0, 0, 0.062);
+  cursor: pointer;
+  z-index: 10000;
+  background: rgba(0, 0, 0, 0.034);
+  text-decoration: none;
+  color: black;
+  border-radius: 15px;
+  padding: 10px;
+  transition: all .5s;
+}
+
+
+.visible{
+  opacity: 0;
+}
+
+.ocultar{
+  display: none;
+}
