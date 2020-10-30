@@ -1,0 +1,10 @@
+                                              Elevator Pitch
+¿Sabías qué, según los datos revelados por el Instituto Nacional de Estadísticas y Censos(INEC),
+las 4 enfermedades más comunes en Ecuador son: Apendicitis, Colelitiasis, Neumonía y Gastroenteritis?
+¿Y que la diabetes es la segunda causa de muerte en el país? Y que además, 4 de cada 5 personas no saben 
+o no tienen información del centro médico en su zona. Todo esto se da por información poco clara o falta 
+de interés. 
+Bueno, nosotros te presentamos "Our Salute", una sitio web el cuál contiene información exacta y detallada  
+con la posiblilidad de acceder a un test  de cada enfermedad mencionada, que te ayudará con un porcentaje de 
+probabilidad de dicha enfermedad y por último, un buscador de centros médicos que le facilitará la dirección, 
+contacto, especialidades y horarios del centro médico que busque.
