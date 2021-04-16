@@ -1,0 +1,89 @@
+.parentContainer{
+    margin-left: 140px;
+}
+.resume{
+    display: flex;
+    align-items: center;
+    margin: -55px 0 ;
+}
+.title {
+    text-align: center;
+    width: 270px;
+    margin-top: 70px;
+}
+.title h1{
+    font-size: 60px;
+    font-weight: bold;
+    text-shadow: 0px 3px 6px rgb(0, 0, 0, 16%);
+}
+.title hr{
+    width: 270px;
+    height: 1.5px;
+    border: none;
+    background: #8D8D8D;
+    margin: auto;
+}
+.title h3{
+    font-size:20px;
+    font-weight: normal;
+    opacity: 63%;
+}
+.resume p{
+    font-size: 17px;
+    font-weight: normal;
+}
+.paragraphs{
+    width: 600px;
+    margin-top: 50px;
+    margin-bottom: 135px;
+}
+.paragraphs p{
+    margin: 20px 0;
+}
+.logo{
+    position: relative;
+}
+.logo .logoPng{
+    width: 400px;
+    margin-left: 100px;
+}
+.logo .logoBlack1{
+    width: 60px;
+    position: absolute;
+
+}
+.logo .logoBlack2{
+    width: 45px;
+    opacity:90%;
+    position: absolute;
+    top: 65px;
+    right:-80px;
+}
+.logo .logoBlack3{
+    width: 30px;
+    opacity:80%;
+    position: absolute;
+    top: 120px;
+    right:-50px;
+}
+button{
+    color: #000000;
+    font-weight: bold;
+    font-size: 15px;
+    border: none;
+    background: #D0D0D0;
+    border-radius: 35px;
+    width: 130px;
+    height: 35px;
+    box-shadow: 0px 3px 4px rgb(0, 0, 0, 16%);
+}
+button:hover{
+    color: #FFFFFF;
+    background: #555555;
+    cursor: pointer;
+}
+.note{
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 35px;
+}
