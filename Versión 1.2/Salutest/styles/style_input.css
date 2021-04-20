@@ -1,0 +1,29 @@
+
+/* INPUT FORMULARIO */
+
+.input_salutest {
+    width: 100%;
+    margin-bottom: 20px;
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+    height: 40px;
+    background: transparent;
+    font-size: 13px;
+    transition: all 0.3s linear;
+    opacity: 50%;
+  }
+  .input_salutest::placeholder{
+    color: #404040;
+    text-transform: none;
+  }
+  .input_salutest:hover{
+    background: rgba(0, 0, 0, 0.123);
+    border-radius: 5px;
+  }
+  
+  .input_salutest:focus{
+    background: rgba(78, 78, 78, 0.171);
+    border-radius: 5px;
+    opacity: 100%;
+  }

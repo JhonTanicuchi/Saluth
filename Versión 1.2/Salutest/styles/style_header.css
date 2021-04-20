@@ -1,9 +1,10 @@
 *{
     margin: 0;
     padding:0;
-    font-family: 'Segoe UI';
-    color: #8D8D8D;
+    font-family: var(--font);
+    color: var(--color_font_P);
 }
+
 body{
     background-color: white;
 }
@@ -37,3 +38,4 @@ header p{
     font-size:14px;
     opacity: 80%;
 }
+

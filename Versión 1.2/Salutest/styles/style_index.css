@@ -1,3 +1,10 @@
+*{
+    margin: 0;
+    padding:0;
+    font-family: var(--font);
+    color: var(--color_font_P);
+}
+
 .parentContainer{
     margin-left: 140px;
 }
@@ -20,7 +27,7 @@
     width: 270px;
     height: 1.5px;
     border: none;
-    background: #8D8D8D;
+    background: var(--color_font_P);
     margin: auto;
 }
 .title h3{
@@ -29,7 +36,7 @@
     opacity: 63%;
 }
 .resume p{
-    font-size: 17px;
+    font-size: 15px;
     font-weight: normal;
 }
 .paragraphs{
@@ -50,6 +57,9 @@
 .logo .logoBlack1{
     width: 60px;
     position: absolute;
+    border-radius: 50%;
+    box-shadow: 0px 3px 4px rgb(0, 0, 0, 50%);
+
 
 }
 .logo .logoBlack2{
@@ -57,33 +67,29 @@
     opacity:90%;
     position: absolute;
     top: 65px;
+    border-radius: 50%;
+
     right:-80px;
+    box-shadow: 0px 3px 4px rgb(0, 0, 0, 50%);
+
 }
 .logo .logoBlack3{
     width: 30px;
     opacity:80%;
     position: absolute;
     top: 120px;
+    border-radius: 50%;
     right:-50px;
+    box-shadow: 0px 3px 4px rgb(0, 0, 0, 50%);
+
 }
-button{
-    color: #000000;
-    font-weight: bold;
-    font-size: 15px;
-    border: none;
-    background: #D0D0D0;
-    border-radius: 35px;
-    width: 130px;
-    height: 35px;
-    box-shadow: 0px 3px 4px rgb(0, 0, 0, 16%);
-}
-button:hover{
-    color: #FFFFFF;
-    background: #555555;
-    cursor: pointer;
-}
+
 .note{
     font-size: 15px;
     font-weight: bold;
     margin-top: 35px;
+}
+
+.btn_login{
+    margin-left: 20px;
 }

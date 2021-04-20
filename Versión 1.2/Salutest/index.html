@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salutest</title>
+    <link rel="icon" href="/resources/img/Favicon.png" type="image/gif" sizes="16x16">
+
+
+    <!-- STYLES -->
+    <link href = "resources/fonts/SegoeUI/stylesheet.css" rel = "stylesheet" type = "text/css"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style_index.css">
+    <link rel="stylesheet" href="styles/style_popup.css">
+    <link rel="stylesheet" href="styles/style_logIn.css">
+    <link rel="stylesheet" href="styles/style_signup.css">
+    <link rel="stylesheet" href="styles/style_welcome.css">
+    <link rel="stylesheet" href="styles/style_button.css">
+    <link rel="stylesheet" href="styles/style_input.css">
+    <link rel="stylesheet" href="styles/style_loader.css">
+    <link rel="stylesheet" href="styles/variable.css">
+
+
+    <!-- SCRIPTS -->
+    <script src="js/jquery-3.6.0.min.js" type="text/javascript"></script>   
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://kit.fontawesome.com/35db202371.js"></script>
+    <script src="/js/include-html.js"></script>
+    <script src="/js/loader.js"></script>
+</head>
+
+
+<body>
+
+
+
+
+
+
+    <!-- LOADER -->
+    <div class="loader" id="loader">
+        <div class="spinner">
+            <div class="double-bounce1"></div>
+            <div class="double-bounce2"></div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <!-- INDEX -->
+    <div data-include="/views/modules/header.html"></div>
+    <main>
+        <div class="parentContainer">
+            <div class="title">
+                <h1 data-aos="fade-right"
+                data-aos-offset="300"
+                data-aos-duration="1000"
+                data-aos-easing="ease-in-sine">Salutest</h1>
+                <hr data-aos="flip-left"
+                data-aos-delay="1000"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="2000">
+                <h3 data-aos="fade-right"
+                data-aos-offset="300"
+                data-aos-duration="800"
+                data-aos-delay="200"
+                data-aos-easing="ease-in-sine">Digitaliza tu vida</h3>
+            </div>
+            <section class="resume">
+                <div class="paragraphs" >
+                    <p data-aos="fade-zoom-in"
+                    data-aos-easing="ease-in-back"
+                    data-aos-delay="500"
+                    data-aos-offset="0">Salutest es un Pretest que te ayudará a identificar si es necesario tomar una cita médica.</p>
+                    <p data-aos="fade-zoom-in"
+                    data-aos-easing="ease-in-back"
+                    data-aos-delay="600"
+                    data-aos-offset="0">Salutest te ofrece un test de evaluación de tus síntomas, un buscador de <br> enfermedades y un historial de tus resultados.</p>
+                    <p data-aos="fade-zoom-in"
+                    data-aos-easing="ease-in-back"
+                    data-aos-delay="700"
+                    data-aos-offset="0">Este aplicativo te ayudará a identificar posibles padecimientos o enfermedades.</p>
+                </div>
+                <div class="logo">
+                    <img class="logoPng" src="resources/img/Icono.png" alt="" data-aos="fade-left" data-aos-duration="1000">
+                    <img class="logoBlack1" src="resources/img/Favicon.png" alt="">
+                    <img class="logoBlack2" src="resources/img/Favicon.png" alt="">
+                    <img class="logoBlack3" src="resources/img/Favicon.png" alt="">
+                </div> 
+            </section>
+            
+            <button class="btn_salutest" id="start" data-aos="zoom-in" data-aos-delay="800">Empezar</button>
+            <button class="btn_salutest btn_login" id="open_login" data-aos="zoom-in" data-aos-delay="800">Iniciar Sesión</button>
+            
+            <p class="note" data-aos="fade-zoom-in"
+            data-aos-easing="ease-in-back"
+            data-aos-delay="900"
+            data-aos-offset="0">Tu salud es importante, si presentas algún síntoma te recomendamos unirte ya!!</p>
+        </div>
+    </main>
+
+
+
+
+
+    <div class="overlay" id="overlay">
+    
+
+
+        <!-- POPUP LOGIN -->
+        <div class="container_popup" id="container_login">
+            <div class="popup login" id="login_popup">
+                <img class="logo" src="/resources/img/Favicon.png" alt="">
+                <a href="#" id="close_login" ><i class="fas fa-times close_popup"></i></a>
+                <div class="part_top">
+                    <h1>Iniciar Sesión</h1>
+                    <form id="login_form">
+                        <div class="credentials_login" >
+                            <input 
+                                class="input_salutest" 
+                                id="email_login" 
+                                type="email" 
+                                placeholder="Correo Electrónico"
+                                required
+                                autocomplete="off">
+                            <input class="input_salutest" id="password_login" type="password" placeholder="Contraseña">
+                        </div>
+                        <button class="btn_salutest btn_login_edit" type="submit">Iniciar Sesión</button>
+                    </form>
+                </div> 
+                <div class="part_bottom">
+                    <div class="separation" >
+                        <hr>
+                        <span><p>o</p></span>
+                        <hr>
+                    </div>
+                    <div class="container_accounts" >
+                        <div class="m">
+                            <img src="/resources/img/icon_microsoft.png" alt="">
+                        </div> 
+                        <div class="a">
+                            <i class="fab fa-apple"></i>  
+                        </div>                  
+                        <div class="g">
+                            <img src="/resources/img/icon_google.png" alt="">
+                        </div>                   
+                        <div class="f">
+                            <i class="fab fa-facebook"></i>
+                        </div>
+                    </div>
+                    <div class="fotter">
+                        <p>Al continuar, aceptas las Condiciones del servicio y la Política de privacidad de Salutest. </p>
+                        <hr>
+                        <a id="open_signup" href="#">¿Aun no estas registrado? Regístrate</a>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    
+    
+    
+    
+    
+    
+    
+        <!-- POPUP SIGNUP -->
+        <div class="container_popup" id="container_signup">
+            <div class="popup signup" id="signup_popup">
+                <img class="logo" src="/resources/img/Favicon.png" alt="">
+                <a href="#" id="close_signup" ><i class="fas fa-times close_popup"></i></a>
+                <div class="part_top">
+                    <h1>Registrate</h1>
+                    <form id="signup_form">
+                        <div class="credentials_signup" >
+                            <input class="input_salutest" id="email_singup" type="email" placeholder="Correo Electrónico"><input class="input_salutest" id="password_signup" type="password" placeholder="Contraseña">
+                            <input class="input_salutest" id="check_password_signup" type="password" placeholder="Confirmar contraseña">
+                        </div>
+                        <button class="btn_salutest btn_signup_edit" type="submit">Registrarse</button>
+                    </form>
+                </div> 
+                <div class="part_bottom">
+                    <div class="fotter">
+                        <p>Al continuar, aceptas las Condiciones del servicio y la Política de privacidad de Salutest. </p>
+                        <hr>
+                        <a id="back_login" href="#">¿Ya tienes cuenta? Inicia Sesión</a>
+                    </div>
+                </div> 
+            </div>
+        </div>
+
+
+
+
+
+
+
+        <!-- POPUP SIGNUP GOOD -->
+        <div class="container_popup" id="container_signup_good">
+            <div class="popup signup_good" id="signup_good_popup">
+                <img class="logo" src="/resources/img/Favicon.png" alt="">
+                <div class="contents">
+                    <h1>Bienvenido a Salutest</h1>
+                    <h3>Registro exitoso</h3>
+                    <hr>
+                    <p>Ahora podrás acceder a todos los servicios que ofrece Salutest.</p>
+                    <h6>Digtaliza tu vida</h6>
+                    <button class="btn_salutest" id="close_signup_good">Aceptar</button>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+
+
+    <!-- SCRIPTS -->
+    <script src="/js/popup.js"></script>
+    <script src="/js/effects.js"></script>
+    <script src="/js/authentication.js"></script>
+
+
+</body>
+</html>
