@@ -16,6 +16,11 @@
     --color_background_H: #555555;
     --color_font_H: #FFFFFF;
 
+/* COLORS NAV */
+    --color_background_NAV: #6D6B6B;
+    
+/* COLORS CHAT */
+    --color_background_CHAT: #EEEFEF;
 
 /* FONTS */
     --font: 'Segoe UI';

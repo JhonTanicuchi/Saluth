@@ -5,8 +5,14 @@
     color: var(--color_font_P);
 }
 
+main{
+    width: 100%;
+    height: calc(100vh - 68.59px - 70px);
+    padding-top: 70px;
+}
+
 .parentContainer{
-    margin-left: 140px;
+    margin-left: 150px;
 }
 .resume{
     display: flex;
@@ -16,7 +22,6 @@
 .title {
     text-align: center;
     width: 270px;
-    margin-top: 70px;
 }
 .title h1{
     font-size: 60px;
@@ -42,7 +47,7 @@
 .paragraphs{
     width: 600px;
     margin-top: 50px;
-    margin-bottom: 135px;
+    margin-bottom: 100px;
 }
 .paragraphs p{
     margin: 20px 0;
@@ -52,7 +57,7 @@
 }
 .logo .logoPng{
     width: 400px;
-    margin-left: 100px;
+    margin-left: 150px;
 }
 .logo .logoBlack1{
     width: 60px;

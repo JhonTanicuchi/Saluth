@@ -1,0 +1,7 @@
+.container_nav{
+    width: 60px;
+    height: 650px;
+    border-radius: 30px;
+    background: var(--color_background_NAV);
+
+}
