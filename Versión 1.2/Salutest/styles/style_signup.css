@@ -1,6 +1,6 @@
 .signup {
     width: 400px !important;
-    height: 550px !important;
+    height: 520px !important;
 }
 
 .signup .part_top {
@@ -10,6 +10,7 @@
 
 .signup .part_top h1 {
     color: black;
+    font-size: 20px;
 }
 .credentials_signup {
     width: 300px;

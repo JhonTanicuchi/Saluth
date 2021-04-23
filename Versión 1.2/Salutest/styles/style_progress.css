@@ -1,0 +1,28 @@
+.progress {
+  margin-top: 10px;
+  height: 8px;
+  position: relative;
+  background: #858fa0;
+  border-radius: 25px;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25),
+    0 1px rgba(255, 255, 255, 0.08);
+}
+.progress > span {
+  width: 10%;
+  display: block;
+  height: 100%;
+  border-radius: 5px;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0.05)
+  );
+  background-color: var(--color_test_P);
+  position: relative;
+  overflow: hidden;
+  transition: 1.5s linear;
+}
+
+.progress:hover > span {
+  width: 100%;
+}

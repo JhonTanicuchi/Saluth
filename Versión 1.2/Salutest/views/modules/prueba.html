@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/Versión 1.2/Salutest/styles/variable.css">
+    <link rel="stylesheet" href="/Versión 1.2/Salutest/styles/style_header.css">
+    <link rel="stylesheet" href="/Versión 1.2/Salutest/styles/style_index.css">
+    <link rel="stylesheet" href="/Versión 1.2/Salutest/styles/style_darkMode.css">
+    <link rel="stylesheet" href="/Versión 1.2/Salutest/styles/style_switch.css">
+
+    <script src="https://kit.fontawesome.com/35db202371.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    
+    
+</head>
+<body>
+    <button id="press">press</button>
+    <div id="contenido">
+
+    </div>
+
+
+    
+</body>
+<script>
+    $(document).ready(function(){
+        $('#press').click(function(){
+            $("#contenido").load("header.html");
+        });
+    });
+</script>
+<script src="/Versión 1.2/Salutest/js/darkMode.js"></script>
+
+</html>

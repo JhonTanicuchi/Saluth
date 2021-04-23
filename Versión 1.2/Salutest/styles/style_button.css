@@ -1,17 +1,19 @@
 .btn_salutest{
-    color: var(--color_font);
+    color: black;
     font-weight: bold;
     font-size: 15px;
-    border: none;
-    background: var(--color_background);
+    border: solid 1px black;
+    background: white;
     border-radius: 35px;
-    width: 130px;
+    width: 135px;
     height: 35px;
-    box-shadow: 0px 3px 4px rgb(0, 0, 0, 16%);
+    border: none;
+    box-shadow: 0px 3px 6px rgb(0, 0, 0, 0.15);
 }
 .btn_salutest:hover{
+    border: none;
     color: var(--color_font_H);
-    background: var(--color_background_H);
+    background: linear-gradient(to right, rgba(2,128,167,0.67) 0%, rgba(2,128,167,1) 100%);
     cursor: pointer;
 }
 

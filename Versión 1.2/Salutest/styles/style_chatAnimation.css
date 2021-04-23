@@ -1,0 +1,40 @@
+.spinner_chat {
+  width: 60px;
+  height: 35px;
+  background: #858fa0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10px;
+  border-radius: 0px 15px 15px 15px;
+}
+
+.spinner_chat > div {
+  width: 7px;
+  height: 7px;
+  margin: 0 1px;
+  background-color: #535965;
+
+  border-radius: 100%;
+  display: inline-block;
+  animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.spinner_chat .bounce1 {
+  animation-delay: -0.32s;
+}
+
+.spinner_chat .bounce2 {
+  animation-delay: -0.16s;
+}
+
+@keyframes sk-bouncedelay {
+  0%,
+  80%,
+  100% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(1);
+  }
+}

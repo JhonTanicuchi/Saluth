@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Salutest</title>
-    <link rel="icon" href="/Versión 1.2/Salutest/resources/img/Favicon.png" type="image/gif" sizes="16x16">
+    <link rel="icon" href="/Versión 1.2/Salutest/resources/img/icon_new_dark.png" type="image/gif" sizes="16x16">
 
 
     <!-- STYLES -->
@@ -14,6 +14,8 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="/Versión 1.2/Salutest/styles/style_popup.css">
     <link rel="stylesheet" href="/Versión 1.2/Salutest/styles/style_logIn.css">
+    <link rel="stylesheet" href="/Versión 1.2/Salutest/styles/style_header.css">
+    <link rel="stylesheet" href="/Versión 1.2/Salutest/styles/style_switch.css">
     <link rel="stylesheet" href="/Versión 1.2/Salutest/styles/style_index.css">
     <link rel="stylesheet" href="/Versión 1.2/Salutest/styles/style_signup.css">
     <link rel="stylesheet" href="/Versión 1.2/Salutest/styles/style_welcome.css">
@@ -21,15 +23,17 @@
     <link rel="stylesheet" href="/Versión 1.2/Salutest/styles/style_input.css">
     <link rel="stylesheet" href="/Versión 1.2/Salutest/styles/style_loader.css">
     <link rel="stylesheet" href="/Versión 1.2/Salutest/styles/variable.css">
+    <link rel="stylesheet" href="/Versión 1.2/Salutest/styles/style_darkMode.css">
 
 
     <!-- SCRIPTS -->
-    <script src="/Versión 1.2/Salutest/js/jquery-3.6.0.min.js" type="text/javascript"></script>   
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://kit.fontawesome.com/35db202371.js"></script>
     <script src="/Versión 1.2/Salutest/js/include-html.js"></script>
     <script src="/Versión 1.2/Salutest/js/loader.js"></script>
+
+
 </head>
 
 
@@ -52,9 +56,20 @@
 
 
 
-
     <!-- INDEX -->
-    <div data-include="/Versión 1.2/Salutest/views/modules/header.html"></div>
+    <header>
+        <div>
+            <img src="/Versión 1.2/Salutest/resources/img/icon_new_png.png" alt="" />
+            <h1>Salutest</h1>
+        </div>
+        <p>V1.2</p>
+        
+        <button class="switch" id="switch">
+            <span><i class="fas fa-sun"></i></span>
+            <span><i class="fas fa-moon"></i></span>
+        </button>
+        
+    </header>
     <main>
         <div class="parentContainer">
             <div class="title">
@@ -77,25 +92,21 @@
                     <p data-aos="fade-zoom-in"
                     data-aos-easing="ease-in-back"
                     data-aos-delay="500"
-                    data-aos-offset="0">Salutest es un Pretest que te ayudará a identificar si es necesario tomar una cita médica.</p>
+                    data-aos-offset="0">Salutest es un aplicativo que te ayudará a identificar posibles enfermedades para evitar tratamientos innecesarios, ayudandote en una mejor toma de decisiones.</p>
                     <p data-aos="fade-zoom-in"
                     data-aos-easing="ease-in-back"
                     data-aos-delay="600"
-                    data-aos-offset="0">Salutest te ofrece un test de evaluación de tus síntomas, un buscador de <br> enfermedades y un historial de tus resultados.</p>
-                    <p data-aos="fade-zoom-in"
-                    data-aos-easing="ease-in-back"
-                    data-aos-delay="700"
-                    data-aos-offset="0">Este aplicativo te ayudará a identificar posibles padecimientos o enfermedades.</p>
+                    data-aos-offset="0">Podras acceder a una evaluación de tus síntomas y a un historial de tus diagnósticos.</p>
                 </div>
                 <div class="logo">
-                    <img class="logoPng" src="/Versión 1.2/Salutest/resources/img/Icono.png" alt="" data-aos="fade-left" data-aos-duration="1000">
-                    <img class="logoBlack1" src="/Versión 1.2/Salutest/resources/img/Favicon.png" alt="">
-                    <img class="logoBlack2" src="/Versión 1.2/Salutest/resources/img/Favicon.png" alt="">
-                    <img class="logoBlack3" src="/Versión 1.2/Salutest/resources/img/Favicon.png" alt="">
+                    <img class="logoPng" src="/Versión 1.2/Salutest/resources/img/icon_new_png.png" alt="" data-aos-delay="500" data-aos="fade-left" data-aos-duration="1000">
+                    <img class="logoBlack1" src="/Versión 1.2/Salutest/resources/img/icon_new_dark.png" alt="">
+                    <img class="logoBlack2" src="/Versión 1.2/Salutest/resources/img/icon_new_dark.png" alt="">
+                    <img class="logoBlack3" src="/Versión 1.2/Salutest/resources/img/icon_new_dark.png" alt="">
                 </div> 
             </section>
             
-            <button class="btn_salutest" id="start" data-aos="zoom-in" data-aos-delay="800">Empezar Test</button>
+            <button class="btn_salutest" id="start" onclick="window.location.href='/Versión 1.2/Salutest/views/modules/test.html'" data-aos="zoom-in" data-aos-delay="800">Evalúa tu salud</button>
             <button class="btn_salutest btn_login" id="open_login" data-aos="zoom-in" data-aos-delay="800">Iniciar Sesión</button>
             
             <p class="note" data-aos="fade-zoom-in"
@@ -116,7 +127,7 @@
         <!-- POPUP LOGIN -->
         <div class="container_popup" id="container_login">
             <div class="popup login" id="login_popup">
-                <img class="logo" src="/Versión 1.2/Salutest/resources/img/Favicon.png" alt="">
+                <img class="logo" src="/Versión 1.2/Salutest/resources/img/icon_new_dark.png" alt="">
                 <a href="#" id="close_login" ><i class="fas fa-times close_popup"></i></a>
                 <div class="part_top">
                     <h1>Iniciar Sesión</h1>
@@ -172,14 +183,15 @@
         <!-- POPUP SIGNUP -->
         <div class="container_popup" id="container_signup">
             <div class="popup signup" id="signup_popup">
-                <img class="logo" src="/Versión 1.2/Salutest/resources/img/Favicon.png" alt="">
+                <img class="logo" src="/Versión 1.2/Salutest/resources/img/icon_new_dark.png" alt="">
                 <a href="#" id="close_signup" ><i class="fas fa-times close_popup"></i></a>
                 <div class="part_top">
                     <h1>Registrate</h1>
                     <form id="signup_form">
                         <div class="credentials_signup" >
-                            <input class="input_salutest" id="email_singup" type="email" placeholder="Correo Electrónico"><input class="input_salutest" id="password_signup" type="password" placeholder="Contraseña">
-                            <input class="input_salutest" id="check_password_signup" type="password" placeholder="Confirmar contraseña">
+                            <input class="input_salutest" id="email_singup" type="email" placeholder="Correo Electrónico" autocomplete="off" required>
+                            <input class="input_salutest" id="password_signup" type="password" placeholder="Contraseña" autocomplete="off" required>
+                            <input class="input_salutest" id="check_password_signup" type="password" placeholder="Confirmar contraseña" autocomplete="off" required>
                         </div>
                         <button class="btn_salutest btn_signup_edit" type="submit">Registrarse</button>
                     </form>
@@ -203,7 +215,7 @@
         <!-- POPUP SIGNUP GOOD -->
         <div class="container_popup" id="container_signup_good">
             <div class="popup signup_good" id="signup_good_popup">
-                <img class="logo" src="/Versión 1.2/Salutest/resources/img/Favicon.png" alt="">
+                <img class="logo" src="/Versión 1.2/Salutest/resources/img/icon_new_dark.png" alt="">
                 <div class="contents">
                     <h1>Bienvenido a Salutest</h1>
                     <h3>Registro exitoso</h3>
@@ -226,6 +238,8 @@
     <script src="/Versión 1.2/Salutest/js/popup.js"></script>
     <script src="/Versión 1.2/Salutest/js/effects.js"></script>
     <script src="/Versión 1.2/Salutest/js/authentication.js"></script>
+
+    <script src="/Versión 1.2/Salutest/js/darkMode.js"></script>
 
 
 </body>

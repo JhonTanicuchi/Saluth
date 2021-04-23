@@ -1,41 +1,41 @@
-*{
-    margin: 0;
-    padding:0;
-    font-family: var(--font);
-    color: var(--color_font_P);
+body {
+  background-color: white;
 }
 
-body{
-    background-color: white;
-}
-header{
-    background-color: white;
-    position:relative;
-    margin:auto;
-    padding:10px 35px;
-    border-bottom: 1px solid rgb(0, 0, 0, 10%);
-    display: flex;
-    justify-content:space-between;
-}
-header div{
-    display: flex;
-    align-items: center;
-}
-header img{
-    width: 45px;
-    display: inline;
-
-}
-header h1{
-    font-size:14px;
-    display: inline;
-    text-shadow: 0px 3px 6px rgb(0, 0, 0, 16%);
-    margin: 20px 0px 0px -5px;
-    font-weight: bold;
-}
-header p{
-    font-weight: lighter;
-    font-size:14px;
-    opacity: 80%;
+header {
+  background-color: white;
+  position: relative;
+  margin: auto;
+  padding: 10px 35px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
+header div {
+  display: flex;
+  align-items: center;
+}
+
+header img {
+  width: 45px;
+  display: inline;
+}
+
+header h1 {
+  font-size: 14px;
+  display: inline;
+  text-shadow: 0px 3px 6px rgb(0, 0, 0, 16%);
+  margin: 20px 0px 0px -5px;
+  font-weight: bold;
+}
+
+header p {
+  font-weight: lighter;
+  font-size: 14px;
+  opacity: 80%;
+}
+
+.switch.disable {
+  display: none;
+}

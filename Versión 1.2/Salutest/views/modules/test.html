@@ -6,26 +6,305 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Salutest | Test</title>
-    <link rel="icon" href="/Versión 1.2/Salutest/resources/img/Favicon.png" type="image/gif" sizes="16x16">
+    <link rel="icon" href="/Versión 1.2/Salutest/resources/img/icon_new_png.png" type="image/gif" sizes="16x16">
 
     <!-- STYLES -->
-    <link rel="stylesheet" href="/Versión 1.2/Salutest/styles/style_test.css" />
     <link rel="stylesheet" href="/Versión 1.2/Salutest/styles/variable.css" />
-
+    <link rel="stylesheet" href="/Versión 1.2/Salutest/styles/style_darkMode.css">
+    <link rel="stylesheet" href="/Versión 1.2/Salutest/styles/style_popup.css">
+    <link rel="stylesheet" href="/Versión 1.2/Salutest/styles/style_logIn.css">
+    <link rel="stylesheet" href="/Versión 1.2/Salutest/styles/style_signup.css">
+    <link rel="stylesheet" href="/Versión 1.2/Salutest/styles/style_input.css">
+    <link rel="stylesheet" href="/Versión 1.2/Salutest/styles/style_header.css" />
+    <link rel="stylesheet" href="/Versión 1.2/Salutest/styles/style_nav.css" />
+    <link rel="stylesheet" href="/Versión 1.2/Salutest/styles/style_test.css" />
+    <link rel="stylesheet" href="/Versión 1.2/Salutest/styles/style_loader.css" />
+    <link rel="stylesheet" href="/Versión 1.2/Salutest/styles/style_switch.css">
+    <link rel="stylesheet" href="/Versión 1.2/Salutest/styles/style_chat.css">
+    <link rel="stylesheet" href="/Versión 1.2/Salutest/styles/style_button.css">
+    <link rel="stylesheet" href="/Versión 1.2/Salutest/styles/style_chatAnimation.css">
+    <link rel="stylesheet" href="/Versión 1.2/Salutest/styles/style_progress.css">
+    
+    
+    
     <!-- SCRIPTS -->
-    <script src="/Versión 1.2/Salutest/js/include-html.js"></script>
+    <script src="https://kit.fontawesome.com/35db202371.js"></script>
+    <script src="/Versión 1.2/Salutest/js/loader.js"></script>
+    <script src="/Versión 1.2/Salutest/js/login_controller.js"></script>
+    
 
 </head>
 
 <body>
-    <div data-include="/Versión 1.2/Salutest/views/modules/header.html"></div>
-    <div class="container_test">
-        <div data-include="/Versión 1.2/Salutest/views/modules/nav.html"></div>
-        <section class="dashboard">
+
+    <!-- LOADER -->
+    <div class="loader" id="loader">
+        <div class="spinner">
+            <div class="double-bounce1"></div>
+            <div class="double-bounce2"></div>
+        </div>
+    </div>
+
+
+    <div class="master_container">
+        <nav>
+            <div class="cont_items profile disable" id="profile">
+                <div class="items">
+                    <i class="fas fa-user"></i>
+                </div>
+                <p>Perfil</p>
+            </div>
         
-        </section>
+            <div class="modules cont_items enable" id="modules">
+                <div class="cont_items">
+                    <div class="items active">
+                        <i class="fas fa-notes-medical"></i>
+                    </div>
+                    <p>Test</p>
+                </div>
+                
+                <div class="cont_items disable" id="btn_H">
+                    <div class="items">
+                        <i class="fas fa-history"></i>
+                    </div>
+                    <p>Historial</p>
+                </div>
+            </div>
+        
+            <div class="cont_items singout">
+                <div class="items" onclick="window.location.href='/Versión 1.2/Salutest/index.html'">
+                    <i class="fas fa-sign-out-alt"></i>
+                </div>
+                <p>Salir</p>
+            </div>
+        </nav>
+        
+        
+        <main>
+
+            <div class="header">
+                <div class="section_header_details">
+                    <img src="/Versión 1.2/Salutest/resources/img/icon_new_png.png" alt="">
+                </div>
+                <div class="section_progress">
+                    <div>
+                        <h6>Progreso</h6>
+                        
+                        <div class="progress">
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container_main">
+                <div class="central_container"> 
+                    <div class="profile_details">
+                        <img src="/Versión 1.2/Salutest/resources/img/img_profile.png" alt="">
+                        <h1>Medicina General</h1>
+                    </div>
+                    
+                    
+                    
+                    <div class="chat_area">
+                        <section class="messages" id="messages">
+                        <!-- CHAT -->
+                        </section>
+                        
+                        <form id="form_chat">
+                            <div class="interaction">
+                                <input id="answer" type="text" placeholder="Ejemplo: Dolor de cabeza, Fiebre" autocomplete="off">
+                                <button class="btn_send" id="send"><i class="fas fa-paper-plane"></i></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                
+                
+                <section class="content_right">
+                    <div class="section_filter">
+                        <div class="contect_search disable" id="contect_search">
+                            <div class="filter">
+                                <i class="fas fa-search"></i>
+                                <input type="text" placeholder="Busca tus consultas médicas">
+                            </div>
+                        </div>
+                        
+                        <section class="inquiries disable" id="inquiries">
+                            <div class="chat_specialty ">
+                                <hr>
+                                <div class="container_specialty">
+                                    <img src="/Versión 1.2/Salutest/resources/img/img_profile.png" alt="">
+                                    <div class="chat_specialty_details">
+                                        <div>
+                                            <h3>Medicina General</h3>
+                                            <h6>3:24 PM</h6>
+                                        </div>
+                                        <p><span>Estado:</span> Completado</p>
+                                    </div>
+                                </div>
+                                <hr>
+                            </div>
+                
+                
+                            <div class="chat_specialty active">
+                                <hr>
+                                <div class="container_specialty">
+                                    <img src="/Versión 1.2/Salutest/resources/img/img_profile.png" alt="">
+                                    <div class="chat_specialty_details">
+                                        <div>
+                                            <h3>Odontología</h3>
+                                            <h6>5:00 AM</h6>
+                                        </div>
+                                        <p><span>Estado:</span> En curso</p>
+                                    </div>
+                                </div>
+                                <hr>
+                            </div>
+                        </section>
+                
+                        <section class="login_false" id="login_false">
+                            <div>
+                                <p>Inicia Sesión o Registrarte para acceder a todos los servicios que te ofrece Salutest.</p>
+                                <button class="btn_salutest" id="open_login">Iniciar Sesión</button>
+                            </div>
+                        </section>
+                    </div>
+                </section>
+                
+            </div>
+                
+            
+        
+            
+            
+        </main>
     </div>
     
+
+
+
+
+
+    <div class="overlay" id="overlay">
+    
+
+
+        <!-- POPUP LOGIN -->
+        <div class="container_popup" id="container_login">
+            <div class="popup login" id="login_popup">
+                <img class="logo" src="/Versión 1.2/Salutest/resources/img/icon_new_dark.png" alt="">
+                <a href="#" id="close_login" ><i class="fas fa-times close_popup"></i></a>
+                <div class="part_top">
+                    <h1>Iniciar Sesión</h1>
+                    <form id="login_form">
+                        <div class="credentials_login" >
+                            <input 
+                                class="input_salutest" 
+                                id="email_login" 
+                                type="email" 
+                                placeholder="Correo Electrónico"
+                                required
+                                autocomplete="off">
+                            <input class="input_salutest" id="password_login" type="password" placeholder="Contraseña">
+                        </div>
+                        <button class="btn_salutest btn_login_edit" type="submit">Iniciar Sesión</button>
+                    </form>
+                </div> 
+                <div class="part_bottom">
+                    <div class="separation" >
+                        <hr>
+                        <span><p>o</p></span>
+                        <hr>
+                    </div>
+                    <div class="container_accounts" >
+                        <div class="m">
+                            <img src="/Versión 1.2/Salutest/resources/img/icon_microsoft.png" alt="">
+                        </div> 
+                        <div class="a">
+                            <i class="fab fa-apple"></i>  
+                        </div>                  
+                        <div class="g">
+                            <img src="/Versión 1.2/Salutest/resources/img/icon_google.png" alt="">
+                        </div>                   
+                        <div class="f">
+                            <i class="fab fa-facebook"></i>
+                        </div>
+                    </div>
+                    <div class="fotter">
+                        <p>Al continuar, aceptas las Condiciones del servicio y la Política de privacidad de Salutest. </p>
+                        <hr>
+                        <a id="open_signup" href="#">¿Aun no estas registrado? Regístrate</a>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    
+    
+    
+    
+    
+    
+    
+        <!-- POPUP SIGNUP -->
+        <div class="container_popup" id="container_signup">
+            <div class="popup signup" id="signup_popup">
+                <img class="logo" src="/Versión 1.2/Salutest/resources/img/icon_new_dark.png" alt="">
+                <a href="#" id="close_signup" ><i class="fas fa-times close_popup"></i></a>
+                <div class="part_top">
+                    <h1>Registrate</h1>
+                    <form id="signup_form">
+                        <div class="credentials_signup" >
+                            <input class="input_salutest" id="email_singup" type="email" placeholder="Correo Electrónico" autocomplete="off" required>
+                            <input class="input_salutest" id="password_signup" type="password" placeholder="Contraseña" autocomplete="off" required>
+                            <input class="input_salutest" id="check_password_signup" type="password" placeholder="Confirmar contraseña" autocomplete="off" required>
+                        </div>
+                        <button class="btn_salutest btn_signup_edit" type="submit">Registrarse</button>
+                    </form>
+                </div> 
+                <div class="part_bottom">
+                    <div class="fotter">
+                        <p>Al continuar, aceptas las Condiciones del servicio y la Política de privacidad de Salutest. </p>
+                        <hr>
+                        <a id="back_login" href="#">¿Ya tienes cuenta? Inicia Sesión</a>
+                    </div>
+                </div> 
+            </div>
+        </div>
+
+
+
+
+
+
+
+        <!-- POPUP SIGNUP GOOD -->
+        <div class="container_popup" id="container_signup_good">
+            <div class="popup signup_good" id="signup_good_popup">
+                <img class="logo" src="/Versión 1.2/Salutest/resources/img/icon_new_dark.png" alt="">
+                <div class="contents">
+                    <h1>Bienvenido a Salutest</h1>
+                    <h3>Registro exitoso</h3>
+                    <hr>
+                    <p>Ahora podrás acceder a todos los servicios que ofrece Salutest.</p>
+                    <h6>Digtaliza tu vida</h6>
+                    <button class="btn_salutest" id="close_signup_good">Aceptar</button>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+
+
 </body>
+<script src="/Versión 1.2/Salutest/js/popup.js"></script>
+<script src="/Versión 1.2/Salutest/js/darkMode.js"></script>
+<script src="/Versión 1.2/Salutest/js/date.js"></script>
+<script src="/Versión 1.2/Salutest/js/text_bot.js"></script>
+<script src="/Versión 1.2/Salutest/js/chat.js"></script>
 
 </html>
