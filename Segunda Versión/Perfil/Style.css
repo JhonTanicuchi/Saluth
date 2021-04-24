@@ -1,0 +1,73 @@
+body{
+    padding: 0;
+    margin: 0;
+    background: #ffffff;
+}
+
+.Perfil{
+    width: 870px;
+    height: 400px;
+    position: relative;
+    top: 80px;
+    left: 400px;
+    background:  #cccaca54 ;
+    border-radius: 2%;
+    text-align: center;
+    color:#9c9595 ;
+}
+
+.Perfil h1{
+    text-align: left;
+    position: relative;
+    top: 20px;
+    left: 20px;
+    color: #6d6565;
+}
+
+.img{
+    width: 90px;
+    height: 90px;
+    background: #cfcdcd;
+    border-radius: 50%;
+}
+
+.input1{
+    position: relative;
+    top: 5px;
+    width: 150px; 
+    border: none;
+    background: #cfcdcd;
+    text-align: center;
+}
+
+.input2{
+    position: relative;
+    top: 40px;
+    width: 200px;
+    border: none;
+    border-bottom: 1px solid;
+    outline: none;
+    background: #cfcdcd; 
+}
+
+.button1{
+    position: relative;
+    top: 60px;
+    text-align: center;
+    padding: 5px 5px;
+    color: #000000;
+    background: #cfcdcd;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.button2{
+    position: relative;
+    top: 110px;
+    text-align: center;
+    padding: 5px 10px;
+    color: #000000;
+    background: #cfcdcd;
+    border-radius: 50px;
+    text-decoration: none;
+}
