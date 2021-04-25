@@ -1,0 +1,198 @@
+body{
+    padding: 0;
+    margin: 0;
+    background: #ffffff;
+}
+
+.Perfil{
+    width: 100%;
+    max-width: 1145px;
+    height: 500px;
+    position: absolute;
+    top: 60px;
+    left: 200px;
+    background:  #cccaca54 ;
+    border-radius: 2%;
+    color:#9c9595 ;
+    text-align: center;
+}
+
+.Perfil h1{
+    text-align: left;
+    position: relative;
+    top: 20px;
+    left: 20px;
+    color: #6d6565;
+}
+
+.Usuario{
+    width: 90px;
+    height: 90px;
+    position: relative;
+    left: 70px;
+    background: #cfcdcd;
+    border-radius: 50%;
+}
+
+.input1{
+    width: 150px; 
+    position: relative;
+    top: 20px;
+    left: 90px;
+    border: none;
+    background: #cfcdcd;
+}
+
+.input2{
+    position: relative;
+    top: 40px;
+    width: 200px;
+    border: none;
+    border-bottom: 1px solid;
+    outline: none;
+    background: #cfcdcd; 
+}
+
+.button1{
+    position: relative;
+    top: 60px;
+    text-align: center;
+    padding: 5px 5px;
+    color: #000000;
+    background: #cfcdcd;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.button2{
+    position: relative;
+    top: 110px;
+    text-align: center;
+    padding: 5px 10px;
+    color: #000000;
+    background: #cfcdcd;
+    border-radius: 50px;
+    text-decoration: none;
+}
+
+.container-popup{
+    width: 2000;
+    height: 625px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 600ms;
+}
+
+.container-popup:target{
+    background: rgba(116, 114, 114, 0.8);
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup{
+    width: 100%;
+    max-width: 503px;
+    height: 400px;
+    position: relative;
+    top: 320px;
+    left: 800px;
+    transform: translate(-50%, -50%);
+    background: rgb(255, 255, 255) ;
+    border-radius: 1%;
+}
+
+.img{
+    width: 90px;
+    height: 90px;
+    position: relative;
+    top: 10px;
+    left: 200px;
+    background: #cfcdcd;
+    border-radius: 50%;
+}
+
+.container-text{
+    border: none;
+}
+
+.container-text h1{
+    text-align: center;
+}
+
+.container-text hr{
+    width: 370px;
+    position: fixed;
+    top: 180px;
+    left: 60px;
+}
+
+.Cinput1{
+    position: absolute;
+    top: 250px;
+    width: 150px;
+    left: 50px;
+    border: none;
+    border-bottom: 1px solid;
+    outline: none;
+}
+
+.Cinput2{
+    position: absolute;
+    top: 290px;
+    width: 150px;
+    left: 50px;
+    border: none;
+    border-bottom: 1px solid;
+    outline: none;
+}
+
+.Cinput3{
+    position: absolute;
+    top: 225px;
+    width: 150px;
+    left: 300px;
+    border: none;
+    border-bottom: 1px solid;
+    outline: none;
+}
+
+.Cinput4{
+    position: absolute;
+    top: 265px;
+    width: 150px;
+    left: 300px;
+    border: none;
+    border-bottom: 1px solid;
+    outline: none;
+}
+
+.Cinput5{
+    position: absolute;
+    top: 310px;
+    width: 150px;
+    left: 300px;
+    border: none;
+    border-bottom: 1px solid;
+    outline: none;
+}
+
+.btn-save{
+    position: relative;
+    top:60px;
+    left: 217px;
+    background: #D0D0D0;
+    padding: 10px 10px;
+    border-radius: 30px;
+    text-decoration: none;
+    color: #000000;
+    
+
+}
+
+.bnt-close-popup{
+    position: absolute;
+    right: 20px;
+    top: 1px;
+    color: #8D8D8D;
+    text-decoration: none;
+}
