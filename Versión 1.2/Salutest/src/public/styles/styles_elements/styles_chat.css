@@ -1,0 +1,160 @@
+.chat_header {
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgb(194, 194, 194);
+  padding: 0 2rem;
+}
+
+.speciality_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.speciality_wrapper img {
+  width: 31px;
+}
+
+.speciality_wrapper h4 {
+  font-size: 0.9rem;
+  margin-left: 1rem;
+}
+
+.user_inquiries {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.user_inquiries span {
+  font-size: 0.8rem;
+  text-transform: capitalize;
+}
+
+.messages {
+  position: relative;
+  font-size: 15px;
+  overflow-y: scroll;
+  padding: 2rem;
+
+}
+
+.messages .date {
+  border-radius: 10px;
+  background: #e8eef4;
+  font-size: 0.7rem;
+  padding: 0.5rem;
+  opacity: 70%;
+  width: 150px;
+  text-align: center;
+  margin: auto;
+  left: 0;
+  right: 0;
+}
+
+.messages h6 {
+  font-size: 10px;
+  font-weight: lighter;
+}
+
+.messages::-webkit-scrollbar {
+  width: 7px;
+}
+
+.messages::-webkit-scrollbar-thumb {
+  background: var(--color_test_P);
+  border-radius: 5px;
+}
+
+.botMedic {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: left;
+  text-align: left;
+}
+
+.botMedic img {
+  width: 30px;
+  height: 30px;
+}
+
+.botMedic p {
+  max-width: 70%;
+  min-height: 25px;
+  height: auto;
+  border-radius: 5px 15px 15px 15px;
+  padding: 5px 10px;
+  margin: 0 10px;
+  background: #35405c;
+  color: white;
+  background: #1f1f1f;
+
+}
+
+.chatUser {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.chatUser img {
+  width: 30px;
+  height: 30px;
+}
+
+.chatUser p {
+  max-width: 70%;
+  min-height: 25px;
+  height: auto;
+  border-radius: 15px 5px 15px 15px;
+  padding: 5px 10px;
+  margin: 0 10px;
+  background: #0281a7;
+  color: white;
+  white-space: pre-line;
+}
+
+
+
+.spinner_chat {
+  width: 60px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10px;
+  border-radius: 0px 15px 15px 15px;
+}
+
+.spinner_chat > div {
+  width: 7px;
+  height: 7px;
+  margin: 0 1px;
+  background-color: #535965;
+
+  border-radius: 100%;
+  display: inline-block;
+  animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.spinner_chat .bounce1 {
+  animation-delay: -0.32s;
+}
+
+.spinner_chat .bounce2 {
+  animation-delay: -0.16s;
+}
+
+@keyframes sk-bouncedelay {
+  0%,
+  80%,
+  100% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(1);
+  }
+}

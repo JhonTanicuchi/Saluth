@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Salutest | Login</title>
+
+
+  <!-- STYLES LOGIN-->
+  <link rel="stylesheet" href="/styles/styles_popup.css">
+  <link rel="stylesheet" href="/styles/styles_logIn.css">
+
+
+
+</head>
+
+<body>
+  <div class="background_transparent">
+
+    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      <path fill="#000000a9 "
+        d="M30.5,-49.6C42.2,-46.1,56.3,-43.3,58,-35.2C59.7,-27.1,49,-13.5,50.7,1C52.5,15.6,66.7,31.1,66.9,42.6C67.2,54.1,53.5,61.5,40,66.3C26.5,71.2,13.3,73.5,3,68.2C-7.2,63,-14.4,50.3,-20.2,41C-26,31.7,-30.4,25.9,-39.9,19.6C-49.3,13.4,-63.9,6.7,-71,-4.1C-78.1,-14.9,-77.9,-29.9,-68.8,-36.7C-59.6,-43.5,-41.6,-42.2,-28.7,-45.1C-15.8,-47.9,-7.9,-54.8,0.8,-56.1C9.4,-57.4,18.8,-53.1,30.5,-49.6Z"
+        transform="translate(100 100)" />
+    </svg>
+    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      <path fill="#000000a9 "
+        d="M35.3,-60C47.8,-53.8,61.4,-48.6,63.6,-38.7C65.8,-28.9,56.5,-14.5,57.8,0.7C59.1,15.9,70.9,31.8,70.5,44.7C70,57.5,57.2,67.3,43.4,72.1C29.7,76.9,14.8,76.7,-0.8,78.1C-16.4,79.4,-32.8,82.4,-46.5,77.5C-60.1,72.6,-71,59.9,-76.1,45.7C-81.2,31.5,-80.5,15.8,-72.6,4.5C-64.8,-6.7,-49.9,-13.5,-42.9,-24.4C-35.9,-35.3,-36.8,-50.3,-31,-60.4C-25.2,-70.4,-12.6,-75.5,-0.6,-74.4C11.4,-73.4,22.7,-66.2,35.3,-60Z"
+        transform="translate(100 100)" />
+    </svg>
+    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      <path fill="#04bbbb "
+        d="M55.7,-42.8C71.5,-24.7,83,-1.5,78,16.8C73,35.1,51.4,48.5,34.5,47.4C17.6,46.2,5.3,30.3,-6.8,21.6C-18.9,12.9,-30.9,11.4,-37.2,3C-43.5,-5.4,-44.2,-20.6,-37.1,-36.8C-29.9,-53,-15,-70.1,2.5,-72.1C20,-74.1,40,-61,55.7,-42.8Z"
+        transform="translate(100 100)" />
+    </svg>
+  </div>
+
+  <main class="main_login">
+
+    <!-- POPUP LOGIN -->
+    <div class="container_popup active" id="container_login">
+      <div class="popup login active" id="login_popup">
+        <img class="logo" src="/img/icon_new_dark.png" alt="" />
+        <div class="part_top">
+          <h1>Iniciar Sesión</h1>
+          <form id="login_form" action="/login" method="POST">
+            <div class="credentials_login">
+              <input name="username" class="input_salutest" id="username_login" type="text"
+                placeholder="Nombre de usuario" required autocomplete="off" />
+              <input name="password" class="input_salutest" id="password_login" type="password"
+                placeholder="Contraseña" />
+            </div>
+            <button class="btn_salutest btn_login_edit" type="submit">
+              Iniciar Sesión
+            </button>
+          </form>
+        </div>
+        <div class="part_bottom">
+          <div class="separation">
+            <hr />
+            <span>
+              <p>o</p>
+            </span>
+            <hr />
+          </div>
+          <div class="container_accounts">
+            <div class="m">
+              <img src="/img/icon_microsoft.png" alt="" />
+            </div>
+            <div class="a">
+              <i class="fab fa-apple"></i>
+            </div>
+            <div class="g">
+              <img src="/img/icon_google.png" alt="" />
+            </div>
+            <div class="f">
+              <i class="fab fa-facebook"></i>
+            </div>
+          </div>
+          <div class="fotter">
+            <p>
+              Al continuar, aceptas las Condiciones del servicio y la Política
+              de privacidad de Salutest.
+            </p>
+            <hr />
+            <a id="open_signup" href="#">¿Aun no estas registrado? Regístrate</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- POPUP SIGNUP -->
+    <div class="container_popup" id="container_signup">
+      <div class="popup signup" id="signup_popup">
+        <img class="logo" src="/img/icon_new_dark.png" alt="" />
+        <div class="part_top">
+        <h1>Registrate</h1>
+          <form id="signup_form" action="/registro" method="POST">
+            <div class="credentials_signup">
+              <input name="nombre" class="input_salutest" id="name_singup" type="text" placeholder="Nombre"
+                autocomplete="off" required />
+              <input name="apellido" class="input_salutest" id="lastname_singup" type="text" placeholder="Apellido"
+                autocomplete="off" required />
+              <input class="input_salutest" id="check_password_signup" type="password"
+                placeholder="Confirmar contraseña" autocomplete="off" required />
+              <input name="cedula" class="input_salutest" id="cedula_singup" type="text" placeholder="Cédula"
+                autocomplete="off" required />
+              <input name="correo" class="input_salutest" id="correo_signup" type="email" placeholder="Correo"
+                autocomplete="off" required />
+              <input name="username" class="input_salutest" id="username_singup" type="text"
+                placeholder="Nombre de usuario" autocomplete="off" required />
+              <input name="password" class="input_salutest" id="password_singup" type="password"
+                placeholder="contraseña" autocomplete="off" required />
+            </div>
+            <button class="btn_salutest btn_signup_edit" type="submit">
+              Registrarse
+            </button>
+          </form>
+        </div>
+        <div class="part_bottom">
+          <div class="fotter">
+            <p>
+              Al continuar, aceptas las Condiciones del servicio y la Política
+              de privacidad de Salutest.
+            </p>
+            <hr />
+            <a id="back_login" href="#">¿Ya tienes cuenta? Inicia Sesión</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+  </main>
+  <script src="/js/popup.js"></script>
+
+</body>
+
+</html>

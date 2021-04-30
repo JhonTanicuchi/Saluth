@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  list-style-type: none;
+  text-decoration: none;
+  font-family: 'Poppins';
+}
+.disable{
+  display: none;
+}
+
+
+:root {
+  /* PRINCIPAL COLORS */
+  --color_sure_P: #00ffff;
+  --color_dark_P: #0281a7;
+  --color_font_P: #535a66;
+  --color_dark_N: #535a66;
+
+  /* COLORS LOAD */
+  --color_background_LOAD: #535a66;
+
+  /* COLORS POPUP */
+  --color_background_POPUP: #000000a9;
+  
+
+  /* COLORS BUTTON */
+  --color_background: #535a66;
+  --color_font: #ffffff;
+
+  /* COLORS BUTTON HOVER */
+  --color_background_H: linear-gradient(
+    to right,
+    rgba(2, 128, 167, 0.67) 0%,
+    rgba(2, 128, 167, 1) 100%
+  );
+  --color_font_H: #ffffff;
+
+  /* COLORS NAV */
+  --color_background_NAV: #ffffff;
+
+  /* COLORS CHAT */
+  --color_background_CHAT: #e8eef4;
+
+  /* COLORS CHAT */
+  --color_test_P: #0281a7;
+  --color_green_test_P: #535a66;
+
+  /* COLORS CHAT */
+  --color_test_progress: linear-gradient(
+    to right,
+    rgba(0, 255, 255, 0.421) 0%,
+    rgba(2, 128, 167, 1) 100%
+  );
+}

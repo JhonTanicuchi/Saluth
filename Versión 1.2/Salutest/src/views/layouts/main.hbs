@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salutest</title>
+    <link rel="icon" href="/img/icon_new_dark.png" type="image/gif" >
+
+
+    <!-- STYLES WEB -->
+    <link rel="stylesheet"
+        href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- STYLES -->
+    <link rel="stylesheet" href="/styles/variable.css">
+    <link rel="stylesheet" href="/styles/styles_loader.css">
+    <link rel="stylesheet" href="/styles/styles_elements/styles_input.css">
+    <link rel="stylesheet" href="/styles/styles_elements/styles_switch.css">
+    <link rel="stylesheet" href="/styles/styles_elements/styles_button.css">
+    <link rel="stylesheet" href="/styles/styles_elements/styles_progress.css">
+
+
+    <!-- STYLES CHAT-->
+    <link rel="stylesheet" href="/styles/styles_elements/styles_chat.css">
+
+
+
+    <!-- STYLES MODULES -->
+    <link rel="stylesheet" href="/styles/styles_navegation.css">
+    <link rel="stylesheet" href="/styles/styles_modules/styles_home.css">
+    <link rel="stylesheet" href="/styles/styles_modules/styles_test.css">
+    <link rel="stylesheet" href="/styles/styles_modules/styles_profile.css">
+    <link rel="stylesheet" href="/styles/styles_modules/styles_inquiries.css">
+    <link rel="stylesheet" href="/styles/styles_modules/styles_record.css">
+    <link rel="stylesheet" href="/styles/styles_modules/styles_settings.css">
+
+
+    <!-- SCRIPTS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://kit.fontawesome.com/35db202371.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <!-- LOADER -->
+    <div class="loader" id="loader">
+        <div class="spinner">
+            <div class="double-bounce1"></div>
+            <div class="double-bounce2"></div>
+        </div>
+    </div>
+    {{>navegacion}}
+    {{>header}}
+    {{{body}}}
+</body>
+
+<!-- SCRIPTS -->
+<script src="/js/loader.js"></script>
+<script src="/js/effects.js"></script>
+<script src="/js/generator_date.js"></script>
+<script src="/js/record_filter.js"></script>
+<script src="/js/inquiries_filter.js"></script>
+<script src="/js/generator_chat.js"></script>
+
+</html>
