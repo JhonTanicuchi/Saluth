@@ -1,32 +1,29 @@
 const mysql = require("mysql");
 const { promisify } = require("util");
 
-const { database } = require("./keys");
-
-const colors = require("colors");
+const { database } = require("../keys");
 
 const pool = mysql.createPool(database);
 
 pool.getConnection((err, connection) => {
   if (err) {
     if (err.code === "PROTOCOL_CONNECTION_LOST") {
-      console.error("Se cerró la conexión a la base de datos.".red);
+      console.error("Se cerró la conexión a la base de datos.");
     }
     if (err.code === "ER_CON_COUNT_ERROR") {
-      console.error("La base de datos tiene muchas conexiones".red);
+      console.error("La base de datos tiene muchas conexiones");
     }
     if (err.code === "ECONNREFUSED") {
-      console.error("La conexión a la base de datos no realizada".red);
+      console.error("la conexión a la base de datos no realizada");
     }
-  } else if (connection) {
-    connection.release();
-    console.log("Base de datos conectada");
   }
-
-  return;
+  if (connection) {
+    connection.release();
+    console.log("Database la Connectada");
+    return;
+  }
 });
 
 // Promisify Pool Querys
 pool.query = promisify(pool.query);
-
 module.exports = pool;
