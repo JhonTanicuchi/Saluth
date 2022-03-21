@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salutest</title>
+    <link rel="icon" href="/img/icon_new_dark.png" type="image/gif" >
+
+
+    <!-- STYLES WEB -->
+    <link rel="stylesheet"
+        href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- STYLES -->
+    <link rel="stylesheet" href="/styles/variable.css">
+    <link rel="stylesheet" href="/styles/styles_loader.css">
+    <link rel="stylesheet" href="/styles/styles_elements/styles_input.css">
+    <link rel="stylesheet" href="/styles/styles_elements/styles_input_peso.css">
+    <link rel="stylesheet" href="/styles/styles_elements/styles_switch.css">
+    <link rel="stylesheet" href="/styles/styles_elements/styles_button.css">
+    <link rel="stylesheet" href="/styles/styles_elements/styles_progress.css">
+    <link rel="stylesheet" href="/styles/styles_elements/styles_calendar.css">
+    <link rel="stylesheet" href="/styles/styles_elements/styles_select.css">
+    <link rel="stylesheet" href="/styles/styles_elements/styles_popup.css">
+    <link rel="stylesheet" href="/styles/styles_elements/styles_pulse.css">
+    <link rel="stylesheet" href="/styles/styles_elements/styles_bubbles.css">
+    <link rel="stylesheet" href="/styles/styles_working.css">
+
+
+    <!-- STYLES CHAT-->
+    <link rel="stylesheet" href="/styles/styles_elements/styles_chat.css">
+
+
+
+    <!-- STYLES MODULES -->
+    <link rel="stylesheet" href="/styles/styles_navegation.css">
+    <link rel="stylesheet" href="/styles/styles_message.css">
+    <link rel="stylesheet" href="/styles/styles_modules/styles_home.css">
+    <link rel="stylesheet" href="/styles/styles_modules/styles_test.css">
+    <link rel="stylesheet" href="/styles/styles_modules/styles_profile.css">
+    <link rel="stylesheet" href="/styles/styles_modules/styles_inquiries.css">
+    <link rel="stylesheet" href="/styles/styles_modules/styles_record.css">
+    <link rel="stylesheet" href="/styles/styles_modules/styles_settings.css">
+    <link rel="stylesheet" href="/styles/styles_modules/styles_cita_home.css">
+    <link rel="stylesheet" href="/styles/styles_modules/styles_cita_cp_1.css">
+    <link rel="stylesheet" href="/styles/styles_modules/styles_cita_cp_2.css">
+    <link rel="stylesheet" href="/styles/styles_modules/styles_cita_ci_1.css">
+    <link rel="stylesheet" href="/styles/styles_modules/styles_cita_meet.css">
+    <link rel="stylesheet" href="/styles/styles_modules/styles_salud_home.css">
+    <link rel="stylesheet" href="/styles/styles_modules/styles_peso.css">
+    <link rel="stylesheet" href="/styles/styles_modules/styles_chat.css">
+
+
+    <!-- SCRIPTS -->
+<script src="https://unpkg.com/feather-icons"></script>
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://kit.fontawesome.com/35db202371.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
+            crossorigin="anonymous">
+    </script>
+</head>
+
+<body>
+    {{>loader}}
+    {{>navegation}}
+    {{>header}}
+    {{{body}}}
+</body>
+
+<!-- SCRIPTS -->
+
+<script src="/js/loader.js"></script>
+<script src="/js/effects.js"></script>
+<script src="/js/generator_date.js"></script>
+<script src="/js/record_filter.js"></script>
+<script src="/js/inquiries_filter.js"></script>
+<script src="/js/generator_chat.js"></script>
+<script src="/js/navegation_active.js"></script>
+<script src="/js/calendar.js"></script>
+<script src="/js/select.js"></script>
+<script src="/js/popup_cita.js"></script>
+<script src="/js/popup_cita.js"></script>
+<script src="/js/cita_meet.js"></script>
+<script src="/js/peso.js"></script>
+<script>
+      feather.replace()
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<script src="/js/bubbles.js"></script>
+
+
+<script  type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+<script  type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/locale/es.js"></script>
+<script type="text/javascript">
+    let calendar = new Calendar('calendar');
+    calendar.getElement().addEventListener('change', e => {
+        console.log(calendar.value().format('LLL'));
+    });
+</script>
+
+
+
+</html>
