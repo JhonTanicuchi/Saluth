@@ -1,7 +1,8 @@
 const passport = require("passport");
 const LocalStrategy = require("passport-local").Strategy;
 
-const pool = require("../config-database/database.sql");
+const orm = require("../config-database/database.orm");
+const sql = require("../config-database/database.sql");
 const helpers = require("./helpers");
 
 passport.use(
@@ -10,23 +11,32 @@ passport.use(
     {
       usernameField: "username",
       passwordField: "password",
-      passReqToCallback: true
+      passReqToCallback: true,
     },
     async (req, username, password, done) => {
-      const rows = await pool.query("SELECT * FROM paciente WHERE username=?",[username]);
-      if (rows.length>0) {
-        const user = rows[0];
+      const rows = await orm.usuario_client.findOne({
+        where: { username: username },
+      });
+      if (rows) {
+        const user = rows;
         const validPassword = await helpers.matchPassword(
           password,
           user.password
         );
         if (validPassword) {
-          done(null, user, req.flash("success", "Bienvenido" + user.username));
+          done(
+            null,
+            user,
+            req.flash("message", "Bienvenido" + " " + user.username)
+          );
         } else {
-          done(null, false, req.flash("message", "Contraseña incorrecta"));
+          done(null, false, req.flash("message", "Datos incorrecta"));
         }
       } else {
-        return done(null, false, req.flash("message", "El nombre de usuario no existe")
+        return done(
+          null,
+          false,
+          req.flash("message", "El nombre de usuario no existe.")
         );
       }
     }
@@ -39,33 +49,50 @@ passport.use(
     {
       usernameField: "username",
       passwordField: "password",
-      passReqToCallback: true
+      passReqToCallback: true,
     },
     async (req, username, password, done) => {
-      const {cedula,nombre,apellido,correo} = req.body;
-      let newUser = {
-        cedula,
-        nombre,
-        apellido,
-        correo,
-        username,
-        password
-      };
-
-      newUser.password = await helpers.encryptPassword(password);
-      // Guardar en la base de datos
-      const result = await pool.query("INSERT INTO paciente SET ? ", newUser);
-      newUser.id = result.insertId;
-      return done(null, newUser);
+      const usuario_client = await orm.usuario_client.findOne({
+        where: { username: username },
+      });
+      if (usuario_client === null) {
+        let nuevoUsuario = {
+          username,
+          password,
+        };
+        nuevoUsuario.password = await helpers.encryptPassword(password);
+        const resultado = await orm.usuario_client.create(nuevoUsuario);
+        nuevoUsuario.id = resultado.insertId;
+        return done(null, nuevoUsuario);
+      } else {
+        if (usuario_client) {
+          const usuario = usuario_client;
+          if (username == usuario.username) {
+            done(
+              null,
+              false,
+              req.flash("message", "El nombre de usuario ya existe.")
+            );
+          } else {
+            let nuevoUsuario = {
+              username,
+              password,
+            };
+            nuevoUsuario.password = await helpers.encryptPassword(password);
+            const resultado = await orm.usuario_client.create(nuevoUsuario);
+            nuevoUsuario.id = resultado.insertId;
+            return done(null, nuevoUsuario);
+          }
+        }
+      }
     }
   )
 );
 
-passport.serializeUser((user, done) => {
-  done(null, user.id);
+passport.serializeUser(function (user, done) {
+  done(null, user);
 });
 
-passport.deserializeUser(async (id, done) => {
-  const rows = await pool.query("SELECT * FROM paciente WHERE id = ?", [id]);
-  done(null, rows[0]);
+passport.deserializeUser(function (user, done) {
+  done(null, user);
 });

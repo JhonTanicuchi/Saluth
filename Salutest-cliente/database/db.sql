@@ -9,7 +9,7 @@ USE database_salutest;
 --
 -- Estructura de tabla para la tabla `paciente`
 --
-
+/* 
 CREATE TABLE paciente (
   id int(11) NOT NULL PRIMARY KEY,
   cedula char(10) COLLATE utf8mb4_spanish_ci NOT NULL,
@@ -45,4 +45,4 @@ CREATE TABLE usuario (
 
 
 ALTER TABLE paciente MODIFY id INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT = 1;
-ALTER TABLE usuario MODIFY id INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT = 1;
+ALTER TABLE usuario MODIFY id INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT = 1; */

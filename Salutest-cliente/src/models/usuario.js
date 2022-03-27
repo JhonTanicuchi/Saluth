@@ -1,6 +1,6 @@
-const usuarios = (sequelize, type) => {
+const usuario_client = (sequelize, type) => {
   return sequelize.define(
-    "usuario",
+    "usuario_client",
     {
       idUsuarios: {
         type: type.INTEGER,
@@ -27,4 +27,4 @@ const usuarios = (sequelize, type) => {
   );
 };
 
-module.exports = usuarios;
+module.exports = usuario_client;

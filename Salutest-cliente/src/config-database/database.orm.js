@@ -16,7 +16,7 @@ mysql
     });
   });
 
-const usuarioModelo = require("../models/usuario");
+const usuario_client_Modelo = require("../models/usuario");
 const personaModelo = require("../models/persona");
 
 const sequelize = new Sequelize("database_salutest", "root", "", {
@@ -43,15 +43,17 @@ sequelize.sync({ force: false }).then(() => {
   console.log("Tablas sincronizadas");
 });
 
-const usuario = usuarioModelo(sequelize, Sequelize);
+const usuario_client = usuario_client_Modelo(sequelize, Sequelize);
 const persona = personaModelo(sequelize, Sequelize);
 
 //relaciones
 
-usuario.hasMany(persona);
-persona.belongsTo(usuario);
+usuario_client.hasMany(persona);
+persona.belongsTo(usuario_client);
 
 module.exports = {
-    usuario,
-    persona
+  usuario_client,
+  persona,
 };
+
+
