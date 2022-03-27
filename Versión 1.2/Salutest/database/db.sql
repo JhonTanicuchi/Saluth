@@ -4,6 +4,7 @@
 DROP DATABASE IF EXISTS database_salutest;
 CREATE DATABASE database_salutest;
 USE database_salutest;
+
 -- --------------------------------------------------------
 
 --
