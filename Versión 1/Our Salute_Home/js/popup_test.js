@@ -18,4 +18,6 @@
         fondoPopup.classList.remove('active');
         popup.classList.remove('active');
         document.body.classList.remove('scroll')
-    };
+};
+    
+
