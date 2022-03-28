@@ -6,7 +6,6 @@ CREATE DATABASE database_salutest;
 USE database_salutest;
 
 -- --------------------------------------------------------
-
 --
 -- Estructura de tabla para la tabla `paciente`
 --
