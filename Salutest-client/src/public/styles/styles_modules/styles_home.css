@@ -1,0 +1,121 @@
+.welcome_card {
+  height: calc(100vh - 18.3rem);
+  background: white;
+  margin: 1rem 0;
+  border-radius: 7px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  position: relative;
+  z-index: 1;
+  color: rgba(0, 0, 0, 0.767);
+}
+
+.container_welcome {
+  border-radius: 7px 0px 0px 7px ;
+  width: 70%;
+  height: 100%;
+  padding: 2rem;
+  clip-path: polygon(0 0, 100% 0%, 89% 100%, 0% 100%);background: #535a664b;
+}
+
+.welcome_card span{
+  text-transform: capitalize;
+  color: #0281a7;
+  font-weight: bold;
+}
+
+.welcome_card img {
+  opacity: 70%;
+  width: 40%;
+  position: absolute;
+  margin: auto;
+  top: 0px;
+  right: 10px;
+  bottom: 0px;
+}
+
+.welcome_card h3{
+  font-weight: normal;
+  text-align: left;
+  font-size: 1rem;
+}
+
+.welcome_card h2 {
+  text-align: left;
+  color: var(--color_dark_P);
+}
+
+.welcome_card h1 {
+  font-size: 3rem;
+}
+
+.welcome_card .paragraphs {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  font-size: 1.1rem;
+  text-align: left;
+  width: 90%;
+  padding: 0 2rem;
+}
+
+.welcome_card .paragraphs .paragraph_single{
+  display: flex;
+  align-items: baseline;
+}
+
+
+.welcome_card .paragraphs p{
+  margin: 1rem 0;
+}
+
+.welcome_card .number_order {
+  width: 20px;
+  min-width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  color: white;
+  background-color: var(--color_dark_P);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: .8rem;
+  margin-right: 1rem;
+}
+
+.welcome_card h4{
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: black !important;
+}
+
+.welcome_card .chevron {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+}
+
+.options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+}
+
+.options_card {
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 2rem;
+  border-radius: 7px;
+}
+
+.options_card div:first-child span {
+  color: rgb(150, 150, 150);
+  font-size: 0.8rem;
+}
+
+.options_card div:last-child span {
+  color: var(--color_dark_P);
+  font-size: 3rem;
+}

@@ -1,2 +1,0 @@
-var buscador;
-var numero;
