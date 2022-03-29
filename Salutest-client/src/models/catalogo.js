@@ -1,6 +1,6 @@
 const catalogo = (sequelize, type) => {
   return sequelize.define(
-    "cliente",
+    "catalogo",
     {
       idCatalogo: {
         type: type.INTEGER,
