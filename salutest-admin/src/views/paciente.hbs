@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://bootswatch.com/4/materia/bootstrap.min.css">
+    <link rel ="stylesheet" type="text/css" href="libs/css/bootstrap.css.map"/>
+    <link rel ="stylesheet" type="text/css" href="libs/css/estilos.css"/>
+    <script type="text/javascript" src="libs/js/jquery.js.js" ></script>
+    <script type="text/javascript" src="libs/js/crud.js" ></script>
+    <title>Crud</title>
+</head>
+<body>
+    <div class="paciente_grid">
+    <h1>Pacientes</h1>
+    <div class="container" >
+        <div class="row" > 
+           <form>
+               <fieldset>
+                    <div class="container text-center "><h1 class="bg-light py-4text-info" >Pacientes </h1></div>
+                    <input type="text" class="form-control" id="item" >
+                    <br/>
+                    <br>
+                    <legend>...</legend>
+                    <input type="text" class="form-control" id="precio" >
+                    <br/>
+                    <br>
+                    <button type="button" id="crear" class="btn btn-success"> Crear tabla </button>
+                    <button type="button" id="insertar" class="btn btn-success"> Insertar registro </button>
+                    <button type="button" id="modificar" class="btn btn-success"> Modificar registro </button>
+                    <button type="button" id="listar" class="btn btn-danger"> Mostrar/Actualizar </button>
+                    <button type="button" id="eliminar" class="btn btn-danger"> Eliminar Todo </button>
+               </fieldset>
+           </form> 
+        </div>
+    </div>
+    <hr/>
+    <h3>lista de pacientes</h3>
+    <table class="table table-borderer table-hover" id="listapacientes" style="width: 715px;" >
+
+    </table>
+    </div>
+</body>
+</html>
