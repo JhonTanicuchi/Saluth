@@ -16,8 +16,13 @@ mysql
     });
   });
 
-const usuario_client_Modelo = require("../models/usuario");
-const personaModelo = require("../models/persona");
+const persona_Modelo = require("../models/persona");
+const empleado_Modelo = require("../models/empleado");
+const paciente_Modelo = require("../models/paciente");
+const usuarioEmpleado_Modelo = require("../models/usuario_empleado");
+const usuarioPaciente_Modelo = require("../models/usuario_paciente");
+const enfermedad_Modelo = require("../models/enfermedad");
+
 
 const sequelize = new Sequelize("database_salutest", "root", "", {
   host: "localhost",
@@ -43,17 +48,32 @@ sequelize.sync({ force: false }).then(() => {
   console.log("Tablas sincronizadas");
 });
 
-const usuario_client = usuario_client_Modelo(sequelize, Sequelize);
-const persona = personaModelo(sequelize, Sequelize);
+const persona = persona_Modelo(sequelize, Sequelize);
+const empleado = empleado_Modelo(sequelize, Sequelize);
+const paciente = paciente_Modelo(sequelize, Sequelize);
+const usuario_empleado = usuarioEmpleado_Modelo(sequelize, Sequelize);
+const usuario_paciente = usuarioPaciente_Modelo(sequelize, Sequelize);
+const enfermedad = enfermedad_Modelo(sequelize, Sequelize);
+
 
 //relaciones
 
-usuario_client.hasMany(persona);
-persona.belongsTo(usuario_client);
+persona.hasMany(empleado);
+empleado.belongsTo(persona);
+
+persona.hasMany(paciente);
+paciente.belongsTo(persona);
+
+empleado.hasMany(usuario_empleado);
+usuario_empleado.belongsTo(empleado);
+
+paciente.hasMany(usuario_paciente);
+usuario_paciente.belongsTo(paciente);
 
 module.exports = {
-  usuario_client,
   persona,
+  empleado,
+  paciente,
+  usuario_empleado,
+  usuario_paciente,
 };
-
-
