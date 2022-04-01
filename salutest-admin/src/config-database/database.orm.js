@@ -21,6 +21,8 @@ const empleado_Modelo = require("../models/empleado");
 const paciente_Modelo = require("../models/paciente");
 const usuarioEmpleado_Modelo = require("../models/usuario_empleado");
 const usuarioPaciente_Modelo = require("../models/usuario_paciente");
+const enfermedad_Modelo = require("../models/enfermedad");
+
 
 const sequelize = new Sequelize("database_salutest", "root", "", {
   host: "localhost",
@@ -51,6 +53,8 @@ const empleado = empleado_Modelo(sequelize, Sequelize);
 const paciente = paciente_Modelo(sequelize, Sequelize);
 const usuario_empleado = usuarioEmpleado_Modelo(sequelize, Sequelize);
 const usuario_paciente = usuarioPaciente_Modelo(sequelize, Sequelize);
+const enfermedad = enfermedad_Modelo(sequelize, Sequelize);
+
 
 //relaciones
 
