@@ -1,19 +1,20 @@
-const catalogo = (sequelize, type) => {
+const paciente = (sequelize, type) => {
   return sequelize.define(
-    "cliente",
+    "paciente",
     {
-      idCatalogo: {
+      id_paciente: {
         type: type.INTEGER,
         primaryKey: true,
         autoIncrement: true,
       },
-      nombre: type.STRING(99),
-      creacionCliente: {
+      donador: type.BOOLEAN,
+      estado: type.STRING,
+      creacionUsuarios: {
         type: "TIMESTAMP",
         defaultValue: type.literal("CURRENT_TIMESTAMP"),
         allowNull: false,
       },
-      actualizacionCliente: {
+      actualizacionUsuarios: {
         type: "TIMESTAMP",
         defaultValue: type.literal("CURRENT_TIMESTAMP "),
         allowNull: false,
@@ -25,4 +26,4 @@ const catalogo = (sequelize, type) => {
   );
 };
 
-module.exports = catalogo;
+module.exports = paciente;
