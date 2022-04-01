@@ -1,18 +1,22 @@
-const cita_medica = (sequelize, type) => {
+const empleado = (sequelize, type) => {
   return sequelize.define(
-    "cliente",
+    "empleado",
     {
-      id_cita_medica: {
+      id_empleado: {
         type: type.INTEGER,
         primaryKey: true,
         autoIncrement: true,
       },
-      creacionCliente: {
+      fecha_ingreso: type.STRING(99),
+      fecha_salida: type.STRING,
+      motivo_salida: type.STRING,
+      estado: type.STRING,
+      creacionUsuarios: {
         type: "TIMESTAMP",
         defaultValue: type.literal("CURRENT_TIMESTAMP"),
         allowNull: false,
       },
-      actualizacionCliente: {
+      actualizacionUsuarios: {
         type: "TIMESTAMP",
         defaultValue: type.literal("CURRENT_TIMESTAMP "),
         allowNull: false,
@@ -24,4 +28,4 @@ const cita_medica = (sequelize, type) => {
   );
 };
 
-module.exports = cita_medica;
+module.exports = empleado;
