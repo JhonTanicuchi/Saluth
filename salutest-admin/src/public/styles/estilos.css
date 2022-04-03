@@ -1,0 +1,29 @@
+table {
+    width: 50%;
+    margin: 5px auto;
+    box-shadow: 0 0 20px #333;
+ 
+    grid-auto-rows: 100%;
+}
+table th{
+    width:2.5rem;
+}
+.table, th, td{
+border:1px solid rgb(7, 6, 6);
+border-collapse:collapse;
+
+}
+th, td{
+    padding: 8px;
+}
+th{
+    text-align: left;
+    background: rgba(40,65,120,1);
+    color:white;
+}
+
+body{
+    background: #005AA7;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #FFFDE4, #005AA7);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #FFFDE4, #005AA7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
