@@ -56,9 +56,12 @@ passport.use(
         where: { username: username },
       });
       if (usuario_client === null) {
+        const { fecha_creacion, correo } = req.body;
         let nuevoUsuario = {
           username,
           password,
+          correo,
+          fecha_creacion,
         };
         nuevoUsuario.password = await helpers.encryptPassword(password);
         const resultado = await orm.usuario_client.create(nuevoUsuario);
@@ -74,9 +77,12 @@ passport.use(
               req.flash("message", "El nombre de usuario ya existe.")
             );
           } else {
+        const { fecha_creacion, correo } = req.body;
             let nuevoUsuario = {
               username,
               password,
+              correo,
+              fecha_creacion,
             };
             nuevoUsuario.password = await helpers.encryptPassword(password);
             const resultado = await orm.usuario_client.create(nuevoUsuario);
