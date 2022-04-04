@@ -1,25 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href=".css">
+    <title>Especialidad</title>
 </head>
 <body>
-    <center>
-        <h3>Epecialidades</h3>
-        <table>
-            <tr>
-                <td>Id</td>
-                <td>Nombre</td>
-                <td>Descripcion</td>
-                <td>Fecha de creacion</td>
-                <td>Estado</td>
+            <form onsubmit="event.preventDefault();onSubmit();" autocomplete="off">
+              <div class="tablita">
+                <table class="tabla" id="tabla">
+                  <thead>
+                    <tr> 
+                        <th>id</th> 
+                      <th>Especialidad</th>
+                      <th>Descripción</th>
+                      <th>Fecha creacion</th>
+                      <th>Estado</th>
+                      <th>Opciones</th>
+                    </tr>
+                  </thead>
+                    <tbody>
+      
+                    </tbody>
+                </table>
+              </div>
+              <br/>
+              <br/>
+              <div class="caja">
+                <input type=hidden"" name="oculto" value="1"> 
                 
-            </tr>
+                <label for="esp">Especialidad</label> <input type="text" id="esp" placeholder="Escriba aqui" required>
+                <label for="desc">Descripción</label> <input type="text" id="desc" placeholder="Escriba aqui" required>
+                <label for="fecha">Fecha creación</label> <input type="text" id="fecha" placeholder="Escriba aqui" required>
+                <select name="est" id="est">
+                    <option>Estado</option>
+                        <option>Activo</option>
+                        <option>No activo</option>
+                       
 
-        </table>
-    </center>
+                </select>
+            
+            </div>
+              <br/>
+              <input class="submit" type="submit" value="Agregar">
+              </form>
+        
+
 </body>
+<script src=".js"></script>
 </html>
