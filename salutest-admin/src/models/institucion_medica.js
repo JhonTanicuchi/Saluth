@@ -1,22 +1,22 @@
-const usuario_paciente = (sequelize, type) => {
+const institucion_medica = (sequelize, type) => {
   return sequelize.define(
-    "usuario_paciente",
+    "institucion_medica",
     {
-      id_usuario_paciente: {
+      id_institucion_medica: {
         type: type.INTEGER,
         primaryKey: true,
         autoIncrement: true,
       },
-      username: type.STRING(99),
-      password: type.STRING,
-      correo: type.STRING,
-      fecha_creacion: type.STRING,
-      creacionUsuario_Pacientes: {
+      nombre: type.STRING,
+      descripcion: type.STRING,
+      fecha: type.STRING,
+      estado: type.BOOLEAN,
+      creacioninstituciones_medicas: {
         type: "TIMESTAMP",
         defaultValue: type.literal("CURRENT_TIMESTAMP"),
         allowNull: false,
       },
-      actualizacionUsuario_Pacientes: {
+      actualizacioninstituciones_medicas: {
         type: "TIMESTAMP",
         defaultValue: type.literal("CURRENT_TIMESTAMP "),
         allowNull: false,
@@ -28,4 +28,4 @@ const usuario_paciente = (sequelize, type) => {
   );
 };
 
-module.exports = usuario_paciente;
+module.exports = institucion_medica;
