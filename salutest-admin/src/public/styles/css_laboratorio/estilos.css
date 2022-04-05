@@ -1,0 +1,23 @@
+
+.d-flex button{
+    margin: 0.3em .2em;
+    padding:.1em 0.4em;
+}
+
+.container table{
+    margin: 1em 10em;
+}
+
+table .btnEditar{
+    color: #6eb8f6;
+    cursor: pointer;
+}
+
+table .btnEliminar{
+    color: tomato;
+    cursor: pointer;
+}
+
+.container .btnCorazon{
+    color:#6eb8f6;
+}
