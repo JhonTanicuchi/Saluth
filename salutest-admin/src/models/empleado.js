@@ -8,12 +8,12 @@ const empleado = (sequelize, type) => {
         autoIncrement: true,
       },
       estado: type.STRING,
-      creacionEmpleado: {
+      creacionEmpleados: {
         type: "TIMESTAMP",
         defaultValue: type.literal("CURRENT_TIMESTAMP"),
         allowNull: false,
       },
-      actualizacionEmpleado: {
+      actualizacionEmpleados: {
         type: "TIMESTAMP",
         defaultValue: type.literal("CURRENT_TIMESTAMP "),
         allowNull: false,
