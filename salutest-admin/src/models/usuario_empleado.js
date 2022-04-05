@@ -11,12 +11,12 @@ const usuario_empleado = (sequelize, type) => {
       password: type.STRING,
       correo: type.STRING,
       fecha_creacion: type.STRING,
-      creacionUsuarios: {
+      creacionUsuario_Empleados: {
         type: "TIMESTAMP",
         defaultValue: type.literal("CURRENT_TIMESTAMP"),
         allowNull: false,
       },
-      actualizacionUsuarios: {
+      actualizacionUsuario_Empleados: {
         type: "TIMESTAMP",
         defaultValue: type.literal("CURRENT_TIMESTAMP "),
         allowNull: false,

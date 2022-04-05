@@ -82,6 +82,8 @@ app.use(require('./rutas/salud_home'))
 app.use(require('./rutas/registro_c'))
 app.use(require('./rutas/chat'))
 app.use(require('./rutas/sucursales'))
+app.use(require("./rutas/institucion_medica"));
+app.use(require("./rutas/catalogos"));
 
 /* app.use('/modules', require('./routes/inquiries')) */
 

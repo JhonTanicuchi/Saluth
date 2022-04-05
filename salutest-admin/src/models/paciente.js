@@ -9,12 +9,12 @@ const paciente = (sequelize, type) => {
       },
       donador: type.BOOLEAN,
       estado: type.STRING,
-      creacionUsuarios: {
+      creacionPacientes: {
         type: "TIMESTAMP",
         defaultValue: type.literal("CURRENT_TIMESTAMP"),
         allowNull: false,
       },
-      actualizacionUsuarios: {
+      actualizacionPacientes: {
         type: "TIMESTAMP",
         defaultValue: type.literal("CURRENT_TIMESTAMP "),
         allowNull: false,

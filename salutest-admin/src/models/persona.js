@@ -14,12 +14,12 @@ const persona = (sequelize, type) => {
       apellido2: type.STRING,
       fecha_nacimiento: type.STRING,
       direccion: type.STRING,
-      creacionPersona: {
+      creacionPersonas: {
         type: "TIMESTAMP",
         defaultValue: type.literal("CURRENT_TIMESTAMP"),
         allowNull: false,
       },
-      actualizacionPersona: {
+      actualizacionPersonas: {
         type: "TIMESTAMP",
         defaultValue: type.literal("CURRENT_TIMESTAMP "),
         allowNull: false,
