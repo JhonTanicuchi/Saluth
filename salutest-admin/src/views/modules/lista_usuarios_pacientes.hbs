@@ -1,17 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista Pacientes</title>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
-    <link rel="stylesheet" href="estilos.css">
-</head>
-<body>
-    <!-- Creacion de lista usuarios pacientes -->
-    <div class="datable-container">
+<!-- MAIN CONTECT -->
+<div class="main_contect">
+    <main class="main_app">
+        <section class="dash_title">
+            <h2 id="title_modules">Lista Pacientes</h2>
+            <a href="/home"><span class="far fa-times-circle"></span></a>
+        </section>
+          
+            <title>Lista Pacientes</title>
+            <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+            rel="stylesheet">
+            <link rel="stylesheet" href="estilos.css">
+        <div class="Lista_Pacientes_grid">
+                <div class="datable-container">
         <div class="header-tools">
             <div class="tools">
                 <ul>
@@ -46,15 +46,12 @@
             <thead>
                 <tr>
                     <th></th>
-                    <th>Status</th>
-                    <th>Paciente</th>
-                    <th>Correo</th>
-                    <th>Telefono</th>
-                    <th>Direccion</th>
-                    <th>Enfermedad</th>
-                    <th>Especialista</th>
-                    <th>Hora</th>
-                    <th>Feha</th>
+                    <th>Estado</th>
+                    <th>Cedula</th>
+                    <th>Nombres</th>
+                    <th>Apellidos</th>
+                    <th>Fecha de Nacimiento</th>
+                    <th>Donador</th>
                 </tr>
             </thead>
 
@@ -62,116 +59,89 @@
                 <tr>
                     <td class="table-checkbox"><input type="checkbox" name="" id=""></td>
                     <td><span class="available"></span></td>
-                    <td>Josue A. Masapanta</td>
-                    <td>@josuem</td>
-                    <td>0998765432</td>
-                    <td>Martha Bucaran</td>
-                    <td>Ostiomilitis</td>
-                    <td>Dr.Martha Bucaran</td>
-                    <td>07:00  09:00</td>
-                    <td>2021/05/01</td>
+                    <td>172031400-3</td>
+                    <td>Josue Alexander</td>
+                    <td>Masapanta Naula</td>
+                    <td>2002-05-01</td>
+                    <td>Si</td>
                 </tr>
                 <tr>
                     <td class="table-checkbox"><input type="checkbox" name="" id=""></td>
                     <td><span class="offline"></span></td>
-                    <td>Alexandra K. Cevallos</td>
-                    <td>@alexandrak</td>
-                    <td>0987654321</td>
-                    <td>Santa Rosa</td>
-                    <td>Dermatitis</td>
-                    <td>Lic.Paola Vinueza</td>
-                    <td>10:00  12:00</td>
-                    <td>2021/05/01</td>
+                    <td>171941598-4</td>
+                    <td>Alexandra Katerine</td>
+                    <td>Bustamante Alvarado</td>
+                    <td>2021-05-01</td>
+                    <td>Si</td>
                 </tr>
                 <tr>
                     <td class="table-checkbox"><input type="checkbox" name="" id=""></td>
                     <td><span class="available"></span></td>
-                    <td>Paola E. Velasco</td>
-                    <td>@paolae</td>
-                    <td>0976573219</td>
-                    <td>San Luis</td>
-                    <td>Amigdalitis</td>
-                    <td>Lic.Katerine Vinueza</td>
-                    <td>14:00  17:00</td>
-                    <td>2021/05/01</td>
+                    <td>17314580-0</td>
+                    <td>Paola Elizabeth</td>
+                    <td>Velasco Ibarra</td>
+                    <td>1999-05-01</td>
+                    <td>No</td>
                 </tr>
                 <tr>
                     <td class="table-checkbox"><input type="checkbox" name="" id=""></td>
                     <td><span class="offline"></span></td>
-                    <td>Pamela A. Beltran</td>
-                    <td>@pamelaa</td>
-                    <td>0943782517</td>
-                    <td>San Mateo</td>
-                    <td>Escarlatina</td>
-                    <td>Doc. Jessica Espinoza</td>
-                    <td>07:00  09:00</td>
-                    <td>2021/05/02</td>
+                    <td>171941557-2</td>
+                    <td>Pamela Anahí</td>
+                    <td>Beltran Acosta</td>
+                    <td>2021-05-02</td>
+                    <td>No</td>
                 </tr>
                 <tr>
                     <td class="table-checkbox"><input type="checkbox" name="" id=""></td>
                     <td><span class="available"></span></td>
-                    <td>Alex R. Chugchilan</td>
-                    <td>@alexr</td>
-                    <td>0943782517</td>
-                    <td>Vista Hermosa</td>
-                    <td>Brucelosis</td>
-                    <td>Doc. Jessica Espinoza</td>
-                    <td>10:00  12:00</td>
-                    <td>2021/05/02</td>
+                    <td>171245890-8</td>
+                    <td>Alex Romeo</td>
+                    <td>Chugchilan Cevallos</td>
+                    <td>1977-05-02</td>
+                    <td>No</td>
                 </tr>
                 <tr>
                     <td class="table-checkbox"><input type="checkbox" name="" id=""></td>
                     <td><span class="offline"></span></td>
-                    <td>Monica P. Alvarado</td>
-                    <td>@monicap</td>
-                    <td>0987654321</td>
-                    <td>Villaflora</td>
-                    <td>Cataratas</td>
-                    <td>Doc. Edwin Zuñiga</td>
-                    <td>14:00  16:00</td>
-                    <td>2021/05/02</td>
+                    <td>123456789-0</td>
+                    <td>Monica Patricia</td>
+                    <td>Alvarado Bustamante</td>
+                    <td>1983-06-10</td>
+                    <td>Si</td>
                 </tr>
                 <tr>
                     <td class="table-checkbox"><input type="checkbox" name="" id=""></td>
                     <td><span class="available"></span></td>
-                    <td>Wendy J. Espinoza</td>
-                    <td>@wendyj</td>
-                    <td>0996745889</td>
-                    <td>San Francisco</td>
-                    <td>Asma</td>
-                    <td>Doc. Romeo Cevallos</td>
-                    <td>07:00  09:00</td>
-                    <td>2021/05/03</td>
+                    <td>098765432-1</td>
+                    <td>Wendy Jazmín</td>
+                    <td>Espinoza Chugchilan</td>
+                    <td>1998-05-03</td>
+                    <td>Si</td>
                 </tr>
                 <tr>
                     <td class="table-checkbox"><input type="checkbox" name="" id=""></td>
                     <td><span class="offline"></span></td>
-                    <td>Liliana P. Semblantes</td>
-                    <td>@lilinap</td>
-                    <td>0943782517</td>
-                    <td>Santa Barbara</td>
-                    <td>Hernias</td>
-                    <td>Doc. Marivel Espejo</td>
-                    <td>10:00  12:00</td>
-                    <td>2021/05/03</td>
+                    <td>234567890-1</td>
+                    <td>Liliana Paulina</td>
+                    <td>Chugchilan Cevallos</td>
+                    <td>1970-05-03</td>
+                    <td>No</td>
                 </tr>
                 <tr>
                     <td class="table-checkbox"><input type="checkbox" name="" id=""></td>
                     <td><span class="available"></span></td>
-                    <td>Maria F. Marcillo</td>
-                    <td>@mariaf</td>
-                    <td>0994337308</td>
-                    <td>San Vicente</td>
-                    <td>Reumatismo</td>
-                    <td>Doc. Jeferson Flores</td>
-                    <td>14:00  16:00</td>
-                    <td>2021/05/03</td>
+                    <td>345678902-1</td>
+                    <td>Maria Fernanda</td>
+                    <td>Marcillo Tipan</td>
+                    <td>1987-05-03</td>
+                    <td>Si</td>
                 </tr>
             </tbody>
         </table>
         <div class="footer-tools">
             <div class="list-itmes">
-                Tiempo de reserva
+                Pacientes
                 <select name="n-entries" id="n-entries" class="n-entries">
                     <option value="1">1</option>
                     <option value="2" selected>2</option>
@@ -182,7 +152,6 @@
                     <option value="7">7</option>
                     <option value="8">8</option>
                 </select>
-                SEMANA
             </div>
             <div class="pages">
                 <ul>
@@ -197,5 +166,6 @@
             </div>
         </div>
     </div>
-</body>
-</html>
+        </div>
+</div>
+</main>

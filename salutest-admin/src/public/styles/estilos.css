@@ -157,15 +157,12 @@ body{
     vertical-align: middle;
 }
 .datable-container .datatable tbody tr .available::after{
-    content: 'Inicia';
+    content: 'Activo';
     color: var(--dt-status-available-color);
 }
-.datable-container .datatable tbody tr .away::after{
-    content: 'Proceso';
-    color: var(--dt-status-away-color);
-}
+
 .datable-container .datatable tbody tr .offline::after{
-    content: 'Finalizada';
+    content: 'Inactivo';
     color: var(--dt-status-offline-color);
 }
 .datable-container .datatable tbody tr .available::before,
