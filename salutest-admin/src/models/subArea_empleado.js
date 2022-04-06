@@ -1,18 +1,19 @@
-const chat = (sequelize, type) => {
+const subArea_empleado = (sequelize, type) => {
     return sequelize.define(
-      "chat",
+      "subArea_empleado",
       {
-        id_chat: {
+        id_subArea_empleado: {
           type: type.INTEGER,
           primaryKey: true,
           autoIncrement: true,
         },
-        creacionChat: {
+        fecha: type.STRING,
+          creacionSubArea_empleado: {
           type: "TIMESTAMP",
           defaultValue: type.literal("CURRENT_TIMESTAMP"),
           allowNull: false,
         },
-        actualizacionChat: {
+        actualizacionSubArea_empleados: {
           type: "TIMESTAMP",
           defaultValue: type.literal("CURRENT_TIMESTAMP "),
           allowNull: false,
@@ -24,4 +25,4 @@ const chat = (sequelize, type) => {
     );
   };
   
-  module.exports = chat;
+  module.exports = subArea_empleado;
