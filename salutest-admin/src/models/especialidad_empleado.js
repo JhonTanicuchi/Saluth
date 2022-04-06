@@ -1,18 +1,18 @@
-const chat = (sequelize, type) => {
+const especialidad_empleado = (sequelize, type) => {
     return sequelize.define(
-      "chat",
+      "especialidad_empleado",
       {
-        id_chat: {
+        id_especialidad_empleado: {
           type: type.INTEGER,
           primaryKey: true,
           autoIncrement: true,
         },
-        creacionChat: {
+        creacionEspecialidad_empleado: {
           type: "TIMESTAMP",
           defaultValue: type.literal("CURRENT_TIMESTAMP"),
           allowNull: false,
         },
-        actualizacionChat: {
+        actualizacionEspecialidad_empleado: {
           type: "TIMESTAMP",
           defaultValue: type.literal("CURRENT_TIMESTAMP "),
           allowNull: false,
@@ -24,4 +24,4 @@ const chat = (sequelize, type) => {
     );
   };
   
-  module.exports = chat;
+  module.exports = especialidad_empleado;
