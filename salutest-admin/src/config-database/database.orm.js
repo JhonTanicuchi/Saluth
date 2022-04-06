@@ -66,6 +66,9 @@ const atencionMedica_citaMedica = atencionMedica_citaMedica_Modelo(sequelize, Se
 const id_diagnostico = diagnostico_Modelo(sequelize, Sequelize);
 const id_diagnostico_enfermedad = diagnostico_enfermedad_Modelo(sequelize, Sequelize);
 const area = area_Modelo(sequelize, Sequelize);
+const atencionMedica_citaMedica = atencionMedica_citaMedica_Modelo(sequelize, Sequelize);
+const id_diagnostico = diagnostico_Modelo(sequelize, Sequelize);
+const id_diagnostico_enfermedad = diagnostico_enfermedad_Modelo(sequelize, Sequelize);
 
 
 
