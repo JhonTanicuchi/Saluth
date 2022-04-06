@@ -72,22 +72,6 @@ const area_especialidade = area_especialidade_Modelo(sequelize, Sequelize);
 const especialidad = especialidad_Modelo(sequelize, Sequelize);
 const cargo = cargo_Modelo(sequelize, Sequelize);
 
-//relaciones
-
-persona.hasMany(empleado);
-empleado.belongsTo(persona);
-
-persona.hasMany(paciente);
-paciente.belongsTo(persona);
-
-empleado.hasMany(usuario_empleado);
-usuario_empleado.belongsTo(empleado);
-
-paciente.hasMany(usuario_paciente);
-usuario_paciente.belongsTo(paciente);
-
-module.exports = {
-  persona,
   empleado,
   paciente,
   usuario_empleado,
