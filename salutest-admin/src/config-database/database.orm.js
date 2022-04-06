@@ -23,6 +23,7 @@ const usuarioEmpleado_Modelo = require("../models/usuario_empleado");
 const usuarioPaciente_Modelo = require("../models/usuario_paciente");
 const enfermedad_Modelo = require("../models/enfermedad");
 const rol_Modelo = require("../models/rol");
+const rol_permiso_Modelo = require("../models/rol_permiso");
 const cita_medica_Modelo = require("../models/cita_medica");
 const area_empleado_Modelo = require("../models/area_empleado");
 const atencionMedica_citaMedica_Modelo = require("../models/atencionMedica_citaMedica");
@@ -67,10 +68,10 @@ const cita_medica = cita_medica_Modelo(sequelize, Sequelize);
 const area_empleado = area_empleado_Modelo(sequelize, Sequelize);
 const atencionMedica_citaMedica = atencionMedica_citaMedica_Modelo(sequelize, Sequelize);
 const diagnostico = diagnostico_Modelo(sequelize, Sequelize);
-const diagnostico_enfermedad = diagnostico_enfermedad_Modelo(sequelize, Sequelize);
+const diagnostico_enfermedad = diagnostico_enfermedad_Modelo(sequelize, Sequelize); << << < HEAD
 const area = area_Modelo(sequelize, Sequelize);
-<<<<<<< HEAD
 const rol = rol_Modelo(sequelize, Sequelize);
+const rol_permiso = rol_permiso_Modelo(sequelize, Sequelize);
 const tipo_examene = tipo_examene_Modelo(sequelize, Sequelize);
 const examen = examen_Modelo(sequelize, Sequelize);
 const mensaje = mensaje_Modelo(sequelize, Sequelize);
@@ -98,15 +99,18 @@ module.exports = {
     paciente,
     usuario_empleado,
     usuario_paciente,
-};
-=======
+}; ===
+===
+=
 const area_especialidade = area_especialidade_Modelo(sequelize, Sequelize);
 const especialidad = especialidad_Modelo(sequelize, Sequelize);
 const cargo = cargo_Modelo(sequelize, Sequelize);
 
-  empleado,
-  paciente,
-  usuario_empleado,
-  usuario_paciente,
-};
->>>>>>> 118f7e5b92858a34fffccb8705f72f02904c1698
+empleado,
+paciente,
+usuario_empleado,
+usuario_paciente,
+}; >>>
+>>>
+>
+118 f7e5b92858a34fffccb8705f72f02904c1698
