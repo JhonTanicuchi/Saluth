@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link rel="stylesheet" href="https://bootswatch.com/4/materia/bootstrap.min.css">
+    <link rel ="stylesheet" type="text/css" href="libs/css/bootstrap.css.map"/>
+    <link rel ="stylesheet" type="text/css" href="libs/css/estilos.css"/>
+    <script type="text/javascript" src="libs/js/jquery.js.js" ></script>
+    <script type="text/javascript" src="libs/js/crud.js" ></script>
+   
+    <title>Crud hora</title>
+</head>
+<body>
+
+    <h1></h1>
+    <div class="container" >
+        <div class="row" > 
+           <form>
+               <fieldset>
+                    <div class="container text-center "><h3 class="bg-light py-4text-info" >Empleado </h3></div>
+                    <input type="text" class="form-control" id="item" >
+                    <br/>
+                    <br>
+                    <div class="container text-center "><h3 class="bg-light py-4text-info" >Date </h3></div>
+                    <input type="date" class="form-control" id="item" >
+                    <br/>
+                    <br>
+                    <div class="container text-center "><h3 class="bg-light py-4text-info" >Time </h3></div>
+                    <input type="time" class="form-control" id="item" >
+                    <br/>
+                    <br>
+                    <legend>Horario</legend>
+                    <input type="text" class="form-control" id="precio" >
+                   
+                    <button type="button" id="crear" class="btn btn-success"> Crear horario </button>
+                    <button type="button" id="insertar" class="btn btn-success"> Insertar  </button>
+                    <button type="button" id="modificar" class="btn btn-success"> Modificar  </button>
+                    <button type="button" id="listar" class="btn btn-danger"> Actualizar </button>
+                    <button type="button" id="eliminar" class="btn btn-danger"> Eliminar </button>
+               </fieldset>
+           </form> 
+        </div>
+    </div>
+    <hr/>
+    <h3>lista de Horarios</h3>
+    <table class="table">
+        <thead>
+            
+
+            <th scope="row">ID</th>
+            <th scope="row">Paciente</th>
+            <th scope="row">Especialidad</th>
+            <th scope="row">Fecha</th>
+            <th scope="row">Horario</th>
+            <th scope="row">Editar</th>
+            <th scope="row">Eliminar</th>
+           
+        </thead>
+        <tbody>
+          <tr class="table-active">
+            <th scope="row">1</th>
+            <td>DILAN BRANDON HARO BUSTAMANTE</td> 
+            <td>odontologia</td>
+            <td>15/02/2022</td>
+            <td>6:00 AM</td>
+            <td><i class="icon-edit btnEditar"><i class="material-icons">edit</i></i>Edit</td>
+            <td><i class="material-icons">remove_circle</i>Delete</td>
+            
+            
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>PEPITO JAIMITO TORRE TAPIA</td> 
+            <td>Pediatria</td>
+            <td>16/02/2022</td>
+            <td>7:00 AM</td>
+            <td><i class="icon-edit btnEditar"><i class="material-icons">edit</i>Edit</td>
+              
+            <td><i class="icon-delete btneliminar"><i class="material-icons">remove_circle</i>Delete</td>
+          </tr>
+          <tr>
+        <tr class="table-active">
+            <th scope="row">3</th>
+            <td>BRAYAN VICENTE LOPEZ BUSTAMANTE</td> 
+            <td>odontologia</td>
+            <td>17/02/2022</td>
+            <td>8:00 AM</td>
+            <td><i class="icon-edit btnEditar"><i class="material-icons">edit</i></i>Edit</td>
+            <td><i class="material-icons">remove_circle</i>Delete</td>
+         </tr>
+        <tr>
+        <tr>
+            <th scope="row">4</th>
+            <td>ADRIANA MARCELA REY SANCHEZ</td> 
+            <td>Pediatria</td>
+            <td>18/02/2022</td>
+            <td>9:00 AM</td>
+            <td><i class="icon-edit btnEditar"><i class="material-icons">edit</i>Edit</td>
+              
+            <td><i class="icon-delete btneliminar"><i class="material-icons">remove_circle</i>Delete</td>
+        </tr>
+        <tr>
+            <tr class="table-active">
+                <th scope="row">5</th>
+                <td>MARIO FERNANDO GARZÓN MUÑOZ</td> 
+                <td>odontologia</td>
+                <td>19/02/2022</td>
+                <td>10:00 AM</td>
+                <td><i class="icon-edit btnEditar"><i class="material-icons">edit</i></i>Edit</td>
+                <td><i class="material-icons">remove_circle</i>Delete</td>
+              </tr>
+              <tr>
+                <th scope="row">6</th>
+                <td>SANDRA XIMENA GARCÉS PARRA</td> 
+                <td>Pediatria</td>
+                <td>20/02/2022</td>
+                <td>11:00 AM</td>
+                <td><i class="icon-edit btnEditar"><i class="material-icons">edit</i>Edit</td>
+              
+                <td><i class="icon-delete btneliminar"><i class="material-icons">remove_circle</i>Delete</td>
+              </tr>
+              <tr>
+            <tr class="table-active">
+                <th scope="row">7</th>
+                <td>YURANY CATALINA CIFUENTES MENDEZ</td> 
+                <td>odontologia</td>
+                <td>21/02/2022</td>
+                <td>12:00 PM</td>
+                <td><i class="icon-edit btnEditar"><i class="material-icons">edit</i></i>Edit</td>
+                <td><i class="material-icons">remove_circle</i>Delete</td>
+             </tr>
+            <tr>
+            <tr>
+                <th scope="row">8</th>
+                <td>EMILY MICHELLE MUÑOZ ASIPUELA</td> 
+                <td>Pediatria</td>
+                <td>22/02/2022</td>
+                <td>13:00 PM</td>
+                <td><i class="icon-edit btnEditar"><i class="material-icons">edit</i>Edit</td>
+              
+                <td><i class="icon-delete btneliminar"><i class="material-icons">remove_circle</i>Delete</td>
+            </tr>
+            <tr>
+        </tbody>
+      </table>
+    </table>
+
+
+</body>
+</html>
