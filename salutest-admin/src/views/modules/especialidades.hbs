@@ -1,13 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-   <link rel="stylesheet" href=".css">
-    <title>Especialidad</title>
-</head>
-<body>
-<<<<<<< HEAD
+<div class="main_contect">
+    <main class="main_app">
+        <section class="dash_title">
+            <h2 id="title_modules">Especialidades</h2>
+            <a href="/home"><span class="far fa-times-circle"></span></a>
+        </section>
+
+        <div class="especialidades_grid">
             <form onsubmit="event.preventDefault();onSubmit();" autocomplete="off">
               <div class="tablita">
                 <table class="tabla" id="tabla">
@@ -30,26 +28,14 @@
               <br/>
               <div class="caja">
                 <input type=hidden"" name="oculto" value="1"> 
-=======
-   <form onsubmit="event.preventDefault();onSubmit();" autocomplete="off">
-              <div class="tablita">
-                <table class="tabla" id="tabla">
-                  <thead>
-            <tr>
-                <td>Id</td>
-                <td>Nombre</td>
-                <td>Descripcion</td>
-                <td>Fecha de creacion</td>
-                <td>Estado</td>
->>>>>>> 858104e4b88742dcc4efb49bcab75fcfeb96758c
                 
                 <label for="esp">Especialidad</label> <input type="text" id="esp" placeholder="Escriba aqui" required>
                 <label for="desc">Descripción</label> <input type="text" id="desc" placeholder="Escriba aqui" required>
                 <label for="fecha">Fecha creación</label> <input type="text" id="fecha" placeholder="Escriba aqui" required>
                 <select name="est" id="est">
                     <option>Estado</option>
-                    <option>Activo</option>
-                    <option>No activo</option>
+                        <option>Activo</option>
+                        <option>No activo</option>
                        
 
                 </select>
@@ -60,6 +46,7 @@
               </form>
         
 
-</body>
-<script src=".js"></script>
-</html>
+
+        </div>
+</div>
+</main>
