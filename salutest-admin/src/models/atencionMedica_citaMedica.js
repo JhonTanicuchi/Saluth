@@ -8,12 +8,12 @@ const atencionMedica_citaMedica = (sequelize, type) => {
         autoIncrement: true,
       },
 
-      creacionAtencionMedica_CitasMedicas: {
+      creacionAtencionMedica_CitaMedica: {
         type: "TIMESTAMP",
         defaultValue: type.literal("CURRENT_TIMESTAMP"),
         allowNull: false,
       },
-      actualizacionAtencionMedica_CitasMedicas: {
+      actualizacionAtencionMedica_CitaMedica: {
         type: "TIMESTAMP",
         defaultValue: type.literal("CURRENT_TIMESTAMP "),
         allowNull: false,
@@ -25,4 +25,4 @@ const atencionMedica_citaMedica = (sequelize, type) => {
   );
 };
 
-module.exports = cita_medica;
+module.exports = atencionMedica_citaMedica;
