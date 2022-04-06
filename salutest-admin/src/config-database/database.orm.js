@@ -24,6 +24,9 @@ const usuarioPaciente_Modelo = require("../models/usuario_paciente");
 const enfermedad_Modelo = require("../models/enfermedad");
 const cita_medica_Modelo = require("../models/cita_medica");
 const area_empleado_Modelo = require("../models/area_empleado");
+const atencionMedica_citaMedica_Modelo = require("../models/atencionMedica_citaMedica");
+const diagnostico_Modelo = require("../models/diagnostico");
+const diagnostico_enfermedad_Modelo = require("../models/diagnostico_enfermedad");
 
 
 
@@ -58,7 +61,13 @@ const usuario_empleado = usuarioEmpleado_Modelo(sequelize, Sequelize);
 const usuario_paciente = usuarioPaciente_Modelo(sequelize, Sequelize);
 const enfermedad = enfermedad_Modelo(sequelize, Sequelize);
 const cita_medica = cita_medica_Modelo(sequelize, Sequelize);
+<<<<<<< HEAD
 const area_empleado = area_empleado_Modelo(sequelize, Sequelize);
+=======
+const atencionMedica_citaMedica = atencionMedica_citaMedica_Modelo(sequelize, Sequelize);
+const id_diagnostico = diagnostico_Modelo(sequelize, Sequelize);
+const id_diagnostico_enfermedad = diagnostico_enfermedad_Modelo(sequelize, Sequelize);
+>>>>>>> 96974cbdf82f26384c9b5e7d4233c01e0ad7ef3f
 
 
 
