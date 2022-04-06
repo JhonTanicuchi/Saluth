@@ -31,6 +31,7 @@ const area_Modelo = require("../models/area");
 const tipo_examene_Modelo = require("../models/tipo_examen");
 const examen_Modelo = require("../models/examen");
 const mensaje_Modelo = require("../models/mensaje");
+const medicamento_Modelo = require("../models/medicamentos");
 
 const sequelize = new Sequelize("database_salutest", "root", "", {
   host: "localhost",
@@ -71,6 +72,7 @@ const area = area_Modelo(sequelize, Sequelize);
 const tipo_examene = tipo_examene_Modelo(sequelize, Sequelize);
 const examen = examen_Modelo(sequelize, Sequelize);
 const mensaje = mensaje_Modelo(sequelize, Sequelize);
+const medicamento = medicamento_Modelo(sequelize, Sequelize);
 
 
 
