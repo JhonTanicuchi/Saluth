@@ -28,6 +28,7 @@ const atencionMedica_citaMedica_Modelo = require("../models/atencionMedica_citaM
 const diagnostico_Modelo = require("../models/diagnostico");
 const diagnostico_enfermedad_Modelo = require("../models/diagnostico_enfermedad");
 const area_Modelo = require("../models/area");
+const area_especialidad_Modelo = require("../models/area_especialidad");
 
 
 const sequelize = new Sequelize("database_salutest", "root", "", {
@@ -63,13 +64,10 @@ const enfermedad = enfermedad_Modelo(sequelize, Sequelize);
 const cita_medica = cita_medica_Modelo(sequelize, Sequelize);
 const area_empleado = area_empleado_Modelo(sequelize, Sequelize);
 const atencionMedica_citaMedica = atencionMedica_citaMedica_Modelo(sequelize, Sequelize);
-const id_diagnostico = diagnostico_Modelo(sequelize, Sequelize);
-const id_diagnostico_enfermedad = diagnostico_enfermedad_Modelo(sequelize, Sequelize);
+const diagnostico = diagnostico_Modelo(sequelize, Sequelize);
+const diagnostico_enfermedad = diagnostico_enfermedad_Modelo(sequelize, Sequelize);
 const area = area_Modelo(sequelize, Sequelize);
-const atencionMedica_citaMedica = atencionMedica_citaMedica_Modelo(sequelize, Sequelize);
-const id_diagnostico = diagnostico_Modelo(sequelize, Sequelize);
-const id_diagnostico_enfermedad = diagnostico_enfermedad_Modelo(sequelize, Sequelize);
-
+const area_especialidad = area_especialidad_Modelo(sequelize, Sequelize);
 
 
 //relaciones
