@@ -62,8 +62,8 @@ const usuario_paciente = usuarioPaciente_Modelo(sequelize, Sequelize);
 const enfermedad = enfermedad_Modelo(sequelize, Sequelize);
 const cita_medica = cita_medica_Modelo(sequelize, Sequelize);
 const atencionMedica_citaMedica = atencionMedica_citaMedica_Modelo(sequelize, Sequelize);
-const id_diagnostico = diagnostico_Modelo(sequelize, Sequelize);
-const id_diagnostico_enfermedad = diagnostico_enfermedad_Modelo(sequelize, Sequelize);
+const diagnostico = diagnostico_Modelo(sequelize, Sequelize);
+const diagnostico_enfermedad = diagnostico_enfermedad_Modelo(sequelize, Sequelize);
 
 
 
