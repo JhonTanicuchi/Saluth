@@ -1,4 +1,4 @@
-const area_especialidad = (sequelize, type) => {
+const area_especialidade = (sequelize, type) => {
   return sequelize.define(
     "area_especialidad",
     {
@@ -24,4 +24,4 @@ const area_especialidad = (sequelize, type) => {
   );
 };
 
-module.exports = area_especialidad;
+module.exports = area_especialidade;
