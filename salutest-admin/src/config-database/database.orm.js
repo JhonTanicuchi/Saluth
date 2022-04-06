@@ -25,6 +25,7 @@ const enfermedad_Modelo = require("../models/enfermedad");
 const cita_medica_Modelo = require("../models/cita_medica");
 const atencionMedica_citaMedica_Modelo = require("../models/atencionMedica_citaMedica");
 const diagnostico_Modelo = require("../models/diagnostico");
+const diagnostico_enfermedad_Modelo = require("../models/diagnostico_enfermedad");
 
 
 
@@ -61,6 +62,7 @@ const enfermedad = enfermedad_Modelo(sequelize, Sequelize);
 const cita_medica = cita_medica_Modelo(sequelize, Sequelize);
 const atencionMedica_citaMedica = atencionMedica_citaMedica_Modelo(sequelize, Sequelize);
 const id_diagnostico = diagnostico_Modelo(sequelize, Sequelize);
+const id_diagnostico_enfermedad = diagnostico_enfermedad_Modelo(sequelize, Sequelize);
 
 
 
