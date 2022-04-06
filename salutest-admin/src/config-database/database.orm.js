@@ -23,6 +23,7 @@ const usuarioEmpleado_Modelo = require("../models/usuario_empleado");
 const usuarioPaciente_Modelo = require("../models/usuario_paciente");
 const enfermedad_Modelo = require("../models/enfermedad");
 const cita_medica_Modelo = require("../models/cita_medica");
+const atencionMedica_citaMedica_Modelo = require("../models/atencionMedica_citaMedica");
 
 
 
@@ -57,6 +58,7 @@ const usuario_empleado = usuarioEmpleado_Modelo(sequelize, Sequelize);
 const usuario_paciente = usuarioPaciente_Modelo(sequelize, Sequelize);
 const enfermedad = enfermedad_Modelo(sequelize, Sequelize);
 const cita_medica = cita_medica_Modelo(sequelize, Sequelize);
+const atencionMedica_citaMedica = atencionMedica_citaMedica_Modelo(sequelize, Sequelize);
 
 
 
