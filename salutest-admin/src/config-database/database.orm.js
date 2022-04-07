@@ -91,7 +91,7 @@ const diagnostico_enfermedad = diagnostico_enfermedad_Modelo(
   Sequelize
 );
 const area = area_Modelo(sequelize, Sequelize);
-const tipo_examene = tipo_examenes_Modelo(sequelize, Sequelize);
+const tipo_examenes = tipo_examenes_Modelo(sequelize, Sequelize);
 const examen = examen_Modelo(sequelize, Sequelize);
 const mensaje = mensaje_Modelo(sequelize, Sequelize);
 const medicamento = medicamento_Modelo(sequelize, Sequelize);
@@ -139,7 +139,7 @@ module.exports = {
   diagnostico,
   diagnostico_enfermedad,
   area,
-  tipo_examene,
+  tipo_examenes,
   examen,
   mensaje,
   medicamento,
