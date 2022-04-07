@@ -28,7 +28,15 @@ const atencionMedica_citaMedica_Modelo = require("../models/atencionMedica_citaM
 const diagnostico_Modelo = require("../models/diagnostico");
 const diagnostico_enfermedad_Modelo = require("../models/diagnostico_enfermedad");
 const area_Modelo = require("../models/area");
-
+const tipo_examene_Modelo = require("../models/tipo_examen");
+const examen_Modelo = require("../models/examen");
+const mensaje_Modelo = require("../models/mensaje");
+const medicamento_Modelo = require("../models/medicamentos");
+const turno_Modelo = require("../models/turno");
+const horario_Modelo = require("../models/horario");
+const sala_Modelo = require("../models/sala");
+const sintoma_Modelo = require("../models/sintoma");
+const sub_area_Modelo = require("../models/sub_area");
 
 const sequelize = new Sequelize("database_salutest", "root", "", {
   host: "localhost",
@@ -63,14 +71,18 @@ const enfermedad = enfermedad_Modelo(sequelize, Sequelize);
 const cita_medica = cita_medica_Modelo(sequelize, Sequelize);
 const area_empleado = area_empleado_Modelo(sequelize, Sequelize);
 const atencionMedica_citaMedica = atencionMedica_citaMedica_Modelo(sequelize, Sequelize);
-const id_diagnostico = diagnostico_Modelo(sequelize, Sequelize);
-const id_diagnostico_enfermedad = diagnostico_enfermedad_Modelo(sequelize, Sequelize);
+const diagnostico = diagnostico_Modelo(sequelize, Sequelize);
+const diagnostico_enfermedad = diagnostico_enfermedad_Modelo(sequelize, Sequelize);
 const area = area_Modelo(sequelize, Sequelize);
-const atencionMedica_citaMedica = atencionMedica_citaMedica_Modelo(sequelize, Sequelize);
-const id_diagnostico = diagnostico_Modelo(sequelize, Sequelize);
-const id_diagnostico_enfermedad = diagnostico_enfermedad_Modelo(sequelize, Sequelize);
-
-
+const tipo_examene = tipo_examene_Modelo(sequelize, Sequelize);
+const examen = examen_Modelo(sequelize, Sequelize);
+const mensaje = mensaje_Modelo(sequelize, Sequelize);
+const medicamento = medicamento_Modelo(sequelize, Sequelize);
+const turno = turno_Modelo(sequelize, Sequelize);
+const horario = horario_Modelo(sequelize, Sequelize);
+const sala = sala_Modelo(sequelize, Sequelize);
+const sintoma = sintoma_Modelo(sequelize, Sequelize);
+const sub_area = sub_area_Modelo(sequelize, Sequelize);
 
 //relaciones
 
