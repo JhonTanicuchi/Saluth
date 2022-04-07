@@ -38,6 +38,7 @@ const sala_Modelo = require("../models/sala");
 const sintoma_Modelo = require("../models/sintoma");
 const sub_area_Modelo = require("../models/sub_area");
 
+
 const sequelize = new Sequelize("database_salutest", "root", "", {
   host: "localhost",
   dialect: "mysql",
