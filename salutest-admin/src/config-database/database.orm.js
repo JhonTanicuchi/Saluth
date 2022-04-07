@@ -91,7 +91,7 @@ const diagnostico_enfermedad = diagnostico_enfermedad_Modelo(
   Sequelize
 );
 const area = area_Modelo(sequelize, Sequelize);
-const tipo_examenes = tipo_examenes_Modelo(sequelize, Sequelize);
+const tipo_examen = tipo_examenes_Modelo(sequelize, Sequelize);
 const examen = examen_Modelo(sequelize, Sequelize);
 const mensaje = mensaje_Modelo(sequelize, Sequelize);
 const medicamento = medicamento_Modelo(sequelize, Sequelize);
@@ -107,7 +107,7 @@ const rol = rol_Modelo(sequelize, Sequelize);
 const rol_permiso = rol_permiso_Modelo(sequelize, Sequelize);
 const permiso = permiso_Modelo(sequelize, Sequelize);
 const receta_medica = receta_medica_Modelo(sequelize, Sequelize);
-const area_especialidade = area_especialidade_Modelo(sequelize, Sequelize);
+const area_especialidad = area_especialidade_Modelo(sequelize, Sequelize);
 const especialidad = especialidad_Modelo(sequelize, Sequelize);
 const cargo = cargo_Modelo(sequelize, Sequelize);
 const atencion_medica = atencion_medica_Modelo(sequelize, Sequelize);
@@ -139,7 +139,7 @@ module.exports = {
   diagnostico,
   diagnostico_enfermedad,
   area,
-  tipo_examenes,
+  tipo_examen,
   examen,
   mensaje,
   medicamento,
@@ -155,7 +155,7 @@ module.exports = {
   rol_permiso,
   permiso,
   receta_medica,
-  area_especialidade,
+  area_especialidad,
   especialidad,
   cargo,
   atencion_medica,
