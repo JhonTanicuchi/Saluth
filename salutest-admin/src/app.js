@@ -84,12 +84,8 @@ app.use(require('./rutas/chat'))
 app.use(require('./rutas/sucursales'))
 app.use(require("./rutas/institucion_medica"));
 app.use(require("./rutas/catalogos"));
-<<<<<<< HEAD
 app.use(require("./rutas/certificado_medico"));
 app.use(require('./rutas/crud_turnos'))
-=======
-app.use(require("./rutas/especialidades"));
->>>>>>> 21833bc073562da12425f1b793a6199142758e12
 
 /* app.use('/modules', require('./routes/inquiries')) */
 
