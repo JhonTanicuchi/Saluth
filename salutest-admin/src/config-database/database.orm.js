@@ -70,7 +70,7 @@ const cita_medica = cita_medica_Modelo(sequelize, Sequelize);
 const area_empleado = area_empleado_Modelo(sequelize, Sequelize);
 const atencionMedica_citaMedica = atencionMedica_citaMedica_Modelo(sequelize, Sequelize);
 const diagnostico = diagnostico_Modelo(sequelize, Sequelize);
-const diagnostico_enfermedad = diagnostico_enfermedad_Modelo(sequelize, Sequelize); << << < HEAD
+const diagnostico_enfermedad = diagnostico_enfermedad_Modelo(sequelize, Sequelize); 
 const area = area_Modelo(sequelize, Sequelize);
 const rol = rol_Modelo(sequelize, Sequelize);
 const rol_permiso = rol_permiso_Modelo(sequelize, Sequelize);
@@ -80,7 +80,10 @@ const examen = examen_Modelo(sequelize, Sequelize);
 const mensaje = mensaje_Modelo(sequelize, Sequelize);
 const medicamento = medicamento_Modelo(sequelize, Sequelize);
 const turno = turno_Modelo(sequelize, Sequelize);
-
+const area_especialidade = area_especialidade_Modelo(sequelize, Sequelize);
+const especialidad = especialidad_Modelo(sequelize, Sequelize);
+const cargo = cargo_Modelo(sequelize, Sequelize);
+const atencion_medica = atencion_medica_Modelo(sequelize, Sequelize);
 
 //relaciones
 
@@ -102,28 +105,4 @@ module.exports = {
     paciente,
     usuario_empleado,
     usuario_paciente,
-}; ===
-===
-=
-const area_especialidade = area_especialidade_Modelo(sequelize, Sequelize);
-const especialidad = especialidad_Modelo(sequelize, Sequelize);
-const cargo = cargo_Modelo(sequelize, Sequelize);
-<<<<<<< HEAD
-const atencion_medica = atencion_medica_Modelo(sequelize, Sequelize);
-module.exports = {
-  empleado,
-  paciente,
-  usuario_empleado,
-  usuario_paciente,
 };
-=======
-
-empleado,
-paciente,
-usuario_empleado,
-usuario_paciente,
-}; >>>
->>>
->
-118 f7e5b92858a34fffccb8705f72f02904c1698
->>>>>>> a374386944e3428acf9899703252c3979946daee
