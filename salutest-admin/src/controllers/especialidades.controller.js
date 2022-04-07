@@ -1,7 +1,7 @@
 const especialidades = {}
 
 especialidades.mostrar = (req,res) => {
-    res.render ('modules/chat')
+    res.render ('modules/especialidades')
 }
 
 module.exports = especialidades
