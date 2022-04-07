@@ -33,6 +33,7 @@ const examen_Modelo = require("../models/examen");
 const mensaje_Modelo = require("../models/mensaje");
 const medicamento_Modelo = require("../models/medicamentos");
 const turno_Modelo = require("../models/turno");
+const horario_Modelo = require("../models/horario");
 
 const sequelize = new Sequelize("database_salutest", "root", "", {
   host: "localhost",
@@ -75,7 +76,7 @@ const examen = examen_Modelo(sequelize, Sequelize);
 const mensaje = mensaje_Modelo(sequelize, Sequelize);
 const medicamento = medicamento_Modelo(sequelize, Sequelize);
 const turno = turno_Modelo(sequelize, Sequelize);
-
+const horario = horario_Modelo(sequelize, Sequelize);
 
 //relaciones
 
