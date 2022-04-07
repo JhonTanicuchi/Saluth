@@ -1,19 +1,21 @@
-const area_empleado = (sequelize, type) => {
+const sintoma = (sequelize, type) => {
   return sequelize.define(
-    "area_empleado",
+    "sintoma",
     {
-      id_area_empleado: {
+      id_enfermedad: {
         type: type.INTEGER,
         primaryKey: true,
         autoIncrement: true,
       },
-      fecha: type.STRING,
-      creacionArea_empleados: {
+      nombre: type.STRING,
+      descripcion: type.STRING,
+      vacuna: type.STRING,
+      creacionSintoma: {
         type: "TIMESTAMP",
         defaultValue: type.literal("CURRENT_TIMESTAMP"),
         allowNull: false,
       },
-      actualizacionArea_empleados: {
+      actualizacionSintoma: {
         type: "TIMESTAMP",
         defaultValue: type.literal("CURRENT_TIMESTAMP "),
         allowNull: false,
@@ -25,4 +27,4 @@ const area_empleado = (sequelize, type) => {
   );
 };
 
-module.exports = area_empleado;
+module.exports = sintoma;

@@ -1,19 +1,21 @@
-const area_empleado = (sequelize, type) => {
+const horario = (sequelize, type) => {
   return sequelize.define(
-    "area_empleado",
+    "horario",
     {
-      id_area_empleado: {
+      id_horario: {
         type: type.INTEGER,
         primaryKey: true,
         autoIncrement: true,
       },
-      fecha: type.STRING,
-      creacionArea_empleados: {
+      hora_ingreso: type.STRING,
+      hora_salida: type.STRING,
+      estado: type.STRING,
+      creacionHorarios: {
         type: "TIMESTAMP",
         defaultValue: type.literal("CURRENT_TIMESTAMP"),
         allowNull: false,
       },
-      actualizacionArea_empleados: {
+      actualizacionHorarios: {
         type: "TIMESTAMP",
         defaultValue: type.literal("CURRENT_TIMESTAMP "),
         allowNull: false,
@@ -25,4 +27,4 @@ const area_empleado = (sequelize, type) => {
   );
 };
 
-module.exports = area_empleado;
+module.exports = horario;

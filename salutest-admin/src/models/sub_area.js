@@ -1,19 +1,20 @@
-const area_empleado = (sequelize, type) => {
+const sub_area = (sequelize, type) => {
   return sequelize.define(
-    "area_empleado",
+    "sub_area",
     {
-      id_area_empleado: {
+      id_sub_area: {
         type: type.INTEGER,
         primaryKey: true,
         autoIncrement: true,
       },
-      fecha: type.STRING,
-      creacionArea_empleados: {
+      nombre: type.STRING,
+      estado: type.STRING,
+      creacionSub_area: {
         type: "TIMESTAMP",
         defaultValue: type.literal("CURRENT_TIMESTAMP"),
         allowNull: false,
       },
-      actualizacionArea_empleados: {
+      actualizacionSub_area: {
         type: "TIMESTAMP",
         defaultValue: type.literal("CURRENT_TIMESTAMP "),
         allowNull: false,
@@ -25,4 +26,4 @@ const area_empleado = (sequelize, type) => {
   );
 };
 
-module.exports = area_empleado;
+module.exports = sub_area;
