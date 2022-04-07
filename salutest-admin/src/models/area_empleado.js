@@ -13,7 +13,7 @@ const area_empleado = (sequelize, type) => {
         defaultValue: type.literal("CURRENT_TIMESTAMP"),
         allowNull: false,
       },
-      actualizacionAre_empleados: {
+      actualizacionArea_empleados: {
         type: "TIMESTAMP",
         defaultValue: type.literal("CURRENT_TIMESTAMP "),
         allowNull: false,
