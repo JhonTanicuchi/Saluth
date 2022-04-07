@@ -37,6 +37,7 @@ const horario_Modelo = require("../models/horario");
 const sala_Modelo = require("../models/sala");
 const sintoma_Modelo = require("../models/sintoma");
 const sub_area_Modelo = require("../models/sub_area");
+const equipo_medico_Modelo = require("../models/equipo_medico");
 
 const sequelize = new Sequelize("database_salutest", "root", "", {
   host: "localhost",
@@ -83,6 +84,7 @@ const horario = horario_Modelo(sequelize, Sequelize);
 const sala = sala_Modelo(sequelize, Sequelize);
 const sintoma = sintoma_Modelo(sequelize, Sequelize);
 const sub_area = sub_area_Modelo(sequelize, Sequelize);
+const equipo_medico = equipo_medico_Modelo(sequelize, Sequelize);
 
 //relaciones
 
