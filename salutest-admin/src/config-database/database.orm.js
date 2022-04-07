@@ -28,7 +28,6 @@ const atencionMedica_citaMedica_Modelo = require("../models/atencionMedica_citaM
 const diagnostico_Modelo = require("../models/diagnostico");
 const diagnostico_enfermedad_Modelo = require("../models/diagnostico_enfermedad");
 const area_Modelo = require("../models/area");
-const tipo_examene_Modelo = require("../models/tipo_examen");
 const examen_Modelo = require("../models/examen");
 const mensaje_Modelo = require("../models/mensaje");
 const medicamento_Modelo = require("../models/medicamentos");
@@ -92,7 +91,7 @@ const diagnostico_enfermedad = diagnostico_enfermedad_Modelo(
   Sequelize
 );
 const area = area_Modelo(sequelize, Sequelize);
-const tipo_examene = tipo_examene_Modelo(sequelize, Sequelize);
+const tipo_examene = tipo_examenes_Modelo(sequelize, Sequelize);
 const examen = examen_Modelo(sequelize, Sequelize);
 const mensaje = mensaje_Modelo(sequelize, Sequelize);
 const medicamento = medicamento_Modelo(sequelize, Sequelize);
