@@ -1,5 +1,7 @@
 # Salutest
 
+El objetivo de Salutest es dar el servicio de virtualizar todo aquello mínimo proceso de una institución médica, brindando tanto a médicos como a pacientes tener el control en tiempo real de sus datos para poder estar al tanto de su salud, y de esta manera automatizar procesos que toman mucho tiempo, uno de ellos el agendamiento de citas, reducir sus procesos y agilizar de manera exponencial.
+
 Salutest es un sistema completo que se divide en 3 aplicaciones:
 
   ### - Salutest management
