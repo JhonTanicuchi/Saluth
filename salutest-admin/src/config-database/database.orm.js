@@ -25,8 +25,6 @@ const enfermedad_Modelo = require("../models/enfermedad");
 const cita_medica_Modelo = require("../models/cita_medica");
 const receta_medica_Modelo = require("../models/receta_medica");
 
-
-
 const sequelize = new Sequelize("database_salutest", "root", "", {
   host: "localhost",
   dialect: "mysql",
@@ -60,7 +58,6 @@ const enfermedad = enfermedad_Modelo(sequelize, Sequelize);
 const cita_medica = cita_medica_Modelo(sequelize, Sequelize);
 const receta_medica = receta_medica_Modelo(sequelize, Sequelize);
 
-
 //relaciones
 
 persona.hasMany(empleado);
@@ -81,4 +78,7 @@ module.exports = {
   paciente,
   usuario_empleado,
   usuario_paciente,
+  enfermedad,
+  cita_medica,
+  receta_medica,
 };
