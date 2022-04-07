@@ -1,19 +1,21 @@
-const area_empleado = (sequelize, type) => {
+const transmision = (sequelize, type) => {
   return sequelize.define(
-    "area_empleado",
+    "transmision",
     {
-      id_area_empleado: {
+      id_transmision: {
         type: type.INTEGER,
         primaryKey: true,
         autoIncrement: true,
       },
-      fecha: type.STRING,
-      creacionArea_empleados: {
+      nombre: type.STRING,
+      descripcion: type.STRING,
+      
+      creacionTransmisiones: {
         type: "TIMESTAMP",
         defaultValue: type.literal("CURRENT_TIMESTAMP"),
         allowNull: false,
       },
-      actualizacionArea_empleados: {
+      actualizacionTransmisiones: {
         type: "TIMESTAMP",
         defaultValue: type.literal("CURRENT_TIMESTAMP "),
         allowNull: false,
@@ -25,4 +27,4 @@ const area_empleado = (sequelize, type) => {
   );
 };
 
-module.exports = area_empleado;
+module.exports = transmision;
