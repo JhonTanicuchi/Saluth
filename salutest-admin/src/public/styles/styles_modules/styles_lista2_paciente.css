@@ -36,7 +36,7 @@ body{
     position: absolute;
     top: 87px;
     left: 35%;
-    border: 5px solid white;
+    border: 5px solid rgb(12, 12, 12);
     border-radius: 50%;
     overflow: hidden;
     height: 96px;
