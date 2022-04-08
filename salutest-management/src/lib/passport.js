@@ -14,7 +14,7 @@ passport.use(
       passReqToCallback: true,
     },
     async (req, username, password, done) => {
-      const rows = await orm.usuario_client.findOne({
+      const rows = await orm.usuario_empleado.findOne({
         where: { username: username },
       });
       if (rows) {
@@ -52,10 +52,10 @@ passport.use(
       passReqToCallback: true,
     },
     async (req, username, password, done) => {
-      const usuario_client = await orm.usuario_client.findOne({
+      const usuario_empleado = await orm.usuario_empleado.findOne({
         where: { username: username },
       });
-      if (usuario_client === null) {
+      if (usuario_empleado === null) {
         const { fecha_creacion, correo } = req.body;
         let nuevoUsuario = {
           username,
@@ -64,12 +64,12 @@ passport.use(
           fecha_creacion,
         };
         nuevoUsuario.password = await helpers.encryptPassword(password);
-        const resultado = await orm.usuario_client.create(nuevoUsuario);
-        nuevoUsuario.id = resultado.insertId;
+        const resultado = await orm.usuario_empleado.create(nuevoUsuario);
+        nuevoUsuario.id_usuario_empleado = resultado.insertId;
         return done(null, nuevoUsuario);
       } else {
-        if (usuario_client) {
-          const usuario = usuario_client;
+        if (usuario_empleado) {
+          const usuario = usuario_empleado;
           if (username == usuario.username) {
             done(
               null,
@@ -77,7 +77,7 @@ passport.use(
               req.flash("message", "El nombre de usuario ya existe.")
             );
           } else {
-        const { fecha_creacion, correo } = req.body;
+            const { fecha_creacion, correo } = req.body;
             let nuevoUsuario = {
               username,
               password,
@@ -85,8 +85,8 @@ passport.use(
               fecha_creacion,
             };
             nuevoUsuario.password = await helpers.encryptPassword(password);
-            const resultado = await orm.usuario_client.create(nuevoUsuario);
-            nuevoUsuario.id = resultado.insertId;
+            const resultado = await orm.usuario_empleado.create(nuevoUsuario);
+            nuevoUsuario.id_usuario_empleado = resultado.insertId;
             return done(null, nuevoUsuario);
           }
         }
