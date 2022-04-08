@@ -48,6 +48,11 @@ const cargo_Modelo = require("../models/cargo");
 const atencion_medica_Modelo = require("../models/atencion_medica");
 const tipo_examenes_Modelo = require("../models/tipo_examen");
 const receta_medica_Modelo = require("../models/receta_medica");
+const chat_Modelo = require("../models/chat");
+const empleado_cargo_Modelo = require("../models/empleado_cargo");
+const especialidad_empleado_Modelo = require("../models/especialidad_empleado");
+const subArea_empleado_Modelo = require("../models/subArea_empleado");
+const area_citaMedica_Modelo = require("../models/area_citaMedica");
 
 const sequelize = new Sequelize("database_salutest", "root", "", {
   host: "localhost",
@@ -110,7 +115,14 @@ const receta_medica = receta_medica_Modelo(sequelize, Sequelize);
 const area_especialidad = area_especialidade_Modelo(sequelize, Sequelize);
 const especialidad = especialidad_Modelo(sequelize, Sequelize);
 const cargo = cargo_Modelo(sequelize, Sequelize);
+const empleado_cargo = empleado_cargo_Modelo(sequelize, Sequelize);
+const chat = chat_Modelo(sequelize, Sequelize);
+const especialidad_empleado = especialidad_empleado_Modelo(sequelize, Sequelize);
+const subArea_empleado = subArea_empleado_Modelo(sequelize, Sequelize);
+const area_citaMedica = area_citaMedica_Modelo(sequelize, Sequelize);
+
 const atencion_medica = atencion_medica_Modelo(sequelize, Sequelize);
+
 
 //relaciones
 
