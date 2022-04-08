@@ -1,0 +1,21 @@
+.message{
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    text-align: center;
+}
+
+.message h1{
+    font-size: 12px;
+}
+
+.message .alert{
+    color: #ff6961;
+}
+
+.message .success{
+    color: #77dd77;
+}

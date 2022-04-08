@@ -1,0 +1,108 @@
+.container_cita_ci_1{
+  height: calc(100vh - 10rem);
+  display: grid;
+  grid-template-columns: 25% calc(75% - 1.5rem);
+  grid-column-gap: 1.5rem;
+}
+
+.container_cita_ci_1 .container_left , .container_cita_ci_1 .container_right{
+  border-radius: 7px;
+  background: white;
+}
+
+.container_cita_ci_1 .title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-bottom: 1px solid rgb(194, 194, 194);
+  padding: 10px;
+}
+
+.container_cita_ci_1 .title h1{
+  font-size: 15px;
+}
+
+.conteiner_cards_especialidad{
+  padding: 10px;
+}
+
+.card_especialidad{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background: #E8EEF4;
+  color: #535a66;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+.card_especialidad:hover{
+  background: #535a66;
+  color: white;
+  cursor: pointer;
+}
+
+.container_cita_ci_1 .medicos{
+  padding: 20px;
+}
+
+.container_cita_ci_1 .card_doctor{
+  display: grid;
+  grid-template-columns: 45px auto;
+  grid-column-gap: .5rem;
+  cursor: pointer;
+  transition: .3s all ease;
+  padding: 5px;
+  border-bottom: 1px solid #535a6644;
+}
+
+.container_cita_ci_1 .card_doctor:hover{
+  background: #E8EEF4;
+  border-radius: 7px;
+
+}
+
+.container_cita_ci_1 .sections{
+  display: grid;
+  grid-template-columns: 50% 30% calc(20% - 1rem);
+  grid-column-gap: .5rem;
+  transition: .5s all ease;
+}
+
+.container_cita_ci_1 .section{
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  transition: .3s all ease;
+}
+
+.container_cita_ci_1 .section span{
+  font-size: 14px;
+}
+
+.container_cita_ci_1 .section_img{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container_cita_ci_1 .section_img img{
+  width: 45px;
+  transition: .3s all ease;
+}
+
+.container_cita_ci_1 .container_right{
+  position: relative;
+}
+
+.container_cita_ci_1 .container_bot{
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
