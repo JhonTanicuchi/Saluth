@@ -85,7 +85,9 @@ app.use(require('./rutas/sucursales'))
 app.use(require("./rutas/institucion_medica"));
 app.use(require("./rutas/catalogos"));
 app.use(require("./rutas/certificado_medico"));
-app.use(require('./rutas/crud_turnos'))
+app.use(require('./rutas/crud_turnos'));
+app.use(require('./rutas/laboratorio'));
+
 
 /* app.use('/modules', require('./routes/inquiries')) */
 
