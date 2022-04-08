@@ -53,6 +53,7 @@ const empleado_cargo_Modelo = require("../models/empleado_cargo");
 const especialidad_empleado_Modelo = require("../models/especialidad_empleado");
 const subArea_empleado_Modelo = require("../models/subArea_empleado");
 const area_citaMedica_Modelo = require("../models/area_citaMedica");
+const historia_clinica_Modelo = require("../models/historia_clinica");
 
 const sequelize = new Sequelize("database_salutest", "root", "", {
   host: "localhost",
@@ -120,9 +121,8 @@ const chat = chat_Modelo(sequelize, Sequelize);
 const especialidad_empleado = especialidad_empleado_Modelo(sequelize, Sequelize);
 const subArea_empleado = subArea_empleado_Modelo(sequelize, Sequelize);
 const area_citaMedica = area_citaMedica_Modelo(sequelize, Sequelize);
-
 const atencion_medica = atencion_medica_Modelo(sequelize, Sequelize);
-
+const historia_clinica = historia_clinica_Modelo(sequelize, Sequelize);
 
 //relaciones
 
