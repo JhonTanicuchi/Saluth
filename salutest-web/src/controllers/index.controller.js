@@ -1,7 +1,7 @@
 const index = {}
 
 index.mostrar = (req,res) => {
-    res.render ('index')
+    res.render ('modules/salutest-patient')
 }
 
 module.exports = index
