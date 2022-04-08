@@ -1,134 +1,140 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/estilos.css">
-    <title>Pacientes</title>
-</head>
-<body>
-    <table>
-        <tr>
-            <td>
-                <img src="img/img-1.png" style="width: 40%;height: 50;">Cupo </td>
-
+<!-- MAIN CONTECT -->
+<div class="main_contect">
+    <main class="main_app">
+        <section class="dash_title">
+            <h2 id="title_modules">Lista Pacientes</h2>
+            <a href="/home"><span class="far fa-times-circle"></span></a>
+        </section>
+        <link rel="stylesheet" href="/salutest-admin/src/public/styles/styles_modules/styles_lista2_paciente.css">
+        <div class="lista pacientes_grid">
+            <title>Pacientes</title>
+            <table>
+                <tr>
+                    <td>
+                        <img src="img/img-1.png" style="width: 40%;height: 50;">Cupo 
+                    </td>
+                    <td> 
+                        <img src="img/img-2.jpg" style="width: 40%;height: 50;"> Pacientes 
+                    </td>
+                    <td>
+                        <img src="img/img4.png" style="width: 30%;height: 1;left: 45px;">Cedula 
+                    </td>
+                    <td>
+                        <img src="img/img-3.png" style="width: 40%;height: 50;">Citas en esperas  
+                    </td>
+                    <td>
+                        <img src="img/img5.webp" style="width: 40%;height: 50;">Citas Asignadas  
+                    </td>
             
-            <td> 
-                <img src="img/img-2.jpg" style="width: 40%;height: 50;"> Pacientes </td>
-             <td>
-                <img src="img/img4.png" style="width: 30%;height: 1;left: 45px;">Cedula </td>
-            <td>
-                <img src="img/img-3.png" style="width: 40%;height: 50;">Citas en esperas  </td>
-            <td>
-                <img src="img/img5.webp" style="width: 40%;height: 50;">Citas Asignadas  </td>
-            
-            <td>
-                <img src="img/img6.jpg" style="width: 40%;height: 50;">Citas Asignadas  </td>
+                    <td>
+                        <img src="img/img6.jpg" style="width: 40%;height: 50;">Citas Asignadas  
+                    </td>
 
-            <td>
-                <img src="img/img7.jpg" style="width: 40%;height: 50;">Citas Asignadas  </td>
-        </tr>
+                    <td>
+                        <img src="img/img7.jpg" style="width: 40%;height: 50;">Citas Asignadas  
+                    </td>
+                </tr>
         
-        <tr>
-            <th>Cita</th>
-            <th> Usuario </th>
-            <th> Cedula </th>
-            <th> Fecha</th>
-            <th> Hora</th>
-            <th> Estado</th>
-            <th> Cita Medica </th>
-        </tr>
-        <tr>
-            <td>#1</td>
-            <td>Juan Roldos </td>
-            <td>########## </td>
-            <td>01-09-2021</td>
-            <td>15:00</td>
-            <td>Asignado</td>
-            <td>Odontologia </td>
-        </tr>
-        <tr>
-            <td>#2</td>
-            <td>Carmen Freire </td>
-            <td>########## </td>
-            <td>10-09-2021</td>
-            <td>12:00</td>
-            <td>Asignado</td>
-            <td>Medicina General</td>
-        </tr>
-        <tr>
-            <td>#3</td>
-            <td>Joel Chicaiza</td>
-            <td>########## </td>
-            <td>15-09-2021</td>
-            <td>9:00</td>
-            <td>Asignado</td>
-            <td>fisioterapia</td>
-        </tr>
-        <tr>
-            <td>#4</td>
-            <td>Angel Lima</td>
-            <td>########## </td>
-            <td>19-09-2021</td>
-            <td>14:00</td>
-            <td>Asignado</td>
-            <td>Odontologia </td>
-        </tr>
-        <tr>
-            <td>#5</td>
-            <td>Edison Moran </td>
-            <td>########## </td>
-            <td>22-09-2021</td>
-            <td>10:00</td>
-            <td>Asignado</td>
-            <td>Odontologia </td>
-        </tr>
-        <tr>
-            <td>#6</td>
-            <td>Sofia Morales</td>
-            <td>########## </td>
-            <td>15-09-2021</td>
-            <td>15:00</td>
-            <td>Asignado</td>
-            <td>Odontologia </td>
-        </tr>
-        <tr>
-            <td>#7</td>
-            <td>Juan Valdez </td>
-            <td>########## </td>
-            <td>25-09-2021</td>
-            <td>7:00</td>
-            <td>Asignado</td>
-            <td>Cardiologia</td>
-        </tr>
-        <tr>
-            <td>#8</td>
-            <td>Mariela Varela</td>
-            <td>########## </td>
-            <td>26-09-2021</td>
-            <td>12:30</td>
-            <td>Asignado</td>
-            <td>medicina General</td>
-        </tr>
-        <tr>
-            <td>#9</td>
-            <td>Martha Vega</td>
-            <td>########## </td>
-            <td>27-09-2021</td>
-            <td>15:30</td>
-            <td>Asignado</td>
-            <td>Cardiologia</td>
-        </tr>
-        <tr>
-            <td>#10</td>
-            <td>Paola Flores </td>
-            <td>########## </td>
-            <td>30-09-2021</td>
-            <td>14:40</td>
-            <td>Asignado</td>
-            <td>Odontologia</td>
-        </tr>
-        
-</body>
-</html>
+                <tr>
+                    <th>Cita</th>
+                    <th> Usuario </th>
+                    <th> Cedula </th>
+                    <th> Fecha</th>
+                    <th> Hora</th>
+                    <th> Estado</th>
+                    <th> Cita Medica </th>
+                </tr>
+                <tr>
+                    <td>#1</td>
+                    <td>Juan Roldos </td>
+                    <td>########## </td>
+                    <td>01-09-2021</td>
+                    <td>15:00</td>
+                    <td>Asignado</td>
+                    <td>Odontologia </td>
+                </tr>
+                <tr>
+                    <td>#2</td>
+                    <td>Carmen Freire </td>
+                    <td>########## </td>
+                    <td>10-09-2021</td>
+                    <td>12:00</td>
+                    <td>Asignado</td>
+                    <td>Medicina General</td>
+                </tr>
+                <tr>
+                    <td>#3</td>
+                    <td>Joel Chicaiza</td>
+                    <td>########## </td>
+                    <td>15-09-2021</td>
+                    <td>9:00</td>
+                    <td>Asignado</td>
+                    <td>fisioterapia</td>
+                </tr>
+                <tr>
+                    <td>#4</td>
+                    <td>Angel Lima</td>
+                    <td>########## </td>
+                    <td>19-09-2021</td>
+                    <td>14:00</td>
+                    <td>Asignado</td>
+                    <td>Odontologia </td>
+                </tr>
+                <tr>
+                    <td>#5</td>
+                    <td>Edison Moran </td>
+                    <td>########## </td>
+                    <td>22-09-2021</td>
+                    <td>10:00</td>
+                    <td>Asignado</td>
+                    <td>Odontologia </td>
+                </tr>
+                <tr>
+                    <td>#6</td>
+                    <td>Sofia Morales</td>
+                    <td>########## </td>
+                    <td>15-09-2021</td>
+                    <td>15:00</td>
+                    <td>Asignado</td>
+                    <td>Odontologia </td>
+                </tr>
+                <tr>
+                    <td>#7</td>
+                    <td>Juan Valdez </td>
+                    <td>########## </td>
+                    <td>25-09-2021</td>
+                    <td>7:00</td>
+                    <td>Asignado</td>
+                    <td>Cardiologia</td>
+                </tr>
+                <tr>
+                    <td>#8</td>
+                    <td>Mariela Varela</td>
+                    <td>########## </td>
+                    <td>26-09-2021</td>
+                    <td>12:30</td>
+                    <td>Asignado</td>
+                    <td>medicina General</td>
+                </tr>
+                <tr>
+                    <td>#9</td>
+                    <td>Martha Vega</td>
+                    <td>########## </td>
+                    <td>27-09-2021</td>
+                    <td>15:30</td>
+                    <td>Asignado</td>
+                    <td>Cardiologia</td>
+                </tr>
+                <tr>
+                    <td>#10</td>
+                    <td>Paola Flores </td>
+                    <td>########## </td>
+                    <td>30-09-2021</td>
+                    <td>14:40</td>
+                    <td>Asignado</td>
+                    <td>Odontologia</td>
+                </tr>
+            </table>
+        </div>
+    </main>  
+</div>

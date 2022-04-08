@@ -1,14 +1,14 @@
 <!-- MAIN CONTECT -->
 <link rel="stylesheet" href="/salutest-admin/src/public/styles/listacitamedica.css">
 <div class="listacitamedica_grid">
-    <div class="main_contect">
+      <div class="main_contect">
         <main class="main_app">
             <section class="dash_title">
                 <h2 id="title_modules">LISTA CITAS MEDICAS</h2>
                 <a href="#"><span class="far fa-times-circle"></span></a>
             </section>
             <form action="" class="search-bar">
-                <input type="search" name="search" pattern=".*\S.*" required>
+                <input type="search" id="certificado_medico_filter"name="search" onkeyup="certificadoMedico_filter()" pattern=".*\S.*" required>
                 <button class="search-btn" type="submit">
                     <span>Search</span>
                 </button>
@@ -17,7 +17,7 @@
                 <div class="limiter">
                     
                 <div class="table100 ver6 m-b-110">
-                    <table data-vertable="ver6">
+                    <table data-vertable="ver6"id="certificado_medico_table">
                         <thead>
                             <tr class="row100 head">
                                 <th class="column100 column1" data-column="column1">ID</th>
@@ -27,113 +27,102 @@
                                 <th class="column100 column5" data-column="column5">DOCTOR</th>
                                 <th class="column100 column6" data-column="column6">FECHA</th>
                                 <th class="column100 column7" data-column="column7">HORA</th>
-                                <th class="column100 column8" data-column="column8">OPCIONES</th>
+                                <th class="column100 column8" data-column="column8">Especialidad</th>
                             </tr>
                         </thead>
                     <tbody>
                     <tr class="row100">
-                    <td class="column100 column1" data-column="column1">--</td>
-                    <td class="column100 column2" data-column="column2">--</td>
-                    <td class="column100 column3" data-column="column3">--</td>
-                    <td class="column100 column4" data-column="column4">--</td>
-                    <td class="column100 column5" data-column="column5">--</td>
-                    <td class="column100 column6" data-column="column6">--</td>
-                    <td class="column100 column7" data-column="column7">--</td>
-                    <td><button type="button"> <img src="cheque.png"><img src="cancelar.png"></button></td>
-
+                    <td class="column100 column1" data-column="column1">01</td>
+                    <td class="column100 column2" data-column="column2">Javier Herran</td>
+                    <td class="column100 column3" data-column="column3">example1@gmail.com</td>
+                    <td class="column100 column4" data-column="column4">Mal del corazón</td>
+                    <td class="column100 column5" data-column="column5">Goku</td>
+                    <td class="column100 column6" data-column="column6">01-01-2022</td>
+                    <td class="column100 column7" data-column="column7">10 am</td>
+                    <td class="column100 column8" data-column="column8">Reparar 1</td>
                     </tr>
                     <tr class="row100">
-                        <td class="column100 column1" data-column="column1">--</td>
-                        <td class="column100 column2" data-column="column2">--</td>
-                        <td class="column100 column3" data-column="column3">--</td>
-                        <td class="column100 column4" data-column="column4">--</td>
-                        <td class="column100 column5" data-column="column5">--</td>
-                        <td class="column100 column6" data-column="column6">--</td>
-                        <td class="column100 column7" data-column="column7">--</td>
-                        <td><button type="button"> <img src="cheque.png"><img src="cancelar.png"></button></td>
+                        <td class="column100 column1" data-column="column1">02</td>
+                        <td class="column100 column2" data-column="column2">José Prez</td>
+                        <td class="column100 column3" data-column="column3">example2@gmail.com</td>
+                        <td class="column100 column4" data-column="column4">Cancer terminal</td>
+                        <td class="column100 column5" data-column="column5">Manuel</td>
+                        <td class="column100 column6" data-column="column6">02-02-2022</td>
+                        <td class="column100 column7" data-column="column7">10 am</td>
+                        <td class="column100 column8" data-column="column8">Reparar 2</td>
                     </tr>
-                </tr>
-                <tr class="row100">
-                    <td class="column100 column1" data-column="column1">--</td>
-                    <td class="column100 column2" data-column="column2">--</td>
-                    <td class="column100 column3" data-column="column3">--</td>
-                    <td class="column100 column4" data-column="column4">--</td>
-                    <td class="column100 column5" data-column="column5">--</td>
-                    <td class="column100 column6" data-column="column6">--</td>
-                    <td class="column100 column7" data-column="column7">--</td>
-                    <td><button type="button"> <img src="cheque.png"><img src="cancelar.png"></button></td>
-                </tr> 
-                <tr class="row100">
-                    <td class="column100 column1" data-column="column1">--</td>
-                    <td class="column100 column2" data-column="column2">--</td>
-                    <td class="column100 column3" data-column="column3">--</td>
-                    <td class="column100 column4" data-column="column4">--</td>
-                    <td class="column100 column5" data-column="column5">--</td>
-                    <td class="column100 column6" data-column="column6">--</td>
-                    <td class="column100 column7" data-column="column7">--</td>
-                    <td><button type="button"> <img src="cheque.png"><img src="cancelar.png"></button></td>
-                </tr> 
         
-                <tr class="row100">
-                    <td class="column100 column1" data-column="column1">--</td>
-                    <td class="column100 column2" data-column="column2">--</td>
-                    <td class="column100 column3" data-column="column3">--</td>
-                    <td class="column100 column4" data-column="column4">--</td>
-                    <td class="column100 column5" data-column="column5">--</td>
-                    <td class="column100 column6" data-column="column6">--</td>
-                    <td class="column100 column7" data-column="column7">--</td>
-                    <td><button type="button"> <img src="cheque.png"><img src="cancelar.png"></button></td>
-
-                </tr>
-                <tr class="row100">
-                    <td class="column100 column1" data-column="column1">--</td>
-                    <td class="column100 column2" data-column="column2">--</td>
-                    <td class="column100 column3" data-column="column3">--</td>
-                    <td class="column100 column4" data-column="column4">--</td>
-                    <td class="column100 column5" data-column="column5">--</td>
-                    <td class="column100 column6" data-column="column6">--</td>
-                    <td class="column100 column7" data-column="column7">--</td>
-                    <td><button type="button"> <img src="cheque.png"><img src="cancelar.png"></button></td>
-
-            </tr> </tr>
-                <tr class="row100">
-                <td class="column100 column1" data-column="column1">--</td>
-                <td class="column100 column2" data-column="column2">--</td>
-                <td class="column100 column3" data-column="column3">--</td>
-                <td class="column100 column4" data-column="column4">--</td>
-                <td class="column100 column5" data-column="column5">--</td>
-                <td class="column100 column6" data-column="column6">--</td>
-                <td class="column100 column7" data-column="column7">--</td>
-                <td><button type="button"> <img src="cheque.png"><img src="cancelar.png"></button></td>
-
-            </tr> </tr>
-                <tr class="row100">
-                <td class="column100 column1" data-column="column1">--</td>
-                <td class="column100 column2" data-column="column2">--</td>
-                <td class="column100 column3" data-column="column3">--</td>
-                <td class="column100 column4" data-column="column4">--</td>
-                <td class="column100 column5" data-column="column5">--</td>
-                <td class="column100 column6" data-column="column6">--</td>
-                <td class="column100 column7" data-column="column7">--</td>
-                <td><button type="button"> <img src="cheque.png"><img src="cancelar.png"></button></td>
-
-            </tr> </tr>
-                <tr class="row100">
-                <td class="column100 column1" data-column="column1">--</td>
-                <td class="column100 column2" data-column="column2">--</td>
-                <td class="column100 column3" data-column="column3">--</td>
-                <td class="column100 column4" data-column="column4">--</td>
-                <td class="column100 column5" data-column="column5">--</td>
-                <td class="column100 column6" data-column="column6">--</td>
-                <td class="column100 column7" data-column="column7">--</td>
-                <td><button type="button"> <img src="cheque.png"><img src="cancelar.png"></button></td>
-            </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-</div>
+                    <tr class="row100">
+                        <td class="column100 column1" data-column="column1">03</td>
+                        <td class="column100 column2" data-column="column2">Klever Catucuamba</td>
+                        <td class="column100 column3" data-column="column3">example3@gmail.com</td>
+                        <td class="column100 column4" data-column="column4">Mal del ojo</td>
+                        <td class="column100 column5" data-column="column5">Tanicuchi</td>
+                        <td class="column100 column6" data-column="column6">03-03-2022</td>
+                        <td class="column100 column7" data-column="column7">10 am</td>
+                        <td class="column100 column8" data-column="column8">Reparar 3</td>
+                    </tr>
+                    <tr class="row100">
+                        <td class="column100 column1" data-column="column1">04</td>
+                        <td class="column100 column2" data-column="column2">Fabián Colcha</td>
+                        <td class="column100 column3" data-column="column3">example4@gmail.com</td>
+                        <td class="column100 column4" data-column="column4">Mal de la cabeza</td>
+                        <td class="column100 column5" data-column="column5">Brayan</td>
+                        <td class="column100 column6" data-column="column6">04-04-2022</td>
+                        <td class="column100 column7" data-column="column7">10 am</td>
+                        <td class="column100 column8" data-column="column8">Reparar 4</td>
+                        </tr>
+        
+                    <tr class="row100">
+                        <td class="column100 column1" data-column="column1">05</td>
+                        <td class="column100 column2" data-column="column2">Rosa Guatemal</td>
+                        <td class="column100 column3" data-column="column3">example5@gmail.com</td>
+                        <td class="column100 column4" data-column="column4">Mal del pie</td>
+                        <td class="column100 column5" data-column="column5">Carmen</td>
+                        <td class="column100 column6" data-column="column6">05-05-2022</td>
+                        <td class="column100 column7" data-column="column7">10 am</td>
+                        <td class="column100 column8" data-column="column8">Reparar 5</td>
+                    </tr>
+                    <tr class="row100">
+                        <td class="column100 column1" data-column="column1">06</td>
+                        <td class="column100 column2" data-column="column2">Marina Flores</td>
+                        <td class="column100 column3" data-column="column3">example6@gmail.com</td>
+                        <td class="column100 column4" data-column="column4">Mal del dedo</td>
+                        <td class="column100 column5" data-column="column5">Juan</td>
+                        <td class="column100 column6" data-column="column6">06-06-2022</td>
+                        <td class="column100 column7" data-column="column7">10 am</td>
+                        <td class="column100 column8" data-column="column8">Reparar 6</td>
+                    </tr>
+                    <tr class="row100">
+                        <td class="column100 column1" data-column="column1">07</td>
+                        <td class="column100 column2" data-column="column2">Carmen Otavalo</td>
+                        <td class="column100 column3" data-column="column3">example7@gmail.com</td>
+                        <td class="column100 column4" data-column="column4">Mal del brazo</td>
+                        <td class="column100 column5" data-column="column5">Luis</td>
+                        <td class="column100 column6" data-column="column6">07-07-2022</td>
+                        <td class="column100 column7" data-column="column7">10 am</td>
+                        <td class="column100 column8" data-column="column8">Reparar 7</td>
+                    </tr>
+                    <tr class="row100">
+                        <td class="column100 column1" data-column="column1">08</td>
+                        <td class="column100 column2" data-column="column2">Jefferson Guajan</td>
+                        <td class="column100 column3" data-column="column3">example8@gmail.com</td>
+                        <td class="column100 column4" data-column="column4">Mal de la oreja xd</td>
+                        <td class="column100 column5" data-column="column5">Mara</td>
+                        <td class="column100 column6" data-column="column6">08-08-2022</td>
+                        <td class="column100 column7" data-column="column7">10 am</td>
+                        <td class="column100 column8" data-column="column8">Reparar 8</td>
+                    </tr>
+                    <tr class="row100">
+                        <td class="column100 column1" data-column="column1">09</td>
+                        <td class="column100 column2" data-column="column2">Brayan Quilo</td>
+                        <td class="column100 column3" data-column="column3">example9@gmail.com</td>
+                        <td class="column100 column4" data-column="column4">Mal de la nariz</td>
+                        <td class="column100 column5" data-column="column5">Sofía</td>
+                        <td class="column100 column6" data-column="column6">09-09-2022</td>
+                        <td class="column100 column7" data-column="column7">10 am</td>
+                        <td class="column100 column8" data-column="column8">Reparar 9</td>
+                    </tr>
 </div>
 </div>
 </main>
