@@ -1,3 +1,3 @@
-# Salutest management
-Este aplicativo permitirá a cualquier institución médica tener el control total del control de procesos y del esquema de la institución médica.
+# Salutest Web
+Nos permitira tener acceso a todas las aplicaciones de salutest, y nos brindara toda la informacion correspondiente a todas las aplicaciones y procesos.
         
