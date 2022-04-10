@@ -1,0 +1,160 @@
+body{
+
+    background: -webkit-linear-gradient(to right, #b3afaf, #090909, #000000);  
+    background: linear-gradient(to right, #b3afaf, #000000, #ffffff); 
+    justify-content: center;
+    align-items: center;
+        
+    }
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.form-registro{
+    width: 800px;
+    
+    background: #24303c;
+    padding: 10px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 4px;
+    font-family: 'calibry';
+    color: white;
+    box-shadow: 7px 13px 37px #000;
+    
+}
+
+.form-registro h4{
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.controls{
+    color: white;
+    width: 100%;
+    background: #24303c;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #1f53c5;
+    font-family: 'calibry';
+    font-size: 18px;
+}
+
+.form-registro p{
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 40px;
+}
+
+.form-registro a{
+    color: white;
+    text-decoration: none;
+}
+
+.form-registro a:hover{
+    color: white;
+    text-decoration: underline;
+}
+
+.form-registro .botons{
+    width: 100%;
+    background: blue;
+    border: none;
+    padding: 12px;
+    color: white;
+    margin: 16px 0;
+    font-size: 16px;
+}
+
+
+
+
+/*------------------------------------------ boton neon-------------------------------------------------*/
+.boton{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 1100px;
+    align-items: center;
+}
+
+.btn{
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-top: 100px;
+    position: relative;
+    padding: 15px;
+    color: white;
+    letter-spacing: 5px;
+    border: 1px solid rgba(172, 162, 233, 1);
+    background: none;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.8s;
+}
+.btn::after{
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0;
+    height: 50%;
+    width: 0%;
+    z-index: -1;
+    background: linear-gradient(to right, #6b6363, #afb1b6); 
+    transition: 0.8s;
+    opacity: 0;
+}
+.btn::before{
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    height: 50%;
+    width: 0%;
+    z-index: -1;
+    background: -webkit-linear-gradient(to right, #939d8b, #949db4);  
+    background: linear-gradient(to right, #8c95a4, #373B44); 
+    transition: 0.8s;
+    opacity: 0;
+}
+
+.btn:hover::after, .btn:hover::before{
+    width: 100%;
+    opacity: 1;
+}
+.btn:hover{
+    color: #b99898;
+    box-shadow: 0 0 60px #ff7bde, 0 0 10px #1100ff, 0 0 100px #037975 ;
+}
+.btn:active{
+    box-shadow: 0 0 60px #ff7bde, 0 0 10px #1100ff, 0 0 100px #0d9e86 ;
+}
+
+
+
+
+/*------------------------------------tabla-------------------------------------------------*/
+.table{
+    background: linear-gradient(to left, #24303c, #595565); 
+    
+}
+
+.table-active{
+    background: linear-gradient(to right, #536976, #24303c); 
+}
+
+table .btnEditar{
+    color:rgb(10, 220, 31);
+    cursor: pointer;
+}
+
+table .btneliminar{
+    color:rgb(255, 0, 0);
+    cursor: pointer;
+}
+

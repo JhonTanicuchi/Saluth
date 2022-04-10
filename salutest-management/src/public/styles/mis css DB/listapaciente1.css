@@ -36,7 +36,7 @@ body{
     position: absolute;
     top: 87px;
     left: 35%;
-    border: 5px solid rgb(12, 12, 12);
+    border: 5px solid white;
     border-radius: 50%;
     overflow: hidden;
     height: 96px;
@@ -76,4 +76,30 @@ body{
 
 .statistics {
     text-align: center;
+}
+
+
+.quantity{
+    font-weight: 700;
+    margin-bottom: 10px; /*Separacion Follo = cant*/
+    color: var(--Very_dark_desaturated_blue);
+}
+
+
+.units{
+    font-size: 0.6em;
+    color: var(--Dark_gray);
+    letter-spacing: 2px;
+    
+}
+
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media screen and (min-width:1440px){
+    .card-container{
+        width: 350px;
+    }
 }
