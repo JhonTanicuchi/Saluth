@@ -8,7 +8,7 @@ Salutest es un sistema completo que se divide en 3 aplicaciones:
   Este aplicativo permitirá a Salutest tener el control de todas las instituciones médicas que están usando el servicio y mantenimiento de estas.
 
   ### - Salutest Management
-  Este aplicativo permitirá a cualquier institución médica tener el control total del control de procesos y del esquema de la institución médica.
+  Este aplicativo permitirá a cualquier institución médica tener el control total de la distribucion y administracion de la institución médica.
   
   ### - Salutest ERP
   Este aplicativo permitirá a gestionar los procesos internos de la intitución medica.
