@@ -1,0 +1,121 @@
+body{
+    font-family: monospace;
+}
+
+.container{
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+}
+.container2{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    
+}
+.container2 input{
+    border-radius: 0px;
+    width: 200px;
+    height: 20px;
+    background-color:#6eb8f6;
+    border-radius: 5px;
+    width: 200px;
+    color:#e8f5ff;
+    font-size: 20px;
+    height: 30px;;
+}
+
+.table{
+    width: 100%;
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    table-layout: fixed;
+}
+
+.table caption {
+    font-size: 28px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 8px 0px;
+    background-color: #c3e3fd;
+    color: #6eb8f6;
+
+}
+
+.texto1{
+    width: 100px;
+    font-size: 20px;
+    position: relative;
+    justify-items: center;
+}
+
+.container1 h1{
+    font-size: 28px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 8px 0px;
+    text-align: center;
+    font-size: 28px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 8px 0px;
+    background-color: #c3e3fd;
+    color: #6eb8f6;
+}
+
+.table tr{
+    background-color: #e8f5ff;
+    border: 1px solid #ddd;
+}
+
+.table th, .table td {
+    font-size: 16px;
+    padding: 8px;
+    text-align: center;
+}
+
+.table thead th{
+    text-transform: uppercase;
+    background-color: #6eb8f6;
+}
+
+.table tbody tr:hover{
+    background-color: #c3e3fd;
+}
+
+.table tbody td:hover{
+    background-color: #6eb8f6;
+}
+
+table .btnEliminar{
+    color: tomato;
+    cursor: pointer;
+}
+
+table .btnEditar{
+    color: #a4f66e;
+    cursor: pointer;
+}
+
+.d-flex button{
+    background: #c3e3fd;
+    color: #6eb8f6;
+    display: inline-block;
+    font-size: 20px;
+    margin: 20px;
+    padding: 10px 0px;
+    text-align: center;
+    width: 100px;
+    cursor: pointer;
+    border-radius: 25px;
+}
+.d-flex.justify-content-center{
+display: flex;
+position: relative;
+justify-content: center;
+align-items: center;
+}
