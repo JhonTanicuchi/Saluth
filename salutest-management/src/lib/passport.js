@@ -70,26 +70,26 @@ passport.use(
         const resultadoPersona = await orm.persona.create(nuevaPersona);
         nuevaPersona.id_persona = resultadoPersona.insertId;
 
-
+/* 
         let nuevoEmpleado = {
           estado : true
         };
 
         const resultadoEmpleado = await orm.empleado.create(nuevoEmpleado);
-        nuevoEmpleado.id_empleado = resultadoEmpleado.insertId;
+        nuevoEmpleado.id_empleado = resultadoEmpleado.insertId; */
 
 
-         const persona_id = await sql.query(
+       /*   const persona_id = await sql.query(
            "select idProyecto from proyectos where idProyecto = ?",
            [nuevoEmpleado.id_empleado]
-         );
+         ); */
         
-        const { correo, empleado } = req.body;
+        const { correo } = req.body;
         let nuevoUsuario = {
           username,
           password,
           correo,
-          empleadoIdEmpleado: empleado,
+         /*  empleadoIdEmpleado: empleado, */
         };
       
         nuevoUsuario.password = await helpers.encryptPassword(password);
