@@ -80,14 +80,16 @@
               <form class="form_signup" id="signup_form" action="/registro" method="POST">
                 <div class="credentials_signup">
                   <div>
+                    <label for="id_singup">Cédula</label>
+                    <input type="text" name="id" id="id_singup" value="{{'max(idComunidad)'}}" readonly>
                     <label for="cedula_singup">Cédula</label>
                     <input name="cedula" class="input" id="cedula_singup" type="text" autocomplete="off" required />
-                    <label for="name_singup">Nombre</label>
-                    <input name="nombre" class="input" id="name_singup" type="text" autocomplete="off" required />
-                    <label for="lastname_singup">Apellido</label>
-                    <input name="apellido" class="input" id="lastname_singup" type="text" autocomplete="off" required />
+                    <label for="name_singup">Nombres</label>
+                    <input name="nombres" class="input" id="name_singup" type="text" autocomplete="off" required />
+                    <label for="lastname_singup">Apellidos</label>
+                    <input name="apellidos" class="input" id="lastname_singup" type="text" autocomplete="off" required />
                     <label for="fecha_n_singup">Fecha de Nacimiento</label>
-                    <input name="nacimiento" class="input" id="fecha_n_singup" type="date" autocomplete="off" required />
+                    <input name="fecha_nacimiento" class="input" id="fecha_n_singup" type="date" autocomplete="off" required />
                   </div>
         
                   <div>
