@@ -185,6 +185,7 @@ background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
   position: relative;
   margin-left: 200px;
   transition: margin-left 500ms;
+  
 }
 
 .header_app {
@@ -251,8 +252,8 @@ background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
 .main_app{
   margin-top: 60px;
   padding: 1rem 3rem;
-  background: #e8eef4;
   min-height: calc(100vh - 60px);
+  background-color: rgb(218, 204, 185);
 }
 
 .dash_title {
@@ -268,4 +269,25 @@ background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
 
 .forthcoming {
   filter: grayscale(100%) blur(2px);
+}
+
+/*Estilos-Crud- empleados*/
+
+#new-employee {
+  padding: 10px;
+  background-color: rgb(110, 155, 214);
+  border: solid 1px black;
+}
+
+#new-employee:hover {
+  opacity: .6;
+}
+
+#formulario  {
+  border: 1px solid black;
+}
+
+#formulario form {
+  padding: 10px;
+  margin: 10px;
 }
