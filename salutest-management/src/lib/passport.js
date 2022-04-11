@@ -56,17 +56,46 @@ passport.use(
         where: { username: username },
       });
       if (usuario_empleado === null) {
-        const { fecha_creacion, correo } = req.body;
+
+        const { cedula, nombres, apellidos, fecha_nacimiento, direccion } =
+          req.body;
+        let nuevaPersona = {
+          cedula,
+          nombres,
+          apellidos,
+          fecha_nacimiento,
+          direccion,
+        };
+
+        const resultadoPersona = await orm.persona.create(nuevaPersona);
+        nuevaPersona.id_persona = resultadoPersona.insertId;
+
+
+        let nuevoEmpleado = {
+          estado : true
+        };
+
+        const resultadoEmpleado = await orm.empleado.create(nuevoEmpleado);
+        nuevoEmpleado.id_empleado = resultadoEmpleado.insertId;
+
+
+         const persona_id = await sql.query(
+           "select idProyecto from proyectos where idProyecto = ?",
+           [nuevoEmpleado.id_empleado]
+         );
+        
+        const { correo, empleado } = req.body;
         let nuevoUsuario = {
           username,
           password,
           correo,
-          fecha_creacion,
+          empleadoIdEmpleado: empleado,
         };
+      
         nuevoUsuario.password = await helpers.encryptPassword(password);
-        const resultado = await orm.usuario_empleado.create(nuevoUsuario);
-        nuevoUsuario.id_usuario_empleado = resultado.insertId;
-        return done(null, nuevoUsuario);
+        const resultadoUsuario = await orm.usuario_empleado.create(nuevoUsuario);
+        nuevoUsuario.id_usuario_empleado = resultadoUsuario.insertId;
+        return done(null, nuevoUsuario, nuevaPersona);
       } else {
         if (usuario_empleado) {
           const usuario = usuario_empleado;

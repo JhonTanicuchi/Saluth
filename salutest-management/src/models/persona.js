@@ -8,10 +8,8 @@ const persona = (sequelize, type) => {
         autoIncrement: true,
       },
       cedula: type.STRING,
-      nombre1: type.STRING,
-      nombre2: type.STRING,
-      apellido1: type.STRING,
-      apellido2: type.STRING,
+      nombres: type.STRING,
+      apellidos: type.STRING,
       fecha_nacimiento: type.STRING,
       direccion: type.STRING,
       creacionPersonas: {

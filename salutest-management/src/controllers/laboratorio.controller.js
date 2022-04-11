@@ -1,7 +1,7 @@
 const laboratorio = {}
 
 laboratorio.mostrar = (req,res) => {
-    res.render ('modules/laboratorio')
+    res.render ('modules/laboratorios')
 }
 
 module.exports = laboratorio

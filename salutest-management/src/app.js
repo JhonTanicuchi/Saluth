@@ -86,7 +86,6 @@ app.use(require("./rutas/catalogos"));
 app.use(require("./rutas/certificado_medico"))
 app.use(require('./rutas/crud_turnos'))
 app.use(require('./rutas/laboratorio'))
-
 app.use(require('./rutas/empleados'))
 app.use(require('./rutas/roles'))
 app.use(require('./rutas/especialidades'))

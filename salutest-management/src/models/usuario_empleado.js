@@ -10,7 +10,6 @@ const usuario_empleado = (sequelize, type) => {
       username: type.STRING(99),
       password: type.STRING,
       correo: type.STRING,
-      fecha_creacion: type.STRING,
       creacionUsuario_Empleados: {
         type: "TIMESTAMP",
         defaultValue: type.literal("CURRENT_TIMESTAMP"),
