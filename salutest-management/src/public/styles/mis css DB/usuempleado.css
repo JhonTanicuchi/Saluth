@@ -1,25 +1,26 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 body{
-    background: #74ebd5;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #ACB6E5, #74ebd5);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #ACB6E5, #74ebd5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #ffd89b;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #19547b, #ffd89b);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #19547b, #ffd89b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
 }
 :root{
-    --primary-color:black;
-    --secondary-color: #9acef8 ;
-    --highlight-color: #c3e3fd;
+    --primary-color:rgb(0, 0, 0);
+    --secondary-color: #5efff2 ;
+    --highlight-color: #23ffa3;
 
-    --dt-status-available-color: #4ea93b;
-    --dt-status-offline-color:#e00000;
+    --dt-status-available-color: #08791d;
+    --dt-status-offline-color:#ff0f1f;
 
-    --dt-padding: 12px;
+    --dt-padding: 7px;
     --dt-padding-s: 6px;
     --dt-padding-xs: 2px;
 
     --dt-border-radius: 3px;
 
-    --dt-background-color-container: #6eb8f5;
+    --dt-background-color-container: #349c89;
     --dt-border-color: var(--secondary-color);
     --dt-bg-color: var(--highlight-color);
     --dt-text-color: var(--primary-color);
@@ -34,7 +35,7 @@ body{
 }
 
 .material-icons{
-    font-size: 16px;
+    font-size: 20px;
 }
 .datable-container{
     font-family: 'Roboto', sans-serif;
@@ -157,12 +158,15 @@ body{
     vertical-align: middle;
 }
 .datable-container .datatable tbody tr .available::after{
-    content: 'Activo';
+    content: 'Inicia';
     color: var(--dt-status-available-color);
 }
-
+.datable-container .datatable tbody tr .away::after{
+    content: 'Proceso';
+    color: var(--dt-status-away-color);
+}
 .datable-container .datatable tbody tr .offline::after{
-    content: 'Inactivo';
+    content: 'Finalizada';
     color: var(--dt-status-offline-color);
 }
 .datable-container .datatable tbody tr .available::before,
@@ -185,26 +189,8 @@ body{
 .datable-container .datatable tbody tr .offline::before{
     background-color: var(--dt-status-offline-color);
 }
-table {
-    width: 50%;
-    margin: 5px auto;
-    box-shadow: 0 0 20px #333;
- 
-    grid-auto-rows: 100%;
-}
-table th{
-    width:2.5rem;
-}
-.table, th, td{
-border:1px solid rgb(7, 6, 6);
-border-collapse:collapse;
 
-}
-th, td{
-    padding: 8px;
-}
-th{
-    text-align: left;
-    background: rgba(40,65,120,1);
-    color:white;
+.table-checkbox{
+    width: 10px;
+    height: 10px;
 }

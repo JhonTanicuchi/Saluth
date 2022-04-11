@@ -1,8 +1,74 @@
-.container_roles {
-    width: 90%;
-    margin: auto;
-    overflow: hidden;
-    background: rgb(14, 200, 113);
-    margin-top: 20px;
-    align-items: center;
+.datatable {
+    font-weight: 400;
+    font-family: Sans-Serif;
+    font-size: 18px;
+    margin: 45px;
+    width: 40px;
+    text-align: left;
+    border-collapse: collapse;
+}
+
+th {
+    font-size: 20px;
+    font-weight: 500;
+    padding: 20px;
+    background: #b9c9fe;
+    border-top: 4px solid #aabcfe;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    color: #039;
+}
+
+td {
+    padding: 9px;
+    background: #08d8af;
+    border-bottom: 2px solid rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
+    border-top: 2px solid transparent;
+}
+
+.rol {
+    font-family: Sans-Serif;
+    font-size: 35px;
+    font-weight: 100;
+    border-bottom: 3px solid;
+    color: rgb(0, 0, 0);
+}
+
+.boton-añadir {
+    background-color: #57c723;
+    padding: 4px 20px;
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 1px 0 rgba(27, 26, 26, 0.5);
+    box-shadow: 0 1px 2px rgba(96, 134, 63, 0.8);
+}
+
+.boton-añadir:hover {
+    background-color: rgb(88, 80, 80);
+}
+
+.boton-eliminar {
+    background-color: #ec1111;
+    padding: 4px 20px;
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 1px 0 rgba(27, 26, 26, 0.5);
+    box-shadow: 0 1px 2px rgba(70, 76, 65, 0.8);
+}
+
+.boton-eliminar:hover {
+    background-color: rgba(88, 80, 80);
+}
+
+.boton-ocultar {
+    background-color: #daec11;
+    padding: 4px 20px;
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 1px 0 rgba(27, 26, 26, 0.5);
+    box-shadow: 0 1px 2px rgba(70, 76, 65, 0.8);
+}
+
+.boton-ocultar:hover {
+    background-color: rgba(88, 80, 80);
 }

@@ -1,0 +1,114 @@
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.conte {
+    height: 510px;
+    width: 350px;
+    box-shadow: 0 0 7px #111;
+    margin: 30px 30px;
+}
+
+.conte .card {
+    height: 200px;
+    width: 100%;
+    margin-bottom: 170px;
+}
+
+.card img {
+    margin: auto;
+    display: block;
+}
+
+.conte .paracetamol img {
+    height: 250px;
+    width: 350px;
+}
+
+.conte .aspirina img {
+    height: 250px;
+    width: 350px;
+}
+
+.conte .amoxicilina img {
+    height: 250px;
+    width: 350px;
+}
+
+.conte .paracetamol {
+    background-color: #111;
+}
+
+.conte .aspirina {
+    background-color: #aa0300;
+}
+
+.conte .amoxicilina {
+    background-color: #B11313;
+}
+
+.conte .paracetamol {
+    height: 170px;
+    width: 200px;
+}
+
+.conte .aspirina {
+    height: 170px;
+    width: 200px;
+}
+
+.conte .amoxicilina {
+    height: 170px;
+    width: 200px;
+}
+
+.informacion {
+    height: 80px;
+    width: 100%;
+}
+
+.informacion h1 {
+    font-family: sans-serif;
+    font-size: 1.5em;
+    text-align: center;
+    color: #333;
+    margin-bottom: -1px;
+}
+
+.informacion p {
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 1.2em;
+    color: #555;
+}
+
+.precio {
+    height: 25px;
+    width: 65%;
+    margin: auto;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.box-precio {
+    width: 80px;
+}
+
+.precio {
+    color: red;
+}
+
+.precio {
+    font-size: 1.3em;
+}
+
+.shoping {
+    font-size: 1.9em;
+    color: rgb(2, 2, 2);
+}
