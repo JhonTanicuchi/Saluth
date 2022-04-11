@@ -1,21 +1,20 @@
-const usuario_empleado = (sequelize, type) => {
+const historia_clinica = (sequelize, type) => {
   return sequelize.define(
-    "usuario_empleado",
+    "historia_clinicae",
     {
-      id_usuario_empleado: {
+      id_historia_clinica: {
         type: type.INTEGER,
         primaryKey: true,
         autoIncrement: true,
       },
-      username: type.STRING(99),
-      password: type.STRING,
-      correo: type.STRING,
-      creacionUsuario_Empleados: {
+      fecha_creacion: type.STRING,
+      campo: type.STRING,
+      creacionHistoria_clinicas: {
         type: "TIMESTAMP",
         defaultValue: type.literal("CURRENT_TIMESTAMP"),
         allowNull: false,
       },
-      actualizacionUsuario_Empleados: {
+      actualizacionHistoria_clinicas: {
         type: "TIMESTAMP",
         defaultValue: type.literal("CURRENT_TIMESTAMP "),
         allowNull: false,
@@ -27,4 +26,4 @@ const usuario_empleado = (sequelize, type) => {
   );
 };
 
-module.exports = usuario_empleado;
+module.exports = historia_clinica;

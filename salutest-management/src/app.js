@@ -61,7 +61,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 //routers
-app.use(require('./rutas/index'))
 app.use(require('./rutas/services'))
 app.use(require('./rutas/job'))
 app.use(require('./rutas/registro'))
@@ -87,9 +86,9 @@ app.use(require("./rutas/catalogos"));
 app.use(require("./rutas/certificado_medico"))
 app.use(require('./rutas/crud_turnos'))
 app.use(require('./rutas/laboratorio'))
-
 app.use(require('./rutas/empleados'))
 app.use(require('./rutas/roles'))
+app.use(require('./rutas/medicamentos'))
 app.use(require('./rutas/especialidades'))
 app.use(require('./rutas/lista2_paciente'))
 app.use(require('./rutas/vistacrudcitamedica'))
@@ -97,6 +96,8 @@ app.use(require('./rutas/listacitamedica'))
 app.use(require('./rutas/vistacrudhorarios'))
 app.use(require('./rutas/lista_usuarios_pacientes'))
 app.use(require('./rutas/vistaempleadosdb'))
-/* app.use('/modules', require('./routes/inquiries')) */
+app.use(require('./rutas/receta_medica'))
+app.use(require('./rutas/signos_vitales'))
+    /* app.use('/modules', require('./routes/inquiries')) */
 
 module.exports = app;

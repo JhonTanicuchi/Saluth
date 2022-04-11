@@ -12,14 +12,14 @@ registro.mostrarLogin = (req, res) => {
 
 
 registro.Registro = passport.authenticate('local.signup', {
-    successRedirect: '/home',
+    successRedirect: '/institucion_medica',
     failureRedirect: '/registro',
     failureFlash: true
 });
 
 registro.Login = passport.authenticate('local.signin', {
-    successRedirect: '/home',
-    failureRedirect: '/login',
+    successRedirect: '/institucion_medica',
+    failureRedirect: '/',
     failureFlash: true
 });
 

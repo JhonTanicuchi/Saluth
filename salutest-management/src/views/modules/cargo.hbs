@@ -1,0 +1,76 @@
+ <!-- MAIN CONTECT -->
+    <div class="main_contect">
+        <main class="main_app">
+            <section class="dash_title">
+                <h2 id="title_modules">Cargo</h2>
+                <a href="#"><span class="far fa-times-circle"></span></a>
+            </section>
+            <button id="new-employee">Agregar</button> 
+            <br><br>
+            <div class="content_grid"> <!-- EN ESTE DIV VA SU CONTENIDO EN SECTIONS -->
+                <!-- TU CONTENIDO  -->
+                <section id="formulario">
+                    <style>
+                        #formulario {
+                            display: none;
+                        }
+                    </style>
+                    <form>
+                        <div class="nombre-completo">
+                            <h3>Cargo</h3>
+                            <input type="text" style="text-transform: uppercase;"  size="20" name="Cargo" id="Cargo" placeholder="Cargo">
+                            <h3>Nombre</h3>
+                            <input type="text" style="text-transform: uppercase;" size="20" name="nombre-1" id="nombres" placeholder="Nombre">
+                            <h3>Sueldo</h3>
+                            <input type="number" size="35" name="sueldo" id="sueldo" placeholder="Sueldo">
+                             
+                        </div>   
+                    </form>
+                    <div class="add">
+
+                        <button type="submit" id="agregar">Agregar</button>
+                    </div>
+                </section>
+                <section id="info-empleado">
+                    <style>
+                        #info-empleado {
+                            display: block;
+                        }
+                    </style>
+                    
+                    <table>
+                        <thead>
+
+                            <tr>
+                                <th>Cargo</th>
+                                <th>Nombre</th>
+                                <th>Sueldo</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                            <div id="campos">
+
+                                   <style>
+                                       #campos {
+                                           display: block;
+                                       }
+                                   </style>
+                                <tbody >
+                                    <tr>
+                                        <td id="cargo"></td>
+                                        <td id="name"></td>
+                                        <td id="sueldo"></td>
+                                        <td id="acciones"><button class="botones-acciones"><span class="fa-solid fa-trash-can"></span></button> | <button class="botones-acciones"><span class="fa-solid fa-user-pen"></span></button> </td>
+                                    </tr>
+                                        <tr>
+                                            <td ></td>
+                                            <td ></td>
+                                        </tr>
+                                </tbody>
+                            </div>
+                    </table>
+                    
+                </section>
+            </div>
+        </main>
+    </div>

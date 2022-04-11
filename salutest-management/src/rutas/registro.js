@@ -5,9 +5,9 @@ const {mostrarRegistro,Registro,Login,logout,mostrarLogin} = require('../control
 const {check_notlogin} = require('../lib/auth');
 
 
-rutas.get('/login',check_notlogin,mostrarLogin);
+rutas.get('/',check_notlogin,mostrarLogin);
 
-rutas.post('/login', Login);
+rutas.post('/', Login);
 
 rutas.get('/registro',check_notlogin, mostrarRegistro);
 
