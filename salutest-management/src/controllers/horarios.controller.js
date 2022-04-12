@@ -1,6 +1,6 @@
 const horarios = {}
 
-vistacrudhorarios.mostrar = (req,res) => {
+horarios.mostrar = (req,res) => {
     res.render ('modules/horarios')
 }
 

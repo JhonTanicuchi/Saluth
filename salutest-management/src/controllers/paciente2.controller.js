@@ -1,6 +1,6 @@
 const paciente2 = {}
 
-lista2_paciente.mostrar = (req,res) => {
+paciente2.mostrar = (req,res) => {
     res.render ('modules/paciente2')
 }
 
