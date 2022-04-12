@@ -81,6 +81,8 @@ app.use(require('./rutas/cita_meet'))
 app.use(require('./rutas/salud_home'))
 app.use(require('./rutas/registro_c'))
 app.use(require('./rutas/chat'))
+app.use(require('./rutas/cita_medica'))
+
 
 /* app.use('/modules', require('./routes/inquiries')) */
 
