@@ -18,13 +18,12 @@ body{
 .container2 input{
     border-radius: 0px;
     width: 200px;
-    height: 20px;
-    background-color:#6eb8f6;
+    height: 25px;
+    background-color:#828282;
     border-radius: 5px;
     width: 200px;
-    color:#e8f5ff;
+    color:#fff;
     font-size: 20px;
-    height: 30px;;
 }
 
 .table{
@@ -41,8 +40,8 @@ body{
     text-transform: uppercase;
     font-weight: bold;
     margin: 8px 0px;
-    background-color: #c3e3fd;
-    color: #6eb8f6;
+    background-color: #aaaaaa;
+    color: #fff;
 
 }
 
@@ -63,13 +62,13 @@ body{
     text-transform: uppercase;
     font-weight: bold;
     margin: 8px 0px;
-    background-color: #c3e3fd;
-    color: #6eb8f6;
+    background-color: #aaaaaa;
+    color: #fff;
 }
 
 .table tr{
-    background-color: #e8f5ff;
-    border: 1px solid #ddd;
+    background-color: #aaaaaa;
+    border: 1px solid #828282;
 }
 
 .table th, .table td {
@@ -80,15 +79,15 @@ body{
 
 .table thead th{
     text-transform: uppercase;
-    background-color: #6eb8f6;
+    background-color: #828282;
 }
 
 .table tbody tr:hover{
-    background-color: #c3e3fd;
+    background-color: #aaaaaa;
 }
 
 .table tbody td:hover{
-    background-color: #6eb8f6;
+    background-color: #828282;
 }
 
 table .btnEliminar{
@@ -102,8 +101,8 @@ table .btnEditar{
 }
 
 .d-flex button{
-    background: #c3e3fd;
-    color: #6eb8f6;
+    background: #aaaaaa;
+    color: #fff;
     display: inline-block;
     font-size: 20px;
     margin: 20px;
