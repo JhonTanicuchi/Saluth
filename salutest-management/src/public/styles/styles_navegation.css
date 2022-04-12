@@ -284,21 +284,69 @@ background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
 
 /*Estilos-Crud- empleados*/
 
-#new-employee {
-  padding: 10px;
-  background-color: rgb(110, 155, 214);
-  border: solid 1px black;
+table th  {
+  width: 10em;
+  border: 1px solid  black;
 }
 
-#new-employee:hover {
-  opacity: .6;
+table td {
+  width: 10em;
+  text-align: center;
+  border-left: 1px solid;
+  
 }
 
-#formulario  {
+table {
+  border-collapse: collapse;
+  border: 1px solid  black;
+}
+
+tr:nth-of-type(1) > th {
+  background-color: #569ebd;
+}
+
+#formulario {
   border: 1px solid black;
+  border-radius: 1rem;
+  background-color: rgb(230, 236, 241);
+  padding: 25px;
+  width: 40em;
+  margin: auto;
+  justify-content: center;
+  
 }
 
-#formulario form {
+form input{
+  margin: 15px;
+  padding: 0.3em;
+  
+}
+.add {
+  text-align: right;
+  margin: auto;
+}
+
+#agregar {
+  padding: 5px 35px;
+  text-align: center;
+  background-color: #569ebd;
+  border: 1px solid;
+  border-radius: 1em;
+}
+
+button:hover {
+  opacity: 0.7;
+}
+
+#new-employee {
+  padding: 5px 35px;
+  text-align: center;
+  background-color: #569ebd;
+  border: 1px solid;
+  border-radius: 1em;
+}
+
+.botones-acciones {
   padding: 10px;
-  margin: 10px;
+  margin: 5px;
 }
