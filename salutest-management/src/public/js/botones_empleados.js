@@ -1,3 +1,4 @@
+//Informacion del empleado
 function agregarEmpleado(){
     let nombre1 = document.getElementById("nombre-1").value;
     let nombre2 = document.getElementById("nombre-2").value;
@@ -20,6 +21,7 @@ function agregarEmpleado(){
     let provinciaEmpleado = document.getElementById("provincia-empleado").value;
     let cantonEmpleado = document.getElementById("canton-empleado").value;
     let parroquiaEmpleado = document.getElementById("parroquia-empleado").value;
+    let sueldos = document.getElementById("sueldo").value;
     
     document.getElementById('nombre').innerHTML = nombre1 + " " + nombre2 + " " + apellido1 + " " + apellido2;
     document.getElementById('nacimiento').innerHTML = fechaNacimiento;
@@ -54,6 +56,7 @@ function agregarEmpleado(){
     document.getElementById('provincia').innerHTML = provinciaEmpleado;    
     document.getElementById('canton').innerHTML = cantonEmpleado;
     document.getElementById('parroquia').innerHTML = parroquiaEmpleado;
+    document.getElementById('sueldo').innerHTML = sueldos;
 }
 
 
@@ -81,4 +84,6 @@ agregarNuevoEmpleado2.addEventListener('click', mostrarCampos );
 let mostrarInfoTabla = document.getElementById('agregar');
 mostrarInfoTabla.addEventListener('click', mostrarTabla );
 
-alert("¡Se ha agregado un nuevo empleado con exito!");
+
+
+
