@@ -100,6 +100,9 @@ app.use(require('./rutas/receta_medica'))
 app.use(require('./rutas/signos_vitales'))
 app.use(require('./rutas/lista_paciente'))
 /* app.use('/modules', require('./routes/inquiries')) */
+<<<<<<< HEAD
     /* app.use('/modules', require('./routes/inquiries')) */
+=======
+>>>>>>> f22fa2c7df44d6e87ef9d289639c676d6debb815
 
 module.exports = app;
