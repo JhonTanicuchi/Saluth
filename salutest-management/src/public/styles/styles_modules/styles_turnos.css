@@ -90,12 +90,12 @@ body{
     background-color: #828282;
 }
 
-table .btnEliminar{
+table .Eliminar{
     color: tomato;
     cursor: pointer;
 }
 
-table .btnEditar{
+table .Editar{
     color: #a4f66e;
     cursor: pointer;
 }
