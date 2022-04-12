@@ -23,7 +23,7 @@
     height: 30px;;
 }
 
-.table{
+.t{
     width: 100%;
     border: 1px solid #ccc;
     border-collapse: collapse;
@@ -32,7 +32,7 @@
     table-layout: fixed;
 }
 
-.table caption {
+.t caption {
     font-size: 28px;
     text-transform: uppercase;
     font-weight: bold;
@@ -63,31 +63,31 @@
     color: #6eb8f6;
 }
 
-.table tr{
+.t tr{
     background-color: #e8f5ff;
     border: 1px solid #ddd;
 }
 
-.table th, .table td {
+.t th, .table td {
     font-size: 16px;
     padding: 8px;
     text-align: center;
 }
 
-.table thead th{
+.t thead th{
     text-transform: uppercase;
     background-color: #6eb8f6;
 }
 
-.table tbody tr:hover{
+.t tbody tr:hover{
     background-color: #c3e3fd;
 }
 
-.table tbody td:hover{
+.t tbody td:hover{
     background-color: #6eb8f6;
 }
 
-table .btnEliminar{
+table .Eliminar{
     color: tomato;
     cursor: pointer;
 }
