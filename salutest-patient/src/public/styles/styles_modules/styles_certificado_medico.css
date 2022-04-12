@@ -65,7 +65,7 @@ body {
 
 .card  h2 {
 	letter-spacing: .1rem;
-	color: var(black-text);
+	color: var(--black-text);
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
@@ -73,7 +73,7 @@ body {
 	color: var(--black-text);
 }
 .card h4{
-	color: var(black-text);
+	color: var(--black-text);
 }
 
 .card h4.resul {
