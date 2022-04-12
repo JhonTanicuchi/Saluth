@@ -1,0 +1,53 @@
+<!-- MAIN CONTECT -->
+<div class="main_contect">
+    <main class="main_app">
+        <section class="dash_title">
+            <h2 id="title_modules">Visa_sala</h2>
+            <a href="/home"><span class="far fa-times-circle"></span></a>
+        </section>
+
+        <div class="vista_sala_grid">
+            <h1>Sala</h1>
+    <table>
+        <tr>
+            <td>
+                <form autocomplete="off" onsubmit="onFormSubmit()">
+                    <div class="texto1">
+                        <label for="productCode">Id-Sala</label>
+                        <input type="text" name="productCode" id="productCode">
+                    </div>
+                    <div class="texto2">
+                        <label for="product">Nombre</label>
+                        <input type="text" name="product" id="product">
+                    </div>
+                    <div>
+                        <label for="qty">Cantidad</label>
+                        <input type="number" name="qty" id="qty">
+                    </div>
+
+                    <div class="form_action--button">
+                        <input type="submit" value="Crear">
+                        <input type="reset" value="Reset">
+                    </div>
+                </form>
+
+                <td>
+                    <table class="list" id="storeList">
+                        <thead>
+                            <tr>
+                                <th>Id de la sala</th>
+                                <th>Nombre</th>
+                                <th>Cantidad</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+            </td>
+        </tr>
+    </table>
+    <script type="text/javascript" src="vista3.js"></script>
+        </div>
+</div>
+</main>

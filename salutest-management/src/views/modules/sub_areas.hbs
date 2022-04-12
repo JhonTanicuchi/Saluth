@@ -2,7 +2,7 @@
 <div class="main_contect">
     <main class="main_app">
         <section class="dash_title">
-            <h2 id="title_modules">Vista Crud-Areas</h2>
+            <h2 id="title_modules">Vista_Areas</h2>
             <a href="/home"><span class="far fa-times-circle"></span></a>
         </section>
 
@@ -12,8 +12,12 @@
             <td>
                 <form autocomplete="off" onsubmit="onFormSubmit()">
                     <div class="texto1">
-                        <label for="productCode">Areas clinicas</label>
+                        <label for="productCode">Areas</label>
                         <input type="text" name="productCode" id="productCode">
+                    </div>
+                    <div class="texto2">
+                        <label for="product">Sub-Area</label>
+                        <input type="text" name="product" id="product">
                     </div>
 
                     <div class="form_action--button">
@@ -27,6 +31,7 @@
                         <thead>
                             <tr>
                                 <th>Areas</th>
+                                <th>Sub-Area</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -36,7 +41,7 @@
             </td>
         </tr>
     </table>
-    <script type="text/javascript" src="vista1.js"></script>
+    <script type="text/javascript" src="vista2.js"></script>
         </div>
 </div>
 </main>
