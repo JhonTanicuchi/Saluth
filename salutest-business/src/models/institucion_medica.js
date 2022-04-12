@@ -1,23 +1,22 @@
-const persona = (sequelize, type) => {
+const institucion_medica = (sequelize, type) => {
   return sequelize.define(
-    "persona",
+    "institucion_medica",
     {
-      id_persona: {
+      id_institucion_medica: {
         type: type.INTEGER,
         primaryKey: true,
         autoIncrement: true,
       },
-      cedula: type.STRING,
-      nombres: type.STRING,
-      apellidos: type.STRING,
-      fecha_nacimiento: type.STRING,
-      direccion: type.STRING,
-      creacionPersonas: {
+      nombre: type.STRING,
+      descripcion: type.STRING,
+      fecha: type.STRING,
+      estado: type.BOOLEAN,
+      creacioninstituciones_medicas: {
         type: "TIMESTAMP",
         defaultValue: type.literal("CURRENT_TIMESTAMP"),
         allowNull: false,
       },
-      actualizacionPersonas: {
+      actualizacioninstituciones_medicas: {
         type: "TIMESTAMP",
         defaultValue: type.literal("CURRENT_TIMESTAMP "),
         allowNull: false,
@@ -29,4 +28,4 @@ const persona = (sequelize, type) => {
   );
 };
 
-module.exports = persona;
+module.exports = institucion_medica;

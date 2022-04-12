@@ -93,7 +93,15 @@
 .login_paciente .section_login_left .bienvenida span {
   font-weight: bold;
   font-size: 30px;
-  display: block;
+  display: flex;
+  align-items:baseline;
+}
+
+.login_paciente .section_login_left .bienvenida span span {
+  font-weight: 100;
+  font-size: 13px;
+  margin-left: 5px;
+  opacity: 80%;
 }
 
 .login_paciente .section_login_right {

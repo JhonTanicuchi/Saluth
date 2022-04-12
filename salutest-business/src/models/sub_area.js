@@ -1,19 +1,20 @@
-const catalogo = (sequelize, type) => {
+const sub_area = (sequelize, type) => {
   return sequelize.define(
-    "catalogo",
+    "sub_area",
     {
-      idCatalogo: {
+      id_sub_area: {
         type: type.INTEGER,
         primaryKey: true,
         autoIncrement: true,
       },
-      nombre: type.STRING(99),
-      creacionCliente: {
+      nombre: type.STRING,
+      estado: type.STRING,
+      creacionSub_area: {
         type: "TIMESTAMP",
         defaultValue: type.literal("CURRENT_TIMESTAMP"),
         allowNull: false,
       },
-      actualizacionCliente: {
+      actualizacionSub_area: {
         type: "TIMESTAMP",
         defaultValue: type.literal("CURRENT_TIMESTAMP "),
         allowNull: false,
@@ -25,4 +26,4 @@ const catalogo = (sequelize, type) => {
   );
 };
 
-module.exports = catalogo;
+module.exports = sub_area;

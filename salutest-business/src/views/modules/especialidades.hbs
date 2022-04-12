@@ -1,0 +1,47 @@
+<div class="main_contect">
+    <main class="main_app">
+        <section class="dash_title">
+            <h2 id="title_modules">Especialidades</h2>
+            <a href="/home"><span class="far fa-times-circle"></span></a>
+        </section>
+
+        <div class="especialidades_grid">
+            <form onsubmit="event.preventDefault();onSubmit();" autocomplete="off">
+              <div class="tablita">
+                <table class="tabla" id="tabla">
+                  <thead>
+                    <tr> 
+                      <th>id</th> 
+                      <th>Especialidad</th>
+                      <th>Descripción</th>
+                      <th>Fecha creacion</th>
+                      <th>Estado</th>
+                      <th>Opciones</th>
+                    </tr>
+                  </thead>
+                    <tbody>
+      
+                    </tbody>
+                </table>
+              </div>
+              <br/>
+              <br/>
+              <div class="caja">
+                <input type=hidden"" name="oculto" value="1"> 
+                
+                <label for="esp">Especialidad</label> <input type="text" id="esp" placeholder="Escriba aqui" required>
+                <label for="desc">Descripción</label> <input type="text" id="desc" placeholder="Escriba aqui" required>
+                <label for="fecha">Fecha creación</label> <input type="date" id="fecha" placeholder="Escriba aqui" required>
+                <select name="est" id="est">
+                        <option>Estado</option>
+                        <option>Activo</option>
+                        <option>No activo</option>
+                </select>
+            
+              </div>
+                <br/>
+                <input class="submit" type="submit" value="Agregar">
+            </form>
+        </div>
+    </main>
+</div>
