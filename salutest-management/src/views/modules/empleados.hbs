@@ -1,4 +1,104 @@
-<!-- MAIN CONTECT -->
+<!-- HEADER -->
+<header class="header_app">
+    <div>
+        <div class="sign_out">
+            <span class="las la-sign-out-alt"></span>
+            <a href="/logout">
+                <h5>Cerrar Sesión</h5>
+            </a>
+        </div>
+    </div>
+    <div class="user_wrapper">
+        <div>
+            <h5>{{user.nombre}} {{user.apellido}}</h5>
+            <p>Paciente</p>
+        </div>
+        <img src="/img/img_profile.png" alt="">
+    </div>
+</header>
+
+<!-- SIDEBAR -->
+
+<div id="sidebar" class="sidebar">
+    <div class="sidebar_header">
+        <h3 class="brand">
+            <img src="/img/icon_new_white.png" alt="logo">
+            <div class="title_nav">
+                <span>Salutest</span>
+                <span>Management</span>
+            </div>
+        </h3>
+        <label id="toggle" class="las la-bars menu_toggle"></label>
+    </div>
+
+    <div class="sidebar_menu">
+        <ul>
+            <li class="list">
+            <a href="/empleados">
+                    <span class="las la-user-friends"></span>
+                    <div>
+                        <span class="title">Empleados</span>
+                        <span id="point_nav" class="fas fa-circle"></span>
+                    </div>
+                </a>
+            </li>
+
+            <li class="list">
+                <a href="./laboratorios">
+                    <span class="las la-bong"></span>
+                    <div>
+                        <span class="title">Laboratorios</span>
+                        <span id="point_nav" class="fas fa-circle"></span>
+                    </div>
+                </a>
+            </li>
+
+            <li class="list">
+                <a href="/lista2_paciente">
+                    <span class="las la-receipt"></span>
+                    <div>
+                        <span class="title">Lista de Pacientes</span>
+                        <span id="point_nav" class="fas fa-circle"></span>
+                    </div>
+                </a>
+            </li>
+
+            <li class="list">
+                <a href="/roles">
+                    <span class="las la-user-nurse"></span>
+                    <div>
+                        <span class="title">Roles</span>
+                        <span id="point_nav" class="fas fa-circle"></span>
+                    </div>
+                </a>
+            </li>
+
+            <li class="list">
+                <a href="./horarios">
+                    <span class="las la-clock"></span>
+                    <div>
+                        <span class="title">Horarios</span>
+                        <span id="point_nav" class="fas fa-circle"></span>
+                    </div>
+                </a>
+            </li>
+            
+        </ul>
+        <ul>
+           
+            <li class="list">
+                <a href="/settings">
+                    <span class="las la-cog"></span>
+                    <div>
+                        <span class="title">Ajustes</span>
+                        <span id="point_nav" class="fas fa-circle"></span>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+ <!-- MAIN CONTECT -->
     <div class="main_contect">
         <main class="main_app">
             <section class="dash_title">
@@ -10,44 +110,64 @@
             <div class="content_grid"> <!-- EN ESTE DIV VA SU CONTENIDO EN SECTIONS -->
                 <!-- TU CONTENIDO  -->
                 <section id="formulario">
-                    <!--<style>
+                    <style>
                         #formulario {
                             display: none;
                         }
-                    </style>-->
+                    </style>
                     <form>
-
-                        <input type="text" name="nombre-1" id="nombre-1" placeholder="Nombre 1">
-                        <input type="text" name="nombre-2" id="nombre-2"   placeholder="Nombre 2">
-                        <input type="text" name="apellido-1" id="apellido-1" placeholder="Apellido 1">
-                        <input type="text" name="apellido-2" id="apellido-2" placeholder="Apellido 2">
-                        <input type="date" name="fecha-nacimiento" id="fecha-nacimiento" placeholder="Fecha de nacimiento">
-                        <input type="number" name="cedula" id="numero-cedula" placeholder="Número de cédula">
-                        <input type="text" name="direccion" id="direccion-empleado" placeholder="Dirección">
-                        <input type="radio" name="genero" id="genero-masculino"  value="Masculino"> Masculino
-                        <input type="radio" name="genero" id="genero-femenino"  value="Femenino"> Femenino
-                        <input type="radio" name="genero" id="genero-otro"  value="Otro"> Otro
+                        <div class="nombre-completo">
+                            <h3>Nombres del Empleado</h3>
+                            <input type="text" style="text-transform: uppercase;" size="35" name="nombre-1" id="nombre-1" placeholder="Nombre 1">
+                            <input type="text" style="text-transform: uppercase;"  size="35" name="nombre-2" id="nombre-2"   placeholder="Nombre 2">
+                            <input type="text" style="text-transform: uppercase;"  size="35" name="apellido-1" id="apellido-1" placeholder="Apellido 1">
+                            <input type="text" style="text-transform: uppercase;"  size="35" name="apellido-2" id="apellido-2" placeholder="Apellido 2">
+                             
+                        </div>
+                        <div class="nacimiento">
+                            <h3>Fecha de Nacimiento</h3>
+                            <input type="date" style="text-transform: uppercase;" name="fecha-nacimiento" id="fecha-nacimiento" placeholder="Fecha de nacimiento">
+                        </div>
+                        <div class="cedula">
+                            <h3>Número de Cédula</h3>
+                            <input type="number"  name="cedula" id="numero-cedula" placeholder="Número de cédula">
+                        </div>
                         
-                        <input type="radio" name="soltero" id="soltero" value="Soltero/a"> Soltero/a
-                        <input type="radio" name="casado" id="casado"  value="Casado/a"> Casado/a
-                        <input type="radio" name="union-libre" id="union-libre" value="Union-Libre"> Union Libre
-                        <input type="radio" name="separado" id="separado" value="Separado/a"> Separado/a
-                        <input type="radio" name="divorciado" id="divorciado" value="Divorciado/a"> Divorciado/a
-                        <input type="radio" name="viudo" id="viudo" value="Viudo/a"> Viudo/a
-                        <input type="text" name="provincia" id="provincia-empleado" placeholder="Provincia">     
-                        <input type="text" name="canton" id="canton-empleado" placeholder="Cantón">     
-                        <input type="text" name="parroquia" id="parroquia-empleado" placeholder="Parroquia">     
+                        <div class="generos-empleado">
+                            <h3>Género</h3>
+                            <input type="radio" name="genero" id="genero-masculino"  value="Masculino"> Masculino
+                            <input type="radio" name="genero" id="genero-femenino"  value="Femenino"> Femenino
+                            <input type="radio" name="genero" id="genero-otro"  value="Otro"> Otro
+                        </div>
+                        <div class="estado-civil">
+                            <h3>Estado Cívil</h3>
+                            <input type="radio" name="soltero" id="soltero" value="Soltero/a"> Soltero/a
+                            <input type="radio" name="casado" id="casado"  value="Casado/a"> Casado/a
+                            <input type="radio" name="union-libre" id="union-libre" value="Union-Libre"> Union Libre
+                            <input type="radio" name="separado" id="separado" value="Separado/a"> Separado/a
+                            <input type="radio" name="divorciado" id="divorciado" value="Divorciado/a"> Divorciado/a
+                            <input type="radio" name="viudo" id="viudo" value="Viudo/a"> Viudo/a
+                        </div>
+                             <div class="ubicacion-empleado">
+                                <h3>Direccion</h3>
+                                <input type="text" name="direccion" id="direccion-empleado" placeholder="Dirección">
+                                 <input type="text" name="provincia" id="provincia-empleado" placeholder="Provincia">     
+                                 <input type="text" name="canton" id="canton-empleado" placeholder="Cantón">     
+                                 <input type="text" name="parroquia" id="parroquia-empleado" placeholder="Parroquia">     
+                             </div>
                         
                          
                     </form>
-                    
-                    <button type="submit" id="agregar">Agregar</button>
+                    <div class="add">
+
+                        <button type="submit" id="agregar">Agregar</button>
+                    </div>
                 </section>
                 <section id="info-empleado">
                     <style>
-                       /* #info-empleado {
+                        #info-empleado {
                             display: block;
-                        }*/
+                        }
                     </style>
                     
                     <table>
@@ -69,9 +189,9 @@
                             <div id="campos">
 
                                    <style>
-                                      /* #campos {
+                                       #campos {
                                            display: block;
-                                       }*/
+                                       }
                                    </style>
                                 <tbody >
                                     <tr>
@@ -84,7 +204,7 @@
                                         <td id="provincia"></td>
                                         <td id="canton"></td>
                                         <td id="parroquia"></td>
-                                        <td id="acciones"></td>
+                                        <td id="acciones"><span class="fa-solid fa-trash-can"></span> | <span class="fa-solid fa-user-pen"></span></td>
                                     </tr>
                                         <tr>
                                             <td ></td>
@@ -98,5 +218,6 @@
             </div>
         </main>
     </div>
+</div>
 
 <script src="./botones.js"></script>
