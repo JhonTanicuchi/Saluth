@@ -1,9 +1,9 @@
-function record_filter() {
+function cita_medica_filter() {
     // Declare variables
     var input, filter, table, tr, td, i, j, visible;
-    var input = document.getElementById("record_filter");
+    var input = document.getElementById("cita_medica_filter");
     filter = input.value.toUpperCase();
-    table = document.getElementById("record_table");
+    table = document.getElementById("cita_medica_table");
     tr = table.getElementsByTagName("tr");
   console.log(filter)
     // Loop through all table rows, and hide those who don't match the search query
