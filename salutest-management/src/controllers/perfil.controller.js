@@ -1,6 +1,6 @@
 const perfil = {}
 
-paciente.mostrar = (req,res) => {
+perfil.mostrar = (req,res) => {
     res.render ('modules/perfil')
 }
 
