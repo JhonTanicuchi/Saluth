@@ -98,6 +98,7 @@ app.use(require('./rutas/receta_medica'))
 /* app.use('/modules', require('./routes/inquiries')) */
 app.use(require('./rutas/pacientes'))
 app.use(require('./rutas/horarios'))
+app.use(require('./rutas/perfil'))
 
 /* app.use('/modules', require('./routes/inquiries')) */
 
