@@ -4,6 +4,6 @@ const rutas = express.Router();
 const {mostrar} = require('../controllers/empleados.controller');
 const {check_login} = require('../lib/auth');
 
-rutas.get('/empleados', mostrar);
+rutas.get('/empleados',check_login, mostrar);
 
 module.exports = rutas;
