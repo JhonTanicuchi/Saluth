@@ -38,6 +38,17 @@ background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
   align-items: center;
 }
 
+.sidebar_header .title_nav span:first-child{
+  display: flex;
+}
+
+.sidebar_header .title_nav span:last-child{
+  display: flex;
+  font-size: 13px;
+  font-weight: 100;
+  opacity: 50%;
+}
+
 .sidebar_header img {
   width: 40px;
   display: inline-block;
