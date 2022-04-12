@@ -8,7 +8,7 @@
 :root{
 	--white-text:#fff;
 	--background:#c8e8f1;
-	--black-text:rgb(68, 66, 66)	
+	--black-text:rgb(68, 66, 66);	
 	--prueba: (180deg,#21c8f6,#637bff);
 }
 
@@ -55,11 +55,12 @@ body {
 	width: 39em;
 	height: 38rem;
 }
-
-.card h6 {
-	opacity: 0.6;	
-	letter-spacing: .1rem;
-	text-transform: uppercase;
+.card .cab_1{
+    margin-left: 9px;
+    font-size: 35px;
+    text-align: center;
+    color: red;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .card  h2 {
@@ -68,21 +69,28 @@ body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+.card h3{
+	color: var(--black-text);
+}
+.card h4{
+	color: var(black-text);
+}
+
 .card h4.resul {
     justify-content: center;
     margin-left: 35%;
+	color: var(--black-text);
+}
+.card h6 {
+	opacity: 0.6;	
+	letter-spacing: .1rem;
+	text-transform: uppercase;
 }
 
 .card .lin{
     margin-left: 27%;
 }
-.card .cab_1{
-    margin-left: 9px;
-    font-size: 35px;
-    text-align: center;
-    color: red;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
+
 
 .card .fin_2{
     margin-left: 30%;
