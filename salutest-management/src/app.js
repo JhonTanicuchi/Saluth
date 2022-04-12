@@ -101,6 +101,5 @@ app.use(require('./rutas/horarios'))
 app.use(require('./rutas/empleados'))
 
 /* app.use('/modules', require('./routes/inquiries')) */
-/* app.use('/modules', require('./routes/inquiries')) */
 
 module.exports = app;
