@@ -94,15 +94,12 @@ app.use(require('./rutas/lista2_paciente'))
 app.use(require('./rutas/vistacrudcitamedica'))
 app.use(require('./rutas/listacitamedica'))
 app.use(require('./rutas/vistacrudhorarios'))
-app.use(require('./rutas/lista_usuarios_pacientes'))
+app.use(require('./rutas/usuarios_pacientes'))
 app.use(require('./rutas/vistaempleadosdb'))
 app.use(require('./rutas/receta_medica'))
 app.use(require('./rutas/signos_vitales'))
 app.use(require('./rutas/lista_paciente'))
 /* app.use('/modules', require('./routes/inquiries')) */
-<<<<<<< HEAD
     /* app.use('/modules', require('./routes/inquiries')) */
-=======
->>>>>>> f22fa2c7df44d6e87ef9d289639c676d6debb815
 
 module.exports = app;
