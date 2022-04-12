@@ -1,0 +1,47 @@
+/* INPUT FORMULARIO */
+
+.input_salutest {
+  width: 100%;
+  color: white;
+  margin-bottom: 20px;
+  border: none;
+  border-bottom: 1px solid rgb(255, 255, 255);
+  outline: none;
+  height: 40px;
+  background: transparent;
+  font-size: 13px;
+  transition: all 0.3s linear;
+  opacity: 60%;
+  padding: 0 5px;
+}
+
+.input_salutest::placeholder {
+  color: #ffffff;
+  
+}
+
+.input_salutest:hover {
+  background: rgba(255, 255, 255, 0.089);
+  border-radius: 5px;
+}
+
+.input_salutest:focus {
+  background: rgba(255, 255, 255, 0.144);
+  border-radius: 5px;
+  opacity: 100%;
+}
+
+
+.input {
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.336);
+  border-radius: 5px;
+  padding: 10px;
+  margin: 5px 0px;
+  font-size: 11px;
+}
+
+label {
+  font-size: 10px;
+}
+
