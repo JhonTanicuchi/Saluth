@@ -80,8 +80,12 @@
               <form class="form_signup" id="signup_form" action="/registro" method="POST">
                 <div class="credentials_signup">
                   <div>
-                    <label for="id_singup">Cédula</label>
-                    <input type="text" name="id" id="id_singup" value="{{'max(idComunidad)'}}" readonly>
+                    {{#each persona_id}}
+                    <input type="text" name="id_persona" id="id_persona" value="{{'id_persona'}}" readonly checked>
+                    {{/each}}
+                    {{#each empleado_id}}
+                    <input type="text" name="id_empleado" id="id_empleado" value="{{'id_empleado'}}" readonly checked>
+                    {{/each}}
                     <label for="cedula_singup">Cédula</label>
                     <input name="cedula" class="input" id="cedula_singup" type="text" autocomplete="off" required />
                     <label for="name_singup">Nombres</label>

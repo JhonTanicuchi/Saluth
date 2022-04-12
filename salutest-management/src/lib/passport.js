@@ -66,30 +66,39 @@ passport.use(
           fecha_nacimiento,
           direccion,
         };
+        
 
-        const resultadoPersona = await orm.persona.create(nuevaPersona);
+        const resultadoPersona =  orm.persona.create(nuevaPersona);
         nuevaPersona.id_persona = resultadoPersona.insertId;
+        
 
-/* 
+        const persona_id =  sql.query(
+          "select id_persona from personas where cedula = ?",
+          [cedula]
+        );
+        console.log(nuevaPersona);
+
+        const { id_persona } = req.body;
         let nuevoEmpleado = {
-          estado : true
+          estado: true,
+          personaIdPersona: resultadoPersona.insertId,
         };
 
-        const resultadoEmpleado = await orm.empleado.create(nuevoEmpleado);
-        nuevoEmpleado.id_empleado = resultadoEmpleado.insertId; */
+        const resultadoEmpleado =  orm.empleado.create(nuevoEmpleado);
+        nuevoEmpleado.id_empleado = resultadoEmpleado.insertId;
 
 
-       /*   const persona_id = await sql.query(
-           "select idProyecto from proyectos where idProyecto = ?",
-           [nuevoEmpleado.id_empleado]
-         ); */
+        const empleado_id =  sql.query(
+          "select e.id_empleado from empleados e join personas p on  e.personaIdPersona = p.id_persona WHERE p.cedula = ?",
+          [nuevaPersona.cedula]
+        );
         
-        const { correo } = req.body;
+        const { correo, id_empleado } = req.body;
         let nuevoUsuario = {
           username,
           password,
           correo,
-         /*  empleadoIdEmpleado: empleado, */
+          empleadoIdEmpleado: resultadoEmpleado.insertId,
         };
       
         nuevoUsuario.password = await helpers.encryptPassword(password);
