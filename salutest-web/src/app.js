@@ -11,16 +11,15 @@ const app = express();
 
 
 /// archivos compartidos
-app.set("port", process.env.PORT || 2000);
+app.set("port", process.env.PORT || 1000);
 app.set("views", path.join(__dirname, "views"));
 app.engine(
   ".hbs",
   exphbs({
-    defaultLayout: "index",
+    defaultLayout: "main",
     layoutsDir: path.join(app.get("views"), "layouts"),
     partialsDir: path.join(app.get("views"), "partials"),
     extname: ".hbs",
-    helpres: require("./lib/handlebars"),
   })
 );
 
@@ -48,8 +47,7 @@ app.use(express.static(path.join(__dirname, "public")));
 
 //routers
 app.use(require("./rutas/index"));
-app.use(require("./rutas/services"));
-app.use(require("./rutas/job"));
+
 /* app.use('/modules', require('./routes/inquiries')) */
 
 module.exports = app;
