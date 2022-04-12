@@ -18,6 +18,7 @@ mysql
 
 const usuario_client_Modelo = require("../models/usuario");
 const personaModelo = require("../models/persona");
+const especialidad_Modelo = require("../models/especialidad");
 
 const sequelize = new Sequelize("database_salutest", "root", "", {
   host: "localhost",
@@ -45,6 +46,7 @@ sequelize.sync({ force: false }).then(() => {
 
 const usuario_client = usuario_client_Modelo(sequelize, Sequelize);
 const persona = personaModelo(sequelize, Sequelize);
+const especialidad = especialidad_Modelo(sequelize, Sequelize);
 
 //relaciones
 
