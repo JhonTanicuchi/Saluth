@@ -97,7 +97,7 @@
     height: 50%;
     width: 0%;
     z-index: -1;
-    background: linear-gradient(to right, #6b6363, #afb1b6); 
+   
     transition: 0.8s;
     opacity: 0;
 }
@@ -109,8 +109,6 @@
     height: 50%;
     width: 0%;
     z-index: -1;
-    background: -webkit-linear-gradient(to right, #939d8b, #949db4);  
-    background: linear-gradient(to right, #8c95a4, #373B44); 
     transition: 0.8s;
     opacity: 0;
 }
@@ -120,7 +118,7 @@
     opacity: 1;
 }
 .neon:hover{
-    color: #b99898;
+    color: #000000;
     box-shadow: 0 0 60px #ff7bde, 0 0 10px #1100ff, 0 0 100px #037975 ;
 }
 .neon:active{
