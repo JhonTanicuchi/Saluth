@@ -10,5 +10,5 @@ dotenv.config();
 const app = require('./app');
 const colors = require('colors');
 
-app.listen(app.get('port'));
-console.log('El servidor esta en el puerto'.cyan, colors.grey(app.get('port')));
+/*app.listen(app.get('port'));
+console.log('El servidor esta en el puerto'.cyan, colors.grey(app.get('port')));*/
