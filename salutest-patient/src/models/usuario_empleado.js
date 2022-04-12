@@ -1,8 +1,8 @@
-const usuario_client = (sequelize, type) => {
+const usuario_empleado = (sequelize, type) => {
   return sequelize.define(
-    "usuario_client",
+    "usuario_empleado",
     {
-      idUsuarios: {
+      id_usuario_empleado: {
         type: type.INTEGER,
         primaryKey: true,
         autoIncrement: true,
@@ -10,12 +10,12 @@ const usuario_client = (sequelize, type) => {
       username: type.STRING(99),
       password: type.STRING,
       correo: type.STRING,
-      creacionUsuarios: {
+      creacionUsuario_Empleados: {
         type: "TIMESTAMP",
         defaultValue: type.literal("CURRENT_TIMESTAMP"),
         allowNull: false,
       },
-      actualizacionUsuarios: {
+      actualizacionUsuario_Empleados: {
         type: "TIMESTAMP",
         defaultValue: type.literal("CURRENT_TIMESTAMP "),
         allowNull: false,
@@ -27,4 +27,4 @@ const usuario_client = (sequelize, type) => {
   );
 };
 
-module.exports = usuario_client;
+module.exports = usuario_empleado;

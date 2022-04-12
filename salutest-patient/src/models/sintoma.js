@@ -1,23 +1,21 @@
-const persona = (sequelize, type) => {
+const sintoma = (sequelize, type) => {
   return sequelize.define(
-    "persona",
+    "sintoma",
     {
-      id_persona: {
+      id_enfermedad: {
         type: type.INTEGER,
         primaryKey: true,
         autoIncrement: true,
       },
-      cedula: type.STRING,
-      nombres: type.STRING,
-      apellidos: type.STRING,
-      fecha_nacimiento: type.STRING,
-      direccion: type.STRING,
-      creacionPersonas: {
+      nombre: type.STRING,
+      descripcion: type.STRING,
+      vacuna: type.STRING,
+      creacionSintoma: {
         type: "TIMESTAMP",
         defaultValue: type.literal("CURRENT_TIMESTAMP"),
         allowNull: false,
       },
-      actualizacionPersonas: {
+      actualizacionSintoma: {
         type: "TIMESTAMP",
         defaultValue: type.literal("CURRENT_TIMESTAMP "),
         allowNull: false,
@@ -29,4 +27,4 @@ const persona = (sequelize, type) => {
   );
 };
 
-module.exports = persona;
+module.exports = sintoma;

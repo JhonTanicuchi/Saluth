@@ -1,23 +1,18 @@
-const persona = (sequelize, type) => {
+const area_especialidade = (sequelize, type) => {
   return sequelize.define(
-    "persona",
+    "area_especialidad",
     {
-      id_persona: {
+      id_area_especialidad: {
         type: type.INTEGER,
         primaryKey: true,
         autoIncrement: true,
       },
-      cedula: type.STRING,
-      nombres: type.STRING,
-      apellidos: type.STRING,
-      fecha_nacimiento: type.STRING,
-      direccion: type.STRING,
-      creacionPersonas: {
+      creacionArea_especialidades: {
         type: "TIMESTAMP",
         defaultValue: type.literal("CURRENT_TIMESTAMP"),
         allowNull: false,
       },
-      actualizacionPersonas: {
+      actualizacionArea_especialidades: {
         type: "TIMESTAMP",
         defaultValue: type.literal("CURRENT_TIMESTAMP "),
         allowNull: false,
@@ -29,4 +24,4 @@ const persona = (sequelize, type) => {
   );
 };
 
-module.exports = persona;
+module.exports = area_especialidade;
