@@ -16,7 +16,6 @@ mysql
     });
   });
 
-<<<<<<< HEAD
 const persona_Modelo = require("../models/persona");
 const empleado_business_Modelo = require("../models/persona");
 const usuario_business_Modelo = require("../models/persona");
@@ -58,11 +57,6 @@ const especialidad_empleado_Modelo = require("../models/especialidad_empleado");
 const subArea_empleado_Modelo = require("../models/subArea_empleado");
 const area_citaMedica_Modelo = require("../models/area_citaMedica");
 const historia_clinica_Modelo = require("../models/historia_clinica");
-=======
-const usuario_client_Modelo = require("../models/usuario");
-const personaModelo = require("../models/persona");
-const especialidad_Modelo = require("../models/especialidad");
->>>>>>> 724de399d9ba6711b120fb9a2646ffaecb530e1e
 
 const sequelize = new Sequelize("database_salutest", "root", "", {
   host: "localhost",
@@ -88,7 +82,6 @@ sequelize.sync({ force: false }).then(() => {
   console.log("Tablas sincronizadas");
 });
 
-<<<<<<< HEAD
 const persona = persona_Modelo(sequelize, Sequelize);
 const empleado_business = empleado_business_Modelo(sequelize, Sequelize);
 const usuario_business = usuarioEmpleado_Modelo(sequelize, Sequelize);
@@ -139,11 +132,6 @@ const subArea_empleado = subArea_empleado_Modelo(sequelize, Sequelize);
 const area_citaMedica = area_citaMedica_Modelo(sequelize, Sequelize);
 const atencion_medica = atencion_medica_Modelo(sequelize, Sequelize);
 const historia_clinica = historia_clinica_Modelo(sequelize, Sequelize);
-=======
-const usuario_client = usuario_client_Modelo(sequelize, Sequelize);
-const persona = personaModelo(sequelize, Sequelize);
-const especialidad = especialidad_Modelo(sequelize, Sequelize);
->>>>>>> 724de399d9ba6711b120fb9a2646ffaecb530e1e
 
 //relaciones
 
