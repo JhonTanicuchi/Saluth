@@ -1,13 +1,9 @@
-body{
-    font-family: monospace;
-}
-
-.container{
+.container1_turnos{
     width: 100%;
     max-width: 1000px;
     margin: auto;
 }
-.container2{
+.container2_turnos{
     display: flex;
     flex-direction: column;
     position: relative;
@@ -15,7 +11,7 @@ body{
     align-items: center;
     
 }
-.container2 input{
+.container2_turnos input{
     border-radius: 0px;
     width: 200px;
     height: 25px;
@@ -26,7 +22,7 @@ body{
     font-size: 20px;
 }
 
-.table{
+.tabla_turnos{
     width: 100%;
     border: 1px solid #ccc;
     border-collapse: collapse;
@@ -35,7 +31,7 @@ body{
     table-layout: fixed;
 }
 
-.table caption {
+.tabla_turnos caption {
     font-size: 28px;
     text-transform: uppercase;
     font-weight: bold;
@@ -52,7 +48,7 @@ body{
     justify-items: center;
 }
 
-.container1 h1{
+.titulo_turnos{
     font-size: 28px;
     text-transform: uppercase;
     font-weight: bold;
@@ -66,41 +62,41 @@ body{
     color: #fff;
 }
 
-.table tr{
+.tabla_turnos tr{
     background-color: #aaaaaa;
     border: 1px solid #828282;
 }
 
-.table th, .table td {
+.tabla_turnos th, .table td {
     font-size: 16px;
     padding: 8px;
     text-align: center;
 }
 
-.table thead th{
+.tabla_turnos thead th{
     text-transform: uppercase;
     background-color: #828282;
 }
 
-.table tbody tr:hover{
+.tabla_turnos tbody tr:hover{
     background-color: #aaaaaa;
 }
 
-.table tbody td:hover{
+.tabla_turnos tbody td:hover{
     background-color: #828282;
 }
 
-table .Eliminar{
+.tabla_turnos .Eliminar{
     color: tomato;
     cursor: pointer;
 }
 
-table .Editar{
+tabla_turnos .Editar{
     color: #a4f66e;
     cursor: pointer;
 }
 
-.d-flex button{
+.botones_turnos button{
     background: #aaaaaa;
     color: #fff;
     display: inline-block;
@@ -112,7 +108,7 @@ table .Editar{
     cursor: pointer;
     border-radius: 25px;
 }
-.d-flex.justify-content-center{
+.botones_turnos{
 display: flex;
 position: relative;
 justify-content: center;
