@@ -153,7 +153,6 @@ module.exports = {
   examen,
   mensaje,
   medicamento,
-  turno,
   horario,
   sala,
   sintoma,
