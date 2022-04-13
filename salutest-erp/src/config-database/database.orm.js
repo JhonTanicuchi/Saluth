@@ -100,7 +100,6 @@ const tipo_examen = tipo_examenes_Modelo(sequelize, Sequelize);
 const examen = examen_Modelo(sequelize, Sequelize);
 const mensaje = mensaje_Modelo(sequelize, Sequelize);
 const medicamento = medicamento_Modelo(sequelize, Sequelize);
-const turno = turno_Modelo(sequelize, Sequelize);
 const horario = horario_Modelo(sequelize, Sequelize);
 const sala = sala_Modelo(sequelize, Sequelize);
 const sintoma = sintoma_Modelo(sequelize, Sequelize);
