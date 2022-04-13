@@ -31,7 +31,6 @@ const area_Modelo = require("../models/area");
 const examen_Modelo = require("../models/examen");
 const mensaje_Modelo = require("../models/mensaje");
 const medicamento_Modelo = require("../models/medicamentos");
-const turno_Modelo = require("../models/turno");
 const horario_Modelo = require("../models/horario");
 const sala_Modelo = require("../models/sala");
 const sintoma_Modelo = require("../models/sintoma");
