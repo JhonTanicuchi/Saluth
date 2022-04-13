@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 :root{
-    --primary-color:rgb(0, 0, 0);
-    --secondary-color: #2196f3 ;
-    --highlight-color: #9acef8;
+    --primary-color: black;
+    --secondary-color: #9acef8 ;
+    --highlight-color: #c6c6c6;
 
-    --dt-status-available-color: #c3e3fd;
+    --dt-status-available-color: #4ea93b;
     --dt-status-offline-color:#ff0f1f;
 
     --dt-padding: 7px;
@@ -13,7 +13,7 @@
 
     --dt-border-radius: 3px;
 
-    --dt-background-color-container: #349c89;
+    --dt-background-color-container: #FFFF;
     --dt-border-color: var(--secondary-color);
     --dt-bg-color: var(--highlight-color);
     --dt-text-color: var(--primary-color);
