@@ -7,98 +7,100 @@
         </section>
     
         <div class="Turnos_grid">
-            <div class="container1_turnos">
+            <div class="datable-container">
+                <div class="container1_turnos">
                 <h1 class="titulo_turnos"><i class="las la-stethoscope Corazon"></i>Turnos</h1>
-            </div>
-            <!--Crear los input-->
-            <div class="container2_turnos">
-                <div class="texto1">
-                    <input type="text" id="productCode" placeholder="Turno Nuevo" required>
                 </div>
-                <div class="texto1">
-                    <input type="text" id="productCode" placeholder="Numero de Turno" required>
+                <!--Crear los input-->
+                <div class="container2_turnos">
+                    <div class="texto1">
+                        <input type="text" id="productCode" placeholder="Turno Nuevo" required>
+                    </div>
+                    <div class="texto1">
+                        <input type="text" id="productCode" placeholder="Numero de Turno" required>
+                    </div>
+                    <div class="texto1">
+                        <input type="text" id="productCode" placeholder="Enfermedad" required>
+                    </div>
+                    <div class="texto1">
+                        <input type="text" id="productCode" placeholder="Especialidad" required>
+                    </div>
+                    <div class="texto1">
+                        <input type="time" id="productCode" required>
+                    </div>
+                    <div class="texto1">
+                        <input type="date" id="productCode" required>
+                    </div>
                 </div>
-                <div class="texto1">
-                    <input type="text" id="productCode" placeholder="Enfermedad" required>
-                </div>
-                <div class="texto1">
-                    <input type="text" id="productCode" placeholder="Especialidad" required>
-                </div>
-                <div class="texto1">
-                    <input type="time" id="productCode" required>
-                </div>
-                <div class="texto1">
-                    <input type="date" id="productCode" required>
-                </div>
-            </div>
 
-            <div class="botones_turnos">
-                <button class="btn btn-success" id="btn-create">Crear</button>
-                <button class="btn btn-warning" id="btn-update">Editar</button>
-                <button class="btn btn-danger" id="btn-delete">Eliminar</button>
-            </div>
+                <div class="botones_turnos">
+                    <button class="btn btn-success" id="btn-create">Crear</button>
+                    <button class="btn btn-warning" id="btn-update">Editar</button>
+                    <button class="btn btn-danger" id="btn-delete">Eliminar</button>
+                </div>
         
-            <div class="container">
-                <table class="tabla_turnos">
-                    <caption><i class="las la-stethoscope"></i>Turnos</caption>
-                    <thead>
-                        <tr>
-                            <th>Hora</th>
-                            <th>Fecha</th>
-                            <th>Numero</th>
-                            <th>Estado</th>
-                            <th>Especialista</th>
-                            <th>Enfermedad</th>
-                            <th>Editar</th>
-                            <th>Eliminar</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td data-label="Hora">11:19:19</td>
-                            <td data-label="Fecha">23-07-2022</td>
-                            <td data-label="Numero">1089</td>
-                            <td data-label="Numero">Atender</td>
-                            <td data-label="Estado">Dr. Luis Chamba</td>
-                            <td data-label="Especialista">Neurólogia</td>
-                            <td data-label="Editar"><i class="lar la-edit Editar"></i></td>
-                            <td data-label="Eliminar"><i class="las la-trash Eliminar"></i></td>
-                        </tr>
+                <div class="container">
+                    <table class="tabla_turnos">
+                        <caption><i class="las la-stethoscope"></i>Turnos</caption>
+                        <thead>
+                            <tr>
+                                <th>Hora</th>
+                                <th>Fecha</th>
+                                <th>Numero</th>
+                                <th>Estado</th>
+                                <th>Especialista</th>
+                                <th>Enfermedad</th>
+                                <th>Editar</th>
+                                <th>Eliminar</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-label="Hora">11:19:19</td>
+                                <td data-label="Fecha">23-07-2022</td>
+                                <td data-label="Numero">1089</td>
+                                <td data-label="Numero">Atender</td>
+                                <td data-label="Estado">Dr. Luis Chamba</td>
+                                <td data-label="Especialista">Neurólogia</td>
+                                <td data-label="Editar"><i class="lar la-edit Editar"></i></td>
+                                <td data-label="Eliminar"><i class="las la-trash Eliminar"></i></td>
+                            </tr>
 
-                        <tr>
-                            <td data-label="Hora">11:19:15</td>
-                            <td data-label="Fecha">10-08-2022</td>
-                            <td data-label="Numero">1478</td>
-                            <td data-label="Numero">Atendido</td>
-                            <td data-label="Estado">Dr. Fernanda Tipan</td>
-                            <td data-label="Especialista">Hepatólogia</td>
-                            <td data-label="Editar"><i class="lar la-edit Editar"></i></i></td>
-                            <td data-label="Eliminar"><i class="las la-trash Eliminar"></i></td>
-                        </tr>
+                            <tr>
+                                <td data-label="Hora">11:19:15</td>
+                                <td data-label="Fecha">10-08-2022</td>
+                                <td data-label="Numero">1478</td>
+                                <td data-label="Numero">Atendido</td>
+                                <td data-label="Estado">Dr. Fernanda Tipan</td>
+                                <td data-label="Especialista">Hepatólogia</td>
+                                <td data-label="Editar"><i class="lar la-edit Editar"></i></i></td>
+                                <td data-label="Eliminar"><i class="las la-trash Eliminar"></i></td>
+                            </tr>
 
-                        <tr>
-                            <td data-label="Hora">11:22:22</td>
-                            <td data-label="Fecha">27-09-2022</td>
-                            <td data-label="Numero">1595</td>
-                            <td data-label="Numero">Atender</td>
-                            <td data-label="Estado">Dr. Luis Cabrera</td>
-                            <td data-label="Especialista">Neumólogia</td>
-                            <td data-label="Editar"><i class="lar la-edit Editar"></i></td>
-                            <td data-label="Eliminar"><i class="las la-trash Eliminar"></i></i></td>
-                        </tr>
+                            <tr>
+                                <td data-label="Hora">11:22:22</td>
+                                <td data-label="Fecha">27-09-2022</td>
+                                <td data-label="Numero">1595</td>
+                                <td data-label="Numero">Atender</td>
+                                <td data-label="Estado">Dr. Luis Cabrera</td>
+                                <td data-label="Especialista">Neumólogia</td>
+                                <td data-label="Editar"><i class="lar la-edit Editar"></i></td>
+                                <td data-label="Eliminar"><i class="las la-trash Eliminar"></i></i></td>
+                            </tr>
 
-                        <tr>
-                            <td data-label="Hora">13:28:19</td>
-                            <td data-label="Fecha">29-10-2022</td>
-                            <td data-label="Numero">1690</td>
-                            <td data-label="Numero">Atendido</td>
-                            <td data-label="Estado">Dr. Hank Rearden</td>
-                            <td data-label="Especialista">Nefrologia</td>
-                            <td data-label="Editar"><i class="lar la-edit Editar"></i></td>
-                            <td data-label="Eliminar"><i class="las la-trash Eliminar"></i></td>
-                        </tr>
-                    </tbody>
-                </table>
+                            <tr>
+                                <td data-label="Hora">13:28:19</td>
+                                <td data-label="Fecha">29-10-2022</td>
+                                <td data-label="Numero">1690</td>
+                                <td data-label="Numero">Atendido</td>
+                                <td data-label="Estado">Dr. Hank Rearden</td>
+                                <td data-label="Especialista">Nefrologia</td>
+                                <td data-label="Editar"><i class="lar la-edit Editar"></i></td>
+                                <td data-label="Eliminar"><i class="las la-trash Eliminar"></i></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </main>

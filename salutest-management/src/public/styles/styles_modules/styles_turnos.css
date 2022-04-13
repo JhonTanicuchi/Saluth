@@ -1,8 +1,18 @@
-.container1_turnos{
+.datable-container{
+    background-color: #fff;
+    border-radius: var(--dt-border-radius);
+    color: black;
+    width: 840px;
+    margin: 0 auto;
+    font-size: 12px;
+}
+
+.container{
     width: 100%;
     max-width: 1000px;
     margin: auto;
 }
+
 .container2_turnos{
     display: flex;
     flex-direction: column;
