@@ -6,14 +6,14 @@ body {
     flex-wrap: wrap;
 }
 
-.conte {
+.conte_medicamentos {
     height: 510px;
     width: 350px;
     box-shadow: 0 0 7px #111;
     margin: 30px 30px;
 }
 
-.conte .card {
+.conte_medicamentos .card {
     height: 200px;
     width: 100%;
     margin-bottom: 180px;
@@ -24,54 +24,42 @@ body {
     display: block;
 }
 
-.conte .paracetamol img {
+.conte_medicamentos .paracetamol img {
     height: 250px;
     width: 350px;
 }
 
-.conte .aspirina img {
+.conte_medicamentos .aspirina img {
     height: 250px;
     width: 350px;
 }
 
-.conte .amoxicilina img {
+.conte_medicamentos .amoxicilina img {
     height: 250px;
     width: 350px;
 }
 
-.conte .paracetamol {
-    background-color: #111;
-}
-
-.conte .aspirina {
-    background-color: #aa0300;
-}
-
-.conte .amoxicilina {
-    background-color: #B11313;
-}
-
-.conte .paracetamol {
+.conte_medicamentos .paracetamol {
     height: 170px;
     width: 200px;
 }
 
-.conte .aspirina {
+.conte_medicamentos .aspirina {
     height: 170px;
     width: 200px;
 }
 
-.conte .amoxicilina {
+.conte_medicamentos .amoxicilina {
     height: 170px;
     width: 200px;
 }
 
-.informacion {
+.informacion_medicamentos {
     height: 80px;
     width: 100%;
 }
 
-.informacion h1 {
+.informacion_medicamentos h1 {
     font-family: sans-serif;
     font-size: 1.5em;
     text-align: center;
@@ -79,14 +67,14 @@ body {
     margin-bottom: -1px;
 }
 
-.informacion p {
+.informacion_medicamentos p {
     text-align: center;
     font-family: sans-serif;
-    font-size: 1.2em;
+    font-size: 1.1em;
     color: #555;
 }
 
-.precio {
+.precio_medicamentos {
     height: 25px;
     width: 65%;
     margin: auto;
@@ -96,15 +84,15 @@ body {
     align-items: center;
 }
 
-.box-precio {
+.box-precio_medicamentos {
     width: 80px;
 }
 
-.precio {
+.precio_medicamentos {
     color: red;
 }
 
-.precio {
+.precio_medicamentos {
     font-size: 1.3em;
 }
 
