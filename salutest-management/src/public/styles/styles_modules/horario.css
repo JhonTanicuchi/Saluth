@@ -7,7 +7,6 @@
 
 .form-registro{
     width: 800px;
-    
     background: #24303c;
     padding: 10px;
     margin: auto;
@@ -130,15 +129,15 @@
 
 /*------------------------------------tabla-------------------------------------------------*/
 .horario{
-    background: linear-gradient(to left, #24303c, #595565); 
+    background: linear-gradient(to left, #0f8dd6, #04519d); 
     
 }
 
 .horario-active{
-    background: linear-gradient(to right, #536976, #24303c); 
+    background: linear-gradient(to right, #0f8dd6, #04519d); 
 }
 
-horario .Editar{
+.horario .Editar{
     color:rgb(10, 220, 31);
     cursor: pointer;
 }
