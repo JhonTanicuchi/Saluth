@@ -8,14 +8,14 @@ sub_area.mostrar = (req,res) => {
 
 sub_area.save = async(req,res) => {
     const {nombre} = req.body;
-    const nuevaArea = {nombre, estado: true};
-    await orm.area.create(nuevaArea);
+    const nuevaSubarea = {nombre, estado: true};
+    await orm.Subarea.create(nuevaSubArea);
     res.redirect("/sub_area")
 }
 
 sub_area.list = async (req, res) => {
-    const areas = await sql.query("SELECT * FROM sub_areas")
-    res.render ("modules/sub_area", {sub_areas})
+    const sub_area = await sql.query("SELECT * FROM sub_areas")
+    res.render ("modules/sub_area", {sub_area})
 }
 
 
