@@ -41,7 +41,7 @@ body {
     margin-bottom: 10%;
     margin-left: 30%;
 	justify-content: center;
-	height: 100vh;
+	height: 10vh;
     align-items: center;
 }
 
@@ -52,7 +52,7 @@ body {
 	display: flex;	
 	margin: 1.5rem;
 	overflow: hidden;
-	width: 39em;
+	width: 35em;
 	height: 38rem;
 }
 .card .cab_1{

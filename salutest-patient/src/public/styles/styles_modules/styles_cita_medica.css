@@ -166,7 +166,7 @@ input {
     }
     
 	.search-bar input {
-		box-shadow: 0 0 0 0.4em #f1f1f1 inset;
+		box-shadow: 0 0 0 0.4em #000000 inset;
     }
     
 	.search-bar input:focus,
@@ -214,11 +214,6 @@ iframe {
     
     min-height: 100vh;
     background: #e8eef4;
-  
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -283,7 +278,7 @@ th, td {
     }
   
 .table100.ver6 table {
-    background-color: rgb(238, 234, 231);
+    background-color: rgb(255, 255, 255);
 }
   
 .table100.ver6 td {
