@@ -81,7 +81,6 @@ app.use(require('./rutas/salud_home'))
 app.use(require('./rutas/registro_c'))
 app.use(require('./rutas/chat'))
 app.use(require('./rutas/especialidades'))
-
-/* app.use('/modules', require('./routes/inquiries')) */
+app.use(require("./rutas/solicitud"));
 
 module.exports = app;

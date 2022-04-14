@@ -5,20 +5,93 @@
             <h2 id="title_modules">Solicitudes</h2>
             <a href="/home"><span class="far fa-times-circle"></span></a>
         </section>
+        <div class="record_grid">
+            <section class="record_info">
+                <div class="summary_card">
+                    <div class="summary_single">
+                        <div>
+                            <span class="fas fa-file"></span>
+                            <span>Totales</span>
+                        </div>
+                        <h5>{{solicitudes.lenght}}</h5>
+                    </div>
 
-        <div class="container_settings working">
-            <span class="las la-cog"></span>
-            <div class="container_message">
-                <div class="content_cogs">
-                    <div class="icon_cogs">
-                        <span class="fas fa-cog"></span>
-                        <span class="fas fa-cog"></span>
-                        <span class="fas fa-cog"></span>
+                    <div class="summary_single">
+                        <div>
+                            <span class="fas fa-file-circle-exclamation"></span>
+                            <span>Pendientes</span>
+                        </div>
+                        <h5>5</h5>
+                    </div>
+
+                    <div class="summary_single">
+                        <div>
+                            <span class="fas fa-file-circle-check"></span>
+                            <span>Aprobadas</span>
+                        </div>
+                        <h5>5</h5>
+                    </div>
+
+                    <div class="summary_single">
+                        <div>
+                            <span class="fas fa-file-circle-minus"></span>
+                            <span>Canceladas</span>
+                        </div>
+                        <h5>12</h5>
                     </div>
                 </div>
-                <h1>Estamos trabajando en estas nuevas funciones</h1>
-            </div>
+                <div class="users_card">
+                    <div class="user_header">
+                        <h1>Contactos</h1>
+                        <h1>1</h1>
+                    </div>
+                    <div class="user_single">
+                        <div class="info">
+                            <img src="/img/img_profile.png" alt="" />
+                            <div>
+                                <h4>Cinthya Ramos</h4>
+                                <div class="details">
+                                    <h5><span class="fas fa-venus"></span>Mujer</h5>
+                                    <h5>21 años</h5>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </section>
+            <section class="record_wrapper">
+                <div class="record_filter">
+                    <div>
+                        <span class="fas fa-search"></span>
+                        <input onkeyup="record_filter()" id="record_filter" type="text"
+                            placeholder="Filtrar por: tipo, fecha, fecha, hora, nivel" />
+                    </div>
+                </div>
+                <div class="record_contect">
+                    <table id="record_table">
+                        <thead>
+                            <tr>
+                                <th>Institución</th>
+                                <th>Paciente</th>
+                                <th>Hora</th>
+                                <th>Fecha</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {{#each solicitudes}}
+                            <tr>
+                                <td>{{id_solicitud}}</td>
+                                <td class="td_person">{{institucion_medica}}</td>
+                                <td>{{tipo_institucion}}</td>
+                                <td>{{estado}}</td>
+                            </tr>
+                            {{/each}}
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </section>
         </div>
-</div>
-</main>
+    </main>
 </div>
