@@ -13,19 +13,19 @@
             <!--Crear los input-->
             <div class="container2">
                 <div class="texto1">
-                    <input type="text" id="productCode" placeholder="ID" required>
+                    <input type="text" name="ID" placeholder="ID" required>
                 </div>
                 <div class="texto1">
-                    <input type="text" id="productCode" placeholder="Cedula" required>
+                    <input type="text" name="Cedula" placeholder="Cedula" required>
                 </div>
                 <div class="texto1">
-                    <input type="text" id="productCode" placeholder="Nombre" required>
+                    <input type="text" name="Nombre" placeholder="Nombre" required>
                 </div>
                 <div class="texto1">
-                    <input type="text" id="productCode" placeholder="Correo" required>
+                    <input type="text" name="Correo" placeholder="Correo" required>
                 </div>
                 <div class="texto1">
-                    <input type="text" id="productCode" placeholder="Ciudad" required>
+                    <input type="text" name="Ciudad" placeholder="Ciudad" required>
                 </div>
             </div>
 
@@ -53,56 +53,13 @@
                         </tr>
                     </thead>
                     <tbody>
+                        {{#each citas_medicas}}
                         <tr>
-                            <td data-label="ID">1119</td>
-                            <td data-label="Cedula">1112345678</td>
-                            <td data-label="Nombre">Alex Romeo Chugchilan Bustamante</td>
-                            <td data-label="Correo">alexr@</td>
-                            <td data-label="Especialista">Dr. Luis Chamba</td>
-                            <td data-label="Fecha">23-07-2022</td>
-                            <td data-label="Hora">11:19:19</td>
-                            <td data-label="Enfermedad">Rinitis</td>
-                            <td data-label="Editar"><i class="lar la-edit Editar"></i></td>
-                            <td data-label="Eliminar"><i class="las la-trash Eliminar"></i></td>
-                        </tr>
-
-                        <tr>
-                            <td data-label="ID">1215</td>
-                            <td data-label="Cedula">2307202209</td>
-                            <td data-label="Nombre">Alexandra Katerine Chugchilan Bustamante</td>
-                            <td data-label="Correo">fernandot@</td>
-                            <td data-label="Especialista">Dr. Fernanda Tipan</td>
-                            <td data-label="Fecha">10-08-2022</td>
-                            <td data-label="Hora">12:20:20</td>
-                            <td data-label="Enfermedad">Gastritis</td>
-                            <td data-label="Editar"><i class="lar la-edit Editar"></i></i></td>
-                            <td data-label="Eliminar"><i class="las la-trash Eliminar"></i></td>
-                        </tr>
-
-                        <tr>
-                            <td data-label="ID">1320</td>
-                            <td data-label="Cedula">4039281745</td>
-                            <td data-label="Nombre">Paola Elizabeth Cevallos Velasco</td>
-                            <td data-label="Correo">luisc@</td>
-                            <td data-label="Especialista">Dr. Luis Cabrera</td>
-                            <td data-label="Fecha">27-09-2022</td>
-                            <td data-label="Hora">11:22:22</td>
-                            <td data-label="Enfermedad">Hepática</td>
-                            <td data-label="Editar"><i class="lar la-edit Editar"></i></td>
-                            <td data-label="Eliminar"><i class="las la-trash Eliminar"></i></i></td>
-                        </tr>
-
-                        <tr>
-                            <td data-label="ID">1425</td>
-                            <td data-label="Cedula">2709202211</td>
-                            <td data-label="Nombre">Melany Alejandra Chugchilan Neira</td>
-                            <td data-label="Correo">hankr@</td>
-                            <td data-label="Especialista">Dr. Hank Rearden</td>
-                            <td data-label="Fecha">29-10-2022</td>
-                            <td data-label="Hora">13:28:19</td>
-                            <td data-label="Enfermedad">Cardiopatia</td>
-                            <td data-label="Editar"><i class="lar la-edit Editar"></i></td>
-                            <td data-label="Eliminar"><i class="las la-trash Eliminar"></i></td>
+                            <td>{{ID_cita_medica}}</td>
+                            <td class="td_person">{{Cedula}}</td>
+                            <td>{{Nombre}}</td>
+                            <td>{{Correo}}</td>
+                            <td>{{Ciudad}}</td>
                         </tr>
                     </tbody>
                 </table>
