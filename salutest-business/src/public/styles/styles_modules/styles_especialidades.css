@@ -7,7 +7,7 @@
 border-collapse: collapse; /*Esta propiedad hace que parezca mas una tabla*/
 font-family: 'Quicksand', sans-serif;
 }
-table tr th{
+.tablita_especialidades tr th{
     border: 1px solid #D5D9D9;
     width: 100px;
     height: 25px;
@@ -15,7 +15,7 @@ table tr th{
     background-color: #00438D;
 }
 /* Para el estilo de las nuevas celdas */
-td {
+.tablita_especialidades td {
     border: 1px solid #D5D9D9;
     width: 100px;
     height: 25px;
