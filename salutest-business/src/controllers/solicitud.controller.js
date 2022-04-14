@@ -9,8 +9,7 @@ solicitud.mostrar = (req, res) => {
 
 solicitud.list = async (req, res) => {
   const solicitudes = await sql.query("SELECT * FROM solicituds");
-  const total_solicitudes = 
-  console.log(solicitudes)
+  console.log(solicitudes);
   res.render("modules/solicitudes", { solicitudes });
 };
 

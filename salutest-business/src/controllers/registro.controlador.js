@@ -19,7 +19,7 @@ registro.Registro = passport.authenticate('local.signup', {
 
 registro.Login = passport.authenticate('local.signin', {
     successRedirect: '/home',
-    failureRedirect: '/login',
+    failureRedirect: '/',
     failureFlash: true
 });
 
