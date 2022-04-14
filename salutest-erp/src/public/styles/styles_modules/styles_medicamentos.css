@@ -1,0 +1,102 @@
+.cuerpo_medicamentos {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.conte_medicamentos {
+    height: 510px;
+    width: 350px;
+    box-shadow: 0 0 7px #111;
+    margin: 30px 30px;
+}
+
+.conte_medicamentos .card {
+    height: 200px;
+    width: 100%;
+    margin-bottom: 180px;
+}
+
+.card img {
+    margin: auto;
+    display: block;
+}
+
+.conte_medicamentos .paracetamol img {
+    height: 250px;
+    width: 350px;
+}
+
+.conte_medicamentos .aspirina img {
+    height: 250px;
+    width: 350px;
+}
+
+.conte_medicamentos .amoxicilina img {
+    height: 250px;
+    width: 350px;
+}
+
+.conte_medicamentos .paracetamol {
+    height: 170px;
+    width: 200px;
+}
+
+.conte_medicamentos .aspirina {
+    height: 170px;
+    width: 200px;
+}
+
+.conte_medicamentos .amoxicilina {
+    height: 170px;
+    width: 200px;
+}
+
+.informacion_medicamentos {
+    height: 80px;
+    width: 100%;
+}
+
+.informacion_medicamentos h1 {
+    font-family: sans-serif;
+    font-size: 1.5em;
+    text-align: center;
+    color: #333;
+    margin-bottom: -1px;
+}
+
+.informacion_medicamentos p {
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 1.1em;
+    color: #555;
+}
+
+.precio_medicamentos {
+    height: 25px;
+    width: 65%;
+    margin: auto;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.box-precio_medicamentos {
+    width: 80px;
+}
+
+.precio_medicamentos {
+    color: red;
+}
+
+.precio_medicamentos {
+    font-size: 1.3em;
+}
+
+.shoping {
+    font-size: 1.9em;
+    color: rgb(2, 2, 2);
+}

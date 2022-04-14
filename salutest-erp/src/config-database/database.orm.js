@@ -31,7 +31,6 @@ const area_Modelo = require("../models/area");
 const examen_Modelo = require("../models/examen");
 const mensaje_Modelo = require("../models/mensaje");
 const medicamento_Modelo = require("../models/medicamentos");
-const turno_Modelo = require("../models/turno");
 const horario_Modelo = require("../models/horario");
 const sala_Modelo = require("../models/sala");
 const sintoma_Modelo = require("../models/sintoma");
@@ -101,7 +100,6 @@ const tipo_examen = tipo_examenes_Modelo(sequelize, Sequelize);
 const examen = examen_Modelo(sequelize, Sequelize);
 const mensaje = mensaje_Modelo(sequelize, Sequelize);
 const medicamento = medicamento_Modelo(sequelize, Sequelize);
-const turno = turno_Modelo(sequelize, Sequelize);
 const horario = horario_Modelo(sequelize, Sequelize);
 const sala = sala_Modelo(sequelize, Sequelize);
 const sintoma = sintoma_Modelo(sequelize, Sequelize);
@@ -155,7 +153,6 @@ module.exports = {
   examen,
   mensaje,
   medicamento,
-  turno,
   horario,
   sala,
   sintoma,

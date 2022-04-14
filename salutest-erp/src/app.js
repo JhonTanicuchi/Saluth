@@ -14,7 +14,7 @@ const app = express();
 require('./lib/passport');
 
 /// archivos compartidos
-app.set('port', process.env.PORT || 4000);
+app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
 app.engine('.hbs', exphbs({
     defaultLayout: 'main',
@@ -84,19 +84,19 @@ app.use(require('./rutas/sucursales'))
 app.use(require("./rutas/institucion_medica"))
 app.use(require("./rutas/catalogos"));
 app.use(require("./rutas/certificado_medico"))
-app.use(require('./rutas/turnos'))
 app.use(require('./rutas/laboratorio'))
 app.use(require('./rutas/empleados'))
 app.use(require('./rutas/roles'))
+app.use(require('./rutas/medicamentos'))
 app.use(require('./rutas/especialidades'))
 app.use(require('./rutas/lista2_paciente'))
-app.use(require('./rutas/vistacrudcitamedica'))
+app.use(require('./rutas/cita_medica'))
 app.use(require('./rutas/listacitamedica'))
 app.use(require('./rutas/vistacrudhorarios'))
 app.use(require('./rutas/lista_usuarios_pacientes'))
 app.use(require('./rutas/vistaempleadosdb'))
 app.use(require('./rutas/receta_medica'))
 app.use(require('./rutas/signos_vitales'))
-/* app.use('/modules', require('./routes/inquiries')) */
+    /* app.use('/modules', require('./routes/inquiries')) */
 
 module.exports = app;
