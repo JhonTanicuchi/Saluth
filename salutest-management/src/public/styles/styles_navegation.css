@@ -284,7 +284,7 @@ background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
 
 /*Estilos-Crud- empleados*/
 
-table th  {
+/*table th  {
   width: 10em;
   border: 1px solid  black;
 }
@@ -349,4 +349,4 @@ button:hover {
 .botones-acciones {
   padding: 10px;
   margin: 5px;
-}
+}*/

@@ -1,3 +1,4 @@
+
  <!-- MAIN CONTECT -->
     <div class="main_contect">
         <main class="main_app">
@@ -6,7 +7,8 @@
                 <a href="#"><span class="far fa-times-circle"></span></a>
             </section>
             <button id="new-employee">Agregar nuevo empleado</button> 
-            <br><br>
+            <br> 
+            <br>
             <div class="content_grid"> <!-- EN ESTE DIV VA SU CONTENIDO EN SECTIONS -->
                 <!-- TU CONTENIDO  -->
                 <section id="formulario">
@@ -15,11 +17,11 @@
                             display: none;
                         }
                     </style>
-                    <form>
+                    <form action="/add" METHOD="post">
                         <div class="nombre-completo">
                             <h3>Nombres del Empleado</h3>
-                            <input type="text" style="text-transform: uppercase;" size="35" name="nombre-1" id="nombre-1" placeholder="Nombre 1">
-                            <input type="text" style="text-transform: uppercase;"  size="35" name="nombre-2" id="nombre-2"   placeholder="Nombre 2">
+                            <input type="text" style="text-transform: uppercase;" size="35" name="nombre_1" id="nombre-1" placeholder="Nombre 1">
+                            <input type="text" style="text-transform: uppercase;"  size="35" name="nombre_2" id="nombre-2"   placeholder="Nombre 2">
                             <input type="text" style="text-transform: uppercase;"  size="35" name="apellido-1" id="apellido-1" placeholder="Apellido 1">
                             <input type="text" style="text-transform: uppercase;"  size="35" name="apellido-2" id="apellido-2" placeholder="Apellido 2">
                              
@@ -57,11 +59,11 @@
                              </div>
                         
                          
-                    </form>
                     <div class="add">
 
                         <button type="submit" id="agregar">Agregar</button>
                     </div>
+                    </form>
                 </section>
                 <section id="info-empleado">
                     <style>
@@ -120,6 +122,14 @@
     
                                     </tr>
                                 </tbody>
+                                <tbody>
+                                    {{#each eEmpleados }}
+                                    <tr>
+                                        <td>{{estado}}</td>
+                                        <td>{{nombre_2}}</td>
+                                    </tr>
+                                    {{/each}}
+                                </tbody>
                             </div>
                     </table>
                     
@@ -128,5 +138,79 @@
         </main>
     </div>
 </div>
+<!-- cargo -->
+    <div class="main_contect">
+        <main class="main_app">
+            <section class="dash_title">
+                <h2 id="title_modules">Cargo</h2>
+                <a href="#"><span class="far fa-times-circle"></span></a>
+            </section>
+            <button id="añadir_cargo_1">Agregar Cargo</button> 
+            <br><br>
+            <div class="content_grid"> <!-- EN ESTE DIV VA SU CONTENIDO EN SECTIONS -->
+                <!-- TU CONTENIDO  -->
+                <section id="formulario_cargo">
+                    <style>
+                       /* #formulario_cargo {
+                            display: none;
+                        }*/
+                    </style>
+                    <form>
+                        <div class="nombre-completo">
+                            <h3>Cargo</h3>
+                            <input type="text" style="text-transform: uppercase;"  size="20" name="Cargo" id="Cargo" placeholder="Cargo">
+                            <h3>Nombre</h3>
+                            <input type="text" style="text-transform: uppercase;" size="20" name="nombre-1" id="nombres" placeholder="Nombre">
+                            <h3>Sueldo</h3>
+                            <input type="number" size="35" name="sueldo" id="sueldo" placeholder="Sueldo">
+                             
+                        </div>   
+                    </form>
+                    
+                    <div class="add">
 
+                        <button type="submit" id="añadir_cargo">Agregar Cargo</button>
+                    </div>
+                </section>
+                <br>
+                <section id="info-cargo">
+                    <style>
+                        #info-cargo {
+                            display: block;
+                        }
+                    </style>
+                    
+                    <table>
+                        <thead>
+
+                            <tr>
+                                <th>Cargo</th>
+                                <th>Nombre</th>
+                                <th>Sueldo</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                            <div id="campos_cargo">
+
+                                   <style>
+                                       #campos_cargo {
+                                           display: block;
+                                       }
+                                   </style>
+                                <tbody >
+                                    <tr>
+                                        <td id="cargo"></td>
+                                        <td id="name"></td>
+                                        <td id="sueldo"></td>
+                                        <td id="acciones"><button class="botones-acciones"><span class="fa-solid fa-trash-can"></span></button> | <button class="botones-acciones"><span class="fa-solid fa-user-pen"></span></button> </td>
+                                    </tr>
+                                       
+                                </tbody>
+                            </div>
+                    </table>
+                    
+                </section>
+           
+        </main>
+    </div>
 <script src="./botones.js"></script>

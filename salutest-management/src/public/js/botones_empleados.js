@@ -1,5 +1,5 @@
 //Informacion del empleado
-function agregarEmpleado(){
+/*function agregarEmpleado(){
     let nombre1 = document.getElementById("nombre-1").value;
     let nombre2 = document.getElementById("nombre-2").value;
     let apellido1 = document.getElementById("apellido-1").value;
@@ -57,32 +57,35 @@ function agregarEmpleado(){
     document.getElementById('canton').innerHTML = cantonEmpleado;
     document.getElementById('parroquia').innerHTML = parroquiaEmpleado;
     document.getElementById('sueldo').innerHTML = sueldos;
-}
+}*/
 
 
 function mostrarCampos(){
     document.getElementById("campos").style.display = 'block';
     document.getElementById("formulario").style.display = 'block';
     document.getElementById("info-empleado").style.display = 'none';
+    document.getElementById("formulario_cargo").style.display = 'none';
 }
 
 function mostrarTabla() {
-    document.getElementById("info-empleado").style.display = 'block'
-    document.getElementById("formulario").style.display = 'none'
+    document.getElementById("info-empleado").style.display = 'block';
+    document.getElementById("formulario_cargo").style.display = 'block';
+    document.getElementById("formulario").style.display = 'none';
 
 }
 
 let mostrarInformacion = document.getElementById('new-employee');
 mostrarInformacion.addEventListener('click', mostrarCampos); 
 
-let agregarNuevoEmpleado = document.getElementById('agregar');
-agregarNuevoEmpleado.addEventListener('click', agregarEmpleado);
+/*let agregarNuevoEmpleado = document.getElementById('agregar');
+agregarNuevoEmpleado.addEventListener('click', agregarEmpleado);*/
 
 let agregarNuevoEmpleado2 = document.getElementById('agregar');
 agregarNuevoEmpleado2.addEventListener('click', mostrarCampos );
 
 let mostrarInfoTabla = document.getElementById('agregar');
 mostrarInfoTabla.addEventListener('click', mostrarTabla );
+
 
 
 
