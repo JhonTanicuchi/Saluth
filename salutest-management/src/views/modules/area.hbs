@@ -27,10 +27,16 @@
                         <thead>
                             <tr>
                                 <th>Areas</th>
+                                <th>Estado</th>
                             </tr>
                         </thead>
                         <tbody>
-
+                        {{#each areas}}
+                            <tr>
+                                <td>{{nombre}}</td>
+                                <td>{{estado}}</td>
+                            </tr>
+                        {{/each}}
                         </tbody>
                     </table>
             </td>
