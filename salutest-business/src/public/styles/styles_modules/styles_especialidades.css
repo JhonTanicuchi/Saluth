@@ -1,16 +1,9 @@
-/*Header*/
-body{
-    margin: 0;
-    padding: 50px;
-}
-form{
-    text-align: center;
-}
-.tablita{
+
+.tablita_especialidades{
     display: inline-block;    
 }
 /*Tablaaaaaa Estilos*/
-.tabla{
+.tablita_especialidades{
 border-collapse: collapse; /*Esta propiedad hace que parezca mas una tabla*/
 font-family: 'Quicksand', sans-serif;
 }
@@ -27,17 +20,19 @@ td {
     width: 100px;
     height: 25px;
 }
-.caja{
+.caja_especialidades{
     display: block;
 }
-.caja label{
+.caja_especialidades label{
     font-family: 'Quicksand', sans-serif;
+    
 }
-.caja input{
+.ccaja_especialidades input{
     width: 8em;
     height: 2em;
     text-align: center;
     font-family: 'Quicksand', sans-serif;  
+    
 }
 .submit{
     width: 8em;

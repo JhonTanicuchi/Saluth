@@ -7,8 +7,8 @@
 
         <div class="especialidades_grid">
             <form onsubmit="event.preventDefault();onSubmit();" autocomplete="off">
-              <div class="tablita">
-                <table class="tabla" id="tabla">
+              <div class="tablita_especialidades">
+                <table class="tabla_especialidades" id="tabla">
                   <thead>
                     <tr> 
                       <th>id</th> 
@@ -26,12 +26,15 @@
               </div>
               <br/>
               <br/>
-              <div class="caja">
+              <div class="caja_especialidades">
                 <input type=hidden"" name="oculto" value="1"> 
-                
+                <br><br>
                 <label for="esp">Especialidad</label> <input type="text" id="esp" placeholder="Escriba aqui" required>
+                <br><br>
                 <label for="desc">Descripción</label> <input type="text" id="desc" placeholder="Escriba aqui" required>
+                <br><br>
                 <label for="fecha">Fecha creación</label> <input type="date" id="fecha" placeholder="Escriba aqui" required>
+                <br><br>
                 <select name="est" id="est">
                         <option>Estado</option>
                         <option>Activo</option>
