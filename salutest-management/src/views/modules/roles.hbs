@@ -2,12 +2,12 @@
 <div class="main_contect">
     <main class="main_app">
         <section class="dash_title">
-            <h2 id="title_modules">Controlador de Roles</h2>
+            <h2 id="title_modules">Roles</h2>
             <a href="/home"><span class="far fa-times-circle"></span></a>
         </section>
 
         <div class="container_roles">
-            <table class="datatable">
+            <table class="tabla_roles">
 
                     <thead>
                         <tr>
@@ -18,7 +18,14 @@
                             <th>Edad</th>
                         </tr>
                     </thead>
-                    <div class="rol">Paciente: </div>
+                    <div class="paciente_roles">Paciente: </div>
+
+                    <form action="" method="POST" class="mt-4">
+
+                        <input type="text" class="border border gray-200 rounded-md bg-green-200 w-full text-Ig placeholder-gray-500 p-2 my-2 focus:bg-white" placeholder="Buscador" name="title">
+
+                        <button type="submit" class="">Encontrar</button>
+                    </form>
 
                     <tbody>
                         <tr>
@@ -60,15 +67,10 @@
                          <i class="boton-eliminar">Eliminar</i>
                 </button>
 
-                <button>
-                        <i class="boton-ocultar">Ocultar</i>
-                </button>
-
-
                 <br>
                 <br>
 
-                <table class="datatable">
+                <table class="tabla_roles">
 
                     <thead>
                         <tr>
@@ -81,7 +83,15 @@
                     </thead>
 
 
-                    <div class="rol">Administrador: </div>
+                    <div class="administrador_roles">Administrador: </div>
+
+                    <form action="" method="POST" class="mt-4">
+
+                        <input type="text" class="border border gray-200 rounded-md bg-green-200 w-full text-Ig placeholder-gray-500 p-2 my-2 focus:bg-white" placeholder="Buscador" name="title">
+
+                        <button type="submit" class="">Encontrar</button>
+                    </form>
+
 
                     <tbody>
                         <tr>
@@ -109,14 +119,10 @@
                 <i class="boton-eliminar">Eliminar</i>
        </button>
 
-                <button>
-               <i class="boton-ocultar">Ocultar</i>
-       </button>
-
                 <br>
                 <br>
 
-                <table class="datatable">
+                <table class="tabla_roles">
 
                     <thead>
                         <tr>
@@ -127,7 +133,7 @@
                             <th>Edad</th>
                         </tr>
                     </thead>
-                    <div class="rol">Doctor: </div>
+                    <div class="doctor_roles">Doctor: </div>
 
                     <tbody>
                         <tr>
@@ -160,10 +166,6 @@
 
                 <button>
                 <i class="boton-eliminar">Eliminar</i>
-                </button>
-
-                <button>
-                <i class="boton-ocultar">Ocultar</i>
                 </button>
         </div>
     </main>

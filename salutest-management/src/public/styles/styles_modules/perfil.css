@@ -6,17 +6,6 @@
     --Dark_gray: hsl(0, 0%, 59%);
 }
 
-body{
-    padding: 0;
-    margin: 0;
-    background-color: var(--Dark_cyan);
-    background-image: url(images/bg-pattern-top.svg), url(images/bg-pattern-bottom.svg);
-    background-repeat: no-repeat, no-repeat;
-    background-position: right 51vw bottom 20vh, left 45vw top 50vh;
-    font-family: 'Kumbh Sans', sans-serif;
-    font-size: 18px;
-}
-
 .card-container{
     border: 1px solid;
     margin: 170px auto 50px;
@@ -28,7 +17,7 @@ body{
 }
 
 .bubbles{
-    background: url(images/bg-pattern-card.svg);
+    background: url(/img/bg-pattern-card.svg);
     height: 140px;
 }
 

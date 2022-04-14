@@ -1,4 +1,4 @@
-.datatable {
+.tabla_roles {
     font-weight: 400;
     font-family: Sans-Serif;
     font-size: 18px;
@@ -8,7 +8,7 @@
     border-collapse: collapse;
 }
 
-th {
+.tabla_roles th {
     font-size: 20px;
     font-weight: 500;
     padding: 20px;
@@ -18,7 +18,7 @@ th {
     color: #039;
 }
 
-td {
+.tabla_roles td {
     padding: 9px;
     background: #08d8af;
     border-bottom: 2px solid rgb(0, 0, 0);
@@ -26,7 +26,23 @@ td {
     border-top: 2px solid transparent;
 }
 
-.rol {
+.paciente_roles {
+    font-family: Sans-Serif;
+    font-size: 35px;
+    font-weight: 100;
+    border-bottom: 3px solid;
+    color: rgb(0, 0, 0);
+}
+
+.administrador_roles {
+    font-family: Sans-Serif;
+    font-size: 35px;
+    font-weight: 100;
+    border-bottom: 3px solid;
+    color: rgb(0, 0, 0);
+}
+
+.doctor_roles {
     font-family: Sans-Serif;
     font-size: 35px;
     font-weight: 100;

@@ -4,6 +4,6 @@ const rutas = express.Router();
 const {mostrar} = require('../controllers/vistacrudcitamedica.controller');
 const {check_login} = require('../lib/auth');
 
-rutas.get('/vistacrudcitamedica',mostrar);
+rutas.get('/vistacrudcitamedica',check_login,mostrar);
 
 module.exports = rutas;
