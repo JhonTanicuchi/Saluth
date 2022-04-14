@@ -12,4 +12,9 @@ area.save = async(req,res) => {
     res.redirect("/area")
 }
 
+area.list = async (req, res) => {
+    const areas = await sql.query("SELECT * FROM areas")
+    res.render ("modules/area", {areas})
+}
+
 module.exports = area

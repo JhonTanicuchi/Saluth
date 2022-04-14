@@ -10,20 +10,11 @@
     <table>
         <tr>
             <td>
-                <form autocomplete="off" onsubmit="onFormSubmit()">
-                    <div class="texto1">
-                        <label for="productCode">Id-Sala</label>
-                        <input type="text" name="productCode" id="productCode">
-                    </div>
+                <form autocomplete="off" action="/add" method="post">
                     <div class="texto2">
-                        <label for="product">Nombre</label>
-                        <input type="text" name="product" id="product">
+                        <label for="product">Nombre de la sala</label>
+                        <input type="text" name="nombre" id="product">
                     </div>
-                    <div>
-                        <label for="qty">Cantidad</label>
-                        <input type="number" name="qty" id="qty">
-                    </div>
-
                     <div class="form_action--button">
                         <input type="submit" value="Crear">
                         <input type="reset" value="Reset">
@@ -34,19 +25,22 @@
                     <table class="list" id="storeList">
                         <thead>
                             <tr>
-                                <th>Id de la sala</th>
                                 <th>Nombre</th>
-                                <th>Cantidad</th>
+                                <th>Estado</th>
                             </tr>
                         </thead>
                         <tbody>
-
+                            {{#each sala}}
+                            <tr>
+                                <td>{{nombre}}</td>
+                                <td>{{estado}}</td>
+                            </tr>
+                        {{/each}}
                         </tbody>
                     </table>
             </td>
         </tr>
     </table>
-    <script type="text/javascript" src="vista3.js"></script>
         </div>
 </div>
 </main>

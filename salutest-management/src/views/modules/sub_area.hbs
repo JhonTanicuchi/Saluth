@@ -10,16 +10,11 @@
             <table>
         <tr>
             <td>
-                <form autocomplete="off" onsubmit="onFormSubmit()">
+                <form autocomplete="off" action="/add" method="post">
                     <div class="texto1">
-                        <label for="productCode">Areas</label>
-                        <input type="text" name="productCode" id="productCode">
+                        <label for="productCode">sub_Areas</label>
+                        <input type="text" name="nombre" id="productCode">
                     </div>
-                    <div class="texto2">
-                        <label for="product">Sub-Area</label>
-                        <input type="text" name="product" id="product">
-                    </div>
-
                     <div class="form_action--button">
                         <input type="submit" value="Crear">
                         <input type="reset" value="Reset">
@@ -30,18 +25,22 @@
                     <table class="list" id="storeList">
                         <thead>
                             <tr>
-                                <th>Areas</th>
-                                <th>Sub-Area</th>
+                                <th>Sub_Areas</th>
+                                <th>Estado</th>
                             </tr>
                         </thead>
                         <tbody>
-
+                            {{#each sub_areas}}
+                            <tr>
+                                <td>{{nombre}}</td>
+                                <td>{{estado}}</td>
+                            </tr>
+                        {{/each}}
                         </tbody>
                     </table>
             </td>
         </tr>
     </table>
-    <script type="text/javascript" src="vista2.js"></script>
         </div>
 </div>
 </main>
