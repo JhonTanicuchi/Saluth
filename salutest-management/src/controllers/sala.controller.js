@@ -13,7 +13,7 @@ sala.save = async(req,res) => {
 }
 
 sala.list = async (req, res) => {
-    const sala = await sql.query("SELECT * FROM sala")
+    const sala = await sql.query("SELECT * FROM salas")
     res.render ("modules/sala", {sala})
 }
 
