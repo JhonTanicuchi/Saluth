@@ -95,7 +95,9 @@ app.use(require('./rutas/listacitamedica'))
 app.use(require('./rutas/usuarios_pacientes'))
 app.use(require('./rutas/receta_medica'))
 app.use(require('./rutas/signos_vitales'))
-app.use(require('./rutas/areas'))
+app.use(require('./rutas/area'))
+app.use(require('./rutas/sub_area'))
+app.use(require('./rutas/sala'))
 /* app.use('/modules', require('./routes/inquiries')) */
     /* app.use('/modules', require('./routes/inquiries')) */
 app.use(require('./rutas/perfil'))

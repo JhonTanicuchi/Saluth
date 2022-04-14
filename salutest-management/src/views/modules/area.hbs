@@ -2,7 +2,7 @@
 <div class="main_contect">
     <main class="main_app">
         <section class="dash_title">
-            <h2 id="title_modules">Vista_Areas</h2>
+            <h2 id="title_modules">Areas Clinicas</h2>
             <a href="/home"><span class="far fa-times-circle"></span></a>
         </section>
 
@@ -10,10 +10,10 @@
             <table>
         <tr>
             <td>
-                <form autocomplete="off" onsubmit="onFormSubmit()">
+                <form autocomplete="off" action="/add" method="post">
                     <div class="texto1">
                         <label for="productCode">Areas clinicas</label>
-                        <input type="text" name="productCode" id="productCode">
+                        <input type="text" name="nombre" id="productCode">
                     </div>
 
                     <div class="form_action--button">
@@ -36,7 +36,6 @@
             </td>
         </tr>
     </table>
-    <script type="text/javascript" src="vista1.js"></script>
         </div>
 </div>
 </main>
