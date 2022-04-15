@@ -1,22 +1,18 @@
-.cuerpo_medicamentos {
-    display: flex;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+.medicamentos_grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-column-gap: 1.5rem;
 }
 
-.conte_medicamentos {
-    height: 510px;
-    width: 350px;
-    box-shadow: 0 0 7px #111;
-    margin: 30px 30px;
+.conte_medicamentos{
+    background: white;
+    border-radius: 7px;
+    padding: 1.5rem;
 }
 
 .conte_medicamentos .card {
     height: 200px;
     width: 100%;
-    margin-bottom: 180px;
 }
 
 .card img {
