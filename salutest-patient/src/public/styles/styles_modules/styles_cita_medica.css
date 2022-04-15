@@ -1,25 +1,3 @@
-* {
-    margin: 0px; 
-    padding: 0px; 
-    box-sizing: border-box;
-}
-#title_modules{
-    color: #000000;
-}
-body, html {
-    height: 100%;
-    font-family: 'Poppins', sans-serif;
-}
-/*-------BARRA DE BUSQUEDA------*/
-button, input {
-	font: 1em Hind, sans-serif;
-	line-height: 1.5em;
-}
-
-input {
-	color: #171717;
-}
-
 .search-bar {
 	display: flex;
 }
@@ -157,14 +135,6 @@ input {
 }
 
 @media screen and (prefers-color-scheme: dark) {
-	body, input {
-		color: #f1f1f1;
-    }
-    
-	body {
-		background: #e8eef4;
-    }
-    
 	.search-bar input {
 		box-shadow: 0 0 0 0.4em #000000 inset;
     }
@@ -185,19 +155,7 @@ input {
 
 
   /* ------------------------------------ */
-button {
-    outline: none !important;
-    border: none;
-    background: transparent;
-}
-  
-button:hover {
-    cursor: pointer;
-}
-  
-iframe {
-    border: none !important;
-}
+
   
   
   
@@ -227,15 +185,7 @@ iframe {
   
 /*//////////////////////////////////////////////////////////////////
 [ Table ]*/
-table {
-    width: 100%;
-    background-color: #fff;
-}
-  
-th, td {
-    font-weight: unset;
-    padding-left: 10px;
-}
+
   
 .column100 {
     width: 230px;
