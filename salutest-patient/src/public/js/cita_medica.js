@@ -1,7 +1,7 @@
 function cita_medica_filter() {
     // Declare variables
     var input, filter, table, tr, td, i, j, visible;
-    var input = document.getElementById("cita_medica_filter");
+    var input = document.getElementById("cita_medica_input");
     filter = input.value.toUpperCase();
     table = document.getElementById("cita_medica_table");
     tr = table.getElementsByTagName("tr");
