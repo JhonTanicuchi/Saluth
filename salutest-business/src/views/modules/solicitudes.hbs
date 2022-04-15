@@ -42,21 +42,20 @@
                 </div>
                 <div class="users_card">
                     <div class="user_header">
-                        <h1>Contactos</h1>
-                        <h1>1</h1>
+                        <h1>Información</h1>
                     </div>
                     <div class="user_single">
                         <div class="info">
                             <img src="/img/img_profile.png" alt="" />
                             <div>
-                                <h4>Cinthya Ramos</h4>
+                                <h4>Institución Médica</h4>
                                 <div class="details">
-                                    <h5><span class="fas fa-venus"></span>Mujer</h5>
-                                    <h5>21 años</h5>
+                                    <h5>Publica</h5>
+                                    <h5>Empresarial</h5>
                                 </div>
                             </div>
                         </div>
-                        
+
                     </div>
                 </div>
             </section>
@@ -73,21 +72,27 @@
                         <thead>
                             <tr>
                                 <th>Institución</th>
-                                <th>Paciente</th>
-                                <th>Hora</th>
+                                <th>Tipo</th>
+                                <th>Estado</th>
+                                <th>Fecha</th>
                                 <th>Fecha</th>
                             </tr>
                         </thead>
                         <tbody>
                             {{#each solicitudes}}
                             <tr>
-                                <td>{{id_solicitud}}</td>
-                                <td class="td_person">{{institucion_medica}}</td>
-                                <td>{{tipo_institucion}}</td>
+                                <td name="nombre">{{institucion_medica}}</td>
+                                <td name="descripcion">{{tipo_institucion}}</td>
                                 <td>{{estado}}</td>
+                                <td>{{formatDate creacionSolicitud}}</td>
+                                <td>
+                                    <div>
+                                        <a href="/check/{{id_solicitud}}" >Aceptar</a>
+                                    </div>
+                                </td>
+
                             </tr>
                             {{/each}}
-                            
                         </tbody>
                     </table>
                 </div>

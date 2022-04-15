@@ -11,7 +11,7 @@ const solicitud = (sequelize, type) => {
       tipo_institucion: type.STRING,
       detalle: type.STRING,
       motivo: type.STRING,
-      estado: type.BOOLEAN,
+      estado: type.STRING,
       creacionSolicitud: {
         type: "TIMESTAMP",
         defaultValue: type.literal("CURRENT_TIMESTAMP"),

@@ -82,5 +82,6 @@ app.use(require('./rutas/registro_c'))
 app.use(require('./rutas/chat'))
 app.use(require('./rutas/especialidades'))
 app.use(require("./rutas/solicitud"));
+app.use(require("./rutas/instituciones_medicas"));
 
 module.exports = app;

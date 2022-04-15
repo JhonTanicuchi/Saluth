@@ -58,6 +58,8 @@ const subArea_empleado_Modelo = require("../models/subArea_empleado");
 const area_citaMedica_Modelo = require("../models/area_citaMedica");
 const historia_clinica_Modelo = require("../models/historia_clinica");
 const solicitud_Modelo = require("../models/solicitud");
+const institucion_medica_Modelo = require("../models/institucion_medica");
+
 
 const sequelize = new Sequelize("database_salutest", "root", "", {
   host: "localhost",
@@ -134,6 +136,8 @@ const area_citaMedica = area_citaMedica_Modelo(sequelize, Sequelize);
 const atencion_medica = atencion_medica_Modelo(sequelize, Sequelize);
 const historia_clinica = historia_clinica_Modelo(sequelize, Sequelize);
 const solicitud = solicitud_Modelo(sequelize, Sequelize);
+const institucion_medica = institucion_medica_Modelo(sequelize, Sequelize);
+
 
 //relaciones
 
@@ -191,4 +195,5 @@ module.exports = {
   area_citaMedica,
   historia_clinica,
   solicitud,
+  institucion_medica,
 };

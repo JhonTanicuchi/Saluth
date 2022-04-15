@@ -1,0 +1,20 @@
+<!-- MAIN CONTECT -->
+<div class="main_contect">
+    <main class="main_app">
+        <section class="dash_title">
+            <h2 id="title_modules">Instituciones Médicas</h2>
+            <a href="/home"><span class="far fa-times-circle"></span></a>
+        </section>
+        <div class="record_grid">
+            <section class="record_info">
+                {{#each instituciones}}
+                <div>
+                    <h1>{{id_institucion_medica}}</h1>
+                    <h1>{{creacioninstituciones_medicas}}</h1>
+                </div>
+                {{/each}}
+            </section>
+            
+        </div>
+    </main>
+</div>
