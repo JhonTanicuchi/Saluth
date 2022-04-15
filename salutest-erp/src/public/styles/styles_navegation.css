@@ -4,7 +4,7 @@
   left: 0;
   top: 0;
   background: var(--color_dark_P);
-background-image: radial-gradient(circle at 37.72% -19.64%, #005184 0, #006794 25%, #0180a7 50%, #4f9aba 75%, #77b2cc 100%);
+background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
   z-index: 100;
   color: #fff;
   overflow: hidden;
