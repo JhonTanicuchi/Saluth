@@ -25,7 +25,7 @@ roles.save = async(req, res) => {
 roles.list = async(req, res) => {
     const roles = await sql.query("SELECT * FROM rols");
     console.log(roles)
-    res.render('modules/empleados', { roles });
+    res.render('modules/roles', { roles });
 }
 
-module.exports = rol;
+module.exports = roles;
