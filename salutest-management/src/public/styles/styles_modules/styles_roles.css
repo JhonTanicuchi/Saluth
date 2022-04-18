@@ -1,90 +1,90 @@
-.tabla_roles {
-    font-weight: 400;
-    font-family: Sans-Serif;
-    font-size: 18px;
-    margin: 45px;
-    width: 40px;
-    text-align: left;
-    border-collapse: collapse;
-}
-
-.tabla_roles th {
+.formulario_roles {
     font-size: 20px;
     font-weight: 500;
-    padding: 20px;
+    padding: 8px;
     background: #b9c9fe;
     border-top: 4px solid #aabcfe;
     border-bottom: 1px solid rgb(255, 255, 255);
-    color: #039;
+    color: rgb(0, 0, 0);
 }
 
-.tabla_roles td {
-    padding: 9px;
-    background: #08d8af;
+.contenedor_roles {
+    padding: 20px;
+    background: #d96a89e4;
     border-bottom: 2px solid rgb(0, 0, 0);
     color: rgb(0, 0, 0);
+    display: inline-block;
     border-top: 2px solid transparent;
+    border: solid 2px rgb(0, 0, 0);
 }
 
-.paciente_roles {
-    font-family: Sans-Serif;
-    font-size: 35px;
-    font-weight: 100;
-    border-bottom: 3px solid;
+.contenedor_roles td {
+    border: 2px solid #000;
+    background-color: #07ffb0;
+    text-align: center;
+    width: auto;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.contenedor_roles tbody {
+    height: 30px;
+    width: 40px;
+}
+
+form {
+    text-align: center;
+}
+
+th {
+    border: 1px solid #D5D9D9;
+    width: 100px;
+    height: 25px;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    background-color: #00438D;
+}
+
+.tr_roles {
+    border: 1px solid #D5D9D9;
+    width: 100px;
+    height: 25px;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    background-color: #00438D;
+}
+
+.submit {
+    width: 8em;
+    height: 2em;
     color: rgb(0, 0, 0);
+    background-color: #4dff00af;
+    border: 1px solid rgb(255, 255, 255);
 }
 
-.administrador_roles {
-    font-family: Sans-Serif;
-    font-size: 35px;
-    font-weight: 100;
-    border-bottom: 3px solid;
+.editar {
+    width: 8em;
+    height: 2em;
     color: rgb(0, 0, 0);
+    background-color: #fffb00f8;
+    border: 1px solid rgb(255, 255, 255);
 }
 
-.doctor_roles {
-    font-family: Sans-Serif;
-    font-size: 35px;
-    font-weight: 100;
-    border-bottom: 3px solid;
+.eliminar {
+    width: 8em;
+    height: 2em;
     color: rgb(0, 0, 0);
+    border: 1px solid rgb(255, 255, 255);
+    background-color: #ff0000;
 }
 
-.boton-añadir {
-    background-color: #57c723;
-    padding: 4px 20px;
-    display: inline-block;
-    color: rgb(255, 255, 255);
-    text-shadow: 0 1px 0 rgba(27, 26, 26, 0.5);
-    box-shadow: 0 1px 2px rgba(96, 134, 63, 0.8);
+.submit:hover {
+    background-color: rgb(162, 156, 156);
 }
 
-.boton-añadir:hover {
-    background-color: rgb(88, 80, 80);
+.editar:hover {
+    background-color: rgb(162, 156, 156);
 }
 
-.boton-eliminar {
-    background-color: #ec1111;
-    padding: 4px 20px;
-    display: inline-block;
-    color: rgb(255, 255, 255);
-    text-shadow: 0 1px 0 rgba(27, 26, 26, 0.5);
-    box-shadow: 0 1px 2px rgba(70, 76, 65, 0.8);
-}
-
-.boton-eliminar:hover {
-    background-color: rgba(88, 80, 80);
-}
-
-.boton-ocultar {
-    background-color: #daec11;
-    padding: 4px 20px;
-    display: inline-block;
-    color: rgb(255, 255, 255);
-    text-shadow: 0 1px 0 rgba(27, 26, 26, 0.5);
-    box-shadow: 0 1px 2px rgba(70, 76, 65, 0.8);
-}
-
-.boton-ocultar:hover {
-    background-color: rgba(88, 80, 80);
+.eliminar:hover {
+    background-color: rgb(162, 156, 156);
 }
