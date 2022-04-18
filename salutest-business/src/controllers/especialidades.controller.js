@@ -7,7 +7,7 @@ especialidades.mostrar = (req,res) => {
     res.render ('modules/especialidades');
 };
 
-especialidades.save = async (req, res) => {
+/*especialidades.save = async (req, res) => {
     const {especialidad, descripcion, fecha_creacion, estado} =
 req.body;
 const nuevaEspecialidad = {
@@ -19,7 +19,7 @@ const nuevaEspecialidad = {
 await onformdata.especialidad.create(nuevaEspecialidad);
 res.redirect("/");
 
-}
+}*/
 
 especialidades.list = async (req, res) => {
     const especialidades = await sql.query("SELECT * FROM especialidades");
