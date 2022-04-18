@@ -1,6 +1,7 @@
 .formulario_roles {
     font-size: 20px;
     font-weight: 500;
+    width: auto;
     padding: 8px;
     background: #b9c9fe;
     border-top: 4px solid #aabcfe;
@@ -53,7 +54,7 @@ th {
     background-color: #00438D;
 }
 
-.submit {
+.submit_roles {
     width: 8em;
     height: 2em;
     color: rgb(0, 0, 0);
@@ -77,7 +78,7 @@ th {
     background-color: #ff0000;
 }
 
-.submit:hover {
+.submit_roles:hover {
     background-color: rgb(162, 156, 156);
 }
 

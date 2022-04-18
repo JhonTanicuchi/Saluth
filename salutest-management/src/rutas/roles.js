@@ -1,9 +1,9 @@
 const express = require('express');
 const rutas = express.Router();
 
-const {mostrar} = require('../controllers/roles.controller');
-const {check_login} = require('../lib/auth');
+const { check_login } = require('../lib/auth');
+const { mostrar } = require('../controllers/roles.controller');
 
-rutas.get('/roles',check_login,mostrar);
+rutas.get('/roles', check_login, rolesController.list);
 
 module.exports = rutas;

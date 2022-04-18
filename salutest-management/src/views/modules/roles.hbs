@@ -21,22 +21,33 @@
                             </tr>
                         </thead>
                         <tbody>
+                            {{#each eEmpleados }}
+                                <tr>
+                                    <td>{{rol}}</td>
+                                    <td>{{ced}}</td>
+                                    <td>{{nom}}</td>
+                                    <td>{{ape}}</td>
+                                    <td>{{edad}}</td>
+                                </tr>
+                            {{/each}}
                         </tbody>
                     </table>
                 </div> <br> <br> <br>
 
                 <table>
                     <div class="formulario_roles">
-                        <label for="rol">Rol</label> <input type="text" id="rol" placeholder="Doctor, Paciente, Admin" required>
-                        <label for="ced">Cedula</label> <input type="text" id="ced" placeholder="Ingrese numero de cedula" required>
-                        <label for="nom">Nombre</label> <input type="text" id="nom" placeholder="Introduzca un nombre" required>
-                        <label for="ape">Apellido</label> <input type="text" id="ape" placeholder="Introduzca un apellido" required>
-                        <label for="edad">Edad</label> <input type="number" id="edad" placeholder="Introduzca la edad" required>
+                        <label for="rol"></label> <input name="rol" id="rol" type="text" placeholder="Doctor, Paciente o Administrador" required>
+                        <label for="ced"></label> <input name="ced" id="ced" type="text" placeholder="Ingrese un numero de cedula" required>
+                        <label for="nom"></label> <input name="nom" id="nom" type="text" placeholder="Introduzca un nombre" required>
+                        <label for="ape"></label> <input name="ape" id="ape" type="text" placeholder="Introduzca un apellido" required>
+                        <label for="edad"></label> <input name="edad" id="edad" type="number" placeholder="Introduzca la edad" required>
 
                         <br> <br>
-                        <input class="submit" type="submit" value="Añadir">
+                        <input class="submit_roles" type="submit" value="Añadir">
                     </div>
                 </table>
             </form>
     </main>
 </div>
+
+<script src="./contenedor_roles.js"></script>
