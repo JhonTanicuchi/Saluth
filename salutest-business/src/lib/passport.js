@@ -5,6 +5,7 @@ const orm = require("../config-database/database.orm");
 const sql = require("../config-database/database.sql");
 const helpers = require("./helpers");
 
+
 passport.use(
   "local.signin",
   new LocalStrategy(
@@ -14,29 +15,26 @@ passport.use(
       passReqToCallback: true,
     },
     async (req, username, password, done) => {
-      const rows = await orm.usuario_business.findOne({
-        where: { username: username },
-      });
-      if (rows) {
-        const user = rows;
+      const rows = await sql.query(
+        "SELECT * FROM usuario_businesses WHERE username=?",
+        [username]
+      );
+      if (rows.length > 0) {
+        const user = rows[0];
         const validPassword = await helpers.matchPassword(
           password,
           user.password
         );
         if (validPassword) {
-          done(
-            null,
-            user,
-            req.flash("message", "Bienvenido" + " " + user.username)
-          );
+          done(null, user, req.flash("success", "Bienvenido" + user.username));
         } else {
-          done(null, false, req.flash("message", "Datos incorrecta"));
+          done(null, false, req.flash("message", "Contraseña incorrecta"));
         }
       } else {
         return done(
           null,
           false,
-          req.flash("message", "El nombre de usuario no existe.")
+          req.flash("message", "El nombre de usuario no existe")
         );
       }
     }
@@ -52,6 +50,10 @@ passport.use(
       passReqToCallback: true,
     },
     async (req, username, password, done) => {
+      let nuevoUsuario;
+      let nuevoEmpleado;
+      let nuevaPersona;
+
       const usuario_business = await orm.usuario_business.findOne({
         where: { username: username },
       });
@@ -66,43 +68,46 @@ passport.use(
           direccion,
         };
 
-        const resultadoPersona = orm.persona.create(nuevaPersona);
-        nuevaPersona.id_persona = resultadoPersona.insertId;
+        await orm.persona.create(nuevaPersona);
 
-        const persona_id = sql.query(
-          "select id_persona from personas where cedula = ?",
-          [cedula]
-        );
-        console.log(nuevaPersona);
+        sql.query(
+          "select * from personas where cedula = ?",
+          [cedula],
+          async function (error, results, fields) {
+            if (error) throw error;
+            let nuevoEmpleado = {
+              estado: true,
+              personaIdPersona: results[0].id_persona,
+            };
 
-        const { id_persona } = req.body;
-        let nuevoEmpleado = {
-          estado: true,
-          personaIdPersona: resultadoPersona.insertId,
-        };
-
-        const resultadoEmpleado = orm.empleado_business.create(nuevoEmpleado);
-        nuevoEmpleado.id_empleado_business = resultadoEmpleado.insertId;
-
-        const empleado_id = sql.query(
-          "select e.id_empleado from empleados e join personas p on  e.personaIdPersona = p.id_persona WHERE p.cedula = ?",
-          [nuevaPersona.cedula]
+            await orm.empleado_business.create(nuevoEmpleado);
+          }
         );
 
-        const { correo, id_empleado } = req.body;
-        let nuevoUsuario = {
-          username,
-          password,
-          correo,
-          empleadoIdEmpleado: resultadoEmpleado.insertId,
-        };
+        sql.query(
+          "select * from empleado_businesses e join personas p on e.personaIdPersona = p.id_persona WHERE p.cedula = ?",
+          [cedula],
+          async function (error, results, fields) {
+            if (error) throw error;
+            const { correo } = req.body;
+            console.log(results);
+            console.log(cedula);
 
-        nuevoUsuario.password = await helpers.encryptPassword(password);
-        const resultadoUsuario = await orm.usuario_business.create(
-          nuevoUsuario
+            let nuevoUsuario = {
+              username,
+              password,
+              correo,
+              empleadoBusinessIdEmpleadoBusiness:
+                results[0].id_empleado_business,
+            };
+
+            nuevoUsuario.password = await helpers.encryptPassword(password);
+            const resultadoUsuario = await orm.usuario_business.create(
+              nuevoUsuario
+            );
+          }
         );
-        nuevoUsuario.id_usuario_business = resultadoUsuario.insertId;
-        return done(null, nuevoUsuario, nuevaPersona);
+        return done(null, nuevoUsuario, nuevoEmpleado, nuevaPersona);
       } else {
         if (usuario_business) {
           const usuario = usuario_business;
@@ -112,18 +117,6 @@ passport.use(
               false,
               req.flash("message", "El nombre de usuario ya existe.")
             );
-          } else {
-            const { fecha_creacion, correo } = req.body;
-            let nuevoUsuario = {
-              username,
-              password,
-              correo,
-              fecha_creacion,
-            };
-            nuevoUsuario.password = await helpers.encryptPassword(password);
-            const resultado = await orm.usuario_business.create(nuevoUsuario);
-            nuevoUsuario.id_usuario_business = resultado.insertId;
-            return done(null, nuevoUsuario);
           }
         }
       }

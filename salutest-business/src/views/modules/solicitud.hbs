@@ -3,7 +3,6 @@
     <main class="main_app">
         <section class="dash_title">
             <h2 id="title_modules">Solicitudes</h2>
-            <h2> <a href="/especialidades">Solicitudes Componentes </a></h2>
             <a href="/home"><span class="far fa-times-circle"></span></a>
         </section>
         <div class="solicitudes_grid">
@@ -68,48 +67,20 @@
                 
             </section>
             <section class="solicitudes_wrapper">
-                <div class="solicitudes_filter">
-                    <div>
-                        <span class="fas fa-search"></span>
-                        <input onkeyup="solicitudes_filter()" id="solicitudes_filter" type="text"
-                            placeholder="Filtrar por: institución, tipo, fecha" />
+                {{#each solicitud_info}}
+                <div class="user_single">
+                    <div class="info">
+                        <img src="/img/img_profile.png" alt="" />
+                        <div>
+                            <h4>Institución Médica</h4>
+                            <div class="details">
+                                <h5>{{nombre_institucion_medica}}</h5>
+                                <h5>Empresarial</h5>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="solicitudes_contect">
-                    <table id="solicitudes_table">
-                        <thead>
-                            <tr>
-                                <th>Institución</th>
-                                <th>Tipo</th>
-                                <th>Estado</th>
-                                <th>Fecha</th>
-                                <th></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {{#each solicitudes_awaiting}}
-                                <tr>
-                                    <td name="nombre">{{nombre_institucion_medica}}</td>
-                                    <td name="descripcion">{{tipo_institucion}}</td>
-                                    <td>{{estado}}</td>
-                                    <td>{{formatDate creacionSolicitud}}</td>
-                                    <td>
-                                        <div>
-                                            <a href="/approve/{{id_solicitud}}">Aceptar</a>
-                                            <a href="/cancel/{{id_solicitud}}">Cancelar</a>
-                                            <a href="/solicitudes/{{id_solicitud}}">view</a>
-                                        </div>
-                                    </td>
-                                </tr>
-                            {{/each}}
-                        </tbody>
-                    </table>
-                    {{#if (conditional_solicitudes_awaiting solicitudes_awaiting)}}
-                    <div class="container_solicitudes_no_content">
-                        <h1>No hay solicitudes pendientes</h1>
-                    </div>
-                    {{/if}}
-                </div>
+                {{/each}}
             </section>
         </div>
     </main>
