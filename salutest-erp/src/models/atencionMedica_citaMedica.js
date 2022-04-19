@@ -1,6 +1,6 @@
 const atencionMedica_citaMedica = (sequelize, type) => {
   return sequelize.define(
-    "cita_medica",
+    "atencionMedica_citaMedica",
     {
       id_atencionMedica_citaMedica: {
         type: type.INTEGER,
