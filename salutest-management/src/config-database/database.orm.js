@@ -55,6 +55,7 @@ const especialidad_empleado_Modelo = require("../models/especialidad_empleado");
 const subArea_empleado_Modelo = require("../models/subArea_empleado");
 const area_citaMedica_Modelo = require("../models/area_citaMedica");
 const historia_clinica_Modelo = require("../models/historia_clinica");
+const institucion_medica_Modelo = require("../models/institucion_medica");
 
 const sequelize = new Sequelize("database_salutest", "root", "", {
     host: "localhost",
@@ -125,6 +126,7 @@ const subArea_empleado = subArea_empleado_Modelo(sequelize, Sequelize);
 const area_citaMedica = area_citaMedica_Modelo(sequelize, Sequelize);
 const atencion_medica = atencion_medica_Modelo(sequelize, Sequelize);
 const historia_clinica = historia_clinica_Modelo(sequelize, Sequelize);
+const institucion_medica = institucion_medica_Modelo(sequelize, Sequelize);
 
 //relaciones
 
@@ -141,36 +143,37 @@ paciente.hasMany(usuario_paciente);
 usuario_paciente.belongsTo(paciente);
 
 module.exports = {
-    persona,
-    empleado,
-    paciente,
-    usuario_empleado,
-    usuario_paciente,
-    enfermedad,
-    cita_medica,
-    area_empleado,
-    atencionMedica_citaMedica,
-    diagnostico,
-    diagnostico_enfermedad,
-    area,
-    tipo_examen,
-    examen,
-    mensaje,
-    medicamento,
-    turno,
-    horario,
-    sala,
-    sintoma,
-    sub_area,
-    equipo_medico,
-    transmision,
-    enfermedad_sintoma,
-    rol,
-    rol_permiso,
-    permiso,
-    receta_medica,
-    area_especialidad,
-    especialidad,
-    cargo,
-    atencion_medica,
+  persona,
+  empleado,
+  paciente,
+  usuario_empleado,
+  usuario_paciente,
+  enfermedad,
+  cita_medica,
+  area_empleado,
+  atencionMedica_citaMedica,
+  diagnostico,
+  diagnostico_enfermedad,
+  area,
+  tipo_examen,
+  examen,
+  mensaje,
+  medicamento,
+  turno,
+  horario,
+  sala,
+  sintoma,
+  sub_area,
+  equipo_medico,
+  transmision,
+  enfermedad_sintoma,
+  rol,
+  rol_permiso,
+  permiso,
+  receta_medica,
+  area_especialidad,
+  especialidad,
+  cargo,
+  atencion_medica,
+  institucion_medica,
 };

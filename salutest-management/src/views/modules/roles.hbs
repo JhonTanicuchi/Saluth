@@ -6,167 +6,46 @@
             <a href="/home"><span class="far fa-times-circle"></span></a>
         </section>
 
-        <div class="container_roles">
-            <table class="tabla_roles">
+            <form onsubmit="event.preventDefault();onSubmit();" autocomplete="of">
 
-                    <thead>
-                        <tr>
-                            <th>Estado</th>
-                            <th>Cedula</th>
-                            <th>Nombre</th>
-                            <th>Apellido</th>
-                            <th>Edad</th>
-                        </tr>
-                    </thead>
-                    <div class="paciente_roles">Paciente: </div>
+                <div class="contenedor_roles">
+                    <table class="tabla_roles" id="tabla_roles">
+                        <div class="fuction"></div>
+                        <thead>
+                            <tr class="tr_roles">
+                                <th>Roles</th>
+                                <th>Cedula</th>
+                                <th>Nombre</th>
+                                <th>Apellido</th>
+                                <th>Edad</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {{#each eEmpleados }}
+                                <tr>
+                                    <td>{{rol}}</td>
+                                    <td>{{ced}}</td>
+                                    <td>{{nom}}</td>
+                                    <td>{{ape}}</td>
+                                    <td>{{edad}}</td>
+                                </tr>
+                            {{/each}}
+                        </tbody>
+                    </table>
+                </div> <br> <br> <br>
 
-                    <form action="" method="POST" class="mt-4">
+                <table>
+                    <div class="formulario_roles">
+                        <label for="rol"></label> <input name="rol" id="rol" type="text" placeholder="Doctor, Paciente o Administrador" required>
+                        <label for="ced"></label> <input name="ced" id="ced" type="text" placeholder="Ingrese un numero de cedula" required>
+                        <label for="nom"></label> <input name="nom" id="nom" type="text" placeholder="Introduzca un nombre" required>
+                        <label for="ape"></label> <input name="ape" id="ape" type="text" placeholder="Introduzca un apellido" required>
+                        <label for="edad"></label> <input name="edad" id="edad" type="number" placeholder="Introduzca la edad" required>
 
-                        <input type="text" class="border border gray-200 rounded-md bg-green-200 w-full text-Ig placeholder-gray-500 p-2 my-2 focus:bg-white" placeholder="Buscador" name="title">
-
-                        <button type="submit" class="">Encontrar</button>
-                    </form>
-
-                    <tbody>
-                        <tr>
-                            <td>Ofline</td>
-                            <td>1754895783</td>
-                            <td>Jenny</td>
-                            <td>Cando</td>
-                            <td>28</td>
-                        </tr>
-                        <tr>
-                            <td>Onfline</td>
-                            <td>1754514691</td>
-                            <td>Marcos</td>
-                            <td>Rays</td>
-                            <td>14</td>
-                        </tr>
-                        <tr>
-                            <td>Online</td>
-                            <td>1754865411</td>
-                            <td>Miguel</td>
-                            <td>Guaman</td>
-                            <td>76</td>
-                        </tr>
-                        <tr>
-                            <td>Ofline</td>
-                            <td>1751452456</td>
-                            <td>Erick</td>
-                            <td>Luambaquin</td>
-                            <td>27</td>
-                        </tr>
-                    </tbody>
+                        <br> <br>
+                        <input class="submit_roles" type="submit" value="Añadir">
+                    </div>
                 </table>
-
-                <button>
-                         <i class="boton-añadir">Añadir</i>
-                </button>
-
-                <button>
-                         <i class="boton-eliminar">Eliminar</i>
-                </button>
-
-                <br>
-                <br>
-
-                <table class="tabla_roles">
-
-                    <thead>
-                        <tr>
-                            <th>Estado</th>
-                            <th>Cedula</th>
-                            <th>Nombre</th>
-                            <th>Apellido</th>
-                            <th>Edad</th>
-                        </tr>
-                    </thead>
-
-
-                    <div class="administrador_roles">Administrador: </div>
-
-                    <form action="" method="POST" class="mt-4">
-
-                        <input type="text" class="border border gray-200 rounded-md bg-green-200 w-full text-Ig placeholder-gray-500 p-2 my-2 focus:bg-white" placeholder="Buscador" name="title">
-
-                        <button type="submit" class="">Encontrar</button>
-                    </form>
-
-
-                    <tbody>
-                        <tr>
-                            <td>Online</td>
-                            <td>175895456</td>
-                            <td>Jhovani</td>
-                            <td>Cañar</td>
-                            <td>41</td>
-                        </tr>
-                        <tr>
-                            <td>Online</td>
-                            <td>175398966</td>
-                            <td>Martha</td>
-                            <td>Caicedo</td>
-                            <td>25</td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <button>
-                <i class="boton-añadir">Añadir</i>
-        </button>
-
-                <button>
-                <i class="boton-eliminar">Eliminar</i>
-       </button>
-
-                <br>
-                <br>
-
-                <table class="tabla_roles">
-
-                    <thead>
-                        <tr>
-                            <th>Estado</th>
-                            <th>Cedula</th>
-                            <th>Nombre</th>
-                            <th>Apellido</th>
-                            <th>Edad</th>
-                        </tr>
-                    </thead>
-                    <div class="doctor_roles">Doctor: </div>
-
-                    <tbody>
-                        <tr>
-                            <td>Ofline</td>
-                            <td>1756954383</td>
-                            <td>Leonardo</td>
-                            <td>Quilumba</td>
-                            <td>24</td>
-                        </tr>
-                        <tr>
-                            <td>Onfline</td>
-                            <td>1754541498</td>
-                            <td>Marcos</td>
-                            <td>Rays</td>
-                            <td>30</td>
-                        </tr>
-                        <tr>
-                            <td>Ofline</td>
-                            <td>1754865411</td>
-                            <td>Miguel</td>
-                            <td>Guaman</td>
-                            <td>45</td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <button>
-                <i class="boton-añadir">Añadir</i>
-                </button>
-
-                <button>
-                <i class="boton-eliminar">Eliminar</i>
-                </button>
-        </div>
+            </form>
     </main>
 </div>
