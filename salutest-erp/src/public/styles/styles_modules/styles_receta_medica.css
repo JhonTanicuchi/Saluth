@@ -1,0 +1,42 @@
+
+
+
+.tablita{
+    display: inline-block;    
+}
+/*Tablaaaaaa Estilos*/
+.tabla_receta{
+border-collapse: collapse; /*Esta propiedad hace que parezca mas una tabla*/
+font-family: 'Quicksand', sans-serif;
+}
+.tabla_receta tr th{
+    border: 1px solid #D5D9D9;
+    width: 100px;
+    height: 25px;
+    color: white;
+    background-color: #00438D;
+    
+}
+/* Para el estilo de las nuevas celdas */
+.tabla_receta td {
+    border: 1px solid #D5D9D9;
+    width: 100px;
+    height: 25px;
+}
+.caja_receta{
+    display:inline;
+}
+
+.caja_receta input{
+    width: 8em;
+    height: 2em;
+    text-align: center;      
+    display:table;
+}
+.submit{
+    width: 8em;
+    height: 2em;
+    color: white;
+    background-color: #00438D;
+    border: 2px solid white;
+}
