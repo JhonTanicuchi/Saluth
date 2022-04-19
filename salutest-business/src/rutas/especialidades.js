@@ -1,9 +1,9 @@
 const express = require('express');
 const rutas = express.Router();
 
-const {mostrar} = require('../controllers/especialidades.controller');
 const {check_login} = require('../lib/auth');
+const especialidadesController = require("../controllers/especialidades.controller");
 
-rutas.get('/especialidades',check_login,mostrar);
+rutas.get('/especialidades',check_login, especialidadesController.list);
 
 module.exports = rutas;

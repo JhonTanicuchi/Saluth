@@ -15,7 +15,7 @@
                 <table class="tabla_especialidades" id="tabla">
                   <thead>
                     <tr> 
-                      <th>id</th> 
+                     <th>ID</th>
                       <th>Especialidad</th>
                       <th>Descripción</th>
                       <th>Fecha creacion</th>
@@ -31,24 +31,45 @@
               <br/>
               <br/>
               <div class="caja_especialidades">
-                <input type=hidden"" name="oculto" value="1"> 
                 <br><br>
-                <label for="esp">Especialidad</label> <input type="text" id="esp" placeholder="Escriba aqui" required>
+                
+                <label for="usuario">ID</label> 
+                <input name="usuario" readonly type="text" id="usuario" autocomplete="off" >
                 <br><br>
-                <label for="desc">Descripción</label> <input type="text" id="desc" placeholder="Escriba aqui" required>
+                <label for="especialidad">Especialidad</label> 
+                <input name="especialidad" type="text" id="especialidad" placeholder="Escriba aqui" required>
                 <br><br>
-                <label for="fecha">Fecha creación</label> <input type="date" id="fecha" placeholder="Escriba aqui" required>
+                <label for="descripcion">Descripción</label> 
+                <input name="descripcion"  type="text" id="descripcion" placeholder="Escriba aqui" required >
                 <br><br>
-                <select name="est" id="est">
+                <label for="fecha_creacion">Fecha creación</label> 
+                <input name="fecha_creacion" type="date" id="fecha_creacion"placeholder="Escriba aqui" required >
+                <br><br>
+                <select name="estado" id="estado">
+
                         <option>Estado</option>
                         <option>Activo</option>
                         <option>No activo</option>
                 </select>
             
-              </div>
-                <br/>
+                <br/><br/>
                 <input class="submit" type="submit" value="Agregar">
+
+            <tbody>
+                            {{#each  especialidades }}
+                            <tr>
+                                <td>{{id_especialidad}}</td>
+                                <td class="td_person">{{especialidad}}</td>
+                                <td>{{fecha_creacion}}</td>
+                                <td>{{estado}}</td>
+                            </tr>
+                            {{/each}}
+                            
+                        </tbody>
+              </div>
+                
             </form>
+
         </div>
     </main>
 </div>

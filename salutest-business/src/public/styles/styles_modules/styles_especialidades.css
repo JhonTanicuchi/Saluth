@@ -8,15 +8,15 @@ border-collapse: collapse; /*Esta propiedad hace que parezca mas una tabla*/
 font-family: 'Quicksand', sans-serif;
 }
 .tablita_especialidades tr th{
-    border: 1px solid #D5D9D9;
-    width: 100px;
+    border: 1px solid #000000;
+    width: 120px;
     height: 25px;
     color: white;
-    background-color: #00438D;
+    background-color: rgba(40,65,120,1);
 }
 /* Para el estilo de las nuevas celdas */
 .tablita_especialidades td {
-    border: 1px solid #D5D9D9;
+    border: 1px solid #000000;
     width: 100px;
     height: 25px;
 }
@@ -39,6 +39,6 @@ font-family: 'Quicksand', sans-serif;
     height: 2em;
     font-family: 'Quicksand', sans-serif;
     color: white;
-    background-color: #00438D;
-    border: 2px solid white;
+    background-color: rgba(40,65,120,1);
+    border: 1px solid rgb(0, 0, 0);
 }
