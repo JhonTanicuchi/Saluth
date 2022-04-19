@@ -1,0 +1,29 @@
+
+.title_solicitud {
+  width: 270px;
+}
+
+.title_solicitud h1 {
+  font-size: 40px;
+  font-weight: bold;
+  text-shadow: 0px 3px 6px rgb(0, 0, 0, 16%);
+}
+
+
+.title_solicitud h3 {
+  font-size: 20px;
+  font-weight: normal;
+  opacity: 63%;
+}
+.resume{
+  width: 600px;
+}
+
+.title_solicitud p {
+  width: 600px;
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #0281a7;
+  opacity: 70%;
+}

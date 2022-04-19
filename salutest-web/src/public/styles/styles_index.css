@@ -100,6 +100,7 @@
 
 .logo {
   position: relative;
+  z-index: 1;
 }
 
 .logo svg {

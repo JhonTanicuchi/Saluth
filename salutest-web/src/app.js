@@ -2,12 +2,13 @@ const express = require("express");
 const morgan = require("morgan");
 const path = require("path");
 const exphbs = require("express-handlebars");
-const passport = require("passport");
-const flash = require("connect-flash");
 const bodyparser = require("body-parser");
 
+const { database } = require("./keys");
 
 const app = express();
+const orm = require("./config-database/database.orm");
+const sql = require("./config-database/database.sql");
 
 
 /// archivos compartidos
@@ -36,18 +37,12 @@ app.use(
 );
 app.use(bodyparser.json());
 
-
-
-//midlewars
-
-
 //public
 app.use(express.static(path.join(__dirname, "public")));
 //public
 
 //routers
 app.use(require("./rutas/index"));
-
-/* app.use('/modules', require('./routes/inquiries')) */
+app.use(require("./rutas/solicitud"));
 
 module.exports = app;
