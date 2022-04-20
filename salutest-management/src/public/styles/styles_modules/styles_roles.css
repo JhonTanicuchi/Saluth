@@ -45,7 +45,7 @@ th {
     background-color: #00438D;
 }
 
-.submit_roles {
+input[class="submit_roles"] {
     width: 8em;
     height: 2em;
     color: rgb(0, 0, 0);
