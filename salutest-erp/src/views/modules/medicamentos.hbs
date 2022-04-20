@@ -7,55 +7,49 @@
                 <a href="/home"><span class="far fa-times-circle"></span></a>
             </section>
 
-            <div class="medicamentos_grid">
-                <div class="conte_medicamentos">
-                    <div class="card paracetamol">
-                        <img src="https://image.shutterstock.com/image-illustration/3d-rendering-paracetamol-bottle-pills-260nw-765786238.jpg">
-                    </div>
-                    <div class="informacion_medicamentos">
-                        <h1>Parecetamol </h1>
-                        <p class="consumo">Para mayores de 3 años</p>
-                    </div>
-                    <div class="precio_medicamentos">
-                        <div class="box-precio_medicamentos">
-                            <span class="precio"><b>$5.00</b></span>
-                        </div>
-                        <span class="shoping"><i class="fas fa-cart-plus"></i></span>
-                    </div>
-                </div>
-                
-                <div class="conte_medicamentos">
-                    <div class="card aspirina">
-                        <img src="https://historiaybiografias.com/archivos_varios4/aspirina.jpg">
-                    </div>
-                    <div class="informacion_medicamentos">
-                        <h1>Aspirina</h1>
-                        <p class="consumo">Para mayores de 3 años</p>
-                    </div>
-                    <div class="precio_medicamentos">
-                        <div class="box-precio_medicamentos">
-                            <span class="precio"><b>$12.00</b></span>
-                        </div>
-                        <span class="shoping"><i class="fas fa-cart-plus"></i></span>
-                    </div>
-                </div>
-                
-                <div class="conte_medicamentos">
-                    <div class="card amoxicilina">
-                        <img src="https://w7.pngwing.com/pngs/596/550/png-transparent-amoxicillin-clavulanic-acid-pharmaceutical-drug-suspension-medicamentos-laboratory-suspension-pharmaceutical-drug-thumbnail.png">
-                    </div>
-                    <div class="informacion_medicamentos">
-                        <h1>Amoxicilina</h1>
-                        <p class="consumo">Para mayores de 10 años</p>
-                    </div>
-                    <div class="precio_medicamentos">
-                        <div class="box-precio_medicamentos">
-                            <span class="precio"><b>$3.00</b></span>
-                        </div>
-                        <span class="shoping"><i class="fas fa-cart-plus"></i></span>
-                    </div>
-                </div>
-            </div>
-        </main>
-    </div>
-</div>
+            <table class="contenido_medicamentos">
+                    <tr>
+                        <td>
+                            <form onsubmit="event.preventDefault();onSubmit();" autocomplete="of">
+                                <div>
+                                    <div>
+                                        <label for="cod">Codigo del producto:</label>
+                                        <input type="text" name="cod" id="cod" placeholder="Introduzca un codigo al producto" required>
+                                    </div>
+                                    <div>
+                                        <label for="pro">Nombre del producto:</label>
+                                        <input type="text" name="pro" id="pro" placeholder="Introduzca un nombre al producto" required>
+                                    </div>
+                                    <div>
+                                        <label for="peso">Peso en gramos:</label>
+                                        <input type="Text" name="peso" id="peso" placeholder="Introduzca el peso del producto" required>
+                                    </div>
+                                    <div>
+                                        <label for="pre">Precio en dollares:</label>
+                                        <input type="number" name="pre" id="pre" placeholder="Introduzca el precio del producto" required>
+                                    </div>
+
+                                    <input class="submit" type="submit" value="Añadir">
+                                </div>
+                            </form>
+
+                            <td>
+                                <div class="contenedor_medicamentos">
+                                    <table class="tabla_medicamentos" id="tabla_medicamentos">
+                                        <div class="fuction"></div>
+                                        <thead>
+                                            <tr class="tr_medicamentos">
+                                                <th>Codigo</th>
+                                                <th>Nombre</th>
+                                                <th>Peso</th>
+                                                <th>Precio</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </td>
+                        </td>
+                    </tr>
+            </table>
