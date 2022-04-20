@@ -7,12 +7,12 @@
             <a href="/home"><span class="far fa-times-circle"></span></a>
         </section>
         <div class="instituciones_medicas_grid">
-            <section class="solicitudes_wrapper">
-                <div class="solicitudes_filter">
+            <section class="instituciones_medicas_wrapper">
+                <div class="instituciones_medicas_filter">
                     <div>
                         <span class="fas fa-search"></span>
-                        <input onkeyup="solicitudes_filter()" id="solicitudes_filter" type="text"
-                            placeholder="Filtrar por: institución, tipo, fecha" />
+                        <input onkeyup="instituciones_medicas_filter()" id="instituciones_medicas_filter" type="text"
+                            placeholder="Filtrar por: institución, tipo" />
                     </div>
                 </div>
                 <div class="instituciones_medicas_list">
@@ -24,71 +24,38 @@
                         <h1>{{formatDate creacioninstituciones_medicas}}</h1>
                     </div>
                     {{else}}
-                    <div class="container_solicitudes_no_content">
+                    <div class="container_instituciones_medicas_no_content">
                         <h1>No hay instituciones</h1>
                     </div>
                     {{/each}}
                 </div>
             </section>
-            <section class="solicitudes_info">
+            <section class="instituciones_medicas_info">
                 <div class="summary_card">
                     <div class="summary_single">
                         <div>
-                            <span class="fas fa-file-circle-exclamation"></span>
-                            <span>Pendientes</span>
+                            <span class="fas fa-house-medical"></span>
+                            <span>Farmacias</span>
                         </div>
                         <h5>{{length instituciones}}</h5>
                     </div>
             
                     <div class="summary_single">
                         <div>
-                            <span class="fas fa-file-circle-question"></span>
-                            <span>En Proceso</span>
+                            <span class="fas fa-hospital-user"></span>
+                            <span>Clinicas</span>
                         </div>
                         <h5>{{length instituciones}}</h5>
                     </div>
             
                     <div class="summary_single">
                         <div>
-                            <span class="fas fa-file-circle-check"></span>
-                            <span>Aprobadas</span>
-                        </div>
-                        <h5>{{length instituciones}}</h5>
-                    </div>
-            
-                    <div class="summary_single">
-                        <div>
-                            <span class="fas fa-file-circle-minus"></span>
-                            <span>Canceladas</span>
+                            <span class="fas fa-hospital"></span>
+                            <span>Hospitales</span>
                         </div>
                         <h5>{{length instituciones}}</h5>
                     </div>
                 </div>
-            
-                <div class="users_card">
-                    <div class="user_header">
-                        <h1>En Proceso</h1>
-                    </div>
-                    {{#each instituciones}}
-                    <div class="user_single">
-                        <div class="info">
-                            <img src="/img/img_profile.png" alt="" />
-                            <div>
-                                <h4>Institución Médica</h4>
-                                <div class="details">
-                                    <h5>{{nombre}}</h5>
-                                    <h5>Empresarial</h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    {{else}}
-                    <div class="container_solicitudes_process_no_content">
-                        <h1>No hay solicitudes en proceso</h1>
-                    </div>
-                    {{/each}}
-                </div>
-            
             </section>
         </div>
     </main>
