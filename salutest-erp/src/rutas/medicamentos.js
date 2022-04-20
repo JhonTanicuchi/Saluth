@@ -1,9 +1,9 @@
 const express = require('express');
 const rutas = express.Router();
 
-const { mostrar } = require('../controllers/medicamentos.controller');
 const { check_login } = require('../lib/auth');
+const medicamentosController = require('../controllers/medicamentos.controller');
 
-rutas.get('/medicamentos', mostrar);
+rutas.get('/medicamentos', check_login, medicamentosController.list);
 
 module.exports = rutas;

@@ -14,19 +14,19 @@
                                 <div>
                                     <div>
                                         <label for="cod">Codigo del producto:</label>
-                                        <input type="text" name="cod" id="cod" placeholder="Introduzca un codigo al producto" required>
+                                        <input name="cod" class="input" id="cod" type="text" placeholder="Introduzca un codigo al producto" required>
                                     </div>
                                     <div>
                                         <label for="pro">Nombre del producto:</label>
-                                        <input type="text" name="pro" id="pro" placeholder="Introduzca un nombre al producto" required>
+                                        <input name="pro" class="input" id="pro" type="text" placeholder="Introduzca un nombre al producto" required>
                                     </div>
                                     <div>
                                         <label for="peso">Peso en gramos:</label>
-                                        <input type="Text" name="peso" id="peso" placeholder="Introduzca el peso del producto" required>
+                                        <input name="peso" class="input" id="peso" type="Text" placeholder="Introduzca el peso del producto" required>
                                     </div>
                                     <div>
                                         <label for="pre">Precio en dollares:</label>
-                                        <input type="number" name="pre" id="pre" placeholder="Introduzca el precio del producto" required>
+                                        <input name="pre" class="input" id="pre" type="number" placeholder="Introduzca el precio del producto" required>
                                     </div>
 
                                     <input class="submit" type="submit" value="Añadir">
@@ -46,6 +46,14 @@
                                             </tr>
                                         </thead>
                                         <tbody>
+                                            {{#each medicamentos}}
+                                                <tr>
+                                                    <td>{{cod}}</td>
+                                                    <td>{{pro}}</td>
+                                                    <td>{{peso}}</td>
+                                                    <td>{{pre}}</td>
+                                                </tr>
+                                            {{/each}}
                                         </tbody>
                                     </table>
                                 </div>
