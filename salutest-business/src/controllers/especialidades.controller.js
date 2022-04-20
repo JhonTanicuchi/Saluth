@@ -4,10 +4,10 @@ const sql = require("../config-database/database.sql");
 const especialidades = {}
 
 especialidades.mostrar = (req,res) => {
-    res.render ('modules/especialidade');
+    res.render ('modules/especialidades');
 };
 
-especialidade.save = async (req, res) => {
+especialidades.save = async (req, res) => {
     const { nombre, descripcion, fecha_creacion, estado} =
 req.body;
 const nuevaEspecialidad = {
