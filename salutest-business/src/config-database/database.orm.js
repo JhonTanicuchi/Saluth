@@ -17,8 +17,8 @@ mysql
   });
 
 const persona_Modelo = require("../models/persona");
-const empleado_business_Modelo = require("../models/persona");
-const usuario_business_Modelo = require("../models/persona");
+const empleado_business_Modelo = require("../models/empleado_business");
+const usuario_business_Modelo = require("../models/usuario_business");
 const empleado_Modelo = require("../models/empleado");
 const paciente_Modelo = require("../models/paciente");
 const usuarioEmpleado_Modelo = require("../models/usuario_empleado");
@@ -87,7 +87,7 @@ sequelize.sync({ force: false }).then(() => {
 
 const persona = persona_Modelo(sequelize, Sequelize);
 const empleado_business = empleado_business_Modelo(sequelize, Sequelize);
-const usuario_business = usuarioEmpleado_Modelo(sequelize, Sequelize);
+const usuario_business = usuario_business_Modelo(sequelize, Sequelize);
 const empleado = empleado_Modelo(sequelize, Sequelize);
 const paciente = paciente_Modelo(sequelize, Sequelize);
 const usuario_empleado = usuarioEmpleado_Modelo(sequelize, Sequelize);
@@ -141,17 +141,28 @@ const institucion_medica = institucion_medica_Modelo(sequelize, Sequelize);
 
 //relaciones
 
+persona.hasMany(empleado_business);
+empleado_business.belongsTo(persona);
+
+empleado_business.hasMany(usuario_business);
+usuario_business.belongsTo(empleado_business);
+
 persona.hasMany(empleado);
 empleado.belongsTo(persona);
-
-persona.hasMany(paciente);
-paciente.belongsTo(persona);
 
 empleado.hasMany(usuario_empleado);
 usuario_empleado.belongsTo(empleado);
 
+persona.hasMany(paciente);
+paciente.belongsTo(persona);
+
+
 paciente.hasMany(usuario_paciente);
 usuario_paciente.belongsTo(paciente);
+
+
+institucion_medica.hasMany(solicitud);
+solicitud.belongsTo(institucion_medica);
 
 module.exports = {
   persona,

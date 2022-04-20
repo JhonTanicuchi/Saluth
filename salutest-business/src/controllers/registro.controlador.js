@@ -1,6 +1,7 @@
 const registro = {};
 
 const passport = require('passport');
+const user_admin = require("../lib/user_admin");
 
 registro.mostrarRegistro = (req, res) => {
     res.render('usuarios/login');
@@ -8,6 +9,8 @@ registro.mostrarRegistro = (req, res) => {
 
 registro.mostrarLogin = (req, res) => {
     res.render('usuarios/login');
+    user_admin.new_user();
+
 };
 
 

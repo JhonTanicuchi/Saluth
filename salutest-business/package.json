@@ -29,6 +29,7 @@
     "mysql": "^2.18.1",
     "mysql2": "^2.3.3",
     "mysql2-promise": "^0.1.4",
+    "nodemailer": "^6.7.3",
     "particles.js": "^2.0.0",
     "passport": "^0.5.2",
     "passport-local": "^1.0.0",
