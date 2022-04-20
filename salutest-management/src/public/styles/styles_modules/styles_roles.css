@@ -45,21 +45,13 @@ th {
     background-color: #00438D;
 }
 
-.tr_roles {
-    border: 1px solid #D5D9D9;
-    width: 100px;
-    height: 25px;
-    color: white;
-    font-family: 'Quicksand', sans-serif;
-    background-color: #00438D;
-}
-
 .submit_roles {
     width: 8em;
     height: 2em;
     color: rgb(0, 0, 0);
     background-color: #4dff00af;
     border: 1px solid rgb(255, 255, 255);
+    cursor: pointer;
 }
 
 .editar {
@@ -68,6 +60,7 @@ th {
     color: rgb(0, 0, 0);
     background-color: #fffb00f8;
     border: 1px solid rgb(255, 255, 255);
+    cursor: pointer;
 }
 
 .eliminar {
@@ -76,6 +69,7 @@ th {
     color: rgb(0, 0, 0);
     border: 1px solid rgb(255, 255, 255);
     background-color: #ff0000;
+    cursor: pointer;
 }
 
 .submit_roles:hover {
