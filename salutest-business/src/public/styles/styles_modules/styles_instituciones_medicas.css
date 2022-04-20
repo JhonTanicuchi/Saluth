@@ -1,3 +1,12 @@
+.instituciones_medicas_grid {
+  display: grid;
+  grid-template-columns: 75% calc(25% - 1.5rem);
+  grid-column-gap: 1.5rem;
+  height: calc(100vh - 10rem);
+  color: var(--color_font_P);
+}
+
+
 .instituciones_medicas_list {
   display: grid;
   grid-template-columns: repeat(5,1fr);

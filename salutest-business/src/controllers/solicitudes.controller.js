@@ -1,5 +1,6 @@
 const orm = require("../config-database/database.orm");
 const sql = require("../config-database/database.sql");
+const email = require("./email.controller");
 const Handlebars = require("handlebars");
 
 const solicitud = {};
@@ -44,6 +45,12 @@ solicitud.list = async (req, res) => {
 };
 
 solicitud.approve = async (req, res) => {
+  const name = "Jhon Tanicuchi";
+  const username = "Jhon.Iess";
+  const password = "1111";
+
+  email.create(req, res, name,username, password);
+
   const id_solicitud = req.params.id;
 
   sql.query(
