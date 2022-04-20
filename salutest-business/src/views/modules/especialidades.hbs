@@ -10,7 +10,7 @@
         </section>
 
         <div class="especialidades_grid">
-            <form onsubmit="event.preventDefault();onSubmit();" autocomplete="off">
+            <form action="/add" autocomplete="off">
               <div class="tablita_especialidades">
                 <table class="tabla_especialidades" id="tabla">
                   <thead>
@@ -58,7 +58,7 @@
             <tbody>
                             {{#each  especialidades }}
                             <tr>
-                                <td>{{id_especialidad}}</td>
+
                                 <td class="td_person">{{especialidad}}</td>
                                 <td>{{fecha_creacion}}</td>
                                 <td>{{estado}}</td>

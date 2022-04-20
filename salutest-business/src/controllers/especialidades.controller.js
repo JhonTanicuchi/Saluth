@@ -8,7 +8,7 @@ especialidades.mostrar = (req,res) => {
 };
 
 especialidades.save = async (req, res) => {
-    const {especialidad, descripcion, fecha_creacion, estado} =
+    const {usuario, especialidad, descripcion, fecha_creacion, estado} =
 req.body;
 const nuevaEspecialidad = {
     especialidad, 
