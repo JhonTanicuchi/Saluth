@@ -4,19 +4,19 @@ const sql = require("../config-database/database.sql");
 const especialidades = {}
 
 especialidades.mostrar = (req,res) => {
-    res.render ('modules/especialidades');
+    res.render ('modules/especialidade');
 };
 
-especialidades.save = async (req, res) => {
-    const {usuario, especialidad, descripcion, fecha_creacion, estado} =
+especialidade.save = async (req, res) => {
+    const { nombre, descripcion, fecha_creacion, estado} =
 req.body;
 const nuevaEspecialidad = {
-    especialidad, 
+    nombre, 
     descripcion,
-     fecha_creacion, 
-     estado,   
+    fecha_creacion, 
+    estado,   
 };
-await onformdata.especialidad.create(nuevaEspecialidad);
+await orm.especialidad.create(nuevaEspecialidad);
 res.redirect("/");
 
 }

@@ -33,11 +33,11 @@
               <div class="caja_especialidades">
                 <br><br>
                 
-                <label for="usuario">ID</label> 
-                <input name="usuario" readonly type="text" id="usuario" autocomplete="off" >
+                <!--<label for="id_especialidad">ID</label> 
+                <input name="id_especialidad" readonly type="text" id="id_especialidad" autocomplete="off" > -->
                 <br><br>
-                <label for="especialidad">Especialidad</label> 
-                <input name="especialidad" type="text" id="especialidad" placeholder="Escriba aqui" required>
+                <label for="nombre">Especialidad</label> 
+                <input name="nombre" type="text" id="nombre" placeholder="Escriba aqui" required>
                 <br><br>
                 <label for="descripcion">Descripción</label> 
                 <input name="descripcion"  type="text" id="descripcion" placeholder="Escriba aqui" required >
@@ -58,8 +58,8 @@
             <tbody>
                             {{#each  especialidades }}
                             <tr>
-
-                                <td class="td_person">{{especialidad}}</td>
+                                <td>{{id_especialidad}}</td>
+                                <td class="td_person">{{nombre}}</td>
                                 <td>{{fecha_creacion}}</td>
                                 <td>{{estado}}</td>
                             </tr>
