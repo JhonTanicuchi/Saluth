@@ -1,0 +1,116 @@
+<!-- MAIN CONTECT -->
+<div class="main_contect">
+    <main class="main_app">
+        <section class="dash_title">
+            <h2 id="title_modules"> <a href="/solicitudes">Solicitudes</a></h2>
+            <h2> <a href="/solicitudes_componentes">Solicitudes Componentes </a></h2>
+            <a href="/home"><span class="far fa-times-circle"></span></a>
+        </section>
+        <div class="solicitudes_grid">
+            <section class="solicitudes_info">
+                <div class="summary_card">
+                    <div class="summary_single">
+                        <div>
+                            <span class="fas fa-file-circle-exclamation"></span>
+                            <span>Pendientes</span>
+                        </div>
+                        <h5>{{length solicitudes_awaiting}}</h5>
+                    </div>
+
+                    <div class="summary_single">
+                        <div>
+                            <span class="fas fa-file-circle-question"></span>
+                            <span>En Proceso</span>
+                        </div>
+                        <h5>{{length solicitudes_in_process}}</h5>
+                    </div>
+
+                    <div class="summary_single">
+                        <div>
+                            <span class="fas fa-file-circle-check"></span>
+                            <span>Aprobadas</span>
+                        </div>
+                        <h5>{{length solicitudes_approved}}</h5>
+                    </div>
+
+                    <div class="summary_single">
+                        <div>
+                            <span class="fas fa-file-circle-minus"></span>
+                            <span>Canceladas</span>
+                        </div>
+                        <h5>{{length solicitudes_canceled}}</h5>
+                    </div>
+                </div>
+                
+                <div class="users_card">
+                    <div class="user_header">
+                        <h1>En Proceso</h1>
+                    </div>
+                    {{#each solicitudes_in_process}}
+                    <div class="user_single">
+                        <div class="info">
+                            <img src="/img/img_profile.png" alt="" />
+                            <div>
+                                <h4>Institución Médica</h4>
+                                <div class="details">
+                                    <h5>{{estado}}</h5>
+                                    <h5>Empresarial</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {{else}}
+                    <div class="container_solicitudes_process_no_content">
+                        <h1>No hay solicitudes en proceso</h1>
+                    </div>
+                    {{/each}}
+                </div>
+                
+            </section>
+            <section class="solicitudes_wrapper">
+                <div class="solicitudes_filter">
+                    <div>
+                        <span class="fas fa-search"></span>
+                        <input onkeyup="solicitudes_filter()" id="solicitudes_filter" type="text"
+                            placeholder="Filtrar por: institución, tipo, fecha" />
+                    </div>
+                </div>
+                <div class="solicitudes_contect">
+                    <table id="solicitudes_table">
+                        <thead>
+                            <tr>
+                                <th>Institución</th>
+                                <th>Tipo</th>
+                                <th>Estado</th>
+                                <th>Fecha</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {{#each solicitudes_awaiting}}
+                                <tr>
+                                    <td name="nombre">{{nombre_institucion_medica}}</td>
+                                    <td name="descripcion">{{tipo_institucion}}</td>
+                                    <td>{{estado}}</td>
+                                    <td>{{formatDate creacionSolicitud}}</td>
+                                    <td>
+                                        <div>
+                                            <a href="/approve/{{id_solicitud}}">Aceptar</a>
+                                            <a href="/cancel/{{id_solicitud}}">Cancelar</a>
+                                            <a href="/solicitudes/{{id_solicitud}}">view</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            {{/each}}
+                        </tbody>
+                    </table>
+                    {{#if (conditional_solicitudes_awaiting solicitudes_awaiting)}}
+                    <div class="container_solicitudes_no_content">
+                        <h1>No hay solicitudes pendientes</h1>
+                    </div>
+                    {{/if}}
+                </div>
+            </section>
+        </div>
+    </main>
+</div>
