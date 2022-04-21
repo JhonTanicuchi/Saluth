@@ -12,7 +12,7 @@
     <div class="especialidades_grid">
       <form action="/add" method="post" autocomplete="off">
         <div class="tablita_especialidades">
-          <table class="tabla_especialidades" id="tabla">
+       <table class="tabla_especialidades" id="tabla">
             <thead>
               <tr>
                 <th>ID</th>
@@ -20,10 +20,19 @@
                 <th>Descripción</th>
                 <th>Fecha creacion</th>
                 <th>Estado</th>
-                <th>Opciones</th>
+              
               </tr>
             </thead>
             <tbody>
+            {{#each especialidades }}
+            <tr>
+              <td>{{id_especialidad}}</td>
+              <td class="td_person">{{nombre}}</td>
+              <td>{{descripcion}}</td>
+              <td>{{fecha_creacion}}</td>
+              <td>{{estado}}</td>
+            </tr>
+            {{/each}}
 
             </tbody>
           </table>
@@ -35,12 +44,15 @@
 
           <!--<label for="id_especialidad">ID</label> 
                 <input name="id_especialidad" readonly type="text" id="id_especialidad" autocomplete="off" > -->
-          <br><br>
+
           <label for="nombre">Especialidad</label>
           <input name="nombre" type="text" id="nombre" placeholder="Escriba aqui" required>
           <br><br>
           <label for="descripcion">Descripción</label>
           <input name="descripcion" type="text" id="descripcion" placeholder="Escriba aqui" required>
+          <br><br>
+           <label for="fecha_creacion">Fecha de Creacion</label>
+          <input name="fecha_creacion" type="date" id="fecha_creacion" placeholder="Escriba aqui" required>
           <br><br>
           <select name="estado" id="estado">
 
@@ -52,15 +64,7 @@
           <br /><br />
           <input class="submit" type="submit" value="Agregar">
 
-          <tbody>
-            {{#each especialidades }}
-            <tr>
-              <td>{{id_especialidad}}</td>
-              <td class="td_person">{{nombre}}</td>
-              <td>{{fecha_creacion}}</td>
-              <td>{{estado}}</td>
-            </tr>
-            {{/each}}
+          
 
           </tbody>
         </div>
