@@ -8,15 +8,15 @@ especialidades.mostrar = (req,res) => {
 };
 
 especialidades.save = async (req, res) => {
-    const {usuario, especialidad, descripcion, fecha_creacion, estado} =
+    const { nombre, descripcion, fecha_creacion, estado} =
 req.body;
 const nuevaEspecialidad = {
-    especialidad, 
+    nombre, 
     descripcion,
-     fecha_creacion, 
-     estado,   
+    fecha_creacion, 
+    estado,   
 };
-await onformdata.especialidad.create(nuevaEspecialidad);
+await orm.especialidad.create(nuevaEspecialidad);
 res.redirect("/");
 
 }
