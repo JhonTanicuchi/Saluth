@@ -1,0 +1,127 @@
+body {
+    margin:0;
+}
+
+.card-category-5 .per-card-3 {
+    width: 400px;
+    height: 240px;
+
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    -moz-box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    -o-box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.card-category-5 .per-card-3:hover .card-content .social-icons {
+    opacity: 1;
+    height: 100%;
+}
+
+.card-category-5 .per-card-3:hover .social-icons .card-btn {
+    bottom: 0px !important;
+    
+    -webkit-animation: down-btn 1.5s;
+    -moz-animation: down-btn 1.5s;
+    -o-animation: down-btn 1.5s;
+    animation: down-btn 1.5s;
+}
+
+.card-category-5 .per-card-3 .card-image {
+    position:relative;
+    background: #009688;
+    padding-left: 20px;
+    text-align:left;
+    }
+
+.card-category-5 .per-card-3 .card-image img {
+    height: 90px;
+    border-radius: 50px;
+    padding: 5px;
+    margin-right: 10px;
+}
+
+.card-category-5 .per-card-3 .card-image .per-name {
+    position: absolute;
+    top: 40%;
+    text-transform: uppercase;
+    letter-spacing: 7px;
+    font-size: 20px;
+    color: #fff;
+}
+    
+.card-category-5 .per-card-3 .card-content {
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+
+.card-category-5 .per-card-3 .card-content .per-position {
+    font-size: 22px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #009688;
+}
+
+.card-category-5 .per-card-3 .card-content .card-text {
+    padding: 10px;
+}
+    
+.card-category-5 .per-card-3 .card-content .card-text span {
+    font-size: 13px;
+    color: #007368;
+}
+
+.card-category-5 .per-card-3 .card-content .social-icons {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    left: 0;
+    opacity: 0;
+    height: 0%;
+    background: #009688;
+    border-top: 1px solid #5eada5;
+    cursor: pointer;
+
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}
+
+.card-category-5 .per-card-3 .card-content .social-icons i {
+    margin: 15px;
+    font-size:30px;
+    color: #fff;
+    cursor:pointer;
+
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+.card-category-5 .per-card-3 .card-content .social-icons i:hover {
+    -webkit-transform: scale(2);
+    -moz-transform: scale(2);
+    -o-transform: scale(2);
+    transform: scale(2);
+}
+    
+.card-category-5 .per-card-3 .card-content .social-icons .card-btn {
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+.card-category-5 .per-card-3 .card-content .social-icons .card-btn button {
+    cursor: pointer;
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    color: #fff;
+    background: #03695f;
+    border: none;
+}
+
+
