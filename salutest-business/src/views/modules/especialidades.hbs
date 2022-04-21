@@ -1,75 +1,72 @@
 <div class="main_contect">
-    <main class="main_app">
-        <section class="dash_title">
-            <h2 id="title_modules">Panel de Control</h2>
-            <a href="/home"><span class="far fa-times-circle"></span></a>
-        </section>
+  <main class="main_app">
+    <section class="dash_title">
+      <h2 id="title_modules">Panel de Control</h2>
+      <a href="/home"><span class="far fa-times-circle"></span></a>
+    </section>
 
-        <section class="dash_title">
-          <h2 >Especialidades</h2>
-        </section>
+    <section class="dash_title">
+      <h2>Especialidades</h2>
+    </section>
 
-        <div class="especialidades_grid">
-            <form action="/add" autocomplete="off">
-              <div class="tablita_especialidades">
-                <table class="tabla_especialidades" id="tabla">
-                  <thead>
-                    <tr> 
-                     <th>ID</th>
-                      <th>Especialidad</th>
-                      <th>Descripción</th>
-                      <th>Fecha creacion</th>
-                      <th>Estado</th>
-                      <th>Opciones</th>
-                    </tr>
-                  </thead>
-                    <tbody>
-      
-                    </tbody>
-                </table>
-              </div>
-              <br/>
-              <br/>
-              <div class="caja_especialidades">
-                <br><br>
-                
-                <!--<label for="id_especialidad">ID</label> 
-                <input name="id_especialidad" readonly type="text" id="id_especialidad" autocomplete="off" > -->
-                <br><br>
-                <label for="nombre">Especialidad</label> 
-                <input name="nombre" type="text" id="nombre" placeholder="Escriba aqui" required>
-                <br><br>
-                <label for="descripcion">Descripción</label> 
-                <input name="descripcion"  type="text" id="descripcion" placeholder="Escriba aqui" required >
-                <br><br>
-                <label for="fecha_creacion">Fecha creación</label> 
-                <input name="fecha_creacion" type="date" id="fecha_creacion"placeholder="Escriba aqui" required >
-                <br><br>
-                <select name="estado" id="estado">
-
-                        <option>Estado</option>
-                        <option>Activo</option>
-                        <option>No activo</option>
-                </select>
-            
-                <br/><br/>
-                <input class="submit" type="submit" value="Agregar">
-
+    <div class="especialidades_grid">
+      <form action="/add" method="post" autocomplete="off">
+        <div class="tablita_especialidades">
+          <table class="tabla_especialidades" id="tabla">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Especialidad</th>
+                <th>Descripción</th>
+                <th>Fecha creacion</th>
+                <th>Estado</th>
+                <th>Opciones</th>
+              </tr>
+            </thead>
             <tbody>
-                            {{#each  especialidades }}
-                            <tr>
-                                <td>{{id_especialidad}}</td>
-                                <td class="td_person">{{nombre}}</td>
-                                <td>{{fecha_creacion}}</td>
-                                <td>{{estado}}</td>
-                            </tr>
-                            {{/each}}
-                            
-                        </tbody>
-              </div>
-                
-            </form>
 
+            </tbody>
+          </table>
         </div>
-    </main>
+        <br />
+        <br />
+        <div class="caja_especialidades">
+          <br><br>
+
+          <!--<label for="id_especialidad">ID</label> 
+                <input name="id_especialidad" readonly type="text" id="id_especialidad" autocomplete="off" > -->
+          <br><br>
+          <label for="nombre">Especialidad</label>
+          <input name="nombre" type="text" id="nombre" placeholder="Escriba aqui" required>
+          <br><br>
+          <label for="descripcion">Descripción</label>
+          <input name="descripcion" type="text" id="descripcion" placeholder="Escriba aqui" required>
+          <br><br>
+          <select name="estado" id="estado">
+
+            <option>Estado</option>
+            <option>Activo</option>
+            <option>No activo</option>
+          </select>
+
+          <br /><br />
+          <input class="submit" type="submit" value="Agregar">
+
+          <tbody>
+            {{#each especialidades }}
+            <tr>
+              <td>{{id_especialidad}}</td>
+              <td class="td_person">{{nombre}}</td>
+              <td>{{fecha_creacion}}</td>
+              <td>{{estado}}</td>
+            </tr>
+            {{/each}}
+
+          </tbody>
+        </div>
+
+      </form>
+
+    </div>
+  </main>
 </div>

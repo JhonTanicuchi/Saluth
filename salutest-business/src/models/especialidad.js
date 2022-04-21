@@ -8,7 +8,7 @@ const especialidad = (sequelize, type) => {
         autoIncrement: true,
       },
       nombre: type.STRING,
-      descipcion: type.STRING,
+      descripcion: type.STRING,
       fecha_creacion: type.STRING,
       estado: type.STRING,
       creacionEspecialidades: {
