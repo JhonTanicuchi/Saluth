@@ -6,7 +6,7 @@ const Handlebars = require("handlebars");
 const solicitudes_componentes = {};
 
 solicitudes_componentes.mostrar = (req, res) => {
-  res.render("modules/solicitudes");
+  res.render("modules/solicitudes_componentes");
 };
 
 Handlebars.registerHelper("formatDate", function (date) {
@@ -22,7 +22,7 @@ Handlebars.registerHelper("conditional_solicitudes_awaiting", function (list) {
 });
 
 solicitudes_componentes.list = async (req, res) => {
-  const solicitudes = await sql.query("SELECT * FROM solicituds");
+  const solicitudes = await sql.query("SELECT * FROM solicitud_componentes");
   const solicitudes_awaiting = await sql.query(
     "SELECT * FROM solicitud_componentes WHERE estado = 'pendiente'"
   );
@@ -35,7 +35,7 @@ solicitudes_componentes.list = async (req, res) => {
   const solicitudes_canceled = await sql.query(
     "SELECT * FROM solicitud_componentes WHERE estado = 'cancelado'"
   );
-  res.render("modules/solicitudes", {
+  res.render("modules/solicitudes_componentes", {
     solicitudes,
     solicitudes_awaiting,
     solicitudes_in_process,
@@ -82,7 +82,7 @@ solicitudes_componentes.approve = async (req, res) => {
 
   await orm.essolicitudes_componentes
     .findOne({ where: { id_solicitud: id_solicitud } })
-    .then((solicitudes) => {
+    .then((solicitudes_componentes) => {
       solicitudes_componentes.update(updateSolicitud);
     });
 
@@ -99,7 +99,7 @@ solicitudes_componentes.cancel = async (req, res) => {
 
   await orm.solicitud_componentes
     .findOne({ where: { id_solicitud: id_solicitud } })
-    .then((solicitud) => {
+    .then((solicitudes_componentes) => {
       solicitudes_componentes.update(updateSolicitud);
     });
   res.redirect("/solicitudes");
@@ -128,7 +128,7 @@ solicitudes_componentes.read = async (req, res) => {
   );
 
 
-  res.render("modules/solicitudes", {
+  res.render("modules/solicitudes_componentes", {
     solicitud_info,
     solicitudes_awaiting,
     solicitudes_in_process,
