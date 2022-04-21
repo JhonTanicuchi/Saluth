@@ -72,6 +72,7 @@ app.use(require("./rutas/profile"));
 app.use(require("./rutas/settings"));
 app.use(require("./rutas/especialidades"));
 app.use(require("./rutas/solicitudes"));
+app.use(require("./rutas/solicitudes_componentes"));
 app.use(require("./rutas/instituciones_medicas"));
 app.use(require("./rutas/general_configuration"));
 
