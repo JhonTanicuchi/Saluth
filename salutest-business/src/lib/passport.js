@@ -5,7 +5,6 @@ const orm = require("../config-database/database.orm");
 const sql = require("../config-database/database.sql");
 const helpers = require("./helpers");
 
-
 passport.use(
   "local.signin",
   new LocalStrategy(
@@ -15,18 +14,24 @@ passport.use(
       passReqToCallback: true,
     },
     async (req, username, password, done) => {
-      const rows = await sql.query(
+/*       const rows = await sql.query(
         "SELECT * FROM usuario_businesses WHERE username=?",
         [username]
+      ); */
+      const person_rows = await sql.query(
+        "SELECT * FROM usuario_businesses u join empleado_businesses e on u.id_usuario_business = e.id_empleado_business join personas p on e.personaIdPersona = p.id_persona WHERE u.username =?",
+        [username]
       );
-      if (rows.length > 0) {
-        const user = rows[0];
+      if (person_rows.length > 0) {
+        const user = person_rows[0];
+        console.log(user)
+
         const validPassword = await helpers.matchPassword(
           password,
           user.password
         );
         if (validPassword) {
-          done(null, user, req.flash("success", "Bienvenido" + user.username));
+          done(null, user, req.flash("success", "Bienvenido" + user.nombres));
         } else {
           done(null, false, req.flash("message", "Contraseña incorrecta"));
         }
