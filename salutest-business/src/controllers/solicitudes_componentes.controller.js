@@ -51,11 +51,11 @@ solicitudes_componentes.approve = async (req, res) => {
 
   email.create(req, res, name,username, password);
 
-  const id_solicitud = req.params.id;
+  const id_solicitudes_componentes = req.params.id;
 
   sql.query(
     "SELECT * FROM solicitud_componentes WHERE id_solicitud = ?",
-    [id_solicitud],
+    [id_solicitudes_componentes],
     function (error, results, fields) {
       if (error) throw error;
       const nuevaInstitucionMedica = {
@@ -80,8 +80,8 @@ solicitudes_componentes.approve = async (req, res) => {
     estado: "aprobado",
   };
 
-  await orm.essolicitudes_componentes
-    .findOne({ where: { id_solicitud: id_solicitud } })
+  await orm.solicitudes_componentes
+    .findOne({ where: { id_solicitud: id_solicitudes_componentes } })
     .then((solicitudes_componentes) => {
       solicitudes_componentes.update(updateSolicitud);
     });
@@ -92,13 +92,13 @@ solicitudes_componentes.approve = async (req, res) => {
 
 
 solicitudes_componentes.cancel = async (req, res) => {
-  const id_solicitud = req.params.id;
+  const id_solicitudes_componentes = req.params.id;
   const updateSolicitud = {
     estado: "cancelado",
   };
 
   await orm.solicitud_componentes
-    .findOne({ where: { id_solicitud: id_solicitud } })
+    .findOne({ where: { id_solicitud: id_solicitudes_componentes } })
     .then((solicitudes_componentes) => {
       solicitudes_componentes.update(updateSolicitud);
     });
@@ -106,12 +106,12 @@ solicitudes_componentes.cancel = async (req, res) => {
 };
 
 solicitudes_componentes.read = async (req, res) => {
-  const id_solicitud = req.params.id;
-  console.log(id_solicitud);
+  const id_solicitudes_componentes = req.params.id;
+  console.log(id_solicitudes_componentes);
 
   const solicitud_info = await sql.query(
     "SELECT * FROM solicitud_componentes WHERE id_solicitud = ?",
-    [id_solicitud]
+    [id_solicitudes_componentes]
   );
 
   const solicitudes_awaiting = await sql.query(
