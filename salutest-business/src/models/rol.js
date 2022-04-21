@@ -1,7 +1,7 @@
 const rol = (sequelize, type) => {
     return sequelize.define(
         "rol", {
-            id_catalogo: {
+            id_rol: {
                 type: type.INTEGER,
                 primaryKey: true,
                 autoIncrement: true,

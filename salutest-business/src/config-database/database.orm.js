@@ -147,6 +147,9 @@ empleado_business.belongsTo(persona);
 empleado_business.hasMany(usuario_business);
 usuario_business.belongsTo(empleado_business);
 
+rol.hasMany(usuario_business);
+usuario_business.belongsTo(rol);
+
 persona.hasMany(empleado);
 empleado.belongsTo(persona);
 
