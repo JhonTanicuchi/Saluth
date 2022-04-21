@@ -12,6 +12,7 @@
   width: 100%;
   z-index: 500;
   top: 0;
+  
 }
 .nav ul, .nav-two ul{
   display: flex;
