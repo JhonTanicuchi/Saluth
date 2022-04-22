@@ -1,0 +1,53 @@
+<!-- MAIN CONTECT -->
+<div class="main_contect">
+    <main class="main_app">
+        <section class="dash_title">
+            <h2 id="title_modules">Componentes Patient</h2>
+            <a href="/home"><span class="far fa-times-circle"></span></a>
+        </section>
+
+        <!--Contenedor 1-->
+
+        <div class="componente_patient_grid">
+            {{#each componentes_patient}}
+            <div class="card-category-5">
+                <ul class="all-pr-cards">
+                    <li>
+                        <div class="per-card-3">
+                            <div class="card-image">
+                                <span></span>
+                                <span class="per-name">{{nombre_componente}}</span>
+                            </div>
+                            <div class="card-content">
+                                <div class="card-text">
+                                    <span>{{descripcion_componente}}</span>
+                                </div>
+                                <div class="social-icons">
+                                    <!--
+                                <i class="las la-stethoscope"></i>
+                                <i class="las la-user-nurse"></i>
+                                <i class="far fa-envelope" title="E-Mail"></i>
+                                <i class="las la-id-card-alt"></i>
+                                <i class="las la-notes-medical"></i>
+                                -->
+                                    <div class="card-btn">
+
+                                        <a href="http://localhost:2000/cita_home"><button type="button"
+                                                title="Connect">Connect</button></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+             {{/each}}
+             {{#unless componentes_patient}}
+                <div class="container_instituciones_medicas_no_content">
+                    <h1>No hay modulos</h1>
+                </div>
+                {{/unless}}
+        </div>
+</div>
+</main>
+</div>
