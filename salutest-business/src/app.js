@@ -75,22 +75,10 @@ app.use(require("./rutas/solicitudes"));
 app.use(require("./rutas/solicitudes_componentes"));
 app.use(require("./rutas/instituciones_medicas"));
 app.use(require("./rutas/general_configuration"));
-<<<<<<< HEAD
 app.use(require("./rutas/componentes_erp"));
 app.use(require("./rutas/modulos_erp"));
 app.use(require("./rutas/componente_patient"));
 app.use(require("./rutas/componentes_management"));
 app.use(require("./rutas/modulo_componentes"));
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-app.use(require("./rutas/componente_patient"))
-=======
-<<<<<<< HEAD
->>>>>>> afe311351d81b8f3bb31b75534faf8d9a80e4d3b
-app.use(require("./rutas/componentes_management"));
->>>>>>> bde9d3ed817a7ab039afc08a3d7466f08674c1ac
 
->>>>>>> 5b968470d724cabc970ad5d3884d29fc70960c38
 module.exports = app;
