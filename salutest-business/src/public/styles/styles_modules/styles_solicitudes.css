@@ -140,12 +140,16 @@ td {
   background: #f8faff;
 }
 
+.solicitudes_contect tbody tr {
+  border-bottom: solid .1px #535a6623;
+}
+
 .solicitudes_contect tbody tr:hover {
-  background: #eaeef7;
+  background: #f2f5fd;
 }
 
 .solicitudes_contect tbody tr:nth-child(even):hover {
-  background: #eaeef7;
+  background: #f2f5fd;
 }
 
 .container_solicitudes_no_content {
