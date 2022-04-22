@@ -17,7 +17,10 @@
                 </div> --}}
                 <div class="instituciones_medicas_list">
                     {{#each instituciones}}
-                    <a href="/sucursales">
+                    <a href="/sucursales_medicas">
+                    {{#if (farmacia categoria_institucion)}}
+                    <a href="/sucursales_medicas/{{id_sucursal_medica}}">
+                    {{/if}}
                         <div class="card">
                             <div class="card_top">
 
@@ -45,12 +48,13 @@
                             </div>
                         </div>
                     </a>
-                    {{else}}
-                    <div class="container_instituciones_medicas_no_content">
-                        <h1>No hay instituciones</h1>
-                    </div>
                     {{/each}}
                 </div>
+                {{#unless instituciones}}
+                <div class="container_instituciones_medicas_no_content">
+                    <h1>No hay instituciones</h1>
+                </div>
+                {{/unless}}
             </section>
             <section class="instituciones_medicas_info">
                 <div class="summary_card">
