@@ -5,23 +5,21 @@ body{
     background-size: cover;
 }
 
-table{
+table.Sala{
     width: 79%;
     margin: 40px auto;
-    background: rgb(239, 193, 120);
+    background: rgb(236, 224, 94);
     border: 1px solid black;
     
 }
 
-.texto1{
-    font-size:20px
-}
 
-.texto2{
+.sala{
     font-size:20px
 }
-table.list{
+table.list_Sala{
     text-align: center;
+    background: rgb(216, 207, 207);
     width: 100%;
     
 }
@@ -32,7 +30,7 @@ td{
     padding: 8px 15px;
 }
 
-tr:nth-child(even), table.list thread> tr{
+tr:nth-child(even), table.list_Sala thread> tr{
     background-color: rgb(204,200,200);
 }
 
@@ -51,18 +49,18 @@ input[type="submit"],input[type="reset"]{
     margin:15px 0 10px;
     display: inline-block;
     border: none;
-    border-radius: 30px;
+    border-radius: 20px;
     font-size: 1rem;
     cursor: pointer;
     outline: none;
 }
 
 input[type="submit"]:hover{
-    background: #4b99d8;
+    background: #96ff77;
 }
 
 input[type="reset"]:hover{
-    background: #4b99d8;
+    background: #96ff77;
 }
 
 button{

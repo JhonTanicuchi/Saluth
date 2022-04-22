@@ -5,25 +5,28 @@ body{
     background-size: cover;
 }
 
-table{
+table.Sub_area{
     width: 79%;
     margin: 40px auto;
-    background: rgb(239, 193, 120);
+    background: rgb(189, 117, 252);
     border: 1px solid black;
     
 }
 
-.texto1{
-    font-size:20px
+
+
+.sub_Area{
+    font-size:200%;
 }
 
-.texto2{
-    font-size:20px
-}
-table.list{
+table.list_subArea{
     text-align: center;
     width: 100%;
     
+}
+
+label{
+    font-size:20px;
 }
 
 td{
