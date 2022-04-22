@@ -1,3 +1,10 @@
+.modulo_estadisticas_grid{
+  height: calc(100vh - 10rem);
+  border-radius: 7px;
+  background: white;
+}
+
+
 table {
     background-color: #ff0000
 }
