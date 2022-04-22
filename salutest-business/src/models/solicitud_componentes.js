@@ -12,6 +12,7 @@ const solicitudes_componentes = (sequelize, type) => {
       nombre_solicitud: type.STRING,
       descripcion: type.STRING,
       estado: type.STRING,
+      app: type.STRING,
       creacionSolicitud: {
         type: "TIMESTAMP",
         defaultValue: type.literal("CURRENT_TIMESTAMP"),
