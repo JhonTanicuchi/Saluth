@@ -1,17 +1,14 @@
 body {
     margin:0;
 }
-
+/*Card General*/
 .card-category-5 .per-card-3 {
     width: 400px;
-    height: 240px;
-
-    -webkit-box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    -moz-box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    -o-box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    height: 230px;
+    background: white;
+    border-radius: 10px;
 }
-
+/*Connect hover*/
 .card-category-5 .per-card-3:hover .card-content .social-icons {
     opacity: 1;
     height: 100%;
@@ -27,39 +24,34 @@ body {
 }
 
 .card-category-5 .per-card-3 .card-image {
-    position:relative;
-    background: #009688;
-    padding-left: 20px;
-    text-align:left;
-    }
-
-.card-category-5 .per-card-3 .card-image img {
-    height: 90px;
-    border-radius: 50px;
-    padding: 5px;
-    margin-right: 10px;
+    height: 20%;
+    background-image: radial-gradient(circle at 37.72% -19.64%, #77b2cc 0, #4f9aba 25%, #0180a7 50%, #006794 75%, #005184 100%);
+    text-align:center;
+    
 }
 
+
+/* Título Content*/ 
+    
+.card-category-5 .per-card-3 .card-content {
+    text-align: center;
+    padding: 35px;
+    position: relative;
+}
 .card-category-5 .per-card-3 .card-image .per-name {
-    position: absolute;
+    position:relative;
     top: 40%;
     text-transform: uppercase;
     letter-spacing: 7px;
     font-size: 20px;
     color: #fff;
 }
-    
-.card-category-5 .per-card-3 .card-content {
-    text-align: center;
-    padding: 20px;
-    position: relative;
-}
 
 .card-category-5 .per-card-3 .card-content .per-position {
     font-size: 22px;
     text-transform: uppercase;
     letter-spacing: 4px;
-    color: #009688;
+    color: #535a66;;
 }
 
 .card-category-5 .per-card-3 .card-content .card-text {
@@ -68,7 +60,7 @@ body {
     
 .card-category-5 .per-card-3 .card-content .card-text span {
     font-size: 13px;
-    color: #007368;
+    color: #535a66;
 }
 
 .card-category-5 .per-card-3 .card-content .social-icons {
@@ -78,7 +70,7 @@ body {
     left: 0;
     opacity: 0;
     height: 0%;
-    background: #009688;
+    background-blend-mode: multiply,multiply;
     border-top: 1px solid #5eada5;
     cursor: pointer;
 
@@ -114,14 +106,17 @@ body {
     width: 100%;
 }
 
+/*Conect boton*/
 .card-category-5 .per-card-3 .card-content .social-icons .card-btn button {
     cursor: pointer;
     width: 100%;
-    padding: 15px;
-    font-size: 18px;
-    color: #fff;
-    background: #03695f;
+    height: 40px;
+    font-size: 20px;
+    color: #ffffff;
+    background-image: radial-gradient(circle at 37.72% -19.64%, #77b2cc 0, #4f9aba 25%, #0180a7 50%, #006794 75%, #005184 100%);
     border: none;
 }
 
-
+.card-category-5 .per-card-3 .card-content .social-icons .card-btn button:hover{
+    background:#57909e;
+}
