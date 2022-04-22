@@ -8,21 +8,43 @@
         </section>
         <div class="instituciones_medicas_grid">
             <section class="instituciones_medicas_wrapper">
-                <div class="instituciones_medicas_filter">
+                {{!-- <div class="instituciones_medicas_filter">
                     <div>
                         <span class="fas fa-search"></span>
                         <input onkeyup="instituciones_medicas_filter()" id="instituciones_medicas_filter" type="text"
                             placeholder="Filtrar por: institución, tipo" />
                     </div>
-                </div>
+                </div> --}}
                 <div class="instituciones_medicas_list">
                     {{#each instituciones}}
-                    <div class="card">
-                        <h1>{{nombre}}</h1>
-                        <span class="fas fa-hospital"></span>
-                        <h1>{{descripcion}}</h1>
-                        <h1>{{formatDate creacioninstituciones_medicas}}</h1>
-                    </div>
+                    <a href="/sucursales">
+                        <div class="card">
+                            <div class="card_top">
+
+                                <img src="https://static.vecteezy.com/system/resources/previews/005/213/046/original/letter-s-colorful-logo-design-vector.jpg"
+                                    alt="">
+                            </div>
+                            <div class="card_bottom">
+                                <div class="categoria_institucion_medica">
+                                    <span class="fas fa-hospital"></span>
+                                    {{#if (farmacia categoria_institucion)}}
+                                    <span class="fas fa-house-medical"></span>
+                                    {{/if}}
+                                    {{#if (centro_medico categoria_institucion)}}
+                                    <span class="fas fa-hospital"></span>
+                                    {{/if}}
+                                    {{#if (clinica categoria_institucion)}}
+                                    <span class="fas fa-hospital-user"></span>
+                                    {{/if}}
+                                    {{#if (hospital categoria_institucion)}}
+                                    <span class="fas fa-hospital"></span>
+                                    {{/if}}
+                                    <h6>Hospital</h6>
+                                </div>
+                                <h1 class="nombre_institucion_medica">{{nombre}}</h1>
+                            </div>
+                        </div>
+                    </a>
                     {{else}}
                     <div class="container_instituciones_medicas_no_content">
                         <h1>No hay instituciones</h1>
@@ -34,12 +56,29 @@
                 <div class="summary_card">
                     <div class="summary_single">
                         <div>
+                            <span class="fas fa-list"></span>
+                            <span>Totales</span>
+                        </div>
+                        <h5>{{length instituciones}}</h5>
+                    </div>
+                </div>
+                <div class="summary_card">
+                    <div class="summary_single">
+                        <div>
                             <span class="fas fa-house-medical"></span>
                             <span>Farmacias</span>
                         </div>
                         <h5>{{length instituciones}}</h5>
                     </div>
-            
+
+                    <div class="summary_single">
+                        <div>
+                            <span class="fas fa-house-medical-flag"></span>
+                            <span>Centros Médicos</span>
+                        </div>
+                        <h5>{{length instituciones}}</h5>
+                    </div>
+
                     <div class="summary_single">
                         <div>
                             <span class="fas fa-hospital-user"></span>
@@ -47,11 +86,28 @@
                         </div>
                         <h5>{{length instituciones}}</h5>
                     </div>
-            
+
                     <div class="summary_single">
                         <div>
                             <span class="fas fa-hospital"></span>
                             <span>Hospitales</span>
+                        </div>
+                        <h5>{{length instituciones}}</h5>
+                    </div>
+                </div>
+                <div class="summary_card">
+                    <div class="summary_single">
+                        <div>
+                            <span class="fas fa-unlock"></span>
+                            <span>Publicas</span>
+                        </div>
+                        <h5>{{length instituciones}}</h5>
+                    </div>
+
+                    <div class="summary_single">
+                        <div>
+                            <span class="fas fa-lock"></span>
+                            <span>Privadas</span>
                         </div>
                         <h5>{{length instituciones}}</h5>
                     </div>
