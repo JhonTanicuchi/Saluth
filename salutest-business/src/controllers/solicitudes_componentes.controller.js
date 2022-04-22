@@ -22,18 +22,18 @@ Handlebars.registerHelper("conditional_solicitudes_awaiting", function (list) {
 });
 
 solicitudes_componentes.list = async (req, res) => {
-  const solicitudes = await sql.query("SELECT * FROM solicitud_componentes");
+  const solicitudes = await sql.query("SELECT * FROM solicitudes_componentes");
   const solicitudes_awaiting = await sql.query(
-    "SELECT * FROM solicitud_componentes WHERE estado = 'pendiente'"
+    "SELECT * FROM solicitudes_componentes WHERE estado = 'pendiente'"
   );
   const solicitudes_in_process = await sql.query(
-    "SELECT * FROM solicitud_componentes WHERE estado = 'en proceso'"
+    "SELECT * FROM solicitudes_componentes WHERE estado = 'en proceso'"
   );
   const solicitudes_approved = await sql.query(
-    "SELECT * FROM solicitud_componentes WHERE estado = 'aprobado'"
+    "SELECT * FROM solicitudes_componentes WHERE estado = 'aprobado'"
   );
   const solicitudes_canceled = await sql.query(
-    "SELECT * FROM solicitud_componentes WHERE estado = 'cancelado'"
+    "SELECT * FROM solicitudes_componentes WHERE estado = 'cancelado'"
   );
   res.render("modules/solicitudes_componentes", {
     solicitudes,
@@ -54,7 +54,7 @@ solicitudes_componentes.approve = async (req, res) => {
   const id_solicitudes_componentes = req.params.id;
 
   sql.query(
-    "SELECT * FROM solicitud_componentes WHERE id_solicitud = ?",
+    "SELECT * FROM solicitudes_componentes WHERE id_solicitud = ?",
     [id_solicitudes_componentes],
     function (error, results, fields) {
       if (error) throw error;
@@ -97,7 +97,7 @@ solicitudes_componentes.cancel = async (req, res) => {
     estado: "cancelado",
   };
 
-  await orm.solicitud_componentes
+  await orm.solicitudes_componentes
     .findOne({ where: { id_solicitud: id_solicitudes_componentes } })
     .then((solicitudes_componentes) => {
       solicitudes_componentes.update(updateSolicitud);
@@ -110,21 +110,21 @@ solicitudes_componentes.read = async (req, res) => {
   console.log(id_solicitudes_componentes);
 
   const solicitud_info = await sql.query(
-    "SELECT * FROM solicitud_componentes WHERE id_solicitud = ?",
+    "SELECT * FROM solicitudes_componentes WHERE id_solicitud = ?",
     [id_solicitudes_componentes]
   );
 
   const solicitudes_awaiting = await sql.query(
-    "SELECT * FROM solicitud_componentes WHERE estado = 'pendiente'"
+    "SELECT * FROM solicitudes_componentes WHERE estado = 'pendiente'"
   );
   const solicitudes_in_process = await sql.query(
-    "SELECT * FROM solicitud_componentes WHERE estado = 'en proceso'"
+    "SELECT * FROM solicitudes_componentes WHERE estado = 'en proceso'"
   );
   const solicitudes_approved = await sql.query(
-    "SELECT * FROM solicitud_componentes WHERE estado = 'aprobado'"
+    "SELECT * FROM solicitudes_componentes WHERE estado = 'aprobado'"
   );
   const solicitudes_canceled = await sql.query(
-    "SELECT * FROM solicitud_componentes WHERE estado = 'cancelado'"
+    "SELECT * FROM solicitudes_componentes WHERE estado = 'cancelado'"
   );
 
 

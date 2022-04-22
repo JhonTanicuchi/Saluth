@@ -79,8 +79,8 @@
                     <table id="solicitudes_table">
                         <thead>
                             <tr>
-                                <th>Institución</th>
-                                <th>Tipo</th>
+                                <th>Nombre de la solicitud</th>
+                                <th>Descripcion</th>
                                 <th>Estado</th>
                                 <th>Fecha</th>
                                 <th></th>
@@ -89,8 +89,8 @@
                         <tbody>
                             {{#each solicitudes_awaiting}}
                                 <tr>
-                                    <td name="nombre">{{nombre_institucion_medica}}</td>
-                                    <td name="descripcion">{{tipo_institucion}}</td>
+                                    <td name="nombre">{{nombre_solicitud}}</td>
+                                    <td name="descripcion">{{descripcion}}</td>
                                     <td>{{estado}}</td>
                                     <td>{{formatDate creacionSolicitud}}</td>
                                     <td>
