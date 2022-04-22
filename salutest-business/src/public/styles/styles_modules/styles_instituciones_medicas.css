@@ -113,3 +113,18 @@
 .instituciones_medicas_info .summary_single h5 {
   font-size: 1rem;
 }
+
+.container_instituciones_medicas_no_content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: calc(100vh - 10rem);
+}
+
+.container_instituciones_medicas_no_content h1 {
+  color: var(--color_font_P);
+  font-size: 15px;
+  opacity: 50%;
+  font-weight: normal;
+}
