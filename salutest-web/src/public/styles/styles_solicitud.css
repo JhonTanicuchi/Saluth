@@ -1,29 +1,109 @@
-
 .title_solicitud {
-  width: 270px;
+  margin-bottom: 30px;
 }
 
 .title_solicitud h1 {
-  font-size: 40px;
+  font-size: 25px;
   font-weight: bold;
   text-shadow: 0px 3px 6px rgb(0, 0, 0, 16%);
 }
 
-
 .title_solicitud h3 {
-  font-size: 20px;
+  font-size: 17px;
   font-weight: normal;
-  opacity: 63%;
+  margin-top: -10px;
+  color: #535a669d;
 }
-.resume{
-  width: 600px;
+.container_solicitud {
+  width: 700px;
 }
 
-.title_solicitud p {
-  width: 600px;
-  font-size: 22px;
+.form_solicitudes {
+  background: #ffffff61;
+  border-radius: 7px;
+  padding: 20px;
+}
+
+.form_solicitudes h3{
   font-weight: bold;
-  margin-bottom: 15px;
-  color: #0281a7;
-  opacity: 70%;
+  font-size: 15px;
+  color: var(--color_font_P);
+  margin-bottom: 5px;
+}
+.form_solicitudes .subtitle_contactos{
+  margin-top: 30px;
+}
+
+
+.form_institucion_medica {
+  display: grid;
+  grid-column-gap: 1rem;
+  grid-template-columns: repeat(9, minmax(0, 1fr));
+}
+
+.form_institucion_medica .data_institucion_medica {
+  grid-column: span 5 / span 5;
+}
+
+.form_institucion_medica .data_categoria_institucion {
+  grid-column: span 2 / span 2;
+}
+
+.form_institucion_medica .data_tipo_institucion {
+  grid-column: span 2 / span 2;
+}
+
+.form_institucion_medica .data_sucursales {
+  grid-column: span 2 / span 2;
+}
+
+.form_institucion_medica #n_sucursales {
+  opacity: 50%;
+}
+
+.form_institucion_medica .data_logo {
+  grid-column: span 5 / span 5;
+}
+
+.data_sucursales .inputs_sucursales {
+  display: grid;
+  grid-column-gap: 0.5rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.form_informacion_contact {
+  display: grid;
+  grid-column-gap: 1rem;
+  grid-template-columns: repeat(9, minmax(0, 1fr));
+}
+
+.form_informacion_contact .data_nombres {
+  grid-column: span 3 / span 3;
+}
+
+.form_informacion_contact .data_correo {
+  grid-column: span 4 / span 4;
+}
+
+.form_informacion_contact .data_celular {
+  grid-column: span 2 / span 2;
+}
+
+.form_solicitudes_fotter{
+  text-align: center;
+  margin-top: 20px;
+}
+
+.form_solicitudes_fotter p{
+  font-size: 12px;
+  margin: 10px;
+}
+
+.form_solicitudes_fotter .btn_solicitudes_edit{
+  width: 100px;
+  margin: 0;
+}
+
+.hidden {
+  display: none;
 }

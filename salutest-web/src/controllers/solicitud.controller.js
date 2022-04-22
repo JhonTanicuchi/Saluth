@@ -8,29 +8,30 @@ solicitud.mostrar = (req, res) => {
 };
 
 solicitud.save = async (req, res) => {
-  const { nombre_institucion_medica, detalle, tipo_institucion, motivo } =
-    req.body;
+  const {
+    nombre_institucion_medica,
+    tipo_institucion,
+    categoria_institucion,
+    sucursales,
+    n_sucursales,
+    nombre_contacto,
+    email_contacto,
+    tel_contacto,
+  } = req.body;
   const nuevaSolicitud = {
     nombre_institucion_medica,
-    detalle,
     tipo_institucion,
-    motivo,
-    estado: "pendiente",
+    categoria_institucion,
+    sucursales,
+    n_sucursales,
+    nombre_contacto,
+    email_contacto,
+    tel_contacto,
   };
 
   await orm.solicitud.create(nuevaSolicitud);
 
-   /* const { cedula, nombres, apellidos } = req.body;
-   let nuevaPersona = {
-     cedula,
-     nombres,
-     apellidos
-   };
-
-   await orm.persona.create(nuevaPersona); */
   res.redirect("/");
 };
-
-
 
 module.exports = solicitud;

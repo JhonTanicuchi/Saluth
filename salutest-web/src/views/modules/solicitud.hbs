@@ -1,100 +1,108 @@
 <div class="body_index">
-        <main class="main_index">
-            <div class="parentContainer">
-                <section class="resume">
-                    <div class="title_solicitud">
-                        <h1 data-aos="fade-right" data-aos-offset="300" data-aos-duration="1000"
-                            data-aos-easing="ease-in-sine">Solicitud de Servicio</h1>
-                        <h3 data-aos="fade-right" data-aos-offset="300" data-aos-duration="800" data-aos-delay="200"
-                            data-aos-easing="ease-in-sine">Salutest-Pack</h3>
-                    </div>
+    <main class="main_index">
+        <div class="parentContainer">
+            <section class="container_solicitud">
+                <div class="title_solicitud">
+                    <h1 data-aos="fade-right" data-aos-offset="300" data-aos-duration="1000"
+                        data-aos-easing="ease-in-sine">Solicitud de Servicio</h1>
+                    <h3 data-aos="fade-right" data-aos-offset="300" data-aos-duration="800" data-aos-delay="200"
+                        data-aos-easing="ease-in-sine">Salutest-Pack</h3>
+                </div>
 
-                    <div>
-                        <form class="form_signup" id="signup_form" action="/add" method="POST">
-                            <div class="credentials_signup">
-                                
-                                    <div>
-                                        <label for="institucion_medica">Institución Medica</label>
-                                        <input name="nombre_institucion_medica" class="input" id="institucion_medica" type="text" 
-                                        autocomplete="off" required />
-                                        <label for="tipo_institucion">Tipo de Isntitución</label>
-                                        <input name="tipo_institucion" class="input" id="tipo_institucion" type="text" autocomplete="off" required />
-                                    </div>
-                                    <label for="detalle">Descripción</label>
-                                    <input name="detalle" class="input" id="detalle" type="text" autocomplete="off" required />
-                                    
-                                    <label for="motivo">¿Porqué desea contratar el servicio?</label>
-                                    <input name="motivo" class="input" id="motivo" type="text" autocomplete="off" required />
-                                    
-                                   
-                            </div>
-                            <div class="fotter">
-                                <p>
-                                    Al continuar, aceptas las Condiciones del servicio y la Política
-                                    de privacidad de Salutest.
-                                </p>
-                                
-                            </div>
-                            <button class="btn btn_signup_edit" type="submit">
-                                Enviar
-                            </button>
-                        </form>
-                    </div>
-                </section>
+                <div>
+                    <form class="form_solicitudes" id="form_solicitudes" action="/add" method="POST">
+                        <div class="data_form_solicitudes">
 
-               {{!--  <section class="resume">
-                    <div class="title_solicitud">
-                        <h1 data-aos="fade-right" data-aos-offset="300" data-aos-duration="1000" data-aos-easing="ease-in-sine">
-                            Solicitud de Servicio</h1>
-                        <h3 data-aos="fade-right" data-aos-offset="300" data-aos-duration="800" data-aos-delay="200"
-                            data-aos-easing="ease-in-sine">Salutest-Pack</h3>
-                    </div>
-                
-                    <div>
-                        <form class="form_signup" id="signup_form" action="/add" method="POST">
-                            <div class="credentials_signup">
-                
-                                <div>
+                            <h3 class="subtitle_institucion">Información de la Institución</h3>
+
+                            <div class="form_institucion_medica">
+                                <div class="data_institucion_medica">
                                     <label for="institucion_medica">Institución Medica</label>
-                                    <input name="nombre_institucion_medica" class="input" id="institucion_medica" type="text"
-                                        autocomplete="off" required />
-                                    <label for="tipo_institucion">Tipo de Isntitución</label>
-                                    <input name="tipo_institucion" class="input" id="tipo_institucion" type="text" autocomplete="off"
-                                        required />
+                                    <input name="nombre_institucion_medica" class="input" id="institucion_medica"
+                                        type="text" autocomplete="off" required />
                                 </div>
-                                <label for="detalle">Descripción</label>
-                                <input name="detalle" class="input" id="detalle" type="text" autocomplete="off" required />
-                
-                                <label for="motivo">¿Porqué desea contratar el servicio?</label>
-                                <input name="motivo" class="input" id="motivo" type="text" autocomplete="off" required />
-                
-                
+                                <div class="data_categoria_institucion">
+                                    <label for="categoria_institucion">Categoría</label>
+                                    <select name="categoria_institucion" class="input" id="categoria_institucion">
+                                        <option selected disabled value=""></option>
+                                        <option value="Farmacia">Farmacia</option>
+                                        <option value="Centro Médico">Centro Médico</option>
+                                        <option value="Clínica">Clínica</option>
+                                        <option value="Hospital">Hospital</option>
+                                    </select>
+                                </div>
+                                <div class="data_tipo_institucion">
+                                    <label for="tipo_institucion">Tipo de Institución</label>
+                                    <select name="tipo_institucion" class="input" id="tipo_institucion">
+                                        <option selected disabled value=""></option>
+                                        <option value="publica">Publica</option>
+                                        <option value="privada">Privada</option>
+                                    </select>
+                                </div>
+                                <div class="data_sucursales">
+                                    <label for="sucursales">¿Tiene sucursales?</label>
+                                    <div class="inputs_sucursales">
+                                        <select name="sucursales" class="input" id="sucursales"
+                                            onchange="input_sucursales()">
+                                            <option selected value="false">No</option>
+                                            <option value="true">Si</option>
+                                        </select>
+                                        <input name="n_sucursales" class="input" id="n_sucursales" type="text"
+                                            autocomplete="off" required disabled placeholder="N°" />
+                                    </div>
+                                </div>
+                                <div class="data_logo">
+                                    <label for="logo">Logo o Imagen</label>
+                                    <input name="logo" class="input" id="logo" type="file" autocomplete="off" />
+                                </div>
                             </div>
-                            <div class="fotter">
-                                <p>
-                                    Al continuar, aceptas las Condiciones del servicio y la Política
-                                    de privacidad de Salutest.
-                                </p>
-                
+
+                            <h3 class="subtitle_contactos">Información de contacto</h3>
+                            <div class="form_informacion_contact">
+                                <div class="data_nombres">
+                                    <label for="nombre_contacto">Nombres</label>
+                                    <input name="nombre_contacto" class="input" id="nombre_contacto" type="text"
+                                        autocomplete="off" required />
+                                </div>
+                                <div class="data_correo">
+                                    <label for="email_contacto">Correo</label>
+                                    <input name="email_contacto" class="input" id="email_contacto" type="email"
+                                        autocomplete="off" required onchange="validator_gmail()" />
+                                </div>
+                                <div class="data_celular">
+                                    <label for="tel_contacto">Celular</label>
+                                    <input name="tel_contacto" class="input" id="tel_contacto" type="text"
+                                        autocomplete="off" required />
+                                </div>
                             </div>
-                            <button class="btn btn_signup_edit" type="submit">
+
+
+                        </div>
+                        <div class="form_solicitudes_fotter">
+                            <p>
+                                Al continuar, aceptas las Condiciones del servicio y la Política
+                                de privacidad de Salutest.
+                            </p>
+                            <button class="btn btn_solicitudes_edit" type="submit">
                                 Enviar
                             </button>
-                        </form>
-                    </div>
-                </section> --}}
-
-                <section>
-    
-                    <div class="content_cogs">
-                        <div class="icon_cogs">
-                            <span class="fas fa-cog"></span>
-                            <span class="fas fa-cog"></span>
-                            <span class="fas fa-cog"></span>
                         </div>
+
+                    </form>
+                </div>
+            </section>
+
+            <section>
+
+                <div class="content_cogs">
+                    <div class="icon_cogs">
+                        <span class="fas fa-cog"></span>
+                        <span class="fas fa-cog"></span>
+                        <span class="fas fa-cog"></span>
                     </div>
-    
-                </section>
-            </div>
-        </main>
+                </div>
+
+            </section>
+        </div>
+    </main>
 </div>
