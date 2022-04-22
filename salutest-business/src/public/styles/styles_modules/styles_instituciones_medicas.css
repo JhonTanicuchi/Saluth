@@ -6,26 +6,13 @@
   color: var(--color_font_P);
 }
 
-
-.instituciones_medicas_list {
-  display: grid;
-  grid-template-columns: repeat(5,1fr);
-  grid-column-gap: 1.5rem;
-  grid-row-gap: 1.5rem;
-  margin-top: 1.5rem;
-}
-
-.instituciones_medicas_list > .card {
-  background: #fff;
-  border-radius: 7px;
-}
-
 .instituciones_medicas_filter {
   padding: 1rem;
   display: flex;
   align-items: center;
   background: #fff;
   border-radius: 7px;
+  margin-bottom: 1.5rem;
 }
 
 .instituciones_medicas_filter div {
@@ -37,4 +24,92 @@
   border: none;
   background: transparent;
   font-size: 13px;
+}
+
+.instituciones_medicas_list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 1.5rem;
+  grid-row-gap: 1.5rem;
+}
+
+.instituciones_medicas_list .card {
+  background: #fff;
+  border-radius: 7px;
+  max-width: 214.4px;
+  transition: all 0.2s ease;
+}
+
+.instituciones_medicas_list .card:hover {
+  transform: scale(1.02);
+}
+
+.instituciones_medicas_list .card .card_top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  height: 200px;
+}
+.instituciones_medicas_list .card .card_top img {
+  width: 200px;
+}
+
+.instituciones_medicas_list .card .card_bottom {
+  background: var(--color_dark_N);
+  color: white;
+  border-radius: 0px 0px 7px 7px;
+  padding: 5px 10px;
+}
+
+.instituciones_medicas_list .card .card_bottom .nombre_institucion_medica {
+  text-transform: uppercase;
+  font-weight: normal;
+  font-size: 15px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.instituciones_medicas_list .card .card_bottom .categoria_institucion_medica{
+  display: flex;
+  align-items: baseline;
+  margin-top: 3px;
+}
+
+.instituciones_medicas_list .card .card_bottom .categoria_institucion_medica h6{
+  margin-left: 5px;
+}
+
+.instituciones_medicas_info .summary_card {
+  background: white;
+  border-radius: 7px;
+  margin-bottom: 1.5rem;
+}
+
+.instituciones_medicas_info .summary_single {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.instituciones_medicas_info .summary_single div {
+  display: flex;
+  align-items: center;
+}
+
+.instituciones_medicas_info .summary_single span:first-child {
+  font-size: 1.5rem;
+  color: var(--color_dark_N);
+  padding-right: 1rem;
+}
+
+.instituciones_medicas_info .summary_single span:last-child {
+  font-size: 0.8rem;
+  color: rgb(119, 119, 119);
+}
+
+.instituciones_medicas_info .summary_single h5 {
+  font-size: 1rem;
 }
