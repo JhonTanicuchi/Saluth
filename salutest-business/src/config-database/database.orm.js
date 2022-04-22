@@ -60,6 +60,9 @@ const historia_clinica_Modelo = require("../models/historia_clinica");
 const solicitud_Modelo = require("../models/solicitud");
 const solicitudes_componentes_Modelo = require("../models/solicitud_componentes");
 const institucion_medica_Modelo = require("../models/institucion_medica");
+const componente_Modelo = require("../models/componente");
+const aplicacion_Modelo = require("../models/aplicacion");
+
 
 
 const sequelize = new Sequelize("database_salutest", "root", "", {
@@ -139,6 +142,8 @@ const historia_clinica = historia_clinica_Modelo(sequelize, Sequelize);
 const solicitud = solicitud_Modelo(sequelize, Sequelize);
 const solicitudes_componentes = solicitudes_componentes_Modelo(sequelize, Sequelize);
 const institucion_medica = institucion_medica_Modelo(sequelize, Sequelize);
+const componente = componente_Modelo(sequelize, Sequelize);
+const aplicacion = aplicacion_Modelo(sequelize, Sequelize);
 
 
 //relaciones
@@ -168,6 +173,10 @@ usuario_paciente.belongsTo(paciente);
 
 institucion_medica.hasMany(solicitud);
 solicitud.belongsTo(institucion_medica);
+
+
+componente.hasMany(aplicacion);
+aplicacion.belongsTo(componente);
 
 module.exports = {
   persona,
@@ -213,4 +222,6 @@ module.exports = {
   solicitud,
   solicitudes_componentes,
   institucion_medica,
+  componente,
+  aplicacion
 };
