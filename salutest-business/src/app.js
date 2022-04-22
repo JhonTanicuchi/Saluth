@@ -77,5 +77,7 @@ app.use(require("./rutas/instituciones_medicas"));
 app.use(require("./rutas/general_configuration"));
 app.use(require("./rutas/componentes_erp"));
 app.use(require("./rutas/modulos_erp"));
-
+app.use(require("./rutas/componente_patient"));
+app.use(require("./rutas/componentes_management"));
+app.use(require("./rutas/modulo_componentes"));
 module.exports = app;

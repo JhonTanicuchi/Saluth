@@ -1,6 +1,7 @@
 const orm = require("../config-database/database.orm");
 const sql = require("../config-database/database.sql");
 const email = require("./email.controller");
+const user_generator = require("./user_generator.controller");
 const Handlebars = require("handlebars");
 
 const solicitud = {};
@@ -23,22 +24,35 @@ Handlebars.registerHelper("conditional_solicitudes_awaiting", function (list) {
 
 solicitud.list = async (req, res) => {
   const solicitudes = await sql.query("SELECT * FROM solicituds");
+
+  let date = new Date();
+  var numberOfMlSeconds = date.getTime();
+  var addMlSeconds = 60000;
+  var date_5min = new Date(numberOfMlSeconds - addMlSeconds);
+  var date_5mas = new Date(numberOfMlSeconds + addMlSeconds);
+  console.log(date);
+  console.log(date_5min + " / " + date_5mas);
+  const solicitudes_new = await sql.query(
+    "SELECT * FROM solicituds WHERE  creacionSolicitud >= ? AND creacionSolicitud  <= ? AND estado = 'pendiente'",
+    [date_5min, date_5mas]
+  );
+
   const solicitudes_awaiting = await sql.query(
     "SELECT * FROM solicituds WHERE estado = 'pendiente'"
   );
-  const solicitudes_in_process = await sql.query(
-    "SELECT * FROM solicituds WHERE estado = 'en proceso'"
-  );
+
   const solicitudes_approved = await sql.query(
     "SELECT * FROM solicituds WHERE estado = 'aprobado'"
   );
+
   const solicitudes_canceled = await sql.query(
     "SELECT * FROM solicituds WHERE estado = 'cancelado'"
   );
+
   res.render("modules/solicitudes", {
     solicitudes,
+    solicitudes_new,
     solicitudes_awaiting,
-    solicitudes_in_process,
     solicitudes_approved,
     solicitudes_canceled,
   });
@@ -46,10 +60,10 @@ solicitud.list = async (req, res) => {
 
 solicitud.approve = async (req, res) => {
   const name = "Jhon Tanicuchi";
-  const username = "Jhon.Iess";
+  const username = user_generator.create.usuarioemail;
   const password = "1111";
 
-  email.create(req, res, name,username, password);
+  email.create(req, res, name, username, password);
 
   const id_solicitud = req.params.id;
 
@@ -68,14 +82,6 @@ solicitud.approve = async (req, res) => {
     }
   );
 
-  //Creacion del usuario admin de contrato
- /*  await sql.query(
-    "INSERT INTO empleado_businesses (personaIdPersona) VALUES ((SELECT id_persona FROM personas where cedula = '0110000100'))"
-  );
-  await sql.query(
-    "INSERT INTO usuario_businesses (username,password,correo,empleadoBusinessIdEmpleadoBusiness)VALUES('admin_salutest','$2a$10$bLoPMbtf5TYXPQPMFiXajus1VK18vk2Ll1O.js1.ZyO6Iw9glE0fe','NA',(SELECT e.id_empleado_business FROM empleado_businesses e JOIN personas p ON p.id_persona = e.personaIdPersona where cedula = '0110000100'))"
-  ); */
-
   const updateSolicitud = {
     estado: "aprobado",
   };
@@ -88,8 +94,6 @@ solicitud.approve = async (req, res) => {
 
   res.redirect("/solicitudes");
 };
-
-
 
 solicitud.cancel = async (req, res) => {
   const id_solicitud = req.params.id;
@@ -113,25 +117,37 @@ solicitud.read = async (req, res) => {
     "SELECT * FROM solicituds WHERE id_solicitud = ?",
     [id_solicitud]
   );
+  const solicitudes = await sql.query("SELECT * FROM solicituds");
+
+  let date = new Date();
+  var numberOfMlSeconds = date.getTime();
+  var addMlSeconds = 300000;
+  var date_5min = new Date(numberOfMlSeconds - addMlSeconds);
+  var date_5mas = new Date(numberOfMlSeconds + addMlSeconds);
+  console.log(date);
+  console.log(date_5min + " / " + date_5mas);
+  const solicitudes_new = await sql.query(
+    "SELECT * FROM solicituds WHERE  creacionSolicitud >= ? AND creacionSolicitud  <= ? AND estado = 'pendiente'",
+    [date_5min, date_5mas]
+  );
 
   const solicitudes_awaiting = await sql.query(
     "SELECT * FROM solicituds WHERE estado = 'pendiente'"
   );
-  const solicitudes_in_process = await sql.query(
-    "SELECT * FROM solicituds WHERE estado = 'en proceso'"
-  );
+
   const solicitudes_approved = await sql.query(
     "SELECT * FROM solicituds WHERE estado = 'aprobado'"
   );
+
   const solicitudes_canceled = await sql.query(
     "SELECT * FROM solicituds WHERE estado = 'cancelado'"
   );
 
-
   res.render("modules/solicitud", {
+    solicitudes,
     solicitud_info,
+    solicitudes_new,
     solicitudes_awaiting,
-    solicitudes_in_process,
     solicitudes_approved,
     solicitudes_canceled,
   });

@@ -8,6 +8,22 @@ Handlebars.registerHelper("length", function (list) {
   return list.length;
 });
 
+Handlebars.registerHelper("farmacia", function (categoria) {
+  return categoria=="Farmacia";
+});
+
+Handlebars.registerHelper("centro_medico", function (categoria) {
+  return categoria == "Centro Médico";
+});
+
+Handlebars.registerHelper("clinica", function (categoria) {
+  return categoria == "Clínica";
+});
+
+Handlebars.registerHelper("hospital", function (categoria) {
+  return categoria == "Hospital";
+});
+
 instituciones_medicas.mostrar = (req, res) => {
   res.render("modules/instituciones_medicas");
 };
