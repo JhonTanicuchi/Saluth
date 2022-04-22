@@ -1,12 +1,10 @@
-.contendedor_modulo{
+.contendedor_componente{
     width: 40em;
     height: 20em;
     margin: 100px;
     margin-left: 10em;
     display:inline-table;
 }
-
-
 .caja_modulo1{
    background: #57909e;
    width: 240px;
