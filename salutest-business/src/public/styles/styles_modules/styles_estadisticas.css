@@ -1,0 +1,28 @@
+table {
+    background-color: #ff0000
+}
+
+.parametro {
+    padding: 20px;
+    background-color: #fff;
+    display: flex;
+}
+
+button type {
+    flex: 1;
+    width: auto;
+}
+
+input {
+    padding: 9px;
+    margin: 6px;
+    width: 42%
+}
+
+.butones_estadisticas {
+    border: none;
+    padding: 9px;
+    display: block;
+    margin: 6px;
+    background-color: #0015ff;
+}

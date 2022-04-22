@@ -8,10 +8,11 @@ especialidades.mostrar = (req, res) => {
 };
 
 especialidades.save = async (req, res) => {
-  const { nombre, descripcion, estado } = req.body;
+  const { nombre, descripcion,fecha_creacion, estado } = req.body;
   const nuevaEspecialidad = {
     nombre,
     descripcion,
+    fecha_creacion,
     estado,
   };
   await orm.especialidad.create(nuevaEspecialidad);
