@@ -1,9 +1,8 @@
 .contendedor_modulo{
     width: 40em;
     height: 20em;
-    background-color: rgb(255, 255, 255); 
     margin: 100px;
-    margin-left: 20em;
+    margin-left: 10em;
     display:inline-table;
 }
 
@@ -80,13 +79,17 @@
 
 .caja_modulo1 h1{
 text-align: center;
+color: #000;
 }
 .caja_modulo2 h1{
    text-align: center;
-   }
+   color: #000
+}
 .caja_modulo3 h1{
       text-align: center;
+      color: #000
 }
 .caja_modulo4 h1{
    text-align: center;
+   color: #000
 }
