@@ -7,8 +7,8 @@ const aplicacion = (sequelize, type) => {
           primaryKey: true,
           autoIncrement: true,
         },
-        nombre: type.STRING,
-        descripcion: type.STRING,
+        nombre_aplicacion: type.STRING,
+        descripcion_aplicacion: type.STRING,
 
         creacionAplicacion: {
           type: "TIMESTAMP",

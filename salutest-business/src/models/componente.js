@@ -7,8 +7,11 @@ const componente = (sequelize, type) => {
           primaryKey: true,
           autoIncrement: true,
         },
-        nombre: type.STRING,
-        descripcion: type.STRING,
+        nombre_componente: type.STRING,
+        descripcion_componente: type.STRING,
+        estado_componente: type.BOOLEAN,
+        default_componente: type.BOOLEAN,
+
 
         creacionComponente: {
           type: "TIMESTAMP",
