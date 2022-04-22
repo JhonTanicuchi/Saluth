@@ -45,8 +45,12 @@
                 </div>
 
                 <div class="users_card">
-                    <div class="user_header">
-                        <h1>Nuevos</h1>
+                    <div class="summary_single user_header">
+                        <div>
+                            <span class="fas fa-bell"></span>
+                            <span>Nuevos</span>
+                        </div>
+                        <h5>{{length solicitudes_new}}</h5>
                     </div>
                     {{#each solicitudes_new}}
                     <div class="user_single">
@@ -82,7 +86,7 @@
                     <table id="solicitudes_table">
                         <thead>
                             <tr>
-                                <th>Id</th>
+                                <th>N°</th>
                                 <th>Institución</th>
                                 <th>Categoría</th>
                                 <th>Tipo</th>
@@ -103,11 +107,11 @@
                             {{/each}}
                         </tbody>
                     </table>
-                    {{#if (conditional_solicitudes_awaiting solicitudes_awaiting)}}
+                    {{#unless solicitudes_awaiting}}
                     <div class="container_solicitudes_no_content">
                         <h1>No hay solicitudes pendientes</h1>
                     </div>
-                    {{/if}}
+                    {{/unless}}
                 </div>
             </section>
         </div>

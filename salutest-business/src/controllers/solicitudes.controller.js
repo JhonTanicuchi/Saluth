@@ -27,7 +27,7 @@ solicitud.list = async (req, res) => {
 
   let date = new Date();
   var numberOfMlSeconds = date.getTime();
-  var addMlSeconds = 60000;
+  var addMlSeconds = 300000;
   var date_5min = new Date(numberOfMlSeconds - addMlSeconds);
   var date_5mas = new Date(numberOfMlSeconds + addMlSeconds);
   console.log(date);
@@ -70,7 +70,7 @@ solicitud.approve = async (req, res) => {
   sql.query(
     "SELECT * FROM solicituds WHERE id_solicitud = ?",
     [id_solicitud],
-    function (error, results, fields) {
+    function (error, results) {
       if (error) throw error;
       const nuevaInstitucionMedica = {
         nombre: results[0].nombre_institucion_medica,

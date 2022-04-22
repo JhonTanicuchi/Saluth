@@ -9,7 +9,6 @@ const institucion_medica = (sequelize, type) => {
       },
       nombre: type.STRING,
       descripcion: type.STRING,
-      fecha: type.STRING,
       estado: type.BOOLEAN,
       creacioninstituciones_medicas: {
         type: "TIMESTAMP",
