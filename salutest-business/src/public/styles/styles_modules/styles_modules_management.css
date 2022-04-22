@@ -1,0 +1,51 @@
+:root{
+    --white-text: #fff;
+    --background:#c8e8f1;
+    --black-text:rgb(68, 66, 66);
+    --prueba: (180deg,#21c8f6,#637bff);
+}
+
+h1{
+    color: aliceblue;
+    text-shadow: 1px 2px 2px black, 0 0 25px blue, 0 0 5px;
+    text-align: center;
+}
+
+div.galeria{
+    margin: 10px 20px;
+    box-shadow: 0 4px 8px 0 lightblue, 0 6px 20px 0 rgba(0,0 ,0 ,0,0.19 ) ;
+    float: left;
+    width: 350px;  
+    background: -webkit-linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9);  
+    background: linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9); 
+}
+
+div.galeria img{
+    width: 50%;
+    height: auto;
+}
+
+div.galeria:hover{
+    border: 3px solid rgb(128, 240, 141);
+    /*transform: rotate(-1deg);*/
+}
+
+div.pie{
+    text-align: center;
+    text-shadow: 2px 2px 5px purple ;
+    padding: 10px;
+}
+.boton{
+    background-color: rgb(87, 189, 229);
+    color: aliceblue;
+    border: 2px solid rgb(100, 255, 190);
+    border-radius: 23%; 
+    cursor: pointer;
+
+}
+.boton:hover{
+    text-decoration: none;
+    color: #21c8f6;
+    background: #fff;
+}
+
