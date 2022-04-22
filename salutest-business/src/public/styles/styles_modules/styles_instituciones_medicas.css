@@ -120,6 +120,8 @@
   justify-content: center;
   text-align: center;
   height: calc(100vh - 10rem);
+  border-radius: 7px;
+  background: white;
 }
 
 .container_instituciones_medicas_no_content h1 {
