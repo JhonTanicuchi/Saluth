@@ -7,7 +7,7 @@
 }
 
 .solicitudes_info > div {
-  background: #fff;
+  background: white;
   border-radius: 7px;
 }
 .users_card {
@@ -135,10 +135,19 @@ td {
 
 .solicitudes_contect td {
   font-size: 0.8rem;
+  cursor: default;
 }
 
 .solicitudes_contect tbody tr:nth-child(even) {
   background: #f8faff;
+}
+
+.solicitudes_contect tbody tr:hover {
+  background: #eaeef7;
+}
+
+.solicitudes_contect tbody tr:nth-child(even):hover {
+  background: #eaeef7;
 }
 
 .container_solicitudes_no_content {

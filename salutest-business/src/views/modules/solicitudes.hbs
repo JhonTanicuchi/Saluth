@@ -11,18 +11,17 @@
                 <div class="summary_card">
                     <div class="summary_single">
                         <div>
+                            <span class="fas fa-list"></span>
+                            <span>Totales</span>
+                        </div>
+                        <h5>{{length solicitudes}}</h5>
+                    </div>
+                    <div class="summary_single">
+                        <div>
                             <span class="fas fa-file-circle-exclamation"></span>
                             <span>Pendientes</span>
                         </div>
                         <h5>{{length solicitudes_awaiting}}</h5>
-                    </div>
-
-                    <div class="summary_single">
-                        <div>
-                            <span class="fas fa-file-circle-question"></span>
-                            <span>En Proceso</span>
-                        </div>
-                        <h5>{{length solicitudes_in_process}}</h5>
                     </div>
 
                     <div class="summary_single">
@@ -41,31 +40,32 @@
                         <h5>{{length solicitudes_canceled}}</h5>
                     </div>
                 </div>
-                
+
                 <div class="users_card">
                     <div class="user_header">
-                        <h1>En Proceso</h1>
+                        <h1>Nuevos</h1>
                     </div>
-                    {{#each solicitudes_in_process}}
+                    {{#each solicitudes_new}}
                     <div class="user_single">
                         <div class="info">
                             <img src="/img/img_profile.png" alt="" />
                             <div>
-                                <h4>Institución Médica</h4>
+                                <h4>{{nombre_institucion_medica}}</h4>
                                 <div class="details">
-                                    <h5>{{estado}}</h5>
-                                    <h5>Empresarial</h5>
+                                    <h5>{{categoria_institucion}}</h5>
+                                    <h5>{{tipo_institucion}}</h5>
                                 </div>
                             </div>
                         </div>
                     </div>
                     {{else}}
                     <div class="container_solicitudes_process_no_content">
-                        <h1>No hay solicitudes en proceso</h1>
+                        <h1>No hay solicitudes en nuevas</h1>
                     </div>
                     {{/each}}
+
                 </div>
-                
+
             </section>
             <section class="solicitudes_wrapper">
                 <div class="solicitudes_filter">
@@ -79,28 +79,24 @@
                     <table id="solicitudes_table">
                         <thead>
                             <tr>
+                                <th>Id</th>
                                 <th>Institución</th>
+                                <th>Categoría</th>
                                 <th>Tipo</th>
                                 <th>Estado</th>
                                 <th>Fecha</th>
-                                <th></th>
                             </tr>
                         </thead>
                         <tbody>
                             {{#each solicitudes_awaiting}}
-                                <tr>
-                                    <td name="nombre">{{nombre_institucion_medica}}</td>
-                                    <td name="descripcion">{{tipo_institucion}}</td>
-                                    <td>{{estado}}</td>
-                                    <td>{{formatDate creacionSolicitud}}</td>
-                                    <td>
-                                        <div>
-                                            <a href="/approve/{{id_solicitud}}">Aceptar</a>
-                                            <a href="/cancel/{{id_solicitud}}">Cancelar</a>
-                                            <a href="/solicitudes/{{id_solicitud}}">view</a>
-                                        </div>
-                                    </td>
-                                </tr>
+                            <tr onclick="window.location='/solicitudes/{{id_solicitud}}'">
+                                <td>{{id_solicitud}}</td>
+                                <td>{{nombre_institucion_medica}}</td>
+                                <td>{{categoria_institucion}}</td>
+                                <td>{{tipo_institucion}}</td>
+                                <td>{{estado}}</td>
+                                <td>{{formatDate creacionSolicitud}}</td>
+                            </tr>
                             {{/each}}
                         </tbody>
                     </table>
