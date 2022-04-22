@@ -36,7 +36,7 @@ app.use(bodyparser.urlencoded({
 }));
 app.use(bodyparser.json());
 app.use(session({
-    secret: 'Salutest',
+    secret: 'Salutest_Management',
     resave: false,
     saveUninitialized: false,
     store: new mysqlstore(database)
@@ -82,8 +82,7 @@ app.use(require('./rutas/registro_c'))
 app.use(require('./rutas/chat'))
 app.use(require('./rutas/sucursales'))
 app.use(require("./rutas/institucion_medica"))
-app.use(require("./rutas/catalogos"));
-app.use(require("./rutas/certificado_medico"))
+
 app.use(require('./rutas/turnos'))
 app.use(require('./rutas/laboratorio'))
 app.use(require('./rutas/empleados'))
