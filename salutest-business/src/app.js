@@ -75,5 +75,5 @@ app.use(require("./rutas/solicitudes"));
 app.use(require("./rutas/solicitudes_componentes"));
 app.use(require("./rutas/instituciones_medicas"));
 app.use(require("./rutas/general_configuration"));
-
+app.use(require("./rutas/modulo_componentes"));
 module.exports = app;
