@@ -45,9 +45,9 @@ solicitudes_componentes.list = async (req, res) => {
 };
 
 solicitudes_componentes.approve = async (req, res) => {
-  const name = "Jhon Tanicuchi";
+  /*const name = "Jhon Tanicuchi";
   const username = "Jhon.Iess";
-  const password = "1111";
+  const password = "1111";*/
 
   email.create(req, res, name,username, password);
 
