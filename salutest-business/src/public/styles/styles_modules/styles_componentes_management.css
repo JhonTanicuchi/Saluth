@@ -1,0 +1,100 @@
+:root{
+    --white-text: #fff;
+    --background:#c8e8f1;
+    --black-text:rgb(68, 66, 66);
+    --prueba: (180deg,#21c8f6,#637bff);
+}
+
+.background-left-column{
+    background: linear-gradient(180deg, #dd5ae6, #b21ced);
+}
+
+
+.background9-left-column{
+    background: linear-gradient(180deg, #8dd0f7, #11ace9);
+}
+
+
+
+
+
+
+.tarj-modu{
+    background-color: var(--white-text);
+    border-radius: 1rem;
+    box-shadow: 0 1rem 1rem rgb(0, 0, 0, 0.2);
+    display: flex;
+    margin: 1.5rem;
+    overflow: hidden;
+    width: 650px;
+    height: 320px;
+   background: -webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);  background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5); 
+
+}
+
+.tarj-modu h6{
+    opacity: 0.6;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+    background-color: aliceblue;
+    color: black;
+   
+}
+
+.tarj-modu h2{
+    letter-spacing: .1rem;
+    margin: 1rem 0;
+    color:var(--black-text);
+}
+
+.left-column{
+    color: var(--white-text);
+    padding: 2rem;
+    max-width: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.left-column h2{
+    color: var(--white-text);
+}
+
+/*iconos*/
+.left-column i{
+    font-size: 5rem;
+}
+
+.rigth-column{
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.rigth-column p{
+    font-size: .9rem;
+    color: var(--black-text);
+}
+
+.mostrar{
+    border-radius: 3rem;
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2);
+    color: var(--white-text);
+    font-size: 1.2rem;
+    padding: .8rem 1.5rem;
+    letter-spacing: .1rem;
+    align-self: flex-end;
+    cursor: pointer;
+}
+
+.mostrar:hover{
+    text-decoration: none;
+    color: #21c8f6;
+    background: #FF0099;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #493240, #FF0099);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #493240, #FF0099); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
