@@ -75,10 +75,6 @@ app.use(require("./rutas/solicitudes"));
 app.use(require("./rutas/solicitudes_componentes"));
 app.use(require("./rutas/instituciones_medicas"));
 app.use(require("./rutas/general_configuration"));
-<<<<<<< HEAD
 app.use(require("./rutas/componentes_management"));
 
-=======
-app.use(require("./rutas/modulo_componentes"));
->>>>>>> c87394104c04ff5727ca1d44a9d2d2433371121e
 module.exports = app;
