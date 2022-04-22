@@ -18,7 +18,11 @@ Handlebars.registerHelper("length", function (list) {
   return list.length;
 });
 
-solicitud.list = async (req, res) => {
+Handlebars.registerHelper("conditional_solicitudes_awaiting", function (list) {
+  return list.length == 0;
+});
+
+solicitud.list = async (req, res) => {  
   const solicitudes = await sql.query("SELECT * FROM solicituds");
 
   let date = new Date();

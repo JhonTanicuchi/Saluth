@@ -7,6 +7,14 @@ body {
     height: 230px;
     background: white;
     border-radius: 10px;
+  
+
+}
+
+.componente_patient_grid{
+    padding: 10px 10px 10px 10px;
+    display: flex-start;
+    flex-wrap: nowrap
 }
 /*Connect hover*/
 .card-category-5 .per-card-3:hover .card-content .social-icons {
