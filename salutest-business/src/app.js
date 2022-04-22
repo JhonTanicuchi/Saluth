@@ -17,14 +17,14 @@ require("./lib/passport");
 app.set("port", process.env.PORT || 5000);
 app.set("views", path.join(__dirname, "views"));
 app.engine(
-  ".hbs",
-  exphbs({
-    defaultLayout: "main",
-    layoutsDir: path.join(app.get("views"), "layouts"),
-    partialsDir: path.join(app.get("views"), "partials"),
-    extname: ".hbs",
-    helpres: require("./lib/handlebars"),
-  })
+    ".hbs",
+    exphbs({
+        defaultLayout: "main",
+        layoutsDir: path.join(app.get("views"), "layouts"),
+        partialsDir: path.join(app.get("views"), "partials"),
+        extname: ".hbs",
+        helpres: require("./lib/handlebars"),
+    })
 );
 
 app.set("view engine", ".hbs");
@@ -34,18 +34,18 @@ app.set("view engine", ".hbs");
 //midlewars
 app.use(morgan("dev"));
 app.use(
-  bodyparser.urlencoded({
-    extended: false,
-  })
+    bodyparser.urlencoded({
+        extended: false,
+    })
 );
 app.use(bodyparser.json());
 app.use(
-  session({
-    secret: "Salutest_Business",
-    resave: false,
-    saveUninitialized: false,
-    store: new mysqlstore(database),
-  })
+    session({
+        secret: "Salutest_Business",
+        resave: false,
+        saveUninitialized: false,
+        store: new mysqlstore(database),
+    })
 );
 app.use(flash());
 app.use(passport.initialize());
@@ -54,10 +54,10 @@ app.use(passport.session());
 
 //varible globales
 app.use((req, res, next) => {
-  app.locals.success = req.flash("success");
-  app.locals.message = req.flash("message");
-  app.locals.user = req.user;
-  next();
+    app.locals.success = req.flash("success");
+    app.locals.message = req.flash("message");
+    app.locals.user = req.user;
+    next();
 });
 //varible globales
 
@@ -82,5 +82,6 @@ app.use(require("./rutas/componentes_patient"));
 app.use(require("./rutas/componentes_management"));
 app.use(require("./rutas/modulo_componentes"));
 app.use(require("./rutas/modules_management"));
+app.use(require("./rutas/modulo_estadisticas"));
 
 module.exports = app;
