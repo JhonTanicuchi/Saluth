@@ -8,6 +8,7 @@ const catalogo = (sequelize, type) => {
         autoIncrement: true,
       },
       nombre: type.STRING,
+      valor: type.STRING,
       creacionCatalogo: {
         type: "TIMESTAMP",
         defaultValue: type.literal("CURRENT_TIMESTAMP"),

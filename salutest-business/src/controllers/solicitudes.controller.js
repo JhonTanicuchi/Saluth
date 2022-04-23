@@ -59,11 +59,9 @@ solicitud.list = async (req, res) => {
 };
 
 solicitud.approve = async (req, res) => {
-  const name = "Jhon Tanicuchi";
   const username = user_generator.create.usuarioemail;
   const password = "1111";
 
-  email.create(req, res, name, username, password);
 
   const id_solicitud = req.params.id;
 
@@ -74,23 +72,39 @@ solicitud.approve = async (req, res) => {
       if (error) throw error;
       const nuevaInstitucionMedica = {
         nombre: results[0].nombre_institucion_medica,
-        descripcion: results[0].detalle,
-        estado: true,
       };
 
+      email.create(
+        req,
+        res,
+        results[0].nombre_contacto,
+        results[0].email_contacto,
+        username,
+        password
+      );
       orm.institucion_medica.create(nuevaInstitucionMedica);
     }
   );
 
-  const updateSolicitud = {
-    estado: "aprobado",
-  };
+  sql.query(
+    "select * from solicituds s join institucion_medicas i on s.nombre_institucion_medica = i.nombre WHERE s.id_solicitud = ?",
+    [id_solicitud],
+    async function (error, results) {
+      if (error) throw error;
+      const updateSolicitud = {
+        estado: "aprobado",
+        institucionMedicaIdInstitucionMedica: results[0].id_institucion_medica,
+      };
+      console.log(results[0])
+      await orm.solicitud
+        .findOne({ where: { id_solicitud: id_solicitud } })
+        .then((solicitudes) => {
+          solicitudes.update(updateSolicitud);
+        });
+    }
+  );
 
-  await orm.solicitud
-    .findOne({ where: { id_solicitud: id_solicitud } })
-    .then((solicitudes) => {
-      solicitudes.update(updateSolicitud);
-    });
+  
 
   res.redirect("/solicitudes");
 };
