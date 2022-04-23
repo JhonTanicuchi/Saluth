@@ -4,13 +4,14 @@ const sql = require("../config-database/database.sql")
 const componente_erp = {}
 
 componente_erp.list = async (req,res) => {
-    
+    const lista = true;
     const componentes_erp = await sql.query(
         "select * from componentes c join aplicacions a on c.aplicacionIdAplicacion = a.id_aplicacion WHERE a.nombre_aplicacion = 'Salutest ERP'"
     );
 
     res.render ('modules/componentes_erp', {
-        componentes_erp
+        componentes_erp,
+        lista,
     });
 
 }
