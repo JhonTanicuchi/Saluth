@@ -9,7 +9,9 @@ componente_erp.list = async (req,res) => {
         "select * from componentes c join aplicacions a on c.aplicacionIdAplicacion = a.id_aplicacion WHERE a.nombre_aplicacion = 'Salutest ERP'"
     );
 
-    res.render ('modules/componentes_erp')
+    res.render ('modules/componentes_erp', {
+        componentes_erp
+    });
 
 }
 

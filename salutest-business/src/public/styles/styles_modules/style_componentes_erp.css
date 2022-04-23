@@ -56,3 +56,25 @@
     text-align: end;
     font-size: 0.8rem;
 }
+
+.boton-mas{
+    position: fixed;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    bottom: 30px;
+    right: 30px;
+    background: #21c8f6;
+    color: #fff;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+}
+.boton-mas:hover{
+    text-decoration: none;
+    color: #21c8f6;
+    background: #fff;
+    
+}
