@@ -1,82 +1,58 @@
-:root{
-    --white-text: #fff;
-    --background:#c8e8f1;
-    --black-text:rgb(68, 66, 66);
-    --prueba: (180deg,#21c8f6,#637bff);
+.contenido{
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
 
-.backgroundl-left-column{
-    background: linear-gradient(180deg, #21c8f6, #637bff);
+.tarjetas-seccion{
+    display: grid;
+    gap: 1.75rem;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 }
 
-
-.background2-left-column{
-    background: linear-gradient(180deg, #6edcc4, #1aab8b);
-}
-
-.container{
+.tarjetas-erp{
+    background: #0CB7F2;
+    padding: 1.75rem;
+    border-radius: 1.75rem;
     display: flex;
-    height: 100vh;
+    flex-wrap: wrap;
 }
 
-.tarjeta-modulos{
-    background-color: var(--white-text);
-    border-radius: 1rem;
-    box-shadow: 0 1rem 1rem rgb(0, 0, 0, 0.2);
-    display: flex;
-    margin: 10px;
-    overflow: hidden;
-    width: 450px;
-    height: 220px;
-}
-
-.tarjeta-modulos h6{
-    opacity: 1;
-    letter-spacing: 1px;
+.tarjetas-erp .tarjetas-header{
+    flex-basis: 100%;
+    font-size: 1.5rem;
     text-transform: uppercase;
 }
 
-.tarjeta-modulos h2{
-    letter-spacing: 1px;
-    margin: 1rem 0;
-    color:var(--black-text);
-    font-size: 20px;
+.tarjetas-erp .tarjetas-body{
+    flex-basis: 100%;
+    margin-top: 1.2rem;
 }
 
-.left-column{
-    color: var(--white-text);
-    padding: 5px;
-    max-width: 10rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
+.tarjetas-erp .tarjetas-body p{
+    margin: 0;
 }
 
-.left-column h2{
-    color: var(--white-text);
+.tarjetas-erp .tarjetas-body a{
+    text-decoration: none;
+    color:black;
+    display: inline-block;
+    padding: 0.7rem 1.75rem;
+    border: 1px solid transparent;
+    background-color: #53d4ff;
+    border-radius: 1.75rem;
+    margin-top: 1.2rem;
+    transition: background-color 0.4s ease-in, color 0.4s ease-in;
 }
 
-.left-column i{
-    font-size: 50px;
-    color: #000;
+.tarjetas-erp .tarjetas-body a:hover{
+    background-color: transparent;
+    border-color: #0e171f;
+    color: #0e171f;
 }
 
-.rigth-column{
-    padding: 5px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
-}
-
-.mostrar{
-    border-radius: 3rem;
-    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2);
-    color: var(--white-text);
-    font-size: 20px;
-    padding: .3rem .3rem;
-    letter-spacing: .1rem;
+.tarjetas-erp .tarjetas-footer{
+    flex-basis: 100%;
     align-self: flex-end;
-    cursor: pointer;
+    text-align: end;
+    font-size: 0.8rem;
 }
