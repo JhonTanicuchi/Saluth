@@ -10,7 +10,11 @@ rutas.get(
   solicitudController.list
 );
 rutas.get("/solicitudes/:id", check_login, solicitudController.read);
-rutas.get("/approve/:id", check_login, solicitudController.approve);
+rutas.get(
+  "/approve/:id",
+  check_login,
+  solicitudController.approve
+);
 rutas.get("/cancel/:id", check_login, solicitudController.cancel);
 
 

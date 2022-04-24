@@ -9,7 +9,7 @@ Handlebars.registerHelper("length", function (list) {
 });
 
 Handlebars.registerHelper("farmacia", function (categoria) {
-  return categoria=="Farmacia";
+  return categoria == "Farmacia";
 });
 
 Handlebars.registerHelper("centro_medico", function (categoria) {
@@ -29,8 +29,24 @@ instituciones_medicas.mostrar = (req, res) => {
 };
 
 instituciones_medicas.list = async (req, res) => {
-  const instituciones = await sql.query("SELECT * FROM institucion_medicas");
-  res.render("modules/instituciones_medicas", { instituciones });
+  const filtro = req.params.parametro;
+      let instituciones = await sql.query(
+        "SELECT * FROM institucion_medicas"
+      );
+
+  if (filtro) {
+     instituciones = await sql.query(
+      "SELECT * FROM institucion_medicas i join institucion_catalogo ic on i.id_institucion_medica = ic.institucionMedicaIdInstitucionMedica join catalogos c on c.id_catalogo = ic.catalogoIdCatalogo WHERE c.valor = ?",
+      [filtro]
+    );
+  } else {
+     instituciones = await sql.query("SELECT * FROM institucion_medicas");
+  }
+
+  console.log(instituciones)
+  res.render("modules/instituciones_medicas", {
+    instituciones,
+  });
 };
 
 module.exports = instituciones_medicas;

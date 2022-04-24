@@ -12,11 +12,11 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
     <div class="componentes_management_grid">
-
+        {{#each componentes_management}}
        <div class="tarj-modu">
         <div class="left-column background-left-column">
             <h6>Controladores</h6>
-            <h2>Lista de pacientes</h2>
+            <h2>{{nombre_componente}}</h2>
             <i class="material-icons">groups</i>
         </div>
         <div class="rigth-column">
@@ -25,108 +25,27 @@
                 <h6>2022-2023</h6>
             </div>
             <h2>A-Z</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita voluptates cum ratione corrupti quisquam, culpa vero illum officiis eligendi facilis?</p>
+            <p>{{descripcion_componente}}</p>
 
             <form action="#" class="mostrar background-left-column">
             <button class="mostrar background9-left-column">Mostrar</button>
             </form>
         </div>
     </div>
+    {{/each}}
 
-
-        <div class="tarj-modu">
-            <div class="left-column background9-left-column">
-                <h6>Controladores</h6>
-                <h2>Roles</h2>
-                <i class="material-icons">engineering</i>
-            </div>
-            <div class="rigth-column">
-                <div>
-                    <h4>SALUTEST</h4>
-                    <h6>2022-2023</h6>
-                </div>
-                <h2>A-Z</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita voluptates cum ratione corrupti quisquam, culpa vero illum officiis eligendi facilis?</p>
-
-                
-                <form action="#" class="mostrar background9-left-column">
-                    <button class="mostrar background-left-column">Mostrar</button>
-                    </form>
-                
-            </div>
-        </div>
-
-
-        <div class="tarj-modu">
-            <div class="left-column background-left-column">
-                <h6>Controladores</h6>
-                <h2>Horarios</h2>
-                <i class="material-icons">watch_later</i>
-            </div>
-            <div class="rigth-column">
-                <div>
-                    <h4>SALUTEST</h4>
-                    <h6>2022-2023</h6>
-                </div>
-                <h2>A-Z</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita voluptates cum ratione corrupti quisquam, culpa vero illum officiis eligendi facilis?</p>
-
-                <form action="#" class="mostrar background-left-column">
-                    <button class="mostrar background9-left-column">Mostrar</button>
-                    </form>
-
-            </div>
-        </div>
-    
-
-    
-        <div class="tarj-modu">
-            <div class="left-column background9-left-column">
-                <h6>Controladores</h6>
-                <h2>Usuarios pacientes</h2>
-                <i class="material-icons">portrait</i>
-            </div>
-            <div class="rigth-column">
-                <div>
-                    <h4>SALUTEST</h4>
-                    <h6>2022-2023</h6>
-                </div>
-                <h2>A-Z</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita voluptates cum ratione corrupti quisquam, culpa vero illum officiis eligendi facilis?</p>
-
-
-                <form action="#" class="mostrar background9-left-column">
-                    <button class="mostrar background-left-column">Mostrar</button>
-                    </form>
-            </div>
-        </div>
-
-
-
-
-
-        <div class="tarj-modu">
-            <div class="left-column background-left-column">
-                <h6>Controladores</h6>
-                <h2>Turnos</h2>
-                <i class="material-icons">calendar_month</i>
-            </div>
-            <div class="rigth-column">
-                <div>
-                    <h4>SALUTEST</h4>
-                    <h6>2022-2023</h6>
-                </div>
-                <h2>A-Z</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita voluptates cum ratione corrupti quisquam, culpa vero illum officiis eligendi facilis?</p>
-
-                <form action="#" class="mostrar background-left-column">
-                    <button class="mostrar background9-left-column">Mostrar</button>
-                    </form>
-            </div>
-        </div>
-  
+     {{#if lista}} 
+                    <a href="/componente" class="boton-mas" target="-blank">
+                        <i class="las la-plus"></i>
+                    </a>
+                    {{else}}
+                     <a href="/componentes_erp" class="boton-mas" target="-blank">
+                        <i class="las la-plus"></i>
+                    </a>   
+                    {{/if}} 
     </div>  
 
     </div>
   </main>
 </div>
+ 
