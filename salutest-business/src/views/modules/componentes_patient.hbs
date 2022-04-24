@@ -2,52 +2,88 @@
 <div class="main_contect">
     <main class="main_app">
         <section class="dash_title">
-            <h2 id="title_modules">Componentes Patient</h2>
-            <a href="/home"><span class="far fa-times-circle"></span></a>
+            <h2 id="title_modules" class="pestana hidden">Componentes Patient</h2>
+
         </section>
 
         <!--Contenedor 1-->
 
-        <div class="componente_patient_grid">
-            {{#each componentes_patient}}
-            <div class="card-category-5">
-                <ul class="all-pr-cards">
-                    <li>
-                        <div class="per-card-3">
-                            <div class="card-image">
-                                <span></span>
-                                <span class="per-name">{{nombre_componente}}</span>
-                            </div>
-                            <div class="card-content">
-                                <div class="card-text">
-                                    <span>{{descripcion_componente}}</span>
-                                </div>
-                                <div class="social-icons">
-                                    <!--
-                                <i class="las la-stethoscope"></i>
-                                <i class="las la-user-nurse"></i>
-                                <i class="far fa-envelope" title="E-Mail"></i>
-                                <i class="las la-id-card-alt"></i>
-                                <i class="las la-notes-medical"></i>
-                                -->
-                                    <div class="card-btn">
-
-                                        <a href="http://localhost:2000/cita_home"><button type="button"
-                                                title="Connect">Connect</button></a>
-                                    </div>
-                                </div>
-                            </div>
+        <div class="instituciones_medicas_grid">
+            <section class="instituciones_medicas_wrapper">
+                <div class="instituciones_medicas_filter">
+                    <div>
+                        <span class="fas fa-search"></span>
+                        <input onkeyup="instituciones_medicas_filter()" id="instituciones_medicas_filter" type="text"
+                            placeholder="Filtrar por: institución, tipo" />
+                    </div>
+                </div>
+                <div class="instituciones_medicas_list">
+                    {{#each componentes_patient}}
+                    <div class="per-card-3">
+                        <div class="card-image">
+                            <span></span>
+                            <span class="per-name">{{nombre_componente}}</span>
                         </div>
-                    </li>
-                </ul>
-            </div>
-             {{/each}}
-             {{#unless componentes_patient}}
+                        <div class="card-content">
+                            <div class="card-text">
+                                <span>{{descripcion_componente}}</span>
+                            </div>
+                       
+                            <div>
+                                {{#if default_componente}}
+                                <i class="fas fa-unlock"></i>
+                                <button onclick="window.location='/componentes_patient/lock/{{id_componente}}'"class="btn_salutest">Hacer privado</button>
+                                {{else}}
+                                <i class="fas fa-lock"></i>
+                                <button onclick="window.location='/componentes_patient/unlock/{{id_componente}}'" class="btn_salutest">Hacer público</button>
+
+                                
+                                {{/if}}
+                            </div>
+                         
+                        </div>
+                    </div>
+
+                    {{/each}}
+
+                </div>
+                {{#unless componentes_patient}}
                 <div class="container_instituciones_medicas_no_content">
-                    <h1>No hay modulos</h1>
+                    <h1>No hay instituciones</h1>
                 </div>
                 {{/unless}}
+            </section>
+            <section class="instituciones_medicas_info">
+                <div class="summary_card">
+                    <div onclick="window.location='/componentes_patient/totales'" class="summary_single">
+                        <div>
+                            <span class="fas fa-list"></span>
+                            <span>Totales</span>
+                        </div>
+                        <h5>{{length componentes_patient_totales}}</h5>
+                    </div>
+                </div>
+
+                <!--Publicas-->
+
+                <div class="summary_card">
+                    <div onclick="window.location='/componentes_patient/publicos'" class="summary_single">
+                        <div>
+                            <span class="fas fa-unlock"></span>
+                            <span>Publicos</span>
+                        </div>
+                        <h5>{{length componentes_patient_publicos}}</h5>
+                    </div>
+
+                    <!--Privadas-->
+
+                    <div onclick="window.location='/componentes_patient/privados'" class="summary_single">
+                        <div>
+                            <span class="fas fa-lock"></span>
+                            <span>Privados</span>
+                        </div>
+                        <h5>{{length componentes_patient_privados}}</h5>
+                    </div>
+                </div>
+            </section>
         </div>
-</div>
-</main>
-</div>

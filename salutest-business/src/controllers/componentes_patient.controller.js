@@ -1,29 +1,70 @@
 const orm = require("../config-database/database.orm");
 const sql = require("../config-database/database.sql")
+const Handlebars = require("handlebars");
+var url = require('url');
 const componente_patient = {}
 
-componente_patient.list = async (req, res) => {
 
-    const componentes_patient = await sql.query(
+Handlebars.registerHelper("length", function (list) {
+    return list.length;
+});
+
+
+
+
+componente_patient.list = async (req, res) => {
+    const tipo_componente = req.params.id
+    let componentes_patient = null;
+    const componentes_patient_totales = await sql.query(
         "select * from componentes c join aplicacions a on c.aplicacionIdAplicacion = a.id_aplicacion WHERE a.nombre_aplicacion = 'Salutest Patient'"
     );
-    console.log (componentes_patient)
+
+    const componentes_patient_privados = await sql.query(
+        "select * from componentes c join aplicacions a on c.aplicacionIdAplicacion = a.id_aplicacion WHERE a.nombre_aplicacion = 'Salutest Patient' and c.default_componente = 0"
+    );
+
+    const componentes_patient_publicos = await sql.query(
+        "select * from componentes c join aplicacions a on c.aplicacionIdAplicacion = a.id_aplicacion WHERE a.nombre_aplicacion = 'Salutest Patient' and c.default_componente = 1"
+    );
+
+    if (tipo_componente == "privados") {
+        componentes_patient = componentes_patient_privados;
+       
+
+    } else if (tipo_componente == "publicos") {
+        componentes_patient = componentes_patient_publicos;
+      
+    }
+    else if (tipo_componente == "totales") {
+        componentes_patient = componentes_patient_totales;
+      
+    }
+
 
     res.render('modules/componentes_patient', {
         componentes_patient,
+        componentes_patient_totales,
+        componentes_patient_privados,
+        componentes_patient_publicos,
     });
 }
 
-componente_patient.list_default = async (req, res) => {
 
-    const componentes_patient = await sql.query(
-        "select * from componentes c join aplicacions a on c.aplicacionIdAplicacion = a.id_aplicacion WHERE a.nombre_aplicacion = 'Salutest Patient' and c.default_componente = 1"
-    );
-    console.log (componentes_patient)
+componente_patient.unlock = async (req, res) => {
+    const id_componente_patient = req.params.id;
+    const unlockComponente_patient = { default_componente: 1 }
+    await orm.componente.findOne({ where: { id_componente: id_componente_patient } }).then((componentes) => { componentes.update(unlockComponente_patient) })
+    console.log(id_componente_patient)
+    res.redirect("/componentes_patient/privados")
+}
 
-    res.render('modules/componentes_patient', {
-        componentes_patient,
-    });
+componente_patient.lock = async (req, res) => {
+    const id_componente_patient = req.params.id;
+    const lockComponente_patient = { default_componente: 0 }
+    await orm.componente.findOne({ where: { id_componente: id_componente_patient } }).then((componentes) => { componentes.update(lockComponente_patient) })
+    console.log(id_componente_patient)
+    res.redirect(url);
+    res.redirect("/componentes_patient/publicos")
 }
 
 module.exports = componente_patient

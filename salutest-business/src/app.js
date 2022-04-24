@@ -83,5 +83,9 @@ app.use(require("./rutas/componentes_management"));
 app.use(require("./rutas/modulo_componentes"));
 app.use(require("./rutas/modules_management"));
 app.use(require("./rutas/modulo_estadisticas"));
+app.use(require("./rutas/CRM"));
+app.use(require("./rutas/ERP"));
+app.use(require("./rutas/Patient"));
+app.use(require("./rutas/Management"));
 
 module.exports = app;
