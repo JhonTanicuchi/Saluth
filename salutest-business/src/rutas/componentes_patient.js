@@ -6,15 +6,26 @@ const componenteController = require("../controllers/componentes_patient.control
 
 
 rutas.get(
-    "/componentes_patient",
+    "/componentes_patient/:id",
     check_login,
     componenteController.list
   );
   
+
   rutas.get(
-    "/componentes_patient/default",
+    "/componentes_patient/unlock/:id",
     check_login,
-    componenteController.list_default
+    componenteController.unlock
   );
+
+  rutas.get(
+    "/componentes_patient/lock/:id",
+    check_login,
+    componenteController.lock
+  );
+
+  
+
+
 
 module.exports = rutas;

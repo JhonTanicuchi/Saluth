@@ -9,6 +9,7 @@ const componente = (sequelize, type) => {
         },
         nombre_componente: type.STRING,
         descripcion_componente: type.STRING,
+        
         estado_componente: type.BOOLEAN,
         default_componente: type.BOOLEAN,
 
