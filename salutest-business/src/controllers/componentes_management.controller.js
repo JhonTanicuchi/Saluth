@@ -1,11 +1,11 @@
 const orm = require("../config-database/database.orm");
 const sql = require("../config-database/database.sql")
-const componentes_management = {}
+const componente_management = {}
 
-componentes_management.list = async (req, res) => {
+componente_management.list = async (req, res) => {
 
     const componentes_management = await sql.query(
-        "select * from management m join managemetapp m on m.managementappIdManagementapp = m.id_management WHERE m.nombre_managemetapp = 'Salutest Management'"
+        "select * from componentes c join aplicacions a on c.aplicacionIdAplicacion = a.id_aplicacion WHERE a.nombre_aplicacion = 'Salutest Management'"
     );
     console.log (componentes_management)
 
@@ -14,10 +14,10 @@ componentes_management.list = async (req, res) => {
     });
 }
 
-componentes_management.list_default = async (req, res) => {
+componente_management.list_default = async (req, res) => {
 
     const componentes_management = await sql.query(
-        "select * from management m join managemetapp m on m.managementappIdManagementapp = m.id_management WHERE m.nombre_managemetapp = 'Salutest Management' and m.default_management = 1"
+        "select * from componentes c join aplicacions a on c.aplicacionIdAplicacion = a.id_aplicacion WHERE a.nombre_aplicacion = 'Salutest Management' and c.default_componente = 1"
     );
     console.log (componentes_management)
 
@@ -26,4 +26,4 @@ componentes_management.list_default = async (req, res) => {
     });
 }
 
-module.exports = componentes_management
+module.exports = componente_management
