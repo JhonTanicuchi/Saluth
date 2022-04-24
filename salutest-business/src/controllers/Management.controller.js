@@ -1,6 +1,6 @@
 const Management = {}
 
-CRM.mostrar = (req, res) => {
+Management.mostrar = (req, res) => {
     res.render('modules/Management')
 }
 

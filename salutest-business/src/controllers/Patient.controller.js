@@ -1,6 +1,6 @@
 const Patient = {}
 
-CRM.mostrar = (req, res) => {
+Patient.mostrar = (req, res) => {
     res.render('modules/Patient')
 }
 

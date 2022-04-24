@@ -1,6 +1,6 @@
 const ERP = {}
 
-CRM.mostrar = (req, res) => {
+ERP.mostrar = (req, res) => {
     res.render('modules/ERP')
 }
 
