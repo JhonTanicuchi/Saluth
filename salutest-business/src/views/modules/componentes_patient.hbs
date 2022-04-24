@@ -2,7 +2,7 @@
 <div class="main_contect">
     <main class="main_app">
         <section class="dash_title">
-            <h2 id="title_modules">Componentes Patient</h2>
+            <h2 id="title_modules" class="pestana hidden" >Componentes Patient</h2>
             <a href="/home"><span class="far fa-times-circle"></span></a>
         </section>
 
@@ -41,13 +41,24 @@
                     </li>
                 </ul>
             </div>
-             {{/each}}
-             {{#unless componentes_patient}}
-                <div class="container_instituciones_medicas_no_content">
-                    <h1>No hay modulos</h1>
-                </div>
-                {{/unless}}
-        </div>
+            {{/each}}
+            {{#unless componentes_patient}}
+            <div class="container_instituciones_medicas_no_content">
+                <h1>No hay modulos</h1>
+            </div>
+            {{/unless}}
+            {{#if lista}} 
+        
+            <a href="/componente" class="boton-mas" >
+           
+                <i class="las la-plus"></i>
+            </a>
+            </div>
+            {{else}}
+            <a href="/componentes_patient" class="boton-mas" >
+                <i class="las la-plus"></i>
+            </a>   
+            {{/if}}
 </div>
 </main>
 </div>

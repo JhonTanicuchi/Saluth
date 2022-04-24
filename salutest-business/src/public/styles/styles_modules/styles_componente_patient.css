@@ -1,6 +1,3 @@
-body {
-    margin:0;
-}
 /*Card General*/
 .card-category-5 .per-card-3 {
     width: 400px;
@@ -14,8 +11,12 @@ body {
 .componente_patient_grid{
     padding: 10px 10px 10px 10px;
     display: flex-start;
-    flex-wrap: nowrap
+    flex-wrap: nowrap;
+    height: calc(100vh - 10rem - 30px);
 }
+
+
+
 /*Connect hover*/
 .card-category-5 .per-card-3:hover .card-content .social-icons {
     opacity: 1;
