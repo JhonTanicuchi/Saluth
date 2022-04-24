@@ -62,7 +62,8 @@ const solicitudes_componentes_Modelo = require("../models/solicitud_componentes"
 const institucion_medica_Modelo = require("../models/institucion_medica");
 const componente_Modelo = require("../models/componente");
 const aplicacion_Modelo = require("../models/aplicacion");
-
+const aplicacion_Modelo = require("../models/management");
+const aplicacion_Modelo = require("../models/managementapp");
 const sucursal_medica_Modelo = require("../models/sucursal_medica");
 
 
@@ -180,6 +181,9 @@ solicitud.belongsTo(institucion_medica);
 aplicacion.hasMany(componente);
 componente.belongsTo(aplicacion);
 
+managemetapp.hasMany(managemet);
+managemet.belongsTo(managemetapp);
+
 
 institucion_medica.hasMany(sucursal_medica);
 sucursal_medica.belongsTo(institucion_medica);
@@ -235,4 +239,6 @@ module.exports = {
   componente,
   aplicacion,
   sucursal_medica,
+  managemet,
+  managemetapp,
 };
