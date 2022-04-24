@@ -1,9 +1,5 @@
 .contendedor_componente{
-    width: 40em;
-    height: 20em;
-    margin: 100px;
-    margin-left: 10em;
-    display:inline-table;
+ height: calc(100vh - 10rem - 30px);
 }
 .caja_modulo1{
    background: #57909e;
@@ -48,8 +44,7 @@
  }
  .caja_modulo3{
     float: left; 
-    margin-top: 2em;  
-    margin-left: 12rem;
+     margin-left: 6rem;
     box-shadow: 0px 1px 5px rgb(27, 27, 27);
     transition: all 400ms ease;
  }
