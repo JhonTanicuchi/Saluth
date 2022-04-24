@@ -10,4 +10,10 @@ rutas.get(
   instituciones_medicasController.list
 );
 
+rutas.get(
+  "/instituciones_medicas/:parametro",
+  check_login,
+  instituciones_medicasController.list
+);
+
 module.exports = rutas;

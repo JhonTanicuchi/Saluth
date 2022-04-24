@@ -1,6 +1,6 @@
 .solicitudes_grid {
   display: grid;
-  grid-template-columns: calc(25% - 1.5rem) 75%;
+  grid-template-columns:  75% calc(25% - 1.5rem);
   grid-column-gap: 1.5rem;
   height: calc(100vh - 10rem - 30px);
   color: var(--color_font_P);

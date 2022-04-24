@@ -38,10 +38,11 @@
   border-radius: 7px;
   max-width: 214.4px;
   transition: all 0.2s ease;
+  cursor: pointer;
 }
 
 .instituciones_medicas_list .card:hover {
-  transform: scale(1.02);
+  transform: scale(1.03);
 }
 
 .instituciones_medicas_list .card .card_top {
@@ -93,6 +94,24 @@
   align-items: center;
   justify-content: space-between;
   cursor: pointer;
+  transition: all 0.2s ease;
+  border-radius: 7px;
+
+}
+.instituciones_medicas_info .summary_single:hover {
+ 
+  padding-left: 40px;
+  background: var(--color_dark_N);
+  color: white;
+
+}
+
+.instituciones_medicas_info .summary_single:hover  span:first-child{
+  color: white;
+
+}
+.instituciones_medicas_info .summary_single:hover  span:last-child{
+  color: white;
 }
 
 .instituciones_medicas_info .summary_single div {

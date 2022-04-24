@@ -7,73 +7,7 @@
             <a href="/home"><span class="far fa-times-circle"></span></a>
         </section>
         <div class="solicitudes_grid">
-            <section class="solicitudes_info">
-                <div class="summary_card">
-                    <div class="summary_single">
-                        <div>
-                            <span class="fas fa-list"></span>
-                            <span>Totales</span>
-                        </div>
-                        <h5>{{length solicitudes}}</h5>
-                    </div>
-                </div>
-                <div class="summary_card">
-
-                    <div class="summary_single">
-                        <div>
-                            <span class="fas fa-file-circle-exclamation"></span>
-                            <span>Pendientes</span>
-                        </div>
-                        <h5>{{length solicitudes_awaiting}}</h5>
-                    </div>
-
-                    <div class="summary_single">
-                        <div>
-                            <span class="fas fa-file-circle-check"></span>
-                            <span>Aprobadas</span>
-                        </div>
-                        <h5>{{length solicitudes_approved}}</h5>
-                    </div>
-
-                    <div class="summary_single">
-                        <div>
-                            <span class="fas fa-file-circle-minus"></span>
-                            <span>Canceladas</span>
-                        </div>
-                        <h5>{{length solicitudes_canceled}}</h5>
-                    </div>
-                </div>
-
-                <div class="users_card">
-                    <div class="summary_single user_header">
-                        <div>
-                            <span class="fas fa-bell"></span>
-                            <span>Nuevos</span>
-                        </div>
-                        <h5>{{length solicitudes_new}}</h5>
-                    </div>
-                    {{#each solicitudes_new}}
-                    <div class="user_single">
-                        <div class="info">
-                            <img src="/img/img_profile.png" alt="" />
-                            <div>
-                                <h4>{{nombre_institucion_medica}}</h4>
-                                <div class="details">
-                                    <h5>{{categoria_institucion}}</h5>
-                                    <h5>{{tipo_institucion}}</h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    {{else}}
-                    <div class="container_solicitudes_process_no_content">
-                        <h1>No hay solicitudes nuevas</h1>
-                    </div>
-                    {{/each}}
-
-                </div>
-
-            </section>
+            
             <section class="solicitudes_wrapper">
                 <div class="solicitudes_filter">
                     <div>
@@ -113,6 +47,73 @@
                     </div>
                     {{/unless}}
                 </div>
+            </section>
+            <section class="solicitudes_info">
+                <div class="summary_card">
+                    <div class="summary_single">
+                        <div>
+                            <span class="fas fa-list"></span>
+                            <span>Totales</span>
+                        </div>
+                        <h5>{{length solicitudes}}</h5>
+                    </div>
+                </div>
+                <div class="summary_card">
+            
+                    <div class="summary_single">
+                        <div>
+                            <span class="fas fa-file-circle-exclamation"></span>
+                            <span>Pendientes</span>
+                        </div>
+                        <h5>{{length solicitudes_awaiting}}</h5>
+                    </div>
+            
+                    <div class="summary_single">
+                        <div>
+                            <span class="fas fa-file-circle-check"></span>
+                            <span>Aprobadas</span>
+                        </div>
+                        <h5>{{length solicitudes_approved}}</h5>
+                    </div>
+            
+                    <div class="summary_single">
+                        <div>
+                            <span class="fas fa-file-circle-minus"></span>
+                            <span>Canceladas</span>
+                        </div>
+                        <h5>{{length solicitudes_canceled}}</h5>
+                    </div>
+                </div>
+            
+                <div class="users_card">
+                    <div class="summary_single user_header">
+                        <div>
+                            <span class="fas fa-bell"></span>
+                            <span>Nuevos</span>
+                        </div>
+                        <h5>{{length solicitudes_new}}</h5>
+                    </div>
+                    {{#each solicitudes_new}}
+                    <div class="user_single">
+                        <div class="info">
+                            <img src="/img/img_profile.png" alt="" />
+                            <div>
+                                <h4>{{nombre_institucion_medica}}</h4>
+                                <div class="details">
+                                    <h5>{{categoria_institucion}}</h5>
+                                    <h5>{{tipo_institucion}}</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {{else}}
+                    <div class="container_solicitudes_process_no_content">
+                        <h1>No hay solicitudes nuevas</h1>
+                    </div>
+                    {{/each}}
+            
+                </div>
+            
             </section>
         </div>
     </main>
