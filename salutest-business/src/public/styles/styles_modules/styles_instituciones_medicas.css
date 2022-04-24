@@ -92,6 +92,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  cursor: pointer;
 }
 
 .instituciones_medicas_info .summary_single div {
