@@ -3,7 +3,7 @@ const sql = require("../config-database/database.sql")
 const componente_patient = {}
 
 componente_patient.list = async (req, res) => {
-
+    const lista = true;
     const componentes_patient = await sql.query(
         "select * from componentes c join aplicacions a on c.aplicacionIdAplicacion = a.id_aplicacion WHERE a.nombre_aplicacion = 'Salutest Patient'"
     );
@@ -11,6 +11,7 @@ componente_patient.list = async (req, res) => {
 
     res.render('modules/componentes_patient', {
         componentes_patient,
+        lista,
     });
 }
 
