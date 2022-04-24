@@ -34,15 +34,17 @@
     </div>
     {{/each}}
 
-     {{#if lista}} 
-                    <a href="/componente" class="boton-mas" target="-blank">
-                        <i class="las la-plus"></i>
-                    </a>
-                    {{else}}
-                     <a href="/componentes_erp" class="boton-mas" target="-blank">
-                        <i class="las la-plus"></i>
-                    </a>   
-                    {{/if}} 
+            {{#if lista}} 
+            <a href="/componente" class="boton-mas">
+                    <i class="las la-plus"></i>
+                    <h2>Nuevo</h2>
+            </a>
+            {{else}}
+            <a href="/componentes_management" class="boton-mas">
+                    <i class="las la-plus"></i>
+                    <h2>Añadir</h2>
+            </a>   
+            {{/if}} 
     </div>  
 
     </div>
