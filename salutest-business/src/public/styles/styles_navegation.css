@@ -299,10 +299,10 @@
 }
 
 .main_app {
-  margin-top: 60px;
+  margin-top: 90px;
   padding: 1rem 3rem;
   background: #e8eef4;
-  min-height: calc(100vh - 60px);
+  min-height: calc(100vh - 60px - 30px);
 }
 
 .dash_title {
