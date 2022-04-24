@@ -64,7 +64,6 @@ const componente_Modelo = require("../models/componente");
 const aplicacion_Modelo = require("../models/aplicacion");
 const sucursal_medica_Modelo = require("../models/sucursal_medica");
 
-
 const sequelize = new Sequelize("database_salutest", "root", "", {
   host: "localhost",
   dialect: "mysql",
@@ -169,25 +168,26 @@ usuario_empleado.belongsTo(empleado);
 persona.hasMany(paciente);
 paciente.belongsTo(persona);
 
-
 paciente.hasMany(usuario_paciente);
 usuario_paciente.belongsTo(paciente);
 
-
 institucion_medica.hasMany(solicitud);
 solicitud.belongsTo(institucion_medica);
-
 
 aplicacion.hasMany(componente);
 componente.belongsTo(aplicacion);
 
 
-
 institucion_medica.hasMany(sucursal_medica);
 sucursal_medica.belongsTo(institucion_medica);
 
-catalogo.hasMany(institucion_medica);
-institucion_medica.belongsTo(catalogo);
+
+catalogo.belongsToMany(institucion_medica, {
+  through: 'institucion_catalogo'
+});
+institucion_medica.belongsToMany(catalogo, {
+  through: 'institucion_catalogo',
+});
 
 module.exports = {
   catalogo,

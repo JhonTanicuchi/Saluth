@@ -4,6 +4,10 @@ const Handlebars = require("handlebars");
 
 const sucursales_medicas = {};
 
+Handlebars.registerHelper("formatDate", function (date) {
+  return date.toLocaleDateString() + " " + date.toLocaleTimeString();
+});
+
 Handlebars.registerHelper("length", function (list) {
   return list.length;
 });
@@ -29,8 +33,19 @@ sucursales_medicas.mostrar = (req, res) => {
 };
 
 sucursales_medicas.read = async (req, res) => {
-  const instituciones = await sql.query("SELECT * FROM institucion_medicas");
-  res.render("modules/sucursales_medicas", { instituciones });
+  const id_institucion_medica = req.params.id;
+  const sucursales_medicas = await sql.query(
+    "SELECT * FROM sucursal_medicas WHERE institucionMedicaIdInstitucionMedica = ?",
+    [id_institucion_medica]
+  );
+   const institucion_medica = await sql.query(
+     "SELECT * FROM institucion_medicas WHERE id_institucion_medica = ?",
+     [id_institucion_medica]
+   );
+  res.render("modules/sucursales_medicas", {
+    sucursales_medicas,
+    institucion_medica,
+  });
 };
 
 module.exports = sucursales_medicas;

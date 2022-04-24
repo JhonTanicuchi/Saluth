@@ -5,7 +5,7 @@ const sucursales_medicasController = require('../controllers/sucursales_medicas.
 const {check_login} = require('../lib/auth');
 
 rutas.get(
-  "/sucursales_medicas",
+  "/sucursales_medicas/:id",
   check_login,
   sucursales_medicasController.read
 );

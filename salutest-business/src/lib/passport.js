@@ -24,7 +24,7 @@ passport.use(
       );
       if (person_rows.length > 0) {
         const user = person_rows[0];
-        console.log(user)
+        console.log(user.nombre)
 
         const validPassword = await helpers.matchPassword(
           password,

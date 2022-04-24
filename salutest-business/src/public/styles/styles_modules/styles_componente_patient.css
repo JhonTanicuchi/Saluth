@@ -9,7 +9,7 @@
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 1.5rem;
     flex-wrap: nowrap;
-    height: calc(100vh - 10rem - 30px);
+    height: calc(100vh - 10rem);
     position: relative;
 }
 

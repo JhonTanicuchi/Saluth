@@ -10,13 +10,6 @@
 
         <div class="instituciones_medicas_grid">
             <section class="instituciones_medicas_wrapper">
-                <div class="instituciones_medicas_filter">
-                    <div>
-                        <span class="fas fa-search"></span>
-                        <input onkeyup="instituciones_medicas_filter()" id="instituciones_medicas_filter" type="text"
-                            placeholder="Filtrar por: institución, tipo" />
-                    </div>
-                </div>
                 <div class="instituciones_medicas_list">
                     {{#each componentes_patient}}
                     <div class="per-card-3">
@@ -28,22 +21,21 @@
                             <div class="card-text">
                                 <span>{{descripcion_componente}}</span>
                             </div>
-                       
+
                             <div>
                                 {{#if default_componente}}
                                 <i class="fas fa-unlock"></i>
-                                <button onclick="window.location='/componentes_patient/lock/{{id_componente}}'"class="btn_salutest">Hacer privado</button>
+                                <button onclick="window.location='/componentes_patient/lock/{{id_componente}}'"
+                                    class="btn_salutest">Hacer privado</button>
                                 {{else}}
                                 <i class="fas fa-lock"></i>
-                                <button onclick="window.location='/componentes_patient/unlock/{{id_componente}}'" class="btn_salutest">Hacer público</button>
+                                <button onclick="window.location='/componentes_patient/unlock/{{id_componente}}'"
+                                    class="btn_salutest">Hacer público</button>
 
-                                
                                 {{/if}}
                             </div>
-                         
                         </div>
                     </div>
-
                     {{/each}}
 
                 </div>
@@ -55,7 +47,7 @@
             </section>
             <section class="instituciones_medicas_info">
                 <div class="summary_card">
-                    <div onclick="window.location='/componentes_patient/totales'" class="summary_single">
+                    <div onclick="window.location='/componentes_patient'" class="summary_single">
                         <div>
                             <span class="fas fa-list"></span>
                             <span>Totales</span>
