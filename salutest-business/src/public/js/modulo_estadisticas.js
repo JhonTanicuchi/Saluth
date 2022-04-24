@@ -1,20 +1,20 @@
-document.querySelector(".agregar").addEventListener("click", agregar);
-document.querySelector(".resultados").addEventListener("click", resultados);
+document.querySelector(".agregar_estadisticas").addEventListener("click", agregar);
+document.querySelector(".resultados_estadisticas").addEventListener("click", resultados);
 
 var parametros = [];
 var valores = [];
 
 function agregar() {
-    let html = document.querySelector(".container").innerHTML;
-    let newHTML = '<div><input type="text" class="parametro" placeholder="parametro"><input type="number" class="valor" placeholder="valor"></div>';
-    document.querySelector(".container").innerHTML = html + newHTML;
+    let html = document.querySelector(".container_estadisticas").innerHTML;
+    let newHTML = '<div><input name=parametro_estadisticas type="text" class="parametro_estadisticas" placeholder="Parametro"><input type="number" class="valor_estadisticas" placeholder="valor"></div>';
+    document.querySelector(".container_estadisticas").innerHTML = html + newHTML;
 }
 
 
 function resultados() {
-    for (var i = 0; i < document.querySelectorAll('.parametro').length; i++) {
-        parametros.push(document.querySelectorAll('.parametro')[i].value);
-        valores.push(parseInt(document.querySelectorAll(".valor")[i].value));
+    for (var i = 0; i < document.querySelectorAll('.parametro_estadisticas').length; i++) {
+        parametros.push(document.querySelectorAll('.parametro_estadisticas')[i].value);
+        valores.push(parseInt(document.querySelectorAll(".valor_estadisticas")[i].value));
     }
     var data = [{
         x: parametros,
