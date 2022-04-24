@@ -10,7 +10,6 @@ rutas.get(
     check_login,
     componenteController.list
   );
-
   
   rutas.get(
     "/componentes_patient/default",

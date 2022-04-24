@@ -12,8 +12,6 @@ componente_patient.list = async (req, res) => {
     res.render('modules/componentes_patient', {
         componentes_patient,
     });
-
-
 }
 
 componente_patient.list_default = async (req, res) => {
@@ -26,8 +24,6 @@ componente_patient.list_default = async (req, res) => {
     res.render('modules/componentes_patient', {
         componentes_patient,
     });
-
-
 }
 
 module.exports = componente_patient

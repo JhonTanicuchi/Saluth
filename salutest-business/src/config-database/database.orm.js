@@ -62,7 +62,6 @@ const solicitudes_componentes_Modelo = require("../models/solicitud_componentes"
 const institucion_medica_Modelo = require("../models/institucion_medica");
 const componente_Modelo = require("../models/componente");
 const aplicacion_Modelo = require("../models/aplicacion");
-
 const sucursal_medica_Modelo = require("../models/sucursal_medica");
 
 
@@ -148,6 +147,8 @@ const aplicacion = aplicacion_Modelo(sequelize, Sequelize);
 const sucursal_medica = sucursal_medica_Modelo(sequelize, Sequelize);
 
 
+
+
 //relaciones
 
 persona.hasMany(empleado_business);
@@ -179,6 +180,7 @@ solicitud.belongsTo(institucion_medica);
 
 aplicacion.hasMany(componente);
 componente.belongsTo(aplicacion);
+
 
 
 institucion_medica.hasMany(sucursal_medica);
@@ -235,4 +237,5 @@ module.exports = {
   componente,
   aplicacion,
   sucursal_medica,
+  
 };
