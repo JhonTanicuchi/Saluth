@@ -1,0 +1,48 @@
+<!-- MAIN CONTECT -->
+<div class="main_contect">
+    <main class="main_app">
+        <section class="dash_title">
+            <h2 id="title_modules" class="hidden">Instituciones</h2>
+            <h2>Instituciones Médicas</h2>
+            <a href="/home"><span class="far fa-times-circle"></span></a>
+        </section>
+        <div class="componente_grid">
+            <div class="title">Componentes</div>
+            <form action="/add" method="post">
+                <div class="user-details">
+                    <div class="input-box">
+                        <span class="details">Nombre</span>
+                        <input name="nombre_componente" type="text" placeholder="nombre del componente" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Aplicaciones </span>
+                        <select name="id_aplicacion" class="input" id="aplicacion">
+                            <option selected disabled value=""></option>
+                            {{#each aplicaciones}}
+                            <option value={{id_aplicacion}}>{{nombre_aplicacion}}</option>
+                            {{/each}}
+                        </select>
+                    </div>
+                </div>
+                <div class="component-details">
+                    <input type="radio" name="default_componente" id="dot-1">
+                    <input type="radio" name="component" id="dot-2">
+                    <span class="component-title">Tipo de Componente</span>
+                    <div class="category">
+                        <label for="dot-1">
+                            <span class="dot one"></span>
+                            <span class="component">Defauel</span>
+                        </label>
+                        <label for="dot-2">
+                            <span class="dot two"></span>
+                            <span class="component">Privada</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="button">
+                    <input type="submit" value="Enviar Datos">
+                </div>
+            </form>
+        </div>
+    </main>
+</div>
