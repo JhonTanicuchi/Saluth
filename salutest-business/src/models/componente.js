@@ -9,15 +9,10 @@ const componente = (sequelize, type) => {
         },
         nombre_componente: type.STRING,
         descripcion_componente: type.STRING,
-<<<<<<< HEAD
         estado_componente: {
           type: type.BOOLEAN,
           defaultValue: true,
         },
-=======
-        
-        estado_componente: type.BOOLEAN,
->>>>>>> 4574da79ddb3dbecfc4134b56e6660ce4505e238
         default_componente: type.BOOLEAN,
 
 
