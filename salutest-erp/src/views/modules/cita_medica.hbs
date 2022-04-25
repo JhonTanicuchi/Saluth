@@ -13,18 +13,42 @@
             <!--Crear los input-->
             <form action="/add " method="post"> 
                 <div class="container2">
-                    
+
                     <div class="texto1">
+                        <h4>Paciente</h4>
+                        <input type="" name="" placeholder="Cedula" required>
+                    </div>
+                    <div class="texto1">
+                        <h4>Medico</h4>
+                        <input type="" name="" placeholder="Cedula" required>
+                    </div>
+                    <div class="texto1">
+                        <h4>Especialidad</h4>
+                        <select name="virtual">
+                            <option>Seleccione</option>
+                            <option>Cardiología</option>
+                            <option>Infectología</option>
+                            <option>Neurología</option>
+                            <option>Patología</option>
+                            <option>Reumatología</option>
+                            <option>Urología</option>
+                        </select>
+                    </div>
+                    <div class="texto1">
+                        <h4>Fecha Asignada</h4>
                         <input type="date" name="fecha_asignada" required>
                     </div>
                     <div class="texto1">
+                        <h4>Hora Inicio</h4>
                         <input type="time" name="hora_inicio" required>
                     </div>
                     <div class="texto1">
-                        <input type="time" name="hora_fin" required>
-                    </div>
-                    <div class="texto1">
-                        <input type="text" name="virtual" placeholder="Virtual" required>
+                        <h4>Tipo Cita</h4>
+                        <select name="virtual">
+                            <option>Seleccione</option>
+                            <option>Virtual</option>
+                            <option>Presencial</option>
+                        </select>
                     </div>
                 </div>
 

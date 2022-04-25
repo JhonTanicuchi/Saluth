@@ -96,6 +96,8 @@ app.use(require('./rutas/lista_usuarios_pacientes'))
 app.use(require('./rutas/vistaempleadosdb'))
 app.use(require('./rutas/receta_medica'))
 app.use(require('./rutas/signos_vitales'))
+app.use(require('./rutas/componentes'))
+app.use(require('./rutas/modulos'))
     /* app.use('/modules', require('./routes/inquiries')) */
 
 module.exports = app;

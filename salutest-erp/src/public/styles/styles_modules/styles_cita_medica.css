@@ -20,7 +20,27 @@
     width: 200px;
     color:#e8f5ff;
     font-size: 20px;
-    height: 30px;;
+    height: 30px;
+    margin-top: 10px;
+}
+
+.container2 h4{
+    margin-left: -190px;
+    top: 10px;
+    position: absolute;
+}
+
+.container2 select{
+    border-radius: 0px;
+    width: 200px;
+    height: 20px;
+    background-color:#6eb8f6;
+    border-radius: 5px;
+    width: 200px;
+    color:#e8f5ff;
+    font-size: 20px;
+    height: 30px;
+    margin-top: 10px;
 }
 
 .tabla_cita{
@@ -48,6 +68,7 @@
     position: relative;
     justify-items: center;
 }
+
 
 .container1 h1{
     font-size: 28px;
