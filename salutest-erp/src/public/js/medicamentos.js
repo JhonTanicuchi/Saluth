@@ -28,8 +28,8 @@ function InsertarDatos(data) {
     columna2 = Fila.insertCell(1).innerHTML = data.pro
     columna3 = Fila.insertCell(2).innerHTML = data.peso
     columna4 = Fila.insertCell(3).innerHTML = data.pre
-    columna5 = Fila.insertCell(4).innerHTML = `<input class="editar" type="button" onClick="Editar(this)" value="Editar" >
-                                                <input class="eliminar" type="button" onClick="onDelete(this)" value="Eliminar">`
+    columna5 = Fila.insertCell(4).innerHTML = `<input class="editar_medicamentos" type="button" onClick="Editar(this)" value="Editar" >
+                                                <input class="eliminar_medicamentos" type="button" onClick="onDelete(this)" value="Eliminar">`
     document.getElementById("cod").focus()
     Vaciar()
 }
