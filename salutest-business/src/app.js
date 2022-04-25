@@ -41,7 +41,7 @@ app.use(
 app.use(bodyparser.json());
 app.use(
     session({
-        secret: "Salutest_Business",
+        secret: "Salutest",
         resave: false,
         saveUninitialized: false,
         store: new mysqlstore(database),
@@ -66,26 +66,24 @@ app.use(express.static(path.join(__dirname, "public")));
 //public
 
 //routers
-app.use(require("./rutas/registro"));
+app.use(require('./rutas/registro'))
 app.use(require("./rutas/login"));
 app.use(require("./rutas/profile"));
-app.use(require("./rutas/settings"));
+app.use(require("./rutas/control_panel"));
 app.use(require("./rutas/especialidades"));
 app.use(require("./rutas/solicitudes"));
 app.use(require("./rutas/solicitudes_componentes"));
 app.use(require("./rutas/instituciones_medicas"));
 app.use(require("./rutas/sucursales_medicas"));
-app.use(require("./rutas/general_configuration"));
-app.use(require("./rutas/componentes_erp"));
-app.use(require("./rutas/modulos_erp"));
-app.use(require("./rutas/modules_patient"));
-app.use(require("./rutas/componentes_management"));
-app.use(require("./rutas/modulo_componentes"));
-app.use(require("./rutas/modules_management"));
-app.use(require("./rutas/modulo_estadisticas"));
+app.use(require("./rutas/menu_aplications"));
 app.use(require("./rutas/CRM"));
 app.use(require("./rutas/ERP"));
 app.use(require("./rutas/Patient"));
 app.use(require("./rutas/Management"));
+app.use(require("./rutas/module"));
+app.use(require("./rutas/modules_erp"));
+app.use(require("./rutas/modules_patient"));
+app.use(require("./rutas/modules_management"));
+app.use(require("./rutas/statistics"));
 
 module.exports = app;

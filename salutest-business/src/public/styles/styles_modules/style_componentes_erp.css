@@ -78,3 +78,14 @@
     background: #fff;
     
 }
+
+.boton-mas h2{
+    position: fixed;
+    line-height: 45px;
+    right: 30px;
+    color: #21c8f6;
+    text-align: center;
+    font-size: 25px;
+    z-index: 100;
+    top: 520px;
+}

@@ -9,9 +9,7 @@ const modulo = (sequelize, type) => {
         },
         nombre_modulo: type.STRING,
         descripcion_modulo: type.STRING,
-        
         estado_modulo: type.BOOLEAN,
-
         creacionModulo: {
           type: "TIMESTAMP",
           defaultValue: type.literal("CURRENT_TIMESTAMP"),

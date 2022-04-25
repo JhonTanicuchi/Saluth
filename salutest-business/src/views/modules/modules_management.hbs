@@ -1,62 +1,87 @@
+<!-- MAIN CONTECT -->
 <div class="main_contect">
-  <main class="main_app">
-    <section class="dash_title">
-      <h2 id="title_modules">Modules</h2>
-      <a href="/home"><span class="far fa-times-circle"></span></a>
-    </section>
+    <main class="main_app">
+        <section class="dash_title">
+            <h2 id="title_modules" class="pestana hidden">Modulos Management</h2>
 
-    <section class="dash_title">
-      <h2></h2>
-    </section>
+        </section>
 
-    <div class="modules_grid">
-      
-      <h1 class="modules">CONTROLADORES</h1>
-    <h1 class="modules" >MODULOS MANAGEMENT</h1>
+        <!--Contenedor 1-->
 
+        <div class="instituciones_medicas_grid">
+            <section class="instituciones_medicas_wrapper">
+                <div class="instituciones_medicas_list">
+                    {{#each componentes_management}}
+                    <div class="tarj-modu">
+                        <div class="left-column background-left-column">
+                            <h6>Controladores</h6>
+                            <h2>{{nombre_modulo}}</h2>
+                            <i class="material-icons">groups</i>
+                        </div>
+                        <div class="rigth-column">
+                            <div>
+                                <h4>23-Abril-2022</h4>
+                                <h6>2022-2023</h6>
+                            </div>
+                            <h2>A-Z</h2>
+                            <p>{{descripcion_modulo}}</p>
+                            <p>{{valor_catalogo}}</p>
 
-    <div class="galeria">
-        <div class="foto">
-            <img src="/img/f.png" alt="">
+                            {{#if (public valor_catalogo)}}
+                            <i class="fas fa-unlock"></i>
+                            <button onclick="window.location='/modules_management/lock/{{id_modulo}}'"
+                                class="btn_salutest">Hacer privado</button>
+                            {{else}}
+                            <i class="fas fa-lock"></i>
+                            <button onclick="window.location='/modules_management/unlock/{{id_modulo}}'"
+                                class="btn_salutest">Hacer público</button>
+                            {{/if}}
+
+                            <form action="#" class="mostrar background-left-column">
+                                <button class="mostrar background9-left-column">Mostrar</button>
+                            </form>
+                        </div>
+                    </div>
+                    {{/each}}
+
+                </div>
+                {{#unless componentes_management}}
+                <div class="container_instituciones_medicas_no_content">
+                    <h1>No hay instituciones</h1>
+                </div>
+                {{/unless}}
+            </section>
+            <section class="instituciones_medicas_info">
+                <div class="summary_card">
+                    <div onclick="window.location='/modules_management'" class="summary_single">
+                        <div>
+                            <span class="fas fa-list"></span>
+                            <span>Totales</span>
+                        </div>
+                        <h5>{{length modules_management_totals}}</h5>
+                    </div>
+                </div>
+
+                <!--Publicas-->
+
+                <div class="summary_card">
+                    <div onclick="window.location='/modules_management/public'" class="summary_single">
+                        <div>
+                            <span class="fas fa-unlock"></span>
+                            <span>Publicos</span>
+                        </div>
+                        <h5>{{length modules_management_public}}</h5>
+                    </div>
+
+                    <!--Privadas-->
+
+                    <div onclick="window.location='/modules_management/private'" class="summary_single">
+                        <div>
+                            <span class="fas fa-lock"></span>
+                            <span>Privados</span>
+                        </div>
+                        <h5>{{length modules_management_private}}</h5>
+                    </div>
+                </div>
+            </section>
         </div>
-        <div class="pie">
-            <p>E M P L E A D O S  </p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste ab labore maiores sed deserunt eveniet debitis velit explicabo inventore magni accusamus rerum, error facilis. Ipsa esse quos aut mollitia ullam.</p>
-            <form action="#">
-                <button class="boton">M O S T R A R</button>
-            </form>
-        </div>
-    </div>
-
-
-    <div class="galeria">
-        <div class="foto">
-            <img src="/img/f1.png" alt="">
-        </div>
-        <div class="pie">
-            <p>E M P L E A D O </p>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt dolorum vitae libero aliquam magnam aliquid. Non modi repellat quod exercitationem. Quasi, atque est eos ut sunt odit totam? Non, alias!</p>
-            
-            <form action="#">
-                <button class="boton">M O S T R A R</button>
-            </form>
-        </div>
-    </div>
-    
-
-    <div class="galeria">
-        <div class="foto">
-            <img src="/img/f2.png" alt="">
-        </div>
-        <div class="pie">
-            <p>L A B O R A T O R I O S</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis perspiciatis id hic nostrum repellendus, cupiditate inventore aperiam eligendi saepe nemo pariatur impedit aut, praesentium voluptas ipsa non eius neque dicta.</p>
-            <form action="#">
-                <button class="boton">M O S T R A R</button>
-            </form>
-        </div>
-    </div>
-
-    </div>
-  </main>
-</div>
