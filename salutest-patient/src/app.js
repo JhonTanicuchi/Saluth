@@ -82,6 +82,7 @@ app.use(require('./rutas/registro_citas'))
 app.use(require("./rutas/certificado_medico"))
 
 
+
 /* app.use('/modules', require('./routes/inquiries')) */
 
 module.exports = app;
