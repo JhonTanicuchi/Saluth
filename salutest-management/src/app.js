@@ -36,7 +36,7 @@ app.use(bodyparser.urlencoded({
 }));
 app.use(bodyparser.json());
 app.use(session({
-    secret: 'Salutest_Management',
+    secret: 'Salutest',
     resave: false,
     saveUninitialized: false,
     store: new mysqlstore(database)
