@@ -1,98 +1,111 @@
-.medicamentos_grid {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-column-gap: 1.5rem;
+.contenido_medicamentos {
+    width: 80%;
+    margin: 40px auto;
+    background: rgb(124, 154, 167);
 }
 
-.conte_medicamentos{
-    background: white;
-    border-radius: 7px;
-    padding: 1.5rem;
-}
-
-.conte_medicamentos .card {
-    height: 200px;
-    width: 100%;
-}
-
-.card img {
-    margin: auto;
-    display: block;
-}
-
-.conte_medicamentos .paracetamol img {
-    height: 250px;
-    width: 350px;
-}
-
-.conte_medicamentos .aspirina img {
-    height: 250px;
-    width: 350px;
-}
-
-.conte_medicamentos .amoxicilina img {
-    height: 250px;
-    width: 350px;
-}
-
-.conte_medicamentos .paracetamol {
-    height: 170px;
-    width: 200px;
-}
-
-.conte_medicamentos .aspirina {
-    height: 170px;
-    width: 200px;
-}
-
-.conte_medicamentos .amoxicilina {
-    height: 170px;
-    width: 200px;
-}
-
-.informacion_medicamentos {
-    height: 80px;
-    width: 100%;
-}
-
-.informacion_medicamentos h1 {
-    font-family: sans-serif;
-    font-size: 1.5em;
-    text-align: center;
-    color: #333;
-    margin-bottom: -1px;
-}
-
-.informacion_medicamentos p {
-    text-align: center;
-    font-family: sans-serif;
-    font-size: 1.1em;
-    color: #555;
-}
-
-.precio_medicamentos {
+.tabla_medicamentos {
+    width: auto;
     height: 25px;
-    width: 65%;
-    margin: auto;
-    font-family: sans-serif;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    border: 3px solid #000;
+    background-color: #dede91;
+    font-family: 'Quicksand', sans-serif;
 }
 
-.box-precio_medicamentos {
-    width: 80px;
+.separador_medicamentos {
+    border: 3px solid rgb(0, 0, 0);
+    text-align: center;
+    padding: 3px 15px;
+}
+
+.tabla_medicamentos td {
+    border: 3px solid rgb(0, 0, 0);
+    text-align: center;
+    padding: 3px 15px;
+}
+
+.tabla_medicamentos th {
+    border: 3px solid #000000;
+    width: 100px;
+    height: 25px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-family: 'Quicksand', sans-serif;
+    background-color: rgb(31, 238, 117);
+    font-size: medium;
+}
+
+.contenedor_medicamentos {
+    padding: 25px;
+    background: #c24766e7;
+    display: inline-block;
+    color: rgb(0, 0, 0);
+    border: solid 4px rgb(0, 0, 0);
+}
+
+.titulo_medicamentos {
+    font: sans-serif;
+    font-size: medium;
+}
+
+.texto_medicamentos {
+    width: 90%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 2px solid rgb(165, 161, 161);
+    border-radius: 4px;
 }
 
 .precio_medicamentos {
-    color: red;
+    width: 90%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 2px solid rgb(165, 161, 161);
+    border-radius: 4px;
 }
 
-.precio_medicamentos {
-    font-size: 1.3em;
+.submit_medicamentos {
+    background: rgb(60, 241, 10);
+    padding: 2px 12px;
+    margin: 15px 0 10px;
+    display: inline-block;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
 }
 
-.shoping {
-    font-size: 1.9em;
-    color: rgb(2, 2, 2);
+.submit_medicamentos:hover {
+    background: #55585a;
+    color: rgb(255, 255, 255);
+}
+
+.editar_medicamentos {
+    background: rgb(19, 182, 218);
+    padding: 6px 12px;
+    margin: 15px 0 10px;
+    display: inline-block;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.editar_medicamentos:hover {
+    background: #3e3f41;
+}
+
+.eliminar_medicamentos {
+    background: rgb(19, 182, 218);
+    padding: 6px 12px;
+    margin: 15px 0 10px;
+    display: inline-block;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.eliminar_medicamentos:hover {
+    background: #3e3f41;
 }

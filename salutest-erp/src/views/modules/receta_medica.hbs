@@ -8,35 +8,49 @@
 
         <div class="receta_grid">
         
-            <form >
-                    <div class="caja">
-                        <br>
-                      <label for="pac">Paciente</label> 
-                      <input type="text" id="pac" placeholder="Escriba aqui" required>
-                      <br>
-                      <label for="fe">Fecha</label>
-                       <input type="date" id="fe" placeholder="Escriba aqui" required>
-                      <br>
-                      <label for="med">Medicamento</label> 
-                      <input type="text" id="med" placeholder="Escriba aqui" required>
-                      <br>
-                      <label for="via">Via ADMIN</label> 
-                      <input type="text" id="via" placeholder="Escriba aqui" required>
-                      <br>
-                      <label for="dos">Dosis</label> 
-                      <input type="text" id="dos" placeholder="Escriba aqui" required>
-                      <br>
-                      <label for="fre">Frecuencia </label> 
-                      <input type="text" id="fre" placeholder="Escriba aqui" required>
-                      <br>
-                      <label for="dur">Duracion</label> 
-                      <input type="text" id="dur" placeholder="Escriba aqui" required>
-                      <br/>
-                      <br/>
-                      <input class="submit" type="submit" value="Generar Receta">
-                    </div>
-                    
-                    </form>
+           
+            <form onsubmit="event.preventDefault();onSubmit();" autocomplete="off">
+        
+              <div class="caja_receta">
+                 
+                <label for="pac">Paciente</label> 
+                <input type="text" id="pac" placeholder="Escriba aqui" required>
+                <label for="fe">Fecha</label> 
+                <input type="date" id="fe" placeholder="Escriba aqui" required>
+                <label for="med">Medicamento</label>
+                 <input type="text" id="med" placeholder="Escriba aqui" required>
+                <label for="via">Via ADMIN</label>
+                <input type="text" id="via" placeholder="Escriba aqui" required>
+                <label for="dos">Dosis</label> 
+                <input type="text" id="dos" placeholder="Escriba aqui" required>
+                <label for="fre">Frecuencia</label> 
+                <input type="text" id="fre" placeholder="Escriba aqui" required>
+                <input class="submit" type="submit" value="Agregar">
+            </div>
+            <br>
+            <br>
+              <div class="tablita_receta">
+                <table class="tabla_receta" id="tabla">
+                  <thead>
+                    <tr> 
+                        <th>Paciente</th> 
+                      <th>Fecha</th>
+                      <th>Medicamento</th>
+                      <th>Via ADMIN</th>
+                      <th>Dosis</th>
+                      <th>Frecuencia</th>
+                      <th>Duracion</th>
+                      <th>Operación</th>
+                    </tr>
+                  </thead>
+                    <tbody>
+      
+                    </tbody>
+                </table>
+              </div>
+              
+              </form>
+        
 
 
         </div>

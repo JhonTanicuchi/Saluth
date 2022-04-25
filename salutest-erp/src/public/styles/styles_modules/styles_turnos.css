@@ -1,0 +1,126 @@
+.datable-container{
+    background-color: #fff;
+    border-radius: var(--dt-border-radius);
+    color: black;
+    width: 840px;
+    margin: 0 auto;
+    font-size: 12px;
+}
+
+.container{
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.container2_turnos{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    
+}
+.container2_turnos input{
+    border-radius: 0px;
+    width: 200px;
+    height: 25px;
+    background-color:#828282;
+    border-radius: 5px;
+    width: 200px;
+    color:#fff;
+    font-size: 20px;
+}
+
+.tabla_turnos{
+    width: 100%;
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    table-layout: fixed;
+}
+
+.tabla_turnos caption {
+    font-size: 28px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 8px 0px;
+    background-color: #aaaaaa;
+    color: #fff;
+
+}
+
+.texto1{
+    width: 100px;
+    font-size: 20px;
+    position: relative;
+    justify-items: center;
+}
+
+.titulo_turnos{
+    font-size: 28px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 8px 0px;
+    text-align: center;
+    font-size: 28px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 8px 0px;
+    background-color: #aaaaaa;
+    color: #fff;
+}
+
+.tabla_turnos tr{
+    background-color: #aaaaaa;
+    border: 1px solid #828282;
+}
+
+.tabla_turnos th, .table td {
+    font-size: 16px;
+    padding: 8px;
+    text-align: center;
+}
+
+.tabla_turnos thead th{
+    text-transform: uppercase;
+    background-color: #828282;
+}
+
+.tabla_turnos tbody tr:hover{
+    background-color: #aaaaaa;
+}
+
+.tabla_turnos tbody td:hover{
+    background-color: #828282;
+}
+
+.tabla_turnos .Eliminar{
+    color: tomato;
+    cursor: pointer;
+}
+
+tabla_turnos .Editar{
+    color: #a4f66e;
+    cursor: pointer;
+}
+
+.botones_turnos button{
+    background: #aaaaaa;
+    color: #fff;
+    display: inline-block;
+    font-size: 20px;
+    margin: 20px;
+    padding: 10px 0px;
+    text-align: center;
+    width: 100px;
+    cursor: pointer;
+    border-radius: 25px;
+}
+.botones_turnos{
+display: flex;
+position: relative;
+justify-content: center;
+align-items: center;
+}
