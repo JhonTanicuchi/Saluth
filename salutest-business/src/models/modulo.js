@@ -1,25 +1,23 @@
-const componente = (sequelize, type) => {
+const modulo = (sequelize, type) => {
     return sequelize.define(
-      "componente",
+      "modulo",
       {
-        id_componente: {
+        id_modulo: {
           type: type.INTEGER,
           primaryKey: true,
           autoIncrement: true,
         },
-        nombre_componente: type.STRING,
-        descripcion_componente: type.STRING,
+        nombre_modulo: type.STRING,
+        descripcion_modulo: type.STRING,
         
-        estado_componente: type.BOOLEAN,
-        default_componente: type.BOOLEAN,
+        estado_modulo: type.BOOLEAN,
 
-
-        creacionComponente: {
+        creacionModulo: {
           type: "TIMESTAMP",
           defaultValue: type.literal("CURRENT_TIMESTAMP"),
           allowNull: false,
         },
-        actualizacionComponente: {
+        actualizacionModulo: {
           type: "TIMESTAMP",
           defaultValue: type.literal("CURRENT_TIMESTAMP "),
           allowNull: false,
@@ -31,4 +29,4 @@ const componente = (sequelize, type) => {
     );
   };
   
-  module.exports = componente;
+  module.exports = modulo;

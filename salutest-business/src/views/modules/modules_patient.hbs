@@ -3,7 +3,6 @@
     <main class="main_app">
         <section class="dash_title">
             <h2 id="title_modules" class="pestana hidden">Componentes Patient</h2>
-
         </section>
 
         <!--Contenedor 1-->
@@ -11,27 +10,27 @@
         <div class="instituciones_medicas_grid">
             <section class="instituciones_medicas_wrapper">
                 <div class="instituciones_medicas_list">
-                    {{#each componentes_patient}}
+                    {{#each modules_patient}}
                     <div class="per-card-3">
                         <div class="card-image">
                             <span></span>
-                            <span class="per-name">{{nombre_componente}}</span>
+                            <span class="per-name">{{nombre_modulo}}</span>
                         </div>
                         <div class="card-content">
                             <div class="card-text">
-                                <span>{{descripcion_componente}}</span>
+                                <span>{{descripcion_modulo}}</span>
+                                <span>{{valor_catalogo}}</span>
                             </div>
 
                             <div>
-                                {{#if default_componente}}
+                                {{#if (public valor_catalogo)}}
                                 <i class="fas fa-unlock"></i>
-                                <button onclick="window.location='/componentes_patient/lock/{{id_componente}}'"
+                                <button onclick="window.location='/modules_patient/lock/{{id_modulo}}'"
                                     class="btn_salutest">Hacer privado</button>
                                 {{else}}
                                 <i class="fas fa-lock"></i>
-                                <button onclick="window.location='/componentes_patient/unlock/{{id_componente}}'"
+                                <button onclick="window.location='/modules_patient/unlock/{{id_modulo}}'"
                                     class="btn_salutest">Hacer público</button>
-
                                 {{/if}}
                             </div>
                         </div>
@@ -39,7 +38,7 @@
                     {{/each}}
 
                 </div>
-                {{#unless componentes_patient}}
+                {{#unless modules_patient}}
                 <div class="container_instituciones_medicas_no_content">
                     <h1>No hay instituciones</h1>
                 </div>
@@ -47,35 +46,37 @@
             </section>
             <section class="instituciones_medicas_info">
                 <div class="summary_card">
-                    <div onclick="window.location='/componentes_patient'" class="summary_single">
+                    <div onclick="window.location='/modules_patient'" class="summary_single">
                         <div>
                             <span class="fas fa-list"></span>
                             <span>Totales</span>
                         </div>
-                        <h5>{{length componentes_patient_totales}}</h5>
+                        <h5>{{length modules_patient_totals}}</h5>
                     </div>
                 </div>
 
                 <!--Publicas-->
 
                 <div class="summary_card">
-                    <div onclick="window.location='/componentes_patient/publicos'" class="summary_single">
+                    <div onclick="window.location='/modules_patient/public'" class="summary_single">
                         <div>
                             <span class="fas fa-unlock"></span>
                             <span>Publicos</span>
                         </div>
-                        <h5>{{length componentes_patient_publicos}}</h5>
+                        <h5>{{length modules_patient_public}}</h5>
                     </div>
 
                     <!--Privadas-->
 
-                    <div onclick="window.location='/componentes_patient/privados'" class="summary_single">
+                    <div onclick="window.location='/modules_patient/private'" class="summary_single">
                         <div>
                             <span class="fas fa-lock"></span>
                             <span>Privados</span>
                         </div>
-                        <h5>{{length componentes_patient_privados}}</h5>
+                        <h5>{{length modules_patient_private}}</h5>
                     </div>
                 </div>
             </section>
         </div>
+    </main>
+</div>
