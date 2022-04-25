@@ -60,7 +60,7 @@ const historia_clinica_Modelo = require("../models/historia_clinica");
 const solicitud_Modelo = require("../models/solicitud");
 const solicitudes_componentes_Modelo = require("../models/solicitud_componentes");
 const institucion_medica_Modelo = require("../models/institucion_medica");
-const componente_Modelo = require("../models/componente");
+const modulo_Modelo = require("../models/modulo");
 const aplicacion_Modelo = require("../models/aplicacion");
 const sucursal_medica_Modelo = require("../models/sucursal_medica");
 
@@ -141,7 +141,7 @@ const historia_clinica = historia_clinica_Modelo(sequelize, Sequelize);
 const solicitud = solicitud_Modelo(sequelize, Sequelize);
 const solicitudes_componentes = solicitudes_componentes_Modelo(sequelize, Sequelize);
 const institucion_medica = institucion_medica_Modelo(sequelize, Sequelize);
-const componente = componente_Modelo(sequelize, Sequelize);
+const modulo = modulo_Modelo(sequelize, Sequelize);
 const aplicacion = aplicacion_Modelo(sequelize, Sequelize);
 const sucursal_medica = sucursal_medica_Modelo(sequelize, Sequelize);
 
@@ -174,8 +174,8 @@ usuario_paciente.belongsTo(paciente);
 institucion_medica.hasMany(solicitud);
 solicitud.belongsTo(institucion_medica);
 
-aplicacion.hasMany(componente);
-componente.belongsTo(aplicacion);
+aplicacion.hasMany(modulo);
+modulo.belongsTo(aplicacion);
 
 
 institucion_medica.hasMany(sucursal_medica);
@@ -188,6 +188,15 @@ catalogo.belongsToMany(institucion_medica, {
 institucion_medica.belongsToMany(catalogo, {
   through: 'institucion_catalogo',
 });
+
+catalogo.belongsToMany(modulo, {
+  through: "modulo_catalogo",
+});
+modulo.belongsToMany(catalogo, {
+  through: "modulo_catalogo",
+});
+
+
 
 module.exports = {
   catalogo,
@@ -234,8 +243,7 @@ module.exports = {
   solicitud,
   solicitudes_componentes,
   institucion_medica,
-  componente,
+  modulo,
   aplicacion,
   sucursal_medica,
-  
 };

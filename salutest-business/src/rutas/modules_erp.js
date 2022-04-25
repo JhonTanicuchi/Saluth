@@ -2,7 +2,7 @@ const express = require("express");
 const rutas = express.Router();
 
 const { check_login } = require("../lib/auth");
-const componenteController = require("../controllers/modules_erp.controller");
+const modules_erpController = require("../controllers/modules_erp.controller");
 
 rutas.get("/modules_erp", check_login, modules_erpController.list);
 

@@ -11,38 +11,38 @@
         <div class="instituciones_medicas_grid">
             <section class="instituciones_medicas_wrapper">
                 <div class="instituciones_medicas_list">
-                     {{#each componentes_management}}
-       <div class="tarj-modu">
-        <div class="left-column background-left-column">
-            <h6>Controladores</h6>
-            <h2>{{nombre_modulo}}</h2>
-            <i class="material-icons">groups</i>
-        </div>
-        <div class="rigth-column">
-            <div>
-                <h4>23-Abril-2022</h4>
-                <h6>2022-2023</h6>
-            </div>
-            <h2>A-Z</h2>
-            <p>{{descripcion_modulo}}</p>
-            <p>{{valor_catalogo}}</p>
+                    {{#each componentes_management}}
+                    <div class="tarj-modu">
+                        <div class="left-column background-left-column">
+                            <h6>Controladores</h6>
+                            <h2>{{nombre_modulo}}</h2>
+                            <i class="material-icons">groups</i>
+                        </div>
+                        <div class="rigth-column">
+                            <div>
+                                <h4>23-Abril-2022</h4>
+                                <h6>2022-2023</h6>
+                            </div>
+                            <h2>A-Z</h2>
+                            <p>{{descripcion_modulo}}</p>
+                            <p>{{valor_catalogo}}</p>
 
-          {{#if (public valor_catalogo)}}
-           <i class="fas fa-unlock"></i>
-           <button onclick="window.location='/modules_management/lock/{{id_modulo}}'"
-                class="btn_salutest">Hacer privado</button>
-          {{else}}
-          <i class="fas fa-lock"></i>
-          <button onclick="window.location='/modules_management/unlock/{{id_modulo}}'"
-                class="btn_salutest">Hacer público</button>
-          {{/if}}
+                            {{#if (public valor_catalogo)}}
+                            <i class="fas fa-unlock"></i>
+                            <button onclick="window.location='/modules_management/lock/{{id_modulo}}'"
+                                class="btn_salutest">Hacer privado</button>
+                            {{else}}
+                            <i class="fas fa-lock"></i>
+                            <button onclick="window.location='/modules_management/unlock/{{id_modulo}}'"
+                                class="btn_salutest">Hacer público</button>
+                            {{/if}}
 
-            <form action="#" class="mostrar background-left-column">
-            <button class="mostrar background9-left-column">Mostrar</button>
-            </form>
-        </div>
-    </div>
-    {{/each}}
+                            <form action="#" class="mostrar background-left-column">
+                                <button class="mostrar background9-left-column">Mostrar</button>
+                            </form>
+                        </div>
+                    </div>
+                    {{/each}}
 
                 </div>
                 {{#unless componentes_management}}
@@ -53,29 +53,29 @@
             </section>
             <section class="instituciones_medicas_info">
                 <div class="summary_card">
-                    <div onclick="window.location='/componentes_patient'" class="summary_single">
+                    <div onclick="window.location='/modules_management'" class="summary_single">
                         <div>
                             <span class="fas fa-list"></span>
                             <span>Totales</span>
                         </div>
-                        <h5>{{length  modules_management_totals}}</h5>
+                        <h5>{{length modules_management_totals}}</h5>
                     </div>
                 </div>
 
                 <!--Publicas-->
 
                 <div class="summary_card">
-                    <div onclick="window.location='/componentes_patient/publicos'" class="summary_single">
+                    <div onclick="window.location='/modules_management/public'" class="summary_single">
                         <div>
                             <span class="fas fa-unlock"></span>
                             <span>Publicos</span>
                         </div>
-                        <h5>{{length  modules_management_public}}</h5>
+                        <h5>{{length modules_management_public}}</h5>
                     </div>
 
                     <!--Privadas-->
 
-                    <div onclick="window.location='/componentes_patient/privados'" class="summary_single">
+                    <div onclick="window.location='/modules_management/private'" class="summary_single">
                         <div>
                             <span class="fas fa-lock"></span>
                             <span>Privados</span>

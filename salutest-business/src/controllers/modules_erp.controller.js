@@ -23,7 +23,7 @@ module_erp.list = async (req, res) => {
   );
 
   const modules_erp_public = await sql.query(
-    "SELECT * FROM modulos m JOIN aplicacions a on m.aplicacionIdAplicacion = a.id_aplicacion JOIN modulo_catalogo mc on mc.moduloIdModulo = m.id_modulo join catalogos c on c.id_catalogo = mc.catalogoIdCatalogo WHERE a.nombre_aplicacion = 'Salutest Patient' and c.valor_catalogo = 'Público'"
+    "SELECT * FROM modulos m JOIN aplicacions a on m.aplicacionIdAplicacion = a.id_aplicacion JOIN modulo_catalogo mc on mc.moduloIdModulo = m.id_modulo join catalogos c on c.id_catalogo = mc.catalogoIdCatalogo WHERE a.nombre_aplicacion = 'Salutest ERP' and c.valor_catalogo = 'Público'"
   );
 
   if (type_module == "private") {
@@ -43,7 +43,7 @@ module_erp.list = async (req, res) => {
 };
 
 module_erp.unlock = async (req, res) => {
-  const id_modules_erp = req.params.id;
+  const id_module_erp = req.params.id;
   await sql.query(
     "UPDATE modulo_catalogo SET catalogoIdCatalogo = (SELECT id_catalogo FROM catalogos WHERE valor_catalogo = 'Público') WHERE moduloIdModulo = ?",
     [id_module_erp]

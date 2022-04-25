@@ -7,6 +7,10 @@ Handlebars.registerHelper("length", function (list) {
   return list.length;
 });
 
+Handlebars.registerHelper("public", function (valor_catalogo) {
+  return valor_catalogo == "Público";
+});
+
 module_management.mostrar = (req, res) => {
   res.render("modules/modules_management");
 };
