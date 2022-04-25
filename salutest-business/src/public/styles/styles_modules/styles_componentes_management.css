@@ -14,8 +14,18 @@
     background: linear-gradient(180deg, #8dd0f7, #11ace9);
 }
 
-
-
+.boton-mas h2{
+    position: fixed;
+    line-height: 45px;
+    right: 10px;
+    color: #21c8f6;
+    text-align: center;
+    font-size: 25px;
+    z-index: 100;
+    top: 520px;
+    left: 990px;
+    
+}
 
 
 
