@@ -14,11 +14,12 @@ passport.use(
       passReqToCallback: true,
     },
     async (req, username, password, done) => {
-      const rows = await orm.usuario_paciente.findOne({
-        where: { username: username },
-      });
-      if (rows) {
-        const user = rows;
+      const person_rows = await sql.query(
+        "SELECT * FROM usuario_pacientes u join pacientes pa on u.pacienteIdPaciente = pa.id_paciente join personas p on pa.personaIdPersona = p.id_persona join rols r on r.id_rol = u.rolIdRol WHERE u.username =?",
+        [username]
+      );
+      if (person_rows) {
+        const user = person_rows;
         const validPassword = await helpers.matchPassword(
           password,
           user.password
