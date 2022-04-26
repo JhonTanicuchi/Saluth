@@ -1,261 +1,199 @@
-.search-bar {
+.record_citas_grid {
+	display: grid;
+	grid-template-columns:  75% calc(25% - 1.5rem);
+	grid-column-gap: 1.5rem;
+	height: calc(100vh - 10rem - 30px);
+	color: var(--color_font_P);
+  }
+  
+  .record_citas_info > div {
+	background: white;
+	border-radius: 7px;
+  }
+  .users_card {
+	height: calc(100% - 224px - 1.5rem - 1.5rem);
+  }
+  
+  .container_record_citas_process_no_content {
+	height: calc(100% - 69.8px - 1.5rem);
 	display: flex;
-}
-
-
-.search-bar input,
-.search-btn, 
-.search-btn:before, 
-.search-btn:after {
-	transition: all 0.25s ease-out;
-}
-
-.search-bar input,
-.search-btn {
-	width: 3em;
-	height: 3em;
-}
-
-.search-bar input:invalid:not(:focus),
-.search-btn {
-	cursor: pointer;
-}
-
-.search-bar,
-.search-bar input:focus,
-.search-bar input:valid  {
-	width: 100%;
-}
-
-.search-bar input:focus,
-.search-bar input:not(:focus) + .search-btn:focus {
-	outline: transparent;
-}
-
-.search-bar {
-	margin: auto;
-	padding: 1.5em;
-	justify-content: left;
-    margin-right: 80%;
+	align-items: center;
+	justify-content: center;
+  }
   
-	max-width: 30em;
-}
-
-.search-bar input {
-	background: transparent;
-	border-radius: 1.5em;
-	box-shadow: 0 0 0 0.4em #171717 inset;
-	padding: 0.75em;
-	transform: translate(0.5em,0.5em) scale(0.5);
-	transform-origin: 100% 0;
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	appearance: none;
-}
-
-.search-bar input::-webkit-search-decoration {
-	-webkit-appearance: none;
-}
-
-.search-bar input:focus,
-.search-bar input:valid {
-	background: rgb(255, 255, 255);
-	border-radius: 0.375em 0 0 0.375em;
-	box-shadow: 0 0 0 0.1em #ffffff inset;
-	transform: scale(1);
-}
-
-.search-btn {
-	background: #ffffff;
-	border-radius: 0 0.75em 0.75em 0 / 0 1.5em 1.5em 0;
-	padding: 0.75em;
-	position: relative;
-	transform: translate(0.25em,0.25em) rotate(45deg) scale(0.25,0.125);
-	transform-origin: 0 50%;
-}
-
-.search-btn:before, 
-.search-btn:after {
-	content: "";
-	display: block;
-	opacity: 0;
-	position: absolute;
-}
-
-.search-btn:before {
+  .container_record_citas_process_no_content h1 {
+	color: var(--color_font_P);
+	font-size: 15px;
+	opacity: 50%;
+	font-weight: normal;
+	width: 60%;
+	text-align: center;
+  }
+  
+  .user_header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border-bottom: 1px solid rgb(194, 194, 194);
+	padding: 1rem;
+  }
+  
+  .user_header h1 {
+	font-size: 20px;
+  }
+  
+  .user_single {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 1rem;
+  }
+  
+  .user_single .info {
+	display: flex;
+	align-items: center;
+  }
+  
+  .user_single .info img {
+	width: 30px;
 	border-radius: 50%;
-	box-shadow: 0 0 0 0.2em #f1f1f1 inset;
-	top: 0.75em;
-	left: 0.75em;
-	width: 1.2em;
-	height: 1.2em;
-}
-
-.search-btn:after {
-	background: #f1f1f1;
-	border-radius: 0 0.25em 0.25em 0;
-	top: 51%;
-	left: 51%;
-	width: 0.75em;
-	height: 0.25em;
-	transform: translate(0.2em,0) rotate(45deg);
-	transform-origin: 0 50%;
-}
-
-.search-btn span {
+	margin-right: 1rem;
+  }
+  
+  .user_single .info .details {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	color: rgb(141, 141, 141);
+  }
+  
+  .user_single .info .details span {
+	margin-right: 0.2rem;
+  }
+  
+  .user_single .info h4 {
+	font-size: 0.8rem;
+	font-weight: 600;
+  }
+  
+  .user_single .info h5 {
+	font-weight: normal;
+	font-size: 0.7rem;
+  }
+  
+  .user_single .edit span {
+	font-size: 1.2rem;
 	display: inline-block;
-	overflow: hidden;
-	width: 1px;
-	height: 1px;
-}
-
-.search-bar input:focus + .search-btn,
-.search-bar input:valid + .search-btn {
-	background: #0094c6;
-	border-radius: 0 0.375em 0.375em 0;
-	transform: scale(1);
-}
-
-.search-bar input:focus + .search-btn:before, 
-.search-bar input:focus + .search-btn:after,
-.search-bar input:valid + .search-btn:before, 
-.search-bar input:valid + .search-btn:after {
-	opacity: 1;
-}
-
-.search-bar input:focus + .search-btn:hover,
-.search-bar input:valid + .search-btn:hover,
-.search-bar input:valid:not(:focus) + .search-btn:focus {
-	background: #0094c6;
-}
-
-.search-bar input:focus + .search-btn:active,
-.search-bar input:valid + .search-btn:active {
-	transform: translateY(1px);
-}
-
-@media screen and (prefers-color-scheme: dark) {
-	.search-bar input {
-		box-shadow: 0 0 0 0.4em #000000 inset;
-    }
-    
-	.search-bar input:focus,
-	.search-bar input:valid {
-		background: #3d3d3d;
-		box-shadow: 0 0 0 0.1em #3d3d3d inset;
-    }
-    
-	.search-btn {
-		background: #000000;
-        position: relative;    
-	}
-}
-
-
-
-
-  /* ------------------------------------ */
-
+	margin-left: 0.5rem;
+	color: var(--color_dark_P);
+  }
   
+  .record_citas_wrapper > div {
+	background: #fff;
+	border-radius: 7px;
+  }
   
+  .record_citas_filter {
+	padding: 1rem;
+	display: flex;
+	align-items: center;
+  }
   
-  /*//////////////////////////////////////////////////////////////////
-  [ Table ]*/
+  .record_citas_filter div {
+	width: 100%;
+  }
+  .record_citas_filter input {
+	width: 95%;
+	padding-left: 7px;
+	border: none;
+	background: transparent;
+	font-size: 13px;
+  }
   
-.limiter {
-    width: 100%;
-    margin: 0 auto;
-}
+  .record_citas_contect {
+	margin-top: 1.5rem;
+	height: calc(100% - 56px - 1.5rem);
+  }
   
-.container-table100 {
-    width: 100%;
-    
-    min-height: 100vh;
-    background: #e8eef4;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 33px 30px;
-}
+  .record_citas_contect table {
+	width: 100%;
+	border-collapse: collapse;
+  }
   
-.wrap-table100 {
-    width: 1300px;
-}
+  .record_citas_contect thead {
+	text-align: left;
+	border-bottom: 1px solid rgb(194, 194, 194);
+  }
   
-/*//////////////////////////////////////////////////////////////////
-[ Table ]*/
-
+  .record_citas_contect th,
+  td {
+	font-size: 0.9rem;
+	padding: 1rem 1rem;
+  }
   
-.column100 {
-    width: 230px;
-    padding-left: 25px;
-}
+  .record_citas_contect td {
+	font-size: 0.8rem;
+	cursor: default;
+  }
   
-.column100.column1 {
-    width: 265px;
-    padding-left: 42px;
-}
+  .record_citas_contect tbody tr:nth-child(even) {
+	background: #f8faff;
+  }
   
-.row100.head th {
-    padding-top: 24px;
-    padding-bottom: 20px;
-    font-family: 'Poppins', sans-serif;
-}
-.row100 td button img {
-    height: 30px;
-    width: 30px;
-    cursor:pointer;
-    margin-left: 40px;
-}
+  .record_citas_contect tbody tr {
+	border-bottom: solid .1px #535a6623;
+  }
   
-.row100 td {
-    padding-top: 18px;
-    padding-bottom: 14px;
-    align-items: center;
-
-}
+  .record_citas_contect tbody tr:hover {
+	background: #f2f5fd;
+  }
   
+  .record_citas_contect tbody tr:nth-child(even):hover {
+	background: #f2f5fd;
+  }
   
-
-/*==================================================================
-[ Ver 1]*/
+  .container_record_citas_no_content {
+	height: calc(100% - 54px);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+  }
   
-    .table100.ver6 {
-        border-radius: 10px;
-        overflow: hidden;
-    
-    }
+  .container_record_citas_no_content h1 {
+	color: var(--color_font_P);
+	font-size: 15px;
+	opacity: 50%;
+	font-weight: normal;
+  }
   
-.table100.ver6 table {
-    background-color: rgb(255, 255, 255);
-}
+  .record_citas_info .summary_card {
+	margin-bottom: 1.5rem;
+  }
   
-.table100.ver6 td {
-    font-size: 14px;
-    color: rgb(0, 0, 0);
-    line-height: 1.4;
-}
-        
-.table100.ver6 th {
-    font-family: 'Poppins', sans-serif;
-    font-size: 12px;
-    color: rgb(255, 255, 255);
-    line-height: 1.4;
-    text-transform: uppercase;
-    background-color: #0094c6;
-}
+  .record_citas_info .summary_single {
+	padding: 1rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+  }
   
-.table100.ver6 .row100:hover td {
-    background-color: rgba(0, 0, 0, 0.1);
-}
-
-.table100.ver6 .hov-column-ver6 {
-    background-color: rgba(0, 0, 0, 0.1);
-}
+  .record_citas_info .summary_single div {
+	display: flex;
+	align-items: center;
+  }
   
+  .record_citas_info .summary_single span:first-child {
+	font-size: 1.5rem;
+	color: var(--color_dark_N);
+	padding-right: 1rem;
+  }
   
-.table100.ver6 .row100 td:hover {
-    background-color: rgba(0, 0, 0, 0.2);
-}
-
+  .record_citas_info .summary_single span:last-child {
+	font-size: 0.8rem;
+	color: rgb(119, 119, 119);
+  }
+  
+  .record_citas_info .summary_single h5 {
+	font-size: 1rem;
+  }
+  
