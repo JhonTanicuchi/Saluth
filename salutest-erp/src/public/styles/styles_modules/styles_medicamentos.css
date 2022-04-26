@@ -12,13 +12,19 @@
     font-family: 'Quicksand', sans-serif;
 }
 
-td {
+.separador_medicamentos {
     border: 3px solid rgb(0, 0, 0);
     text-align: center;
     padding: 3px 15px;
 }
 
-th {
+.tabla_medicamentos td {
+    border: 3px solid rgb(0, 0, 0);
+    text-align: center;
+    padding: 3px 15px;
+}
+
+.tabla_medicamentos th {
     border: 3px solid #000000;
     width: 100px;
     height: 25px;
@@ -26,6 +32,7 @@ th {
     color: rgb(0, 0, 0);
     font-family: 'Quicksand', sans-serif;
     background-color: rgb(31, 238, 117);
+    font-size: medium;
 }
 
 .contenedor_medicamentos {
@@ -36,8 +43,12 @@ th {
     border: solid 4px rgb(0, 0, 0);
 }
 
-input[type="text"],
-input[type="number"] {
+.titulo_medicamentos {
+    font: sans-serif;
+    font-size: medium;
+}
+
+.texto_medicamentos {
     width: 90%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -46,21 +57,32 @@ input[type="number"] {
     border-radius: 4px;
 }
 
-input[type="submit"] {
+.precio_medicamentos {
+    width: 90%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 2px solid rgb(165, 161, 161);
+    border-radius: 4px;
+}
+
+.submit_medicamentos {
     background: rgb(60, 241, 10);
-    padding: 10px 12px;
+    padding: 2px 12px;
     margin: 15px 0 10px;
     display: inline-block;
     border-radius: 30px;
     font-size: 1.1rem;
     cursor: pointer;
+    color: rgb(0, 0, 0);
 }
 
-input[type="submit"]:hover {
+.submit_medicamentos:hover {
     background: #55585a;
+    color: rgb(255, 255, 255);
 }
 
-input[type="button"] {
+.editar_medicamentos {
     background: rgb(19, 182, 218);
     padding: 6px 12px;
     margin: 15px 0 10px;
@@ -70,6 +92,20 @@ input[type="button"] {
     cursor: pointer;
 }
 
-input[type="button"]:hover {
+.editar_medicamentos:hover {
+    background: #3e3f41;
+}
+
+.eliminar_medicamentos {
+    background: rgb(19, 182, 218);
+    padding: 6px 12px;
+    margin: 15px 0 10px;
+    display: inline-block;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.eliminar_medicamentos:hover {
     background: #3e3f41;
 }
