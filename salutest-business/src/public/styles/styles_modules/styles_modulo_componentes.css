@@ -1,0 +1,79 @@
+.contendedor_componente{
+ height: calc(100vh - 10rem - 30px);
+}
+.caja_modulo1{
+   background: #57909e;
+   width: 240px;
+   height: 230px;
+   border: 2px solid rgb(5, 5, 5);
+   
+}
+.caja_modulo1{
+    float: left; 
+    margin-left: 2rem;
+    box-shadow: 0px 1px 5px rgb(27, 27, 27);
+    transition: all 400ms ease;
+ }
+.caja_modulo1:hover{
+    box-shadow: 5px 5px 20px rgb(0, 0, 0.2); 
+    transform:translateY(-3);
+}
+
+.caja_modulo2{
+    background: #6499a7;
+    width: 240px;
+    height: 230px;
+    border: 2px solid rgb(5, 5, 5);
+ }
+ .caja_modulo2{
+
+    float: left;   
+    margin-left: 5rem;
+    box-shadow: 0px 1px 5px (27, 27, 27);
+    transition: all 400ms ease;
+ }
+ .caja_modulo2:hover{
+    box-shadow: 5px 5px 20px rgb(0, 0, 0.2); 
+    transform:translateY(-3);
+}
+.caja_modulo3{
+    background: #599aaa;
+    width: 240px;
+    height: 230px;
+    border: 2px solid rgb(5, 5, 5);
+ }
+ .caja_modulo3{
+    float: left; 
+     margin-left: 6rem;
+    box-shadow: 0px 1px 5px rgb(27, 27, 27);
+    transition: all 400ms ease;
+ }
+ .caja_modulo3:hover{
+    box-shadow: 5px 5px 20px rgb(0, 0, 0.2); 
+    transform:translateY(-3);
+}
+
+.caja_modulo1 h1{
+text-align: center;
+color: rgb(36, 35, 35);
+}
+.caja_modulo2 h1{
+   text-align: center;
+   color: rgb(36, 35, 35);
+}
+.caja_modulo3 h1{
+      text-align: center;
+      color: rgb(36, 35, 35);
+}
+.caja_modulo1 p{
+   text-align:center;
+   color: rgb(255, 255, 255);
+}
+.caja_modulo2 p{
+   text-align:center;
+   color: rgb(255, 255, 255);
+}.caja_modulo3 p{
+   text-align: center;
+   color: rgb(255, 255, 255);
+}
+

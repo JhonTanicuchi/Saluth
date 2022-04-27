@@ -1,0 +1,245 @@
+.sucursales_medicas_grid {
+  display: grid;
+  grid-template-rows: 20% 80%;
+  grid-row-gap: 1.5rem;
+  height: calc(100vh - 10rem);
+  color: var(--color_font_P);
+}
+
+.sucursales_medicas_filter {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 7px;
+  margin-bottom: 1.5rem;
+}
+
+.sucursales_medicas_filter div {
+  width: 100%;
+}
+.sucursales_medicas_filter input {
+  width: 95%;
+  padding-left: 7px;
+  border: none;
+  background: transparent;
+  font-size: 13px;
+}
+
+.sucursales_medicas_list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 1.5rem;
+  grid-row-gap: 1.5rem;
+}
+
+.sucursales_medicas_list .card {
+  background: #fff;
+  border-radius: 7px;
+  max-width: 214.4px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.sucursales_medicas_list .card:hover {
+  transform: scale(1.03);
+}
+
+.sucursales_medicas_list .card .card_top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  height: 200px;
+}
+.sucursales_medicas_list .card .card_top img {
+  width: 200px;
+}
+
+.sucursales_medicas_list .card .card_bottom {
+  background: var(--color_dark_N);
+  color: white;
+  border-radius: 0px 0px 7px 7px;
+  padding: 5px 10px;
+}
+
+.sucursales_medicas_list .card .card_bottom .nombre_institucion_medica {
+  text-transform: uppercase;
+  font-weight: normal;
+  font-size: 15px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.sucursales_medicas_list .card .card_bottom .categoria_institucion_medica{
+  display: flex;
+  align-items: baseline;
+  margin-top: 3px;
+}
+
+.sucursales_medicas_list .card .card_bottom .categoria_institucion_medica h6{
+  margin-left: 5px;
+}
+
+.sucursales_medicas_info .summary_card {
+  background: white;
+  border-radius: 7px;
+  margin-bottom: 1.5rem;
+}
+
+.sucursales_medicas_info .summary_single {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-radius: 7px;
+
+}
+
+.sucursales_medicas_info .summary_single:hover {
+ 
+  padding-left: 40px;
+  background: var(--color_dark_N);
+  color: white;
+
+}
+
+
+.sucursales_medicas_info .summary_single.new {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-radius: 7px;
+
+}
+
+.sucursales_medicas_info .summary_single.new:hover {
+ 
+  background: var(--color_dark_N);
+  color: white;
+
+}
+
+
+
+.sucursales_medicas_info .summary_single:hover  span:first-child{
+  color: white;
+
+}
+.sucursales_medicas_info .summary_single:hover  span:last-child{
+  color: white;
+}
+
+.sucursales_medicas_info .summary_single div {
+  display: flex;
+  align-items: center;
+}
+
+.sucursales_medicas_info .summary_single span:first-child {
+  font-size: 1.5rem;
+  color: var(--color_dark_N);
+  padding-right: 1rem;
+}
+
+.sucursales_medicas_info .summary_single span:last-child {
+  font-size: 0.8rem;
+  color: rgb(119, 119, 119);
+}
+
+.sucursales_medicas_info .summary_single h5 {
+  font-size: 1rem;
+}
+
+.container_sucursales_medicas_no_content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: calc(100% - 1.5rem);
+  border-radius: 7px;
+  background: white;
+}
+
+.container_sucursales_medicas_no_content h1 {
+  color: var(--color_font_P);
+  font-size: 15px;
+  opacity: 50%;
+  font-weight: normal;
+}
+
+
+
+.sucursales_medicas_cuerpo{
+ display: grid;
+  grid-template-columns: 75% calc(25% - 1.5rem);
+  grid-column-gap: 1.5rem;
+}
+
+
+.welcome_card {
+  background: white;
+  border-radius: 7px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  position: relative;
+  z-index: 1;
+  color: white;
+  overflow: hidden;
+}
+
+.container_welcome {
+  border-radius: 7px 0px 0px 7px ;
+  width: 70%;
+  height: 100%;
+  padding: 2rem;
+  clip-path: polygon(0 0, 100% 0%, 89% 100%, 0% 100%);
+  background: #535a66;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+
+.welcome_card span{
+  text-transform: capitalize;
+  color: #5fbdda;
+  font-weight: normal;
+}
+
+.welcome_card img {
+  opacity: 90%;
+  width: 40%;
+  position: absolute;
+  margin: auto;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+}
+
+.welcome_card h3{
+  font-weight: normal;
+  text-align: left;
+  font-size: 14px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.welcome_card h2 {
+  text-align: left;
+  color: var(--color_dark_P);
+}
+
+.welcome_card h1 {
+  font-size: 20px;
+  padding-right: 20px;
+  font-weight: normal;
+}

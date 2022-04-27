@@ -1,0 +1,114 @@
+<!-- MAIN CONTECT -->
+<div class="main_contect">
+    <main class="main_app">
+        <section class="dash_title">
+            <h2 class="pestana hidden home">Home</h2>
+            <h2 class="pestana hidden">Instituciones Médicas</h2>
+            <h2 id="title_modules" class="hidden">Sucursales Médicas</h2>
+            <h2 id="title_pestaña" class="pestana hidden">Sucursales Médicas</h2>
+        </section>
+        <div class="sucursales_medicas_grid">
+            {{#each institucion_medica}}
+            <section class="welcome_card">
+                <img src="/img/image_gallery.jpeg" alt="" />
+                <div class="container_welcome">
+                    <h3><span>{{tipo_institucion}}</span></h3>
+                    <h1>Institución Médica <span>{{nombre_institucion_medica}}</span></h1>
+                </div>
+            </section>
+            {{/each}}
+
+
+            <section class="sucursales_medicas_cuerpo">
+                <section class="sucursales_medicas_wrapper">
+                    <div class="sucursales_medicas_list">
+                        {{#each sucursales_medicas}}
+                        <div onclick="window.location='/sucursales_medicas/{{id_institucion_medica}}'" class="card">
+                            <div class="card_top">
+                        
+                                <img src="https://static.vecteezy.com/system/resources/previews/005/213/046/original/letter-s-colorful-logo-design-vector.jpg"
+                                    alt="">
+                            </div>
+                            <div class="card_bottom">
+                                <div class="categoria_institucion_medica">
+                                    <span class="fas fa-hospital"></span>
+                                    <h6>Sucursal Médica</h6>
+                                </div>
+                                <h1 class="nombre_institucion_medica">{{nombre_sucursal_medica}}</h1>
+                            </div>
+                        </div>
+                        </a>
+                        {{/each}}
+                    </div>
+                    {{#unless sucursales_medicas}}
+                    <div class="container_sucursales_medicas_no_content">
+                        <h1>No hay sucursales médicas</h1>
+                    </div>
+                    {{/unless}}
+                </section>
+                <section class="sucursales_medicas_info">
+                    <div onclick="window.location='/instituciones_medicas'" class="summary_card">
+                        <div class="summary_single">
+                            <div>
+                                <span class="fas fa-list"></span>
+                                <span>Totales</span>
+                            </div>
+                            <h5>{{length sucursales_medicas}}</h5>
+                        </div>
+                    </div>
+                    <div class="summary_card">
+                        <div onclick="window.location='/instituciones_medicas/Farmacia'" class="summary_single">
+                            <div>
+                                <span class="fas fa-house-medical"></span>
+                                <span>Farmacias</span>
+                            </div>
+                            <h5>{{length sucursales_medicas}}</h5>
+                        </div>
+
+                        <div onclick="window.location='/instituciones_medicas/Centro Médico'" class="summary_single">
+                            <div>
+                                <span class="fas fa-house-medical-flag"></span>
+                                <span>Centros Médicos</span>
+                            </div>
+                            <h5>{{length sucursales_medicas}}</h5>
+                        </div>
+
+                        <div onclick="window.location='/instituciones_medicas/Clínica'" class="summary_single">
+                            <div>
+                                <span class="fas fa-hospital-user"></span>
+                                <span>Clinicas</span>
+                            </div>
+                            <h5>{{length sucursales_medicas}}</h5>
+                        </div>
+
+                        <div onclick="window.location='/instituciones_medicas/Hospital'" class="summary_single">
+                            <div>
+                                <span class="fas fa-hospital"></span>
+                                <span>Hospitales</span>
+                            </div>
+                            <h5>{{length sucursales_medicas}}</h5>
+                        </div>
+                    </div>
+                    <div class="summary_card">
+                        <div onclick="window.location='/instituciones_medicas/Publica'" class="summary_single">
+                            <div>
+                                <span class="fas fa-unlock"></span>
+                                <span>Publicas</span>
+                            </div>
+                            <h5>{{length sucursales_medicas}}</h5>
+                        </div>
+
+                        <div onclick="window.location='/instituciones_medicas/Privada'" class="summary_single">
+                            <div>
+                                <span class="fas fa-lock"></span>
+                                <span>Privadas</span>
+                            </div>
+                            <h5>{{length sucursales_medicas}}</h5>
+                        </div>
+                    </div>
+                </section>
+            </section>
+
+        </div>
+    </main>
+</div>

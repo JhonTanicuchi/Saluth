@@ -1,0 +1,48 @@
+.modulo_estadisticas_grid {
+    height: calc(100vh - 10rem - 30px);
+    border-radius: 7px;
+    background: white;
+}
+
+.parametro_estadisticas {
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px;
+    display: flex;
+    padding: 9px;
+    margin: 6px;
+    width: 42%;
+}
+
+.valor_estadisticas {
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px;
+    display: flex;
+    padding: 9px;
+    margin: 6px;
+    width: 42%;
+}
+
+.agregar_estadisticas {
+    flex: 1;
+    width: auto;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: green;
+    cursor: pointer;
+}
+
+.resultados_estadisticas {
+    background-color: yellow;
+    flex: 1;
+    width: auto;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.container_estadisticas {
+    background-color: rgb(51, 134, 153);
+    width: 70%;
+    border-radius: 30px;
+    padding: auto;
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Salutest</title>
+
+    <!-- ESTILOS -->
+    <link rel="stylesheet" href="/styles/styles_login.css">
+
+
+  </head>
+  <body>
+    <div class="background login">
+      <section id="section_login" class="section_login"> 
+
+        <div id="section_login_left" class="section_login_left">
+          <div class="container_left">
+            <div class="section_logo">
+              <span>
+                <img src="img/icon_new_png.png" alt=""/>
+                <h1 class="logo_name">Salutest</h1>
+              </span>
+            </div>
+            <h1 class="bienvenida">Bienvenido a<span>Salutest<span>business</span></span></h1>
+
+            {{>message}}
+
+            <div class="part_top">
+              <form id="login_form" action="/" method="POST">
+                <div class="credentials_login">
+                  <label for="username_login">Usuario</label>
+                  <input
+                    name="username"
+                    class="input"
+                    id="username_login"
+                    type="text"
+                    required
+                    autocomplete="off"
+                    autofocus
+                  />
+                  <label for="password_login">Contraseña</label>
+                  <input
+                    name="password"
+                    class="input"
+                    id="password_login"
+                    type="password"
+                    autocomplete="off"
+                    required
+                  />
+                </div>
+                <button class="btn" type="submit">Iniciar Sesión</button>
+              </form>
+            </div>
+            <div class="part_bottom">
+              <div class="fotter">
+                <p>
+                  Al continuar, aceptas las Condiciones del servicio y la
+                  Política de privacidad de Salutest.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+
+        <svg
+          id="hexagon_svg"
+          class="hexagon_svg"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 722.09 650"
+        >
+          <g id="Capa_2" data-name="Capa 2">
+            <g id="Capa_1-2" data-name="Capa 1">
+              <path
+                d="M361,649.75c45,0,90,.68,135-.23,33.51-.68,60.91-15.75,77.9-44.5Q643.11,487.84,710,369.26c16.27-28.83,16.14-60-.18-88.84Q643,162.32,574.08,45.4C556.91,16.31,529.39.79,495.54.52Q361-.52,226.42.52C192.58.79,165,16.27,147.86,45.38Q79.11,161.87,12.58,279.65c-16.87,29.75-16.74,61.3.18,91.09Q79.38,488,147.61,604.27c17.34,29.44,45,44.66,79.21,45.28C271.52,650.36,316.24,649.75,361,649.75Z"
+              />
+            </g>
+          </g>
+        </svg>
+
+
+        
+        
+          <div id="r" class="container-info r info-visible">
+            <h1>Recuerda tu salud es importante</h1>
+          </div>
+
+     
+
+      </section>
+    </div>
+  </body>
+
+  <!-- SCRIPTS -->
+  <script src="js/login.js"></script>
+</html>
