@@ -17,4 +17,4 @@ Salutest es un sistema completo que se divide en 3 aplicaciones:
   Este aplicativo permitirá gestionar los procesos internos de la intitución medica.
         
   ### - Salutest Patient
-  Aplicación general para todos los pacientes, permitirá tener el control de salud y de cada detalle que se lleva a cabo en una institución médica sea pública o           privada.
+  Aplicación general para todos los pacientes, permitirá tener el control de salud y de cada detalle que se lleva a cabo en una institución médica sea pública o privada.
