@@ -7,15 +7,18 @@ const transmision = (sequelize, type) => {
         primaryKey: true,
         autoIncrement: true,
       },
-      nombre: type.STRING,
-      descripcion: type.STRING,
-      
-      creacionTransmisiones: {
+      nombre_transmision: type.STRING,
+      descripcion_transmision: type.STRING,
+      estado_transmision: {
+        type: type.BOOLEAN,
+        defaultValue: true,
+      },
+      creacionTransmision: {
         type: "TIMESTAMP",
         defaultValue: type.literal("CURRENT_TIMESTAMP"),
         allowNull: false,
       },
-      actualizacionTransmisiones: {
+      actualizacionTransmision: {
         type: "TIMESTAMP",
         defaultValue: type.literal("CURRENT_TIMESTAMP "),
         allowNull: false,

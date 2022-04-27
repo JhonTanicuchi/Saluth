@@ -1,7 +1,13 @@
-.welcome_card {
-  height: calc(100vh - 18.3rem);
+.home_grid{
+    display: grid;
+  grid-template-rows: 20% 80%;
+  grid-row-gap: 1.5rem;
+  height: calc(100vh - 60px - 2rem - 1.5rem);
+}
+
+
+.home_grid .welcome_card {
   background: white;
-  margin: 1rem 0;
   border-radius: 7px;
   text-align: center;
   display: flex;
@@ -9,113 +15,120 @@
   justify-content: left;
   position: relative;
   z-index: 1;
-  color: rgba(0, 0, 0, 0.767);
+  color: white;
+  overflow: hidden;
 }
 
-.container_welcome {
+.home_grid .container_welcome {
   border-radius: 7px 0px 0px 7px ;
   width: 70%;
   height: 100%;
   padding: 2rem;
-  clip-path: polygon(0 0, 100% 0%, 89% 100%, 0% 100%);background: #535a664b;
+  clip-path: polygon(0 0, 100% 0%, 89% 100%, 0% 100%);
+  background: #7c8b94;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
 }
 
-.welcome_card span{
+.home_grid .welcome_card span{
   text-transform: capitalize;
-  color: #0281a7;
-  font-weight: bold;
+  color: #5fbdda;
+  font-weight: normal;
 }
 
-.welcome_card img {
-  opacity: 70%;
+.home_grid .welcome_card img {
+  opacity: 90%;
   width: 40%;
   position: absolute;
   margin: auto;
   top: 0px;
-  right: 10px;
+  right: 0px;
   bottom: 0px;
 }
 
-.welcome_card h3{
+.home_grid .welcome_card h3{
   font-weight: normal;
   text-align: left;
-  font-size: 1rem;
+  font-size: 14px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
 }
 
-.welcome_card h2 {
+.home_grid .welcome_card h2 {
   text-align: left;
   color: var(--color_dark_P);
 }
 
-.welcome_card h1 {
-  font-size: 3rem;
-}
-
-.welcome_card .paragraphs {
-  margin-top: 4rem;
-  margin-bottom: 4rem;
-  font-size: 1.1rem;
-  text-align: left;
-  width: 90%;
-  padding: 0 2rem;
-}
-
-.welcome_card .paragraphs .paragraph_single{
-  display: flex;
-  align-items: baseline;
+.home_grid .welcome_card h1 {
+  font-size: 20px;
+  padding-right: 20px;
+  font-weight: normal;
 }
 
 
-.welcome_card .paragraphs p{
-  margin: 1rem 0;
+
+.home_bootom .shortcut_grid{
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 1rem;
+
 }
 
-.welcome_card .number_order {
-  width: 20px;
-  min-width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  color: white;
-  background-color: var(--color_dark_P);
+.home_bootom .shortcut_grid .card_shortcut{
+  background: rgba(255, 255, 255, 0.63);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: .8rem;
-  margin-right: 1rem;
-}
-
-.welcome_card h4{
-  font-weight: bold;
-  font-size: 1.2rem;
-  color: black !important;
-}
-
-.welcome_card .chevron {
-  margin-top: 2rem;
-  font-size: 1.5rem;
-}
-
-.options {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 1rem;
-}
-
-.options_card {
-  background: white;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1.5rem 2rem;
   border-radius: 7px;
+  opacity: 70%;
+  position: relative;
+  transition: all .1s ease-in-out;
 }
 
-.options_card div:first-child span {
-  color: rgb(150, 150, 150);
-  font-size: 0.8rem;
+.home_bootom .shortcut_grid .card_shortcut.plus{
+  background: transparent;
+  border:  1px dashed #535a6686;
 }
 
-.options_card div:last-child span {
-  color: var(--color_dark_P);
-  font-size: 3rem;
+.home_bootom .shortcut_grid .card_shortcut.plus:hover{
+  background: transparent;
+  border:  1px dashed #535a6686;
+}
+
+.home_bootom .shortcut_grid .card_shortcut:hover{
+  opacity: 100%;
+  cursor: pointer;
+  border:  1px solid #535a6686;
+  background: white;
+}
+
+.home_bootom .shortcut_grid .card_shortcut > span{
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 10px;
+  opacity: 30%;
+}
+
+.home_bootom .shortcut_grid .card_shortcut .title {
+  text-align: center;
+}
+
+.home_bootom .shortcut_grid .card_shortcut .title > span{
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.home_bootom .shortcut_grid .card_shortcut.plus .title > span{
+
+  margin:0;
+}
+
+.home_bootom .shortcut_grid .card_shortcut .title > h3{
+  font-size: 15px
 }

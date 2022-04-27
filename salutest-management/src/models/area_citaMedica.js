@@ -7,9 +7,6 @@ const area_citaMedica = (sequelize, type) => {
           primaryKey: true,
           autoIncrement: true,
         },
-        cantidad: type.STRING,
-        estado: type.STRING,
-
         creacionArea_citaMedica: {
           type: "TIMESTAMP",
           defaultValue: type.literal("CURRENT_TIMESTAMP"),

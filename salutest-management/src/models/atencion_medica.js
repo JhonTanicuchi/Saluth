@@ -7,17 +7,19 @@ const atencion_medica = (sequelize, type) => {
         primaryKey: true,
         autoIncrement: true,
       },
-      fecha: type.STRING(99),
+      fecha_atencion_medica: type.STRING(99),
       hora_llegada: type.STRING,
       hora_salida: type.STRING,
-      virtual: type.BOOLEAN,
-
-      creacionAtencion_medicas: {
+      estado_atencion_medica: {
+        type: type.BOOLEAN,
+        defaultValue: true,
+      },
+      creacionAtencion_medica: {
         type: "TIMESTAMP",
         defaultValue: type.literal("CURRENT_TIMESTAMP"),
         allowNull: false,
       },
-      actualizacionatencion_medicas: {
+      actualizacionAtencion_medica: {
         type: "TIMESTAMP",
         defaultValue: type.literal("CURRENT_TIMESTAMP "),
         allowNull: false,

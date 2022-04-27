@@ -1,0 +1,48 @@
+<!-- MAIN CONTECT -->
+<div class="main_contect">
+    <main class="main_app">
+        <section class="dash_title">
+            <font size="5">
+                <h2 id="title_modules"></h2>Sub Areas</h2>
+            </font>
+            <a href="/home"><span class="far fa-times-circle"></span></a>
+        </section>
+
+        <div class="Crud_SubAreas_grid">
+            <table class="Sub_area">
+                <tr>
+                    <td>
+                        <form autocomplete="off" action="/sub_areas/add" method="post">
+                            <div class="sub_Area">
+                                <label for="productCode">sub_Areas</label>
+                                <input type="text" name="nombre" id="productCode">
+                            </div>
+                            <div class="form_action--button">
+                                <input type="submit" value="Crear">
+                                <input type="reset" value="Reset">
+                            </div>
+                        </form>
+
+                    <td>
+                        <table class="list_subArea" id="storeList">
+                            <thead>
+                                <tr>
+                                    <th>Sub_Areas</th>
+                                    <th>Estado</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {{#each sub_areas}}
+                                <tr>
+                                    <td>{{nombre_sub_area}}</td>
+                                    <td>{{estado_sub_area}}</td>
+                                </tr>
+                                {{/each}}
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </div>
+</div>
+</main>

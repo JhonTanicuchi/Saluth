@@ -1,22 +1,25 @@
 const especialidad = (sequelize, type) => {
   return sequelize.define(
-    "especialidade",
+    "especialidad",
     {
       id_especialidad: {
         type: type.INTEGER,
         primaryKey: true,
         autoIncrement: true,
       },
-      nombre: type.STRING,
-      descipcion: type.STRING,
+      nombre_especialidad: type.STRING,
+      descripcion_especialidad: type.STRING,
       fecha_creacion: type.STRING,
-      estado: type.STRING,
-      creacionEspecialidades: {
+      estado_especialidad: {
+        type: type.BOOLEAN,
+        defaultValue: true,
+      },
+      creacionEspecialidad: {
         type: "TIMESTAMP",
         defaultValue: type.literal("CURRENT_TIMESTAMP"),
         allowNull: false,
       },
-      actualizacionEspecialidades: {
+      actualizacionEspecialidad: {
         type: "TIMESTAMP",
         defaultValue: type.literal("CURRENT_TIMESTAMP "),
         allowNull: false,

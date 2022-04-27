@@ -3,19 +3,20 @@ const sql = require("../config-database/database.sql");
 const sub_area = {}
 
 sub_area.mostrar = (req,res) => {
-    res.render ('modules/sub_area')
+    res.render ('modules/sub_areas')
 }
 
-sub_area.save = async(req,res) => {
+sub_area.save = async (req,res) => {
     const {nombre} = req.body;
     const nuevaSubarea = {nombre, estado: true};
-    await orm.Subarea.create(nuevaSubArea);
-    res.redirect("/sub_area")
+    await orm.sub_area.create(nuevaSubarea);
+    res.redirect("/sub_areas")
 }
 
 sub_area.list = async (req, res) => {
-    const sub_area = await sql.query("SELECT * FROM sub_areas")
-    res.render ("modules/sub_area", {sub_area})
+    const sub_areas = await sql.query("SELECT * FROM sub_areas");
+    console.log(sub_area);
+    res.render ("modules/sub_areas", {sub_areas})
 }
 
 

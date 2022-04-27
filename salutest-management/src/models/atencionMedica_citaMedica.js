@@ -1,13 +1,12 @@
 const atencionMedica_citaMedica = (sequelize, type) => {
   return sequelize.define(
-    "cita_medica",
+    "atencionMedica_citaMedica",
     {
       id_atencionMedica_citaMedica: {
         type: type.INTEGER,
         primaryKey: true,
         autoIncrement: true,
       },
-
       creacionAtencionMedica_CitaMedica: {
         type: "TIMESTAMP",
         defaultValue: type.literal("CURRENT_TIMESTAMP"),

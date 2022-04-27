@@ -14,11 +14,16 @@ passport.use(
       passReqToCallback: true,
     },
     async (req, username, password, done) => {
-      const rows = await orm.usuario_empleado.findOne({
+      /* const rows = await orm.usuario_empleado.findOne({
         where: { username: username },
-      });
-      if (rows) {
-        const user = rows;
+      }); */
+      const person_rows = await sql.query(
+        "SELECT * FROM usuario_empleados u join empleados e on u.empleadoIdEmpleado = e.id_empleado join personas p on e.personaIdPersona = p.id_persona join rols r on r.id_rol = u.rolIdRol join institucion_medicas ins on ins.id_institucion_medica = e.institucionMedicaIdInstitucionMedica WHERE u.username =?",
+        [username]
+      );
+      console.log(person_rows);
+      if (person_rows.length > 0) {
+        const user = person_rows[0];
         const validPassword = await helpers.matchPassword(
           password,
           user.password
@@ -27,7 +32,14 @@ passport.use(
           done(
             null,
             user,
-            req.flash("message", "Bienvenido" + " " + user.username)
+            req.flash(
+              "message",
+              "Bienvenido" +
+                " " +
+                user.nombres_persona +
+                " " +
+                user.apellidos_persona
+            )
           );
         } else {
           done(null, false, req.flash("message", "Datos incorrecta"));

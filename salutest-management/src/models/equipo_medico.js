@@ -7,15 +7,17 @@ const equipo_medico = (sequelize, type) => {
         primaryKey: true,
         autoIncrement: true,
       },
-      nombre: type.STRING,
-      estado: type.STRING,
-      
-      creacionEquipo_medicos: {
+      nombre_equipo_medico: type.STRING,
+      estado_equipo_medico: {
+        type: type.BOOLEAN,
+        defaultValue: true,
+      },
+      creacionEquipo_medico: {
         type: "TIMESTAMP",
         defaultValue: type.literal("CURRENT_TIMESTAMP"),
         allowNull: false,
       },
-      actualizacionEquipo_medicos: {
+      actualizacionEquipo_medico: {
         type: "TIMESTAMP",
         defaultValue: type.literal("CURRENT_TIMESTAMP "),
         allowNull: false,

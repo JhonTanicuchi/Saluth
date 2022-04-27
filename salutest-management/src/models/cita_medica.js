@@ -10,14 +10,16 @@ const cita_medica = (sequelize, type) => {
       fecha_asignada: type.STRING(99),
       hora_inicio: type.STRING,
       hora_fin: type.STRING,
-      virtual: type.BOOLEAN,
-
-      creacionCitas_medicas: {
+      estado_cita_medica: {
+        type: type.BOOLEAN,
+        defaultValue: true,
+      },
+      creacionCita_medica: {
         type: "TIMESTAMP",
         defaultValue: type.literal("CURRENT_TIMESTAMP"),
         allowNull: false,
       },
-      actualizacionCitas_medicas: {
+      actualizacionCita_medica: {
         type: "TIMESTAMP",
         defaultValue: type.literal("CURRENT_TIMESTAMP "),
         allowNull: false,

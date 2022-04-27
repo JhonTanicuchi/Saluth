@@ -9,13 +9,16 @@ const horario = (sequelize, type) => {
       },
       hora_ingreso: type.STRING,
       hora_salida: type.STRING,
-      estado: type.STRING,
-      creacionHorarios: {
+      estado_horario: {
+        type: type.BOOLEAN,
+        defaultValue: true,
+      },
+      creacionHorario: {
         type: "TIMESTAMP",
         defaultValue: type.literal("CURRENT_TIMESTAMP"),
         allowNull: false,
       },
-      actualizacionHorarios: {
+      actualizacionHorario: {
         type: "TIMESTAMP",
         defaultValue: type.literal("CURRENT_TIMESTAMP "),
         allowNull: false,

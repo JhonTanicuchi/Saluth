@@ -8,7 +8,10 @@ const mensaje = (sequelize, type) => {
         autoIncrement: true,
       },
       mensaje: type.STRING,
-      fecha: type.STRING,
+      estado_mensaje: {
+        type: type.BOOLEAN,
+        defaultValue: true,
+      },
       creacionMensaje: {
         type: "TIMESTAMP",
         defaultValue: type.literal("CURRENT_TIMESTAMP"),

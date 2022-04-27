@@ -7,17 +7,22 @@ const persona = (sequelize, type) => {
         primaryKey: true,
         autoIncrement: true,
       },
-      cedula: type.STRING,
-      nombres: type.STRING,
-      apellidos: type.STRING,
-      fecha_nacimiento: type.STRING,
-      direccion: type.STRING,
-      creacionPersonas: {
+      cedula_persona: type.STRING,
+      nombres_persona: type.STRING,
+      apellidos_persona: type.STRING,
+      fecha_nacimiento_persona: type.STRING,
+      direccion_persona: type.STRING,
+      tel_persona: type.STRING,
+      estado_persona: {
+        type: type.BOOLEAN,
+        defaultValue: true,
+      },
+      creacionPersona: {
         type: "TIMESTAMP",
         defaultValue: type.literal("CURRENT_TIMESTAMP"),
         allowNull: false,
       },
-      actualizacionPersonas: {
+      actualizacionPersona: {
         type: "TIMESTAMP",
         defaultValue: type.literal("CURRENT_TIMESTAMP "),
         allowNull: false,

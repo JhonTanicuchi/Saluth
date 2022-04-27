@@ -7,15 +7,17 @@ const diagnostico = (sequelize, type) => {
         primaryKey: true,
         autoIncrement: true,
       },
-      observacion: type.STRING,
-      
-
-      creacionDiagnosticos: {
+      observacion_diagnostico: type.STRING,
+      estado_diagnostico: {
+        type: type.BOOLEAN,
+        defaultValue: true,
+      },
+      creacionDiagnostico: {
         type: "TIMESTAMP",
         defaultValue: type.literal("CURRENT_TIMESTAMP"),
         allowNull: false,
       },
-      actualizacionDiagnosticos: {
+      actualizacionDiagnostico: {
         type: "TIMESTAMP",
         defaultValue: type.literal("CURRENT_TIMESTAMP "),
         allowNull: false,

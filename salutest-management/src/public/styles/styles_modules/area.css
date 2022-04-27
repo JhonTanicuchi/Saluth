@@ -1,45 +1,40 @@
-body{
+.Crud_Areas_grid body{
     background-image: url('background.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
 }
 
-table.Sub_area{
+.Crud_Areas_grid table.Sala{
     width: 79%;
     margin: 40px auto;
-    background: rgb(189, 117, 252);
+    background: rgb(236, 224, 94);
     border: 1px solid black;
     
 }
 
 
-
-.sub_Area{
-    font-size:200%;
+.sala{
+    font-size:20px
 }
-
-table.list_subArea{
+.Crud_Areas_grid table.list_Sala{
     text-align: center;
+    background: rgb(216, 207, 207);
     width: 100%;
     
 }
 
-label{
-    font-size:20px;
-}
-
-td{
+.Crud_Areas_grid td{
     border: 1px solid rgb(204,200,200);
     text-align: left;
     padding: 8px 15px;
 }
 
-tr:nth-child(even), table.list thread> tr{
+.Crud_Areas_grid tr:nth-child(even), table.list_Sala thread> tr{
     background-color: rgb(204,200,200);
 }
 
-input[type="text"],input[type="number"]{
+.Crud_Areas_grid input[type="text"],input[type="number"]{
     width:91%;
     padding:12px 20px;
     margin:8px 0;
@@ -48,7 +43,27 @@ input[type="text"],input[type="number"]{
     border-radius: 4px;
 }
 
-input[type="submit"],input[type="reset"]{
+.Crud_Areas_grid input[type="submit"],input[type="reset"]{
+    background: #eee;
+    padding:6px 12px;
+    margin:15px 0 10px;
+    display: inline-block;
+    border: none;
+    border-radius: 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    outline: none;
+}
+
+.Crud_Areas_grid input[type="submit"]:hover{
+    background: #96ff77;
+}
+
+.Crud_Areas_grid input[type="reset"]:hover{
+    background: #96ff77;
+}
+
+.Crud_Areas_grid button{
     background: #eee;
     padding:6px 12px;
     margin:15px 0 10px;
@@ -60,27 +75,7 @@ input[type="submit"],input[type="reset"]{
     outline: none;
 }
 
-input[type="submit"]:hover{
-    background: #4b99d8;
-}
-
-input[type="reset"]:hover{
-    background: #4b99d8;
-}
-
-button{
-    background: #eee;
-    padding:6px 12px;
-    margin:15px 0 10px;
-    display: inline-block;
-    border: none;
-    border-radius: 30px;
-    font-size: 1rem;
-    cursor: pointer;
-    outline: none;
-}
-
-button:hover{
+.Crud_Areas_grid button:hover{
     background:#4b99d8 ;
 }
 
