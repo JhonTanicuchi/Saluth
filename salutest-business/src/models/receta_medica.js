@@ -8,12 +8,16 @@ const receta_medica = (sequelize, type) => {
         autoIncrement: true,
       },
       indicaciones: type.STRING,
-      creacionReceta_Medicas: {
+      estado_receta_medica: {
+        type: type.BOOLEAN,
+        defaultValue: true,
+      },
+      creacionReceta_Medica: {
         type: "TIMESTAMP",
         defaultValue: type.literal("CURRENT_TIMESTAMP"),
         allowNull: false,
       },
-      actualizacionReceta_Medicas: {
+      actualizacionReceta_Medica: {
         type: "TIMESTAMP",
         defaultValue: type.literal("CURRENT_TIMESTAMP "),
         allowNull: false,

@@ -7,13 +7,16 @@ const empleado_business = (sequelize, type) => {
         primaryKey: true,
         autoIncrement: true,
       },
-      estado: type.STRING,
-      creacionEmpleados_business: {
+      estado_empleado_business: {
+        type: type.BOOLEAN,
+        defaultValue: true,
+      },
+      creacionEmpleado_business: {
         type: "TIMESTAMP",
         defaultValue: type.literal("CURRENT_TIMESTAMP"),
         allowNull: false,
       },
-      actualizacionEmpleados_business: {
+      actualizacionEmpleado_business: {
         type: "TIMESTAMP",
         defaultValue: type.literal("CURRENT_TIMESTAMP "),
         allowNull: false,

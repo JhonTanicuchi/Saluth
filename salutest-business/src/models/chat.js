@@ -7,6 +7,10 @@ const chat = (sequelize, type) => {
           primaryKey: true,
           autoIncrement: true,
         },
+        estado_chat: {
+        type: type.BOOLEAN,
+        defaultValue: true,
+      },
         creacionChat: {
           type: "TIMESTAMP",
           defaultValue: type.literal("CURRENT_TIMESTAMP"),

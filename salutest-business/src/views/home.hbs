@@ -1,27 +1,68 @@
-
 <!-- MAIN CONTECT -->
 <div class="main_contect">
   <main class="main_app">
 
-    {{!-- <div class="first_grid">
-      <section class="dash_title">
-        <h2 id="title_modules">Home</h2>
+    <div class="home_grid">
+
+      <section class="welcome_card">
+        <img src="/img/images.jpg" alt="" />
+        <div class="container_welcome">
+          <h3>Hey <span>{{user.nombres_persona}},</span></h3>
+          <h1>Bienvenido a Salutest <span>Business</span></h1>
+        </div>
       </section>
 
-      
-    </div> --}}
+      <section class="home_bootom">
 
-    <section class="home_grid">
-      <div><h1>Bienvenido {{user.nombres}}</h1></div>
-      <div class="shortcuts">
-        <div class="card">
-          <div>
-            <span class=""></span>
-            <h1>Especialidades</h1>
+        <section class="shortcut_grid">
+          <div class="card_shortcut" onclick="window.location='/modules_management'">
+            <div class="title">
+              <span class="fa fa-layer-group"></span>
+              <h3>Módulos Management</h3>
+            </div>
+            <span class="fa-solid fa-paperclip"></span>
           </div>
-        </div>
-      </div>
-    </section>
-  </main>
 
+          <div class="card_shortcut" onclick="window.location='/modules_erp'">
+            <div class="title">
+              <span class="fa fa-layer-group"></span>
+              <h3>Módulos ERP</h3>
+            </div>
+            <span class="fa-solid fa-paperclip"></span>
+          </div>
+
+          <div class="card_shortcut" onclick="window.location='/modules_patient'">
+            <div class="title">
+              <span class="fa fa-layer-group"></span>
+              <h3>Módulos Patient</h3>
+            </div>
+            <span class="fa-solid fa-paperclip"></span>
+          </div>
+
+          <div class="card_shortcut" onclick="window.location='/module'">
+            <div class="title">
+              <span class="fa fa-clone"></span>
+              <h3>Nuevo Módulo</h3>
+            </div>
+            <span class="fa-solid fa-paperclip"></span>
+          </div>
+
+          <div class="card_shortcut" onclick="window.location='/especialidades'">
+            <div class="title">
+              <span class="fa fa-clone"></span>
+              <h3>Nueva Especialidad</h3>
+            </div>
+            <span class="fa-solid fa-paperclip"></span>
+          </div>
+
+          <div class="card_shortcut plus">
+            <div class="title">
+              <span class="fa fa-square-plus"></span>
+            </div>
+          </div>
+        </section>
+
+      </section>
+    </div>
+  </main>
 </div>

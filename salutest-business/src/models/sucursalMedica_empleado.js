@@ -7,9 +7,9 @@ const sucursalMedica_empleado = (sequelize, type) => {
         primaryKey: true,
         autoIncrement: true,
       },
-      fecha_ingreso: type.STRING,
-      fecha_salida: type.STRING,
-      motivo_salida: type.STRING,
+      fecha_ingreso_sucursalMedica_empleado: type.STRING,
+      fecha_salida_sucursalMedica_empleado: type.STRING,
+      motivo_salida_sucursalMedica_empleado: type.STRING,
       creacionSucursalMedica_empleado: {
         type: "TIMESTAMP",
         defaultValue: type.literal("CURRENT_TIMESTAMP"),

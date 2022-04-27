@@ -7,14 +7,16 @@ const paciente = (sequelize, type) => {
         primaryKey: true,
         autoIncrement: true,
       },
-      donador: type.BOOLEAN,
-      estado: type.STRING,
-      creacionPacientes: {
+      estado_paciente: {
+        type: type.BOOLEAN,
+        defaultValue: true,
+      },
+      creacionPaciente: {
         type: "TIMESTAMP",
         defaultValue: type.literal("CURRENT_TIMESTAMP"),
         allowNull: false,
       },
-      actualizacionPacientes: {
+      actualizacionPaciente: {
         type: "TIMESTAMP",
         defaultValue: type.literal("CURRENT_TIMESTAMP "),
         allowNull: false,

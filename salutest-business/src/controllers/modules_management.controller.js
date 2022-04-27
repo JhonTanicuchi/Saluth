@@ -7,6 +7,11 @@ Handlebars.registerHelper("length", function (list) {
   return list.length;
 });
 
+Handlebars.registerHelper("formatDate", function (date) {
+  return date.toLocaleDateString() + " " + date.toLocaleTimeString();
+});
+
+
 Handlebars.registerHelper("public", function (valor_catalogo) {
   return valor_catalogo == "Público";
 });
@@ -19,15 +24,15 @@ module_management.list = async (req, res) => {
   const type_module = req.params.id;
   let modules_management = null;
   const modules_management_totals = await sql.query(
-    "SELECT * FROM modulos m JOIN aplicacions a on m.aplicacionIdAplicacion = a.id_aplicacion JOIN modulo_catalogo mc on mc.moduloIdModulo = m.id_modulo join catalogos c on c.id_catalogo = mc.catalogoIdCatalogo WHERE a.nombre_aplicacion = 'Salutest Patient'"
+    "SELECT * FROM modulos m JOIN aplicacions a on m.aplicacionIdAplicacion = a.id_aplicacion JOIN modulo_catalogos mc on mc.moduloIdModulo = m.id_modulo join catalogos c on c.id_catalogo = mc.catalogoIdCatalogo WHERE a.nombre_aplicacion = 'Salutest Management'"
   );
 
   const modules_management_private = await sql.query(
-    "SELECT * FROM modulos m JOIN aplicacions a on m.aplicacionIdAplicacion = a.id_aplicacion JOIN modulo_catalogo mc on mc.moduloIdModulo = m.id_modulo join catalogos c on c.id_catalogo = mc.catalogoIdCatalogo WHERE a.nombre_aplicacion = 'Salutest Management' and c.valor_catalogo = 'Privado'"
+    "SELECT * FROM modulos m JOIN aplicacions a on m.aplicacionIdAplicacion = a.id_aplicacion JOIN modulo_catalogos mc on mc.moduloIdModulo = m.id_modulo join catalogos c on c.id_catalogo = mc.catalogoIdCatalogo WHERE a.nombre_aplicacion = 'Salutest Management' and c.valor_catalogo = 'Privado'"
   );
 
   const modules_management_public = await sql.query(
-    "SELECT * FROM modulos m JOIN aplicacions a on m.aplicacionIdAplicacion = a.id_aplicacion JOIN modulo_catalogo mc on mc.moduloIdModulo = m.id_modulo join catalogos c on c.id_catalogo = mc.catalogoIdCatalogo WHERE a.nombre_aplicacion = 'Salutest Management' and c.valor_catalogo = 'público'"
+    "SELECT * FROM modulos m JOIN aplicacions a on m.aplicacionIdAplicacion = a.id_aplicacion JOIN modulo_catalogos mc on mc.moduloIdModulo = m.id_modulo join catalogos c on c.id_catalogo = mc.catalogoIdCatalogo WHERE a.nombre_aplicacion = 'Salutest Management' and c.valor_catalogo = 'Público'"
   );
 
   if (type_module == "private") {
@@ -49,7 +54,7 @@ module_management.list = async (req, res) => {
 module_management.unlock = async (req, res) => {
   const id_module_management = req.params.id;
   await sql.query(
-    "UPDATE modulo_catalogo SET catalogoIdCatalogo = (SELECT id_catalogo FROM catalogos WHERE valor_catalogo = 'Público') WHERE moduloIdModulo = ?",
+    "UPDATE modulo_catalogos SET catalogoIdCatalogo = (SELECT id_catalogo FROM catalogos WHERE valor_catalogo = 'Público') WHERE moduloIdModulo = ?",
     [id_module_management]
   );
   
@@ -59,7 +64,7 @@ module_management.unlock = async (req, res) => {
 module_management.lock = async (req, res) => {
   const id_module_management = req.params.id;
   await sql.query(
-    "UPDATE modulo_catalogo SET catalogoIdCatalogo = (SELECT id_catalogo FROM catalogos WHERE valor_catalogo = 'Privado') WHERE moduloIdModulo = ?",
+    "UPDATE modulo_catalogos SET catalogoIdCatalogo = (SELECT id_catalogo FROM catalogos WHERE valor_catalogo = 'Privado') WHERE moduloIdModulo = ?",
     [id_module_management]
   );
     

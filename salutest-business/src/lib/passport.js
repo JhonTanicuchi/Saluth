@@ -24,14 +24,21 @@ passport.use(
       );
       if (person_rows.length > 0) {
         const user = person_rows[0];
-        console.log(user.nombre)
+        console.log(user.nombres_persona)
 
         const validPassword = await helpers.matchPassword(
           password,
           user.password
         );
         if (validPassword) {
-          done(null, user, req.flash("success", "Bienvenido" + user.nombres));
+          done(
+            null,
+            user,
+            req.flash(
+              "success",
+              "Bienvenido" + user.nombres_persona + " " + user.apellidos_persona
+            )
+          );
         } else {
           done(null, false, req.flash("message", "Contraseña incorrecta"));
         }

@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: 75% calc(25% - 1.5rem);
   grid-column-gap: 1.5rem;
-  height: calc(100vh - 10rem - 30px);
+  height: calc(100vh - 10rem);
   color: var(--color_font_P);
 }
 
@@ -98,6 +98,7 @@
   border-radius: 7px;
 
 }
+
 .instituciones_medicas_info .summary_single:hover {
  
   padding-left: 40px;
@@ -105,6 +106,27 @@
   color: white;
 
 }
+
+
+.instituciones_medicas_info .summary_single.new {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-radius: 7px;
+
+}
+
+.instituciones_medicas_info .summary_single.new:hover {
+ 
+  background: var(--color_dark_N);
+  color: white;
+
+}
+
+
 
 .instituciones_medicas_info .summary_single:hover  span:first-child{
   color: white;
@@ -139,7 +161,7 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  height: calc(100vh - 10rem - 30px);
+  height: calc(100vh - 10rem);
   border-radius: 7px;
   background: white;
 }

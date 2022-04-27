@@ -2,10 +2,9 @@
 <div class="main_contect">
     <main class="main_app">
         <section class="dash_title">
+            <h2 class="pestana hidden home">Home</h2>
             <h2 id="title_modules" class="hidden">Instituciones</h2>
-            <h2 class="pestana hidden">Instituciones Médicas</h2>
-            <h2 class="pestana hidden">Instituciones</h2>
-            <a href="/home"><span class="far fa-times-circle"></span></a>
+            <h2 id="title_pestaña" class="pestana hidden">Instituciones Médicas</h2>
         </section>
         <div class="instituciones_medicas_grid">
             <section class="instituciones_medicas_wrapper">
@@ -20,21 +19,9 @@
                             <div class="card_bottom">
                                 <div class="categoria_institucion_medica">
                                     <span class="fas fa-hospital"></span>
-                                    {{#if (farmacia categoria_institucion)}}
-                                    <span class="fas fa-house-medical"></span>
-                                    {{/if}}
-                                    {{#if (centro_medico categoria_institucion)}}
-                                    <span class="fas fa-hospital"></span>
-                                    {{/if}}
-                                    {{#if (clinica categoria_institucion)}}
-                                    <span class="fas fa-hospital-user"></span>
-                                    {{/if}}
-                                    {{#if (hospital categoria_institucion)}}
-                                    <span class="fas fa-hospital"></span>
-                                    {{/if}}
-                                    <h6>Hospital</h6>
+                                    <h6>Institución Médica</h6>
                                 </div>
-                                <h1 class="nombre_institucion_medica">{{nombre}}</h1>
+                                <h1 class="nombre_institucion_medica">{{nombre_institucion_medica}}</h1>
                             </div>
                         </div>
                     </a>
@@ -57,45 +44,12 @@
                     </div>
                 </div>
                 <div class="summary_card">
-                    <div onclick="window.location='/instituciones_medicas/Farmacia'" class="summary_single">
-                        <div>
-                            <span class="fas fa-house-medical"></span>
-                            <span>Farmacias</span>
-                        </div>
-                        <h5>{{length instituciones}}</h5>
-                    </div>
-
-                    <div onclick="window.location='/instituciones_medicas/Centro Médico'" class="summary_single">
-                        <div>
-                            <span class="fas fa-house-medical-flag"></span>
-                            <span>Centros Médicos</span>
-                        </div>
-                        <h5>{{length instituciones}}</h5>
-                    </div>
-
-                    <div onclick="window.location='/instituciones_medicas/Clínica'" class="summary_single">
-                        <div>
-                            <span class="fas fa-hospital-user"></span>
-                            <span>Clinicas</span>
-                        </div>
-                        <h5>{{length instituciones}}</h5>
-                    </div>
-
-                    <div onclick="window.location='/instituciones_medicas/Hospital'" class="summary_single">
-                        <div>
-                            <span class="fas fa-hospital"></span>
-                            <span>Hospitales</span>
-                        </div>
-                        <h5>{{length instituciones}}</h5>
-                    </div>
-                </div>
-                <div class="summary_card">
                     <div onclick="window.location='/instituciones_medicas/Publica'" class="summary_single">
                         <div>
                             <span class="fas fa-unlock"></span>
                             <span>Publicas</span>
                         </div>
-                        <h5>{{length instituciones}}</h5>
+                        <h5>{{length instituciones_public}}</h5>
                     </div>
 
                     <div onclick="window.location='/instituciones_medicas/Privada'" class="summary_single">
@@ -103,7 +57,7 @@
                             <span class="fas fa-lock"></span>
                             <span>Privadas</span>
                         </div>
-                        <h5>{{length instituciones}}</h5>
+                        <h5>{{length instituciones_private}}</h5>
                     </div>
                 </div>
             </section>

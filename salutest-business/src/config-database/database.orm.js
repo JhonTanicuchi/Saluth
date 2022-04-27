@@ -33,7 +33,7 @@ const diagnostico_enfermedad_Modelo = require("../models/diagnostico_enfermedad"
 const area_Modelo = require("../models/area");
 const examen_Modelo = require("../models/examen");
 const mensaje_Modelo = require("../models/mensaje");
-const medicamento_Modelo = require("../models/medicamentos");
+const medicamento_Modelo = require("../models/medicamento");
 const turno_Modelo = require("../models/turno");
 const horario_Modelo = require("../models/horario");
 const sala_Modelo = require("../models/sala");
@@ -49,7 +49,6 @@ const area_especialidade_Modelo = require("../models/area_especialidad");
 const especialidad_Modelo = require("../models/especialidad");
 const cargo_Modelo = require("../models/cargo");
 const atencion_medica_Modelo = require("../models/atencion_medica");
-const tipo_examenes_Modelo = require("../models/tipo_examen");
 const receta_medica_Modelo = require("../models/receta_medica");
 const chat_Modelo = require("../models/chat");
 const empleado_cargo_Modelo = require("../models/empleado_cargo");
@@ -63,6 +62,11 @@ const institucion_medica_Modelo = require("../models/institucion_medica");
 const modulo_Modelo = require("../models/modulo");
 const aplicacion_Modelo = require("../models/aplicacion");
 const sucursal_medica_Modelo = require("../models/sucursal_medica");
+const contrato_Modelo = require("../models/contrato");
+const provincia_Modelo = require("../models/provincia");
+const canton_Modelo = require("../models/canton");
+const parroquia_Modelo = require("../models/parroquia");
+const modulo_catalogo_Modelo = require("../models/modulo_catalogo");
 
 const sequelize = new Sequelize("database_salutest", "root", "", {
   host: "localhost",
@@ -109,7 +113,6 @@ const diagnostico_enfermedad = diagnostico_enfermedad_Modelo(
   Sequelize
 );
 const area = area_Modelo(sequelize, Sequelize);
-const tipo_examen = tipo_examenes_Modelo(sequelize, Sequelize);
 const examen = examen_Modelo(sequelize, Sequelize);
 const mensaje = mensaje_Modelo(sequelize, Sequelize);
 const medicamento = medicamento_Modelo(sequelize, Sequelize);
@@ -139,13 +142,19 @@ const area_citaMedica = area_citaMedica_Modelo(sequelize, Sequelize);
 const atencion_medica = atencion_medica_Modelo(sequelize, Sequelize);
 const historia_clinica = historia_clinica_Modelo(sequelize, Sequelize);
 const solicitud = solicitud_Modelo(sequelize, Sequelize);
-const solicitudes_componentes = solicitudes_componentes_Modelo(sequelize, Sequelize);
+const solicitudes_componentes = solicitudes_componentes_Modelo(
+  sequelize,
+  Sequelize
+);
 const institucion_medica = institucion_medica_Modelo(sequelize, Sequelize);
 const modulo = modulo_Modelo(sequelize, Sequelize);
 const aplicacion = aplicacion_Modelo(sequelize, Sequelize);
 const sucursal_medica = sucursal_medica_Modelo(sequelize, Sequelize);
-
-
+const contrato = contrato_Modelo(sequelize, Sequelize);
+const provincia = provincia_Modelo(sequelize, Sequelize);
+const canton = canton_Modelo(sequelize, Sequelize);
+const parroquia = parroquia_Modelo(sequelize, Sequelize);
+const modulo_catalogo = modulo_catalogo_Modelo(sequelize, Sequelize);
 
 
 //relaciones
@@ -165,11 +174,26 @@ empleado.belongsTo(persona);
 empleado.hasMany(usuario_empleado);
 usuario_empleado.belongsTo(empleado);
 
+rol.hasMany(usuario_empleado);
+usuario_empleado.belongsTo(rol);
+
 persona.hasMany(paciente);
 paciente.belongsTo(persona);
 
 paciente.hasMany(usuario_paciente);
 usuario_paciente.belongsTo(paciente);
+
+rol.hasMany(usuario_paciente);
+usuario_paciente.belongsTo(rol);
+
+
+
+rol.belongsToMany(permiso, {
+  through: rol_permiso,
+});
+permiso.belongsToMany(rol, {
+  through: rol_permiso,
+});
 
 institucion_medica.hasMany(solicitud);
 solicitud.belongsTo(institucion_medica);
@@ -177,26 +201,31 @@ solicitud.belongsTo(institucion_medica);
 aplicacion.hasMany(modulo);
 modulo.belongsTo(aplicacion);
 
-
 institucion_medica.hasMany(sucursal_medica);
 sucursal_medica.belongsTo(institucion_medica);
 
+institucion_medica.hasMany(empleado);
+empleado.belongsTo(institucion_medica);
 
 catalogo.belongsToMany(institucion_medica, {
-  through: 'institucion_catalogo'
+  through: 'institucion_catalogo',
 });
 institucion_medica.belongsToMany(catalogo, {
   through: 'institucion_catalogo',
 });
 
 catalogo.belongsToMany(modulo, {
-  through: "modulo_catalogo",
+  through: modulo_catalogo,
 });
 modulo.belongsToMany(catalogo, {
-  through: "modulo_catalogo",
+  through: modulo_catalogo,
 });
 
+provincia.hasMany(canton);
+canton.belongsTo(provincia);
 
+canton.hasMany(parroquia);
+parroquia.belongsTo(canton);
 
 module.exports = {
   catalogo,
@@ -212,7 +241,6 @@ module.exports = {
   diagnostico,
   diagnostico_enfermedad,
   area,
-  tipo_examen,
   examen,
   mensaje,
   medicamento,
@@ -246,4 +274,9 @@ module.exports = {
   modulo,
   aplicacion,
   sucursal_medica,
+  contrato,
+  provincia,
+  canton,
+  parroquia,
+  modulo_catalogo,
 };

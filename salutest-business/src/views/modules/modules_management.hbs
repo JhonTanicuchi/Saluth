@@ -2,30 +2,32 @@
 <div class="main_contect">
     <main class="main_app">
         <section class="dash_title">
-            <h2 id="title_modules" class="pestana hidden">Modulos Management</h2>
-
+            <h2 class="pestana hidden home">Home</h2>
+            <h2 class="pestana hidden">Apps</h2>
+            <h2 id="title_modules" class="hidden">Modulos Management</h2>
+            <h2 id="title_pestaña" class="pestana hidden">Modulos Management</h2>
         </section>
 
         <!--Contenedor 1-->
 
         <div class="instituciones_medicas_grid">
             <section class="instituciones_medicas_wrapper">
-                <div class="instituciones_medicas_list">
-                    {{#each componentes_management}}
+                <div class="instituciones_medicas_list management">
+                    {{#each modules_management}}
                     <div class="tarj-modu">
                         <div class="left-column background-left-column">
-                            <h6>Controladores</h6>
+                            <h6>Modulo</h6>
                             <h2>{{nombre_modulo}}</h2>
-                            <i class="material-icons">groups</i>
+                            
                         </div>
                         <div class="rigth-column">
                             <div>
-                                <h4>23-Abril-2022</h4>
-                                <h6>2022-2023</h6>
+                                <h4>{{formatDate creacionModulo}}</h4>
+                               
                             </div>
-                            <h2>A-Z</h2>
+                            <h2>{{valor_catalogo}}</h2>
                             <p>{{descripcion_modulo}}</p>
-                            <p>{{valor_catalogo}}</p>
+                            
 
                             {{#if (public valor_catalogo)}}
                             <i class="fas fa-unlock"></i>
@@ -37,15 +39,13 @@
                                 class="btn_salutest">Hacer público</button>
                             {{/if}}
 
-                            <form action="#" class="mostrar background-left-column">
-                                <button class="mostrar background9-left-column">Mostrar</button>
-                            </form>
+                            
                         </div>
                     </div>
                     {{/each}}
 
                 </div>
-                {{#unless componentes_management}}
+                {{#unless modules_management}}
                 <div class="container_instituciones_medicas_no_content">
                     <h1>No hay instituciones</h1>
                 </div>
@@ -81,6 +81,14 @@
                             <span>Privados</span>
                         </div>
                         <h5>{{length modules_management_private}}</h5>
+                    </div>
+                </div>
+                <div class="summary_card">
+                    <div onclick="window.location='/module'" class="summary_single new">
+                        <div>
+                            <span class="fas fa-square-plus"></span>
+                            <span>Nuevo</span>
+                        </div>
                     </div>
                 </div>
             </section>

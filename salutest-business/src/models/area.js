@@ -7,14 +7,17 @@ const area = (sequelize, type) => {
         primaryKey: true,
         autoIncrement: true,
       },
-      nombre: type.STRING,
-      estado: type.STRING,
-      creacionAreas: {
+      nombre_area: type.STRING,
+      estado_area: {
+        type: type.BOOLEAN,
+        defaultValue: true,
+      },
+      creacionArea: {
         type: "TIMESTAMP",
         defaultValue: type.literal("CURRENT_TIMESTAMP"),
         allowNull: false,
       },
-      actualizacionAreas: {
+      actualizacionArea: {
         type: "TIMESTAMP",
         defaultValue: type.literal("CURRENT_TIMESTAMP "),
         allowNull: false,

@@ -7,14 +7,12 @@ const diagnostico_enfermedad = (sequelize, type) => {
         primaryKey: true,
         autoIncrement: true,
       },
-      
-
-      creacionDiagnosticos_enfermedades: {
+      creacionDiagnostico_enfermedad: {
         type: "TIMESTAMP",
         defaultValue: type.literal("CURRENT_TIMESTAMP"),
         allowNull: false,
       },
-      actualizacionDiagnosticos_enfermedades: {
+      actualizacionDiagnostico_enfermedad: {
         type: "TIMESTAMP",
         defaultValue: type.literal("CURRENT_TIMESTAMP "),
         allowNull: false,

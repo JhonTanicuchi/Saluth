@@ -12,9 +12,7 @@
 .tarjetas-erp{
     background: #0CB7F2;
     padding: 1.75rem;
-    border-radius: 1.75rem;
-    display: flex;
-    flex-wrap: wrap;
+    border-radius: 7px;
 }
 
 .tarjetas-erp .tarjetas-header{

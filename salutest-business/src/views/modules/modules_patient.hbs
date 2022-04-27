@@ -2,7 +2,10 @@
 <div class="main_contect">
     <main class="main_app">
         <section class="dash_title">
-            <h2 id="title_modules" class="pestana hidden">Componentes Patient</h2>
+            <h2 class="pestana hidden home">Home</h2>
+            <h2 class="pestana hidden">Apps</h2>
+            <h2 id="title_modules" class="hidden">Componentes Patient</h2>
+            <h2 id="title_pestaña" class="pestana hidden">Componentes Patient</h2>
         </section>
 
         <!--Contenedor 1-->
@@ -76,6 +79,15 @@
                         <h5>{{length modules_patient_private}}</h5>
                     </div>
                 </div>
+                <div class="summary_card">
+                    <div onclick="window.location='/module'" class="summary_single new">
+                        <div>
+                            <span class="fas fa-square-plus"></span>
+                            <span>Nuevo</span>
+                        </div>
+                    </div>
+                </div>
+
             </section>
         </div>
     </main>

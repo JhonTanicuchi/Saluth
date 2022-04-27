@@ -1,28 +1,24 @@
-const persona = (sequelize, type) => {
+const provincia = (sequelize, type) => {
   return sequelize.define(
-    "persona",
+    "provincia",
     {
-      id_persona: {
+      id_provincia: {
         type: type.INTEGER,
         primaryKey: true,
         autoIncrement: true,
       },
-      cedula_persona: type.STRING,
-      nombres_persona: type.STRING,
-      apellidos_persona: type.STRING,
-      fecha_nacimiento_persona: type.STRING,
-      direccion_persona: type.STRING,
-      tel_persona: type.STRING,
-      estado_persona: {
+      numero_provincia: type.INTEGER,
+      nombre_provincia: type.STRING,
+      estado_provincia: {
         type: type.BOOLEAN,
         defaultValue: true,
       },
-      creacionPersona: {
+      creacionProvincia: {
         type: "TIMESTAMP",
         defaultValue: type.literal("CURRENT_TIMESTAMP"),
         allowNull: false,
       },
-      actualizacionPersona: {
+      actualizacionProvincia: {
         type: "TIMESTAMP",
         defaultValue: type.literal("CURRENT_TIMESTAMP "),
         allowNull: false,
@@ -34,4 +30,4 @@ const persona = (sequelize, type) => {
   );
 };
 
-module.exports = persona;
+module.exports = provincia;

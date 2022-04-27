@@ -1,8 +1,10 @@
+/* SOLICITUDES */
+
 .solicitudes_grid {
   display: grid;
   grid-template-columns:  75% calc(25% - 1.5rem);
   grid-column-gap: 1.5rem;
-  height: calc(100vh - 10rem - 30px);
+  height: calc(100vh - 10rem);
   color: var(--color_font_P);
 }
 
@@ -88,10 +90,10 @@
   color: var(--color_dark_P);
 }
 
-.solicitudes_wrapper > div {
-  background: #fff;
-  border-radius: 7px;
-}
+  .solicitudes_wrapper > div {
+    background: #fff;
+    border-radius: 7px;
+  }
 
 .solicitudes_filter {
   padding: 1rem;
@@ -196,3 +198,181 @@ td {
 .solicitudes_info .summary_single h5 {
   font-size: 1rem;
 }
+
+
+
+/* SOLICITUD */
+
+.solicitud_grid {
+  display: grid;
+  grid-template-columns:  75% calc(25% - 1.5rem);
+  grid-column-gap: 1.5rem;
+  height: calc(100vh - 10rem);
+  color: var(--color_font_P);
+}
+
+
+.solicitud_grid .solicitud_wrapper {
+  background: #fff;
+  border-radius: 7px;
+  position: relative;
+}
+
+.solicitud_grid .solicitud_wrapper .head_solicitud{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 57px;
+  border-bottom: 1px solid rgb(194, 194, 194);
+}
+
+.solicitud_grid .solicitud_wrapper .head_solicitud h1{
+  font-size: 22px;
+}
+
+
+
+.solicitud_grid .solicitud_wrapper .head_solicitud span{
+  position: absolute;
+  top: 0;
+  left: 0;
+    opacity: 70%;
+  margin: 15px 15px;
+}
+
+
+
+
+
+
+
+.solicitud_grid .container_info{
+  display: grid;
+  grid-template-columns: 70% 30%;
+  height: calc(100% - 50px - 70px);
+}
+
+.solicitud_grid .container_info .info_detalles{
+  padding: 30px 20px;
+  display: grid;
+  grid-template-rows: 60% 40%;
+
+}
+
+.solicitud_grid .container_info .info_detalles div{
+    padding-left: 10px;
+}
+
+.solicitud_grid .container_info .info_detalles h4 span{
+    font-size: 13px;
+  font-weight: normal;
+  left: 150px;
+  position: absolute;
+  text-overflow: ellipsis;
+}
+
+.solicitud_grid .container_info .info_detalles .procesos_aprovacion > div{
+  margin: 10px 0px;
+  display: flex;
+  align-items: center;
+}
+
+.solicitud_grid .container_info .info_detalles .procesos_aprovacion > div > label{
+  font-size: 13px;
+  margin-left: 10px;
+}
+
+
+.solicitud_grid .container_info .info_contacto{
+  border-left: 1px solid #535a6642;
+  padding: 30px 20px;
+  position: relative;
+
+}
+
+.solicitud_grid .container_info .info_contacto div{
+  padding-left: 10px;
+
+}
+
+.solicitud_grid .container_info  h3{
+  border-bottom: 1px solid #535a6615;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+}
+
+.solicitud_grid .container_info  h4{
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin: 20px 0px;
+  white-space: nowrap;
+  overflow: hidden;
+
+}
+
+
+.solicitud_grid .container_info .info_contacto h4 span{
+  font-size: 13px;
+  font-weight: normal;
+  left: 80px;
+  position: absolute;
+  text-overflow: ellipsis;
+}
+
+.solicitud_grid .container_info .correo_contacto{
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  font-size: 13px;
+  opacity: 60%;
+}
+
+
+.solicitud_grid .container_buttons{
+  position: absolute;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  bottom: 0;
+}
+
+.btn_solicitud_edit {
+  width: 100px !important;
+  margin: 10px !important;
+}
+
+.file_xmark{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: #535a66;
+  font-size: 25px;
+  transition: all .2s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 10px;
+  opacity: 60%;
+
+}
+
+.file_xmark:hover{
+  transform: scale(1.15);
+  opacity: 100%;
+  color: #d1052a;
+}
+
+
+
+
+
+

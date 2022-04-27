@@ -7,15 +7,15 @@ const usuario_business = (sequelize, type) => {
         primaryKey: true,
         autoIncrement: true,
       },
-      username: type.STRING(99),
+      username: type.STRING,
       password: type.STRING,
       correo: type.STRING,
-      creacionUsuarios_business: {
+      creacionUsuario_business: {
         type: "TIMESTAMP",
         defaultValue: type.literal("CURRENT_TIMESTAMP"),
         allowNull: false,
       },
-      actualizacionUsuarios_business: {
+      actualizacionUsuario_business: {
         type: "TIMESTAMP",
         defaultValue: type.literal("CURRENT_TIMESTAMP "),
         allowNull: false,

@@ -7,8 +7,11 @@ const laboratorio = (sequelize, type) => {
         primaryKey: true,
         autoIncrement: true,
       },
-      nombre: type.STRING,
-      estado: type.BOOLEAN,
+      nombre_laboratorio: type.STRING,
+      estado_laboratorio: {
+        type: type.BOOLEAN,
+        defaultValue: true,
+      },
       creacionLaboratorio: {
         type: "TIMESTAMP",
         defaultValue: type.literal("CURRENT_TIMESTAMP"),

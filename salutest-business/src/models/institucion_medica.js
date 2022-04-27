@@ -7,15 +7,18 @@ const institucion_medica = (sequelize, type) => {
         primaryKey: true,
         autoIncrement: true,
       },
-      nombre: type.STRING,
-      descripcion: type.STRING,
-      estado: type.BOOLEAN,
-      creacioninstituciones_medicas: {
+      nombre_institucion_medica: type.STRING,
+      descripcion_institucion_medica: type.STRING,
+      estado_institucion_medica: {
+        type: type.BOOLEAN,
+        defaultValue: true,
+      },
+      creacioninstitucion_medica: {
         type: "TIMESTAMP",
         defaultValue: type.literal("CURRENT_TIMESTAMP"),
         allowNull: false,
       },
-      actualizacioninstituciones_medicas: {
+      actualizacioninstitucion_medica: {
         type: "TIMESTAMP",
         defaultValue: type.literal("CURRENT_TIMESTAMP "),
         allowNull: false,

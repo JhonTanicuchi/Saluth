@@ -29,6 +29,16 @@ instituciones_medicas.mostrar = (req, res) => {
 };
 
 instituciones_medicas.list = async (req, res) => {
+const instituciones_private = await sql.query(
+  "SELECT * FROM institucion_medicas i join institucion_catalogo ic on i.id_institucion_medica = ic.institucionMedicaIdInstitucionMedica join catalogos c on c.id_catalogo = ic.catalogoIdCatalogo WHERE c.valor_catalogo = 'Privada'"
+);
+
+const instituciones_public = await sql.query(
+  "SELECT * FROM institucion_medicas i join institucion_catalogo ic on i.id_institucion_medica = ic.institucionMedicaIdInstitucionMedica join catalogos c on c.id_catalogo = ic.catalogoIdCatalogo WHERE c.valor_catalogo = 'Pública'"
+);
+
+
+
   const filtro = req.params.parametro;
       let instituciones = await sql.query(
         "SELECT * FROM institucion_medicas"
@@ -36,7 +46,7 @@ instituciones_medicas.list = async (req, res) => {
 
   if (filtro) {
      instituciones = await sql.query(
-      "SELECT * FROM institucion_medicas i join institucion_catalogo ic on i.id_institucion_medica = ic.institucionMedicaIdInstitucionMedica join catalogos c on c.id_catalogo = ic.catalogoIdCatalogo WHERE c.valor = ?",
+      "SELECT * FROM institucion_medicas i join institucion_catalogo ic on i.id_institucion_medica = ic.institucionMedicaIdInstitucionMedica join catalogos c on c.id_catalogo = ic.catalogoIdCatalogo WHERE c.valor_catalogo = ?",
       [filtro]
     );
   } else {
@@ -46,6 +56,8 @@ instituciones_medicas.list = async (req, res) => {
   console.log(instituciones)
   res.render("modules/instituciones_medicas", {
     instituciones,
+    instituciones_private,
+    instituciones_public,
   });
 };
 

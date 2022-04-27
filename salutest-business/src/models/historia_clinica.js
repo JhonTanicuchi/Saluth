@@ -7,14 +7,16 @@ const historia_clinica = (sequelize, type) => {
         primaryKey: true,
         autoIncrement: true,
       },
-      fecha_creacion: type.STRING,
-      campo: type.STRING,
-      creacionHistoria_clinicas: {
+      estado_historia_clinica: {
+        type: type.BOOLEAN,
+        defaultValue: true,
+      },
+      creacionHistoria_clinica: {
         type: "TIMESTAMP",
         defaultValue: type.literal("CURRENT_TIMESTAMP"),
         allowNull: false,
       },
-      actualizacionHistoria_clinicas: {
+      actualizacionHistoria_clinica: {
         type: "TIMESTAMP",
         defaultValue: type.literal("CURRENT_TIMESTAMP "),
         allowNull: false,

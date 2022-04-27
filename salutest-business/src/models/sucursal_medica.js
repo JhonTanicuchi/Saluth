@@ -7,9 +7,12 @@ const sucursal_medica = (sequelize, type) => {
         primaryKey: true,
         autoIncrement: true,
       },
-      nombre: type.STRING,
-      direccion: type.STRING,
-      estado: type.BOOLEAN,
+      nombre_sucursal_medica: type.STRING,
+      direccion_sucursal_medica: type.STRING,
+      estado_sucursal_medica: {
+        type: type.BOOLEAN,
+        defaultValue: true,
+      },
       creacionSucursal_medica: {
         type: "TIMESTAMP",
         defaultValue: type.literal("CURRENT_TIMESTAMP"),

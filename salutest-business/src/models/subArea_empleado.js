@@ -7,13 +7,13 @@ const subArea_empleado = (sequelize, type) => {
           primaryKey: true,
           autoIncrement: true,
         },
-        fecha: type.STRING,
-          creacionSubArea_empleado: {
+        fecha_subArea_empleado: type.STRING,
+        creacionSubArea_empleado: {
           type: "TIMESTAMP",
           defaultValue: type.literal("CURRENT_TIMESTAMP"),
           allowNull: false,
         },
-        actualizacionSubArea_empleados: {
+        actualizacionSubArea_empleado: {
           type: "TIMESTAMP",
           defaultValue: type.literal("CURRENT_TIMESTAMP "),
           allowNull: false,

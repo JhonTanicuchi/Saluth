@@ -2,8 +2,10 @@
 <div class="main_contect">
     <main class="main_app">
         <section class="dash_title">
-            <h2 id="title_modules" class="pestana hidden">Modulos ERP</h2>
-
+            <h2 class="pestana hidden home">Home</h2>
+            <h2 class="pestana hidden">Apps</h2>
+            <h2 id="title_modules" class="hidden">Modulos ERP</h2>
+            <h2 id="title_pestaña" class="pestana hidden">Modulos ERP</h2>
         </section>
 
         <!--Contenedor 1-->
@@ -18,16 +20,17 @@
                             <p>{{descripcion-modulo}}</p>
                         </div>
                         <div class="tarjetas-footer">{{valor_catalogo}}</div>
+                        {{#if (public valor_catalogo)}}
+                        <i class="fas fa-unlock"></i>
+                        <button onclick="window.location='/modules_erp/lock/{{id_modulo}}'" class="btn_salutest">Hacer
+                            privado</button>
+                        {{else}}
+                        <i class="fas fa-lock"></i>
+                        <button onclick="window.location='/modules_erp/unlock/{{id_modulo}}'" class="btn_salutest">Hacer
+                            público</button>
+                        {{/if}}
                     </div>
-                    {{#if (public valor_catalogo)}}
-                    <i class="fas fa-unlock"></i>
-                    <button onclick="window.location='/modules_erp/lock/{{id_modulo}}'" class="btn_salutest">Hacer
-                        privado</button>
-                    {{else}}
-                    <i class="fas fa-lock"></i>
-                    <button onclick="window.location='/modules_erp/unlock/{{id_modulo}}'" class="btn_salutest">Hacer
-                        público</button>
-                    {{/if}}
+                    
                     {{/each}}
                 </div>
                 {{#unless modules_erp}}
@@ -66,6 +69,15 @@
                             <span>Privados</span>
                         </div>
                         <h5>{{length modules_erp_private}}</h5>
+                    </div>
+                </div>
+
+                <div class="summary_card">
+                    <div onclick="window.location='/module'" class="summary_single new">
+                        <div>
+                            <span class="fas fa-square-plus"></span>
+                            <span>Nuevo</span>
+                        </div>
                     </div>
                 </div>
             </section>

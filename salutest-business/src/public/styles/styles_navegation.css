@@ -303,6 +303,7 @@
   padding: 1rem 3rem;
   background: #e8eef4;
   min-height: calc(100vh - 60px - 30px);
+  border-radius: 7px;
 }
 
 .dash_title {

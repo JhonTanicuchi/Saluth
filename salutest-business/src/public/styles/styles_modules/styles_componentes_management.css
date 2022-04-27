@@ -34,10 +34,8 @@
     border-radius: 1rem;
     box-shadow: 0 1rem 1rem rgb(0, 0, 0, 0.2);
     display: flex;
-    margin: 1.5rem;
     overflow: hidden;
-    width: 650px;
-    height: 320px;
+    height: 220px;
    background: -webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);  background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5); 
 
 }
@@ -106,5 +104,12 @@
     background: #FF0099;  /* fallback for old browsers */
 background: -webkit-linear-gradient(to right, #493240, #FF0099);  /* Chrome 10-25, Safari 5.1-6 */
 background: linear-gradient(to right, #493240, #FF0099); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+
+.instituciones_medicas_list.management {
+
+  grid-template-columns: repeat(2, 1fr);
 
 }

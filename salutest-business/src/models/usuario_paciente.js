@@ -7,15 +7,15 @@ const usuario_paciente = (sequelize, type) => {
         primaryKey: true,
         autoIncrement: true,
       },
-      username: type.STRING(99),
+      username: type.STRING,
       password: type.STRING,
       correo: type.STRING,
-      creacionUsuario_Pacientes: {
+      creacionUsuario_Paciente: {
         type: "TIMESTAMP",
         defaultValue: type.literal("CURRENT_TIMESTAMP"),
         allowNull: false,
       },
-      actualizacionUsuario_Pacientes: {
+      actualizacionUsuario_Paciente: {
         type: "TIMESTAMP",
         defaultValue: type.literal("CURRENT_TIMESTAMP "),
         allowNull: false,

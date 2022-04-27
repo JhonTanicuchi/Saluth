@@ -9,6 +9,10 @@ const catalogo = (sequelize, type) => {
       },
       nombre_catalogo: type.STRING,
       valor_catalogo: type.STRING,
+      estado_catalogo: {
+        type: type.BOOLEAN,
+        defaultValue: true,
+      },
       creacionCatalogo: {
         type: "TIMESTAMP",
         defaultValue: type.literal("CURRENT_TIMESTAMP"),

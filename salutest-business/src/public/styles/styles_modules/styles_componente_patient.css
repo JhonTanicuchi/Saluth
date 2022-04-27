@@ -2,6 +2,7 @@
  .per-card-3 {
     height: 220px;
     background: white;
+    border-radius: 7px;
 }
 
 .componente_patient_grid{
@@ -21,6 +22,8 @@
     height: 20%;
     background-image: radial-gradient(circle at 37.72% -19.64%, #77b2cc 0, #4f9aba 25%, #0180a7 50%, #006794 75%, #005184 100%);
     text-align:center;
+    border-radius: 7px 7px 0px 0px;
+
     
 }
 

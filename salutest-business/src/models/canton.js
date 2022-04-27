@@ -1,28 +1,24 @@
-const persona = (sequelize, type) => {
+const canton = (sequelize, type) => {
   return sequelize.define(
-    "persona",
+    "canton",
     {
-      id_persona: {
+      id_canton: {
         type: type.INTEGER,
         primaryKey: true,
         autoIncrement: true,
       },
-      cedula_persona: type.STRING,
-      nombres_persona: type.STRING,
-      apellidos_persona: type.STRING,
-      fecha_nacimiento_persona: type.STRING,
-      direccion_persona: type.STRING,
-      tel_persona: type.STRING,
-      estado_persona: {
+      numero_canton: type.INTEGER,
+      nombre_canton: type.STRING,
+      estado_canton: {
         type: type.BOOLEAN,
         defaultValue: true,
       },
-      creacionPersona: {
+      creacionCanton: {
         type: "TIMESTAMP",
         defaultValue: type.literal("CURRENT_TIMESTAMP"),
         allowNull: false,
       },
-      actualizacionPersona: {
+      actualizacionCanton: {
         type: "TIMESTAMP",
         defaultValue: type.literal("CURRENT_TIMESTAMP "),
         allowNull: false,
@@ -34,4 +30,4 @@ const persona = (sequelize, type) => {
   );
 };
 
-module.exports = persona;
+module.exports = canton;
