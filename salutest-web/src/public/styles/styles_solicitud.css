@@ -16,6 +16,7 @@
 }
 .container_solicitud {
   width: 700px;
+  margin-bottom: 30px;
 }
 
 .form_solicitudes {
@@ -42,7 +43,7 @@
 }
 
 .form_institucion_medica .data_institucion_medica {
-  grid-column: span 5 / span 5;
+  grid-column: span 4 / span 4;
 }
 
 .form_institucion_medica .data_categoria_institucion {
@@ -50,6 +51,18 @@
 }
 
 .form_institucion_medica .data_tipo_institucion {
+  grid-column: span 2 / span 2;
+}
+
+.form_institucion_medica .data_provincia {
+  grid-column: span 2 / span 2;
+}
+
+.form_institucion_medica .data_canton {
+  grid-column: span 2 / span 2;
+}
+
+.form_institucion_medica .data_parroquia {
   grid-column: span 2 / span 2;
 }
 
@@ -62,7 +75,11 @@
 }
 
 .form_institucion_medica .data_logo {
-  grid-column: span 5 / span 5;
+  grid-column: span 3 / span 3;
+}
+
+.form_institucion_medica .data_direccion{
+  grid-column: span 6 / span 6;
 }
 
 .data_sucursales .inputs_sucursales {
@@ -77,12 +94,20 @@
   grid-template-columns: repeat(9, minmax(0, 1fr));
 }
 
+.form_informacion_contact .data_cedula {
+  grid-column: span 2 / span 2;
+}
+
 .form_informacion_contact .data_nombres {
-  grid-column: span 3 / span 3;
+  grid-column: span 2 / span 2;
+}
+
+.form_informacion_contact .data_apellidos {
+  grid-column: span 2 / span 2;
 }
 
 .form_informacion_contact .data_correo {
-  grid-column: span 4 / span 4;
+  grid-column: span 3 / span 3;
 }
 
 .form_informacion_contact .data_celular {

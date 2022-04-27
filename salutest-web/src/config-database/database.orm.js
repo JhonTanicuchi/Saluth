@@ -17,6 +17,7 @@ mysql
   });
 
 const solicitud_Modelo = require("../models/solicitud");
+const catalogo_Modelo = require("../models/catalogo");
 
 const sequelize = new Sequelize("database_salutest", "root", "", {
   host: "localhost",
@@ -43,7 +44,9 @@ sequelize.sync({ force: false }).then(() => {
 });
 
 const solicitud = solicitud_Modelo(sequelize, Sequelize);
+const catalogo = catalogo_Modelo(sequelize, Sequelize);
 
 module.exports = {
   solicitud,
+  catalogo,
 };

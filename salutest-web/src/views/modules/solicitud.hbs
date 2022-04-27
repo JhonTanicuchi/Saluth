@@ -21,25 +21,56 @@
                                     <input name="nombre_institucion_medica" class="input" id="institucion_medica"
                                         type="text" autocomplete="off" required />
                                 </div>
-                                <div class="data_categoria_institucion">
+                                {{!-- <div class="data_categoria_institucion">
                                     <label for="categoria_institucion">Categoría</label>
                                     <select name="categoria_institucion" class="input" id="categoria_institucion">
                                         <option selected disabled value=""></option>
-                                        <option value="Farmacia">Farmacia</option>
-                                        <option value="Centro Médico">Centro Médico</option>
-                                        <option value="Clínica">Clínica</option>
-                                        <option value="Hospital">Hospital</option>
+                                        {{#each categoria_instituciones_medicas}}
+                                        <option value={{id_catalogo}}>{{valor_catalogo}}</option>
+                                        {{/each}}
                                     </select>
-                                </div>
+                                </div> --}}
                                 <div class="data_tipo_institucion">
                                     <label for="tipo_institucion">Tipo de Institución</label>
                                     <select name="tipo_institucion" class="input" id="tipo_institucion">
                                         <option selected disabled value=""></option>
-                                        <option value="publica">Publica</option>
-                                        <option value="privada">Privada</option>
+                                        {{#each tipo_instituciones_medicas}}
+                                        <option value={{id_catalogo}}>{{valor_catalogo}}</option>
+                                        {{/each}}
+
                                     </select>
                                 </div>
-                                <div class="data_sucursales">
+                             {{!--    <div class="data_provincia">
+                                    <label for="provincia">Provincia</label>
+                                    <select name="provincia" class="input" id="provincia">
+                                        <option selected disabled value=""></option>
+                                        {{#each provincias}}
+                                        <option value={{id_provincia}}>{{nombre_provincia}}</option>
+                                        {{/each}}
+                                
+                                    </select>
+                                </div>
+                                <div class="data_canton">
+                                    <label for="canton">Canton</label>
+                                    <select name="canton" class="input" id="canton">
+                                        <option selected disabled value=""></option>
+                                        {{#each cantones}}
+                                        <option value={{id_canton}}>{{nombre_canton}}</option>
+                                        {{/each}}
+                                
+                                    </select>
+                                </div>
+                                <div class="data_parroquia">
+                                    <label for="parroquia">Parroquia</label>
+                                    <select name="parroquia" class="input" id="parroquia">
+                                        <option selected disabled value=""></option>
+                                        {{#each parroquias}}
+                                        <option value={{id_parroquia}}>{{nombre_parroquia}}</option>
+                                        {{/each}}
+                                
+                                    </select>
+                                </div> --}}
+                               {{!--  <div class="data_sucursales">
                                     <label for="sucursales">¿Tiene sucursales?</label>
                                     <div class="inputs_sucursales">
                                         <select name="sucursales" class="input" id="sucursales"
@@ -50,30 +81,44 @@
                                         <input name="n_sucursales" class="input" id="n_sucursales" type="text"
                                             autocomplete="off" required disabled placeholder="N°" />
                                     </div>
-                                </div>
+                                </div> --}}
+                                
                                 <div class="data_logo">
                                     <label for="logo">Logo o Imagen</label>
                                     <input name="logo" class="input" id="logo" type="file" autocomplete="off" />
                                 </div>
+                                {{!-- <div class="data_direccion">
+                                    <label for="direccion">Dirección</label>
+                                    <input name="direccion" class="input" id="direccion" type="text" autocomplete="off"
+                                        required />
+                                </div> --}}
                             </div>
 
                             <h3 class="subtitle_contactos">Información de contacto</h3>
                             <div class="form_informacion_contact">
+                                <div class="data_cedula">
+                                    <label for="cedula_contacto">Cédula</label>
+                                    <input name="cedula_contacto" class="input" id="cedula_contacto" type="text" autocomplete="off" required />
+                                </div>
                                 <div class="data_nombres">
-                                    <label for="nombre_contacto">Nombres</label>
-                                    <input name="nombre_contacto" class="input" id="nombre_contacto" type="text"
+                                    <label for="nombres_contacto">Nombre</label>
+                                    <input name="nombres_contacto" class="input" id="nombres_contacto" type="text"
                                         autocomplete="off" required />
+                                </div>
+                                {{!-- <div class="data_apellidos">
+                                    <label for="apellidos_contacto">Apellidos</label>
+                                    <input name="apellidos_contacto" class="input" id="apellidos_contacto" type="text" autocomplete="off" required />
+                                </div> --}}
+                                <div class="data_celular">
+                                    <label for="tel_contacto">Celular</label>
+                                    <input name="tel_contacto" class="input" id="tel_contacto" type="text" autocomplete="off" required />
                                 </div>
                                 <div class="data_correo">
                                     <label for="email_contacto">Correo</label>
                                     <input name="email_contacto" class="input" id="email_contacto" type="email"
                                         autocomplete="off" required onchange="validator_gmail()" />
                                 </div>
-                                <div class="data_celular">
-                                    <label for="tel_contacto">Celular</label>
-                                    <input name="tel_contacto" class="input" id="tel_contacto" type="text"
-                                        autocomplete="off" required />
-                                </div>
+                                
                             </div>
 
 
