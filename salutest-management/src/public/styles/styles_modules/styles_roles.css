@@ -1,0 +1,85 @@
+.formulario_roles {
+    font-size: 20px;
+    font-weight: 500;
+    width: auto;
+    padding: 8px;
+    background: #b9c9fe;
+    border-top: 4px solid #aabcfe;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+
+.contenedor_roles {
+    padding: 20px;
+    background: #d96a89e4;
+    border-bottom: 2px solid rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
+    display: inline-block;
+    border-top: 2px solid transparent;
+    border: solid 2px rgb(0, 0, 0);
+}
+
+.contenedor_roles td {
+    border: 2px solid #000;
+    background-color: #07ffb0;
+    text-align: center;
+    width: auto;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.contenedor_roles tbody {
+    height: 30px;
+    width: 40px;
+}
+
+form {
+    text-align: center;
+}
+
+th {
+    border: 1px solid #D5D9D9;
+    width: 100px;
+    height: 25px;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    background-color: #00438D;
+}
+
+input[class="submit_roles"] {
+    width: 8em;
+    height: 2em;
+    color: rgb(0, 0, 0);
+    background-color: #4dff00af;
+    border: 1px solid rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+.editar {
+    width: 8em;
+    height: 2em;
+    color: rgb(0, 0, 0);
+    background-color: #fffb00f8;
+    border: 1px solid rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+.eliminar {
+    width: 8em;
+    height: 2em;
+    color: rgb(0, 0, 0);
+    border: 1px solid rgb(255, 255, 255);
+    background-color: #ff0000;
+    cursor: pointer;
+}
+
+.submit_roles:hover {
+    background-color: rgb(162, 156, 156);
+}
+
+.editar:hover {
+    background-color: rgb(162, 156, 156);
+}
+
+.eliminar:hover {
+    background-color: rgb(162, 156, 156);
+}

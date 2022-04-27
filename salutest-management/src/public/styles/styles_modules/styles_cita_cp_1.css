@@ -1,0 +1,159 @@
+.container_cita_cp_1{
+  height: calc(100vh - 10rem);
+  display: grid;
+  grid-template-columns: calc(80% - 1.5rem) 20%;
+  grid-column-gap: 1.5rem;
+}
+
+.container_cita_cp_1 .container_left , .container_cita_cp_1 .calendar, .container_cita_cp_1 .disponibilidad{
+  border-radius: 7px;
+  background: white;
+}
+
+.container_cita_cp_1 .container_left .detalle_paciente{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 20px;
+  border-bottom: 1px solid rgb(194, 194, 194);
+  font-size: 12px;
+}
+
+.container_cita_cp_1 .container_left .detalle_paciente p span{
+  font-weight: bold;
+}
+.container_cita_cp_1 .container_left{
+  position: relative;
+}
+
+.container_cita_cp_1 .especialidad{
+  display: flex;
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid rgb(194, 194, 194);
+}
+
+.container_cita_cp_1 .container_especialidad{
+  display: flex;
+  align-items: center;
+}
+
+.container_cita_cp_1 .container_especialidad .title{
+  margin-right: 20px;
+}
+
+.container_cita_cp_1 .container_right{
+  display: grid;
+  grid-template-rows: 260.40px auto;
+  grid-row-gap: 1.5rem;
+}
+
+.container_cita_cp_1 .container_right .title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  border-bottom: 1px solid rgb(194, 194, 194);
+}
+
+.container_cita_cp_1 .container_right .title h1{
+  font-size: 15px;
+}
+
+.container_cita_cp_1 .disponibilidad .contenido{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: .1rem;
+  padding: 10px;
+}
+
+.container_cita_cp_1 .card_hour{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  margin: 5px;
+  padding: 5px;
+  background: #e8eef4ad;
+}
+
+.container_cita_cp_1 .card_hour:hover{
+  background: #dde0e2e1;
+  cursor: pointer;
+}
+
+.container_cita_cp_1 .card_hour span{
+  font-size: 14px;
+}
+
+.container_cita_cp_1 .container_bot{
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.container_cita_cp_1 .select-box{
+  position: relative;
+}
+
+.container_cita_cp_1 .options-container{
+  margin-top: 50px;
+  position: absolute;
+}
+
+.container_cita_cp_1 .medicos{
+  padding: 20px;
+}
+
+.container_cita_cp_1 .card_doctor{
+  display: grid;
+  grid-template-columns: 45px auto;
+  grid-column-gap: .5rem;
+  cursor: pointer;
+  transition: .3s all ease;
+  padding: 5px;
+  border-bottom: 1px solid #535a6644;
+}
+
+
+.container_cita_cp_1 .card_doctor:hover{
+  background: #E8EEF4;
+  border-radius: 7px;
+
+}
+
+.container_cita_cp_1 .sections{
+  display: grid;
+  grid-template-columns: 50% 30% calc(20% - 1rem);
+  grid-column-gap: .5rem;
+  transition: .5s all ease;
+}
+
+.container_cita_cp_1 .section{
+  /* background: #d9e5e9;
+  border-radius: 5px; */
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  transition: .3s all ease;
+}
+
+.container_cita_cp_1 .section span{
+  font-size: 14px;
+}
+
+.container_cita_cp_1 .section_img{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container_cita_cp_1 .section_img img{
+  width: 45px;
+  transition: .3s all ease;
+}

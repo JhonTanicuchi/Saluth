@@ -1,0 +1,99 @@
+.container_salud{
+    display: grid;
+    grid-template-rows: calc(50% - 1.5rem) 50%;
+    grid-row-gap: 1.5rem;
+    height: calc(100vh - 10rem);
+}
+
+.container_salud .container_top {
+    display: grid;
+    grid-template-columns: calc(30% - 1.5rem) 70%;
+    grid-column-gap: 1.5rem;
+}
+
+.container_salud .container_top .control_peso{
+    display: grid;
+    grid-template-rows: calc(75% - .5rem) calc(25% - .5rem);
+    grid-row-gap: 1rem;
+}
+
+.container_salud .container_top .container_right{
+    display: grid;
+    grid-template-rows: calc(50% - .5rem) calc(50% - .5rem);
+    grid-row-gap: 1rem;
+}
+
+.container_salud .container_bot {
+    display: grid;
+    grid-template-columns: calc(60% - 1.5rem) 40%;
+    grid-column-gap: 1.5rem;
+}
+
+.container_salud .container_top .control_peso .peso_details, 
+.container_salud .container_top .control_peso .peso_estado, 
+.container_salud .container_top .container_right div:first-child, 
+.container_salud .container_top .container_right div:last-child, 
+.container_salud .container_bot .container_left, 
+.container_salud .container_bot .container_right{
+    border-radius: 5px;
+    background: white;
+}
+
+.container_salud .container_top .control_peso,  
+.container_salud .container_top .container_right, 
+.container_salud .container_bot .container_left, 
+.container_salud .container_bot .container_right{
+    cursor: pointer;
+    transition: all .2s ease-in;
+    opacity: 80%;
+}
+
+.container_salud .container_top .control_peso:hover,  
+.container_salud .container_top .container_right:hover, 
+.container_salud .container_bot .container_left:hover, 
+.container_salud .container_bot .container_right:hover{
+    transform: scale(1.03);
+    opacity: 100%;
+}
+
+
+
+
+.container_salud .container_top .control_peso .peso_details .title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 14px;
+    padding: 5px;
+    border-bottom: 1px solid #E8EEF4;
+    color: #535a66;
+}
+.container_salud .container_top .control_peso .peso_details .icon_peso{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100% - 43px);
+}
+
+
+.container_salud .container_top .control_peso .peso_details .icon_peso span{
+    color: var(--color_dark_P);
+    font-size: 50px;
+}
+
+.container_salud .container_top .control_peso .peso_estado{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    color: #535a66;
+}
+
+.container_salud .inactive:hover{
+    cursor: no-drop;
+    background: #535a6617;
+    opacity: 100%;
+}

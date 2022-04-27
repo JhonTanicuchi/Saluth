@@ -1,0 +1,134 @@
+.home_grid{
+    display: grid;
+  grid-template-rows: 20% 80%;
+  grid-row-gap: 1.5rem;
+  height: calc(100vh - 60px - 2rem - 1.5rem);
+}
+
+
+.home_grid .welcome_card {
+  background: white;
+  border-radius: 7px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  position: relative;
+  z-index: 1;
+  color: white;
+  overflow: hidden;
+}
+
+.home_grid .container_welcome {
+  border-radius: 7px 0px 0px 7px ;
+  width: 70%;
+  height: 100%;
+  padding: 2rem;
+  clip-path: polygon(0 0, 100% 0%, 89% 100%, 0% 100%);
+  background: #7c8b94;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+
+.home_grid .welcome_card span{
+  text-transform: capitalize;
+  color: #5fbdda;
+  font-weight: normal;
+}
+
+.home_grid .welcome_card img {
+  opacity: 90%;
+  width: 40%;
+  position: absolute;
+  margin: auto;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+}
+
+.home_grid .welcome_card h3{
+  font-weight: normal;
+  text-align: left;
+  font-size: 14px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.home_grid .welcome_card h2 {
+  text-align: left;
+  color: var(--color_dark_P);
+}
+
+.home_grid .welcome_card h1 {
+  font-size: 20px;
+  padding-right: 20px;
+  font-weight: normal;
+}
+
+
+
+.home_bootom .shortcut_grid{
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 1rem;
+
+}
+
+.home_bootom .shortcut_grid .card_shortcut{
+  background: rgba(255, 255, 255, 0.63);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 7px;
+  opacity: 70%;
+  position: relative;
+  transition: all .1s ease-in-out;
+}
+
+.home_bootom .shortcut_grid .card_shortcut.plus{
+  background: transparent;
+  border:  1px dashed #535a6686;
+}
+
+.home_bootom .shortcut_grid .card_shortcut.plus:hover{
+  background: transparent;
+  border:  1px dashed #535a6686;
+}
+
+.home_bootom .shortcut_grid .card_shortcut:hover{
+  opacity: 100%;
+  cursor: pointer;
+  border:  1px solid #535a6686;
+  background: white;
+}
+
+.home_bootom .shortcut_grid .card_shortcut > span{
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 10px;
+  opacity: 30%;
+}
+
+.home_bootom .shortcut_grid .card_shortcut .title {
+  text-align: center;
+}
+
+.home_bootom .shortcut_grid .card_shortcut .title > span{
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.home_bootom .shortcut_grid .card_shortcut.plus .title > span{
+
+  margin:0;
+}
+
+.home_bootom .shortcut_grid .card_shortcut .title > h3{
+  font-size: 15px
+}

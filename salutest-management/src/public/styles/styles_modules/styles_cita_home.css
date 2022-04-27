@@ -1,0 +1,85 @@
+.grid_cita_home {
+  display: grid;
+  height: calc(100vh - 10rem);
+  grid-template-columns: repeat(4,1fr);
+  grid-column-gap: 2rem;
+}
+
+.container_mode_cita{
+  height: calc(100% - 1.5rem);
+  display: grid;
+  grid-template-rows: 10% 90%;
+  grid-row-gap: 1.5rem;
+  background: rgba(255, 255, 255, 0.438);
+  border-radius: 7px;
+  transition: all .2s ease-in;
+  opacity: 80%;
+}
+
+.container_mode_cita:hover{
+  transform: scale(1.01);
+  opacity: 100%;
+  background: #535a6617;
+}
+
+.container_mode_cita:hover > .content, .container_mode_cita:hover > .title{
+  transform: scale(1.03);
+}
+
+/* .container_mode_cita:hover > div span{
+  animation: zoom_icon 1.5s infinite ease-in-out both;
+} */
+
+.container_mode_cita.disable{
+  height: 100%;
+  cursor: no-drop;
+}
+
+.container_mode_cita .title, .container_mode_cita .content{
+  background: white;
+  border-radius: 7px;
+}
+
+.container_mode_cita .title{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--color_font_P);
+  font-size: 12px;
+  transition: all .2s ease-in;
+}
+
+.container_mode_cita .content{
+  position: relative;
+  overflow: hidden;
+}
+
+.container_mode_cita div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: all .2s ease-in;
+}
+
+.container_mode_cita div span{
+  font-size: 40px;
+  color: var(--color_font_P);
+  z-index: 10;
+  transition: all .2s ease-in;
+}
+
+
+.container_mode_cita div span:hover{
+  transform: scale(1.15);
+}
+
+@keyframes zoom_icon{
+  0%,100%{
+    transform: scale(1);
+  }
+  50%{
+    transform: scale(1.5);
+  }
+}

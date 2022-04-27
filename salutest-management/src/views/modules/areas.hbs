@@ -1,0 +1,47 @@
+<!-- MAIN CONTECT -->
+<div class="main_contect">
+    <main class="main_app">
+        <section class="dash_title">
+            <h2 id="title_modules">Areas Clinicas</h2>
+            <a href="/home"><span class="far fa-times-circle"></span></a>
+        </section>
+
+        <div class="Crud_Areas_grid">
+            <table>
+        <tr>
+            <td>
+                <form autocomplete="off" action="/areas/add" method="post">
+                    <div class="texto1">
+                        <label for="productCode">Areas clinicas</label>
+                        <input type="text" name="nombre" id="productCode">
+                    </div>
+
+                    <div class="form_action--button">
+                        <input type="submit" value="Crear">
+                        <input type="reset" value="Reset">
+                    </div>
+                </form>
+
+                <td>
+                    <table class="list" id="storeList">
+                        <thead>
+                            <tr>
+                                <th>Areas</th>
+                                <th>Estado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        {{#each areas}}
+                            <tr>
+                                <td>{{nombre_area}}</td>
+                                <td>{{estado_area}}</td>
+                            </tr>
+                        {{/each}}
+                        </tbody>
+                    </table>
+            </td>
+        </tr>
+    </table>
+        </div>
+</div>
+</main>

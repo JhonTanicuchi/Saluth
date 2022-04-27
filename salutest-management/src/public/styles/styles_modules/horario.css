@@ -1,0 +1,149 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.form-registro{
+    width: 800px;
+    background: #24303c;
+    padding: 10px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 4px;
+    font-family: 'calibry';
+    color: white;
+    box-shadow: 7px 13px 37px #000;
+    
+}
+
+.form-registro h4{
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.controls{
+    color: white;
+    width: 100%;
+    background: #24303c;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #1f53c5;
+    font-family: 'calibry';
+    font-size: 18px;
+}
+
+.form-registro p{
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 40px;
+}
+
+.form-registro a{
+    color: white;
+    text-decoration: none;
+}
+
+.form-registro a:hover{
+    color: white;
+    text-decoration: underline;
+}
+
+.form-registro .botons{
+    width: 100%;
+    background: blue;
+    border: none;
+    padding: 12px;
+    color: white;
+    margin: 16px 0;
+    font-size: 16px;
+}
+
+
+
+
+/*------------------------------------------ boton neon-------------------------------------------------*/
+.boton{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 1100px;
+    align-items: center;
+}
+
+.neon{
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-top: 100px;
+    position: relative;
+    padding: 15px;
+    color: white;
+    letter-spacing: 5px;
+    border: 1px solid rgba(172, 162, 233, 1);
+    background: none;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.8s;
+}
+.neon::after{
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0;
+    height: 50%;
+    width: 0%;
+    z-index: -1;
+   
+    transition: 0.8s;
+    opacity: 0;
+}
+.neon::before{
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    height: 50%;
+    width: 0%;
+    z-index: -1;
+    transition: 0.8s;
+    opacity: 0;
+}
+
+.neon:hover::after, .btn:hover::before{
+    width: 100%;
+    opacity: 1;
+}
+.neon:hover{
+    color: #000000;
+    box-shadow: 0 0 60px #ff7bde, 0 0 10px #1100ff, 0 0 100px #037975 ;
+}
+.neon:active{
+    box-shadow: 0 0 60px #ff7bde, 0 0 10px #1100ff, 0 0 100px #0d9e86 ;
+}
+
+
+
+
+/*------------------------------------tabla-------------------------------------------------*/
+.horario{
+    background: linear-gradient(to left, #0f8dd6, #04519d); 
+    
+}
+
+.horario-active{
+    background: linear-gradient(to right, #0f8dd6, #04519d); 
+}
+
+.horario .Editar{
+    color:rgb(10, 220, 31);
+    cursor: pointer;
+}
+
+table .eliminar{
+    color:rgb(255, 0, 0);
+    cursor: pointer;
+}
+

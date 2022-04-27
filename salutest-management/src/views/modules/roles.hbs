@@ -1,0 +1,48 @@
+<!-- MAIN CONTECT -->
+<div class="main_contect">
+    <main class="main_app">
+        <section class="dash_title">
+            <h2 id="title_modules">Roles</h2>
+            <a href="/home"><span class="far fa-times-circle"></span></a>
+        </section>
+
+            <form onsubmit="event.preventDefault();onSubmit();" autocomplete="of">
+
+                <div class="contenedor_roles">
+                    <table class="tabla_roles" id="tabla_roles">
+                        <div class="fuction"></div>
+                        <thead>
+                            <tr class="tr_roles">
+                                <th>ID</th>
+                                <th>Nombre</th>
+                                <th>Apellido</th>
+                                <th>Edad</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {{#each roles}}
+                                <tr>
+                                    <td>{{id}}</td>
+                                    <td>{{nom}}</td>
+                                    <td>{{ape}}</td>
+                                    <td>{{edad}}</td>
+                                </tr>
+                            {{/each}}
+                        </tbody>
+                    </table>
+                </div> <br> <br> <br>
+
+                <table>
+                    <div class="formulario_roles">
+                        <label for="id"></label> <input name="id" id="id" type="text" placeholder="Doctor, Paciente o Administrador" required>
+                        <label for="nom"></label> <input name="nom" id="nom" type="text" placeholder="Introduzca un nombre" required>
+                        <label for="ape"></label> <input name="ape" id="ape" type="text" placeholder="Introduzca un apellido" required>
+                        <label for="edad"></label> <input name="edad" id="edad" type="number" placeholder="Introduzca la edad" required>
+
+                        <br> <br>
+                        <input class="submit_roles" type="submit" value="Añadir">
+                    </div>
+                </table>
+            </form>
+    </main>
+</div>

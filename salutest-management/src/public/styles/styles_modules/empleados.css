@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root{
+    --primary-color:rgb(0, 0, 0);
+    --secondary-color: #5efff2 ;
+    --highlight-color: #23ffa3;
+
+    --dt-status-available-color: #08791d;
+    --dt-status-offline-color:#ff0f1f;
+
+    --dt-padding: 7px;
+    --dt-padding-s: 6px;
+    --dt-padding-xs: 2px;
+
+    --dt-border-radius: 3px;
+
+    --dt-background-color-container: #349c89;
+    --dt-border-color: var(--secondary-color);
+    --dt-bg-color: var(--highlight-color);
+    --dt-text-color: var(--primary-color);
+    --dt-bg-active-button: var(--highlight-color);
+    --dt-text-color-button: var(--primary-color);
+    --dt-text-color-active-button: var(--primary-color);
+    --dt-hover-cell-color: var(--highlight-color);
+    --dt-even-row-color: var(--secondary-color);
+    --dt-focus-color: var(--highlight-color);
+    --dt-input-background-color: var(--secondary-color);
+    --dt-input-color: var(--primary-color);
+}
+
+.material-icons{
+    font-size: 20px;
+}
+.datable-container{
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--dt-background-color-container);
+    border-radius: var(--dt-border-radius);
+    color: var(--dt-text-color);
+    width: 850px;
+    margin: 0 auto;
+    font-size: 12px;
+}
+.datable-container .header-tools{
+    border-bottom: solid 1px var(--dt-border-color);
+    padding: var(--dt-padding);
+    display: flex;
+    align-items: baseline;
+}
+.datable-container .header-tools .search{
+    width: 30%;
+}
+.datable-container .header-tools .search .search-input{
+    width: 100%;
+    background-color: var(--dt-input-background-color);
+    display: block;
+    box-sizing: border-box;
+    border-radius: var(--dt-border-color);
+    border: solid 1px var(--dt-border-color);
+    color: var(--dt-input-color);
+}
+.datable-container .header-tools .tools{
+    width: 70%;
+}
+.datable-container .header-tools .tools ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: start;
+    align-items: baseline;
+}
+.datable-container .header-tools .tools ul li{
+    display: inline-block;
+    margin: 0 var(--dt-padding-xs);
+    align-items: baseline;
+}
+.datable-container .footer-tools{
+    padding: var(--dt-padding);
+    display: flex;
+    align-items: baseline;
+}
+.datable-container .footer-tools .list-itmes{
+    width: 50%;
+}
+
+.datable-container .footer-tools .pages{
+    margin-left: auto;
+    margin-right: 0;
+    width: 50%;
+}
+.datable-container .footer-tools .pages ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-end;
+}
+.datable-container .footer-tools .pages ul li{
+    display: inline-block;
+    margin: 0 var(--dt-padding-xs);
+}
+.datable-container .footer-tools .pages ul li button,
+.datable-container .header-tools .tools ul li button{
+    color: var(--dt-text-color-button);
+    width: 100%;
+    box-sizing: border-box;
+    border: 0;
+    border-radius: var(--dt-border-radius);
+    background: transparent;
+    cursor: pointer;
+}
+.datable-container .footer-tools .pages ul li button:hover,
+.datable-container .header-tools .tools ul li button:hover{
+    background: var(--dt-bg-active-button);
+    color:var(--dt-text-color-active-button);
+}
+.datable-container .footer-tools .pages ul li span.active{
+    background-color: var(--dt-bg-color);
+    border-radius: var(--dt-border-radius);
+}
+.datable-container .footer-tools .pages ul li button,
+.datable-container .footer-tools .pages ul li span,
+.datable-container .header-tools .tools ul li button{
+    padding: var(--dt-padding-s) var(--dt-padding);
+}
+.datable-container .datatable{
+    border-collapse: collapse;
+    width: 100%;
+}
+.datable-container .datatable,
+.datable-container .datatable th,
+.datable-container .datatable td{
+    padding: var(--dt-padding) var(--dt-padding);
+}
+.datable-container .datatable th{
+    font-weight: bolder;
+    text-align: left;
+    border-bottom: solid 1px var(--dt-border-color);
+}
+.datable-container .datatable td{
+    border-bottom: solid 1px var(--dt-border-color);
+}
+.datable-container .datatable tbody tr:nth-child(even){
+    background-color: var(--dt-even-row-color);
+}
+.datable-container .datatable tbody tr:hover{
+    background-color: var(--dt-hover-cell-color);
+}
+.datable-container .datatable tbody tr .available::after,
+.datable-container .datatable tbody tr .away::after,
+.datable-container .datatable tbody tr .offline::after{
+    display: inline-block;
+    vertical-align: middle;
+}
+.datable-container .datatable tbody tr .available::after{
+    content: 'Inicia';
+    color: var(--dt-status-available-color);
+}
+.datable-container .datatable tbody tr .away::after{
+    content: 'Proceso';
+    color: var(--dt-status-away-color);
+}
+.datable-container .datatable tbody tr .offline::after{
+    content: 'Finalizada';
+    color: var(--dt-status-offline-color);
+}
+.datable-container .datatable tbody tr .available::before,
+.datable-container .datatable tbody tr .away::before,
+.datable-container .datatable tbody tr .offline::before{
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-right: 10px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+.datable-container .datatable tbody tr .available::before{
+    background-color: var(--dt-status-available-color);
+}
+.datable-container .datatable tbody tr .away::before{
+    background-color: var(--dt-status-away-color);
+}
+.datable-container .datatable tbody tr .offline::before{
+    background-color: var(--dt-status-offline-color);
+}
+
+.table-checkbox{
+    width: 10px;
+    height: 10px;
+}
