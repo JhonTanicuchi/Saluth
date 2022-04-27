@@ -13,8 +13,7 @@
                         <div class="fuction"></div>
                         <thead>
                             <tr class="tr_roles">
-                                <th>Roles</th>
-                                <th>Cedula</th>
+                                <th>ID</th>
                                 <th>Nombre</th>
                                 <th>Apellido</th>
                                 <th>Edad</th>
@@ -23,8 +22,7 @@
                         <tbody>
                             {{#each roles}}
                                 <tr>
-                                    <td>{{rol}}</td>
-                                    <td>{{ced}}</td>
+                                    <td>{{id}}</td>
                                     <td>{{nom}}</td>
                                     <td>{{ape}}</td>
                                     <td>{{edad}}</td>
@@ -36,8 +34,7 @@
 
                 <table>
                     <div class="formulario_roles">
-                        <label for="rol"></label> <input name="rol" id="rol" type="text" placeholder="Doctor, Paciente o Administrador" required>
-                        <label for="ced"></label> <input name="ced" id="ced" type="text" placeholder="Ingrese un numero de cedula" required>
+                        <label for="id"></label> <input name="id" id="id" type="text" placeholder="Doctor, Paciente o Administrador" required>
                         <label for="nom"></label> <input name="nom" id="nom" type="text" placeholder="Introduzca un nombre" required>
                         <label for="ape"></label> <input name="ape" id="ape" type="text" placeholder="Introduzca un apellido" required>
                         <label for="edad"></label> <input name="edad" id="edad" type="number" placeholder="Introduzca la edad" required>

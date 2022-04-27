@@ -10,12 +10,11 @@ roles.mostrar = (req, res) => {
 module.exports = roles
 
 roles.save = async(req, res) => {
-    const { rol, ced, name, ape, edad } =
+    const { id, nom, ape, edad } =
     req.body;
     const nuevosRoles = {
-        rol,
-        ced,
-        name,
+        id,
+        nom,
         ape,
         edad,
     };
