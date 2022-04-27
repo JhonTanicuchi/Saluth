@@ -7,8 +7,12 @@ const cargo = (sequelize, type) => {
         primaryKey: true,
         autoIncrement: true,
       },
-      nombre: type.STRING,
-      sueldo: type.STRING,
+      nombre_cargo: type.STRING,
+      sueldo_cargo: type.BOOLEAN,
+      estado_cargo: {
+        type: type.BOOLEAN,
+        defaultValue: true,
+      },
       creacionCargo: {
         type: "TIMESTAMP",
         defaultValue: type.literal("CURRENT_TIMESTAMP"),

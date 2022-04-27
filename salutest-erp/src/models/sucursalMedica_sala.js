@@ -1,20 +1,18 @@
-const recetaMedica_medicamento = (sequelize, type) => {
+const sucursalMedica_sala = (sequelize, type) => {
   return sequelize.define(
-    "recetaMedica_medicamento",
+    "sucursalMedica_sala",
     {
-      id_catalogo: {
+      id_sucursalMedica_sala: {
         type: type.INTEGER,
         primaryKey: true,
         autoIncrement: true,
       },
-      dosis_recetaMedica_medicamento: type.STRING,
-      descripcion_recetaMedica_medicamento: type.STRING,
-      creacionRecetaMedica_medicamento: {
+      creacionSucursalMedica_sala: {
         type: "TIMESTAMP",
         defaultValue: type.literal("CURRENT_TIMESTAMP"),
         allowNull: false,
       },
-      actualizacionRecetaMedica_medicamento: {
+      actualizacionSucursalMedica_sala: {
         type: "TIMESTAMP",
         defaultValue: type.literal("CURRENT_TIMESTAMP "),
         allowNull: false,
@@ -26,4 +24,4 @@ const recetaMedica_medicamento = (sequelize, type) => {
   );
 };
 
-module.exports = recetaMedica_medicamento;
+module.exports = sucursalMedica_sala;

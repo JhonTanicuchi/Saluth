@@ -7,13 +7,17 @@ const examen = (sequelize, type) => {
         primaryKey: true,
         autoIncrement: true,
       },
-      nombre: type.STRING,
-      creacionExamenes: {
+      nombre_examen: type.STRING,
+      estado_examen: {
+        type: type.BOOLEAN,
+        defaultValue: true,
+      },
+      creacionExamen: {
         type: "TIMESTAMP",
         defaultValue: type.literal("CURRENT_TIMESTAMP"),
         allowNull: false,
       },
-      actualizacionExamenes: {
+      actualizacionExamen: {
         type: "TIMESTAMP",
         defaultValue: type.literal("CURRENT_TIMESTAMP "),
         allowNull: false,

@@ -1,20 +1,22 @@
-const recetaMedica_medicamento = (sequelize, type) => {
+const contrato = (sequelize, type) => {
   return sequelize.define(
-    "recetaMedica_medicamento",
+    "contrato",
     {
-      id_catalogo: {
+      id_contrato: {
         type: type.INTEGER,
         primaryKey: true,
         autoIncrement: true,
       },
-      dosis_recetaMedica_medicamento: type.STRING,
-      descripcion_recetaMedica_medicamento: type.STRING,
-      creacionRecetaMedica_medicamento: {
+      estado_contrato: {
+        type: type.STRING,
+        defaultValue: "pendiente",
+      },
+      creacionContrato: {
         type: "TIMESTAMP",
         defaultValue: type.literal("CURRENT_TIMESTAMP"),
         allowNull: false,
       },
-      actualizacionRecetaMedica_medicamento: {
+      actualizacionContrato: {
         type: "TIMESTAMP",
         defaultValue: type.literal("CURRENT_TIMESTAMP "),
         allowNull: false,
@@ -26,4 +28,4 @@ const recetaMedica_medicamento = (sequelize, type) => {
   );
 };
 
-module.exports = recetaMedica_medicamento;
+module.exports = contrato;

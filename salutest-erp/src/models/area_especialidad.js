@@ -7,12 +7,12 @@ const area_especialidade = (sequelize, type) => {
         primaryKey: true,
         autoIncrement: true,
       },
-      creacionArea_especialidades: {
+      creacionArea_especialidad: {
         type: "TIMESTAMP",
         defaultValue: type.literal("CURRENT_TIMESTAMP"),
         allowNull: false,
       },
-      actualizacionArea_especialidades: {
+      actualizacionArea_especialidad: {
         type: "TIMESTAMP",
         defaultValue: type.literal("CURRENT_TIMESTAMP "),
         allowNull: false,

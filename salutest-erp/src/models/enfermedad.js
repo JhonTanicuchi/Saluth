@@ -7,15 +7,18 @@ const enfermedad = (sequelize, type) => {
         primaryKey: true,
         autoIncrement: true,
       },
-      nombre: type.STRING(99),
-      descripcion: type.STRING,
-      vacuna: type.STRING,
-      creacionEnfermedades: {
+      nombre_enfermedad: type.STRING(99),
+      descripcion_enfermedad: type.STRING,
+      estado_enfermedad: {
+        type: type.BOOLEAN,
+        defaultValue: true,
+      },
+      creacionEnfermedad: {
         type: "TIMESTAMP",
         defaultValue: type.literal("CURRENT_TIMESTAMP"),
         allowNull: false,
       },
-      actualizacionEnfermedades: {
+      actualizacionEnfermedad: {
         type: "TIMESTAMP",
         defaultValue: type.literal("CURRENT_TIMESTAMP "),
         allowNull: false,

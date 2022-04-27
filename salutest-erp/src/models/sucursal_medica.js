@@ -1,28 +1,24 @@
-const persona = (sequelize, type) => {
+const sucursal_medica = (sequelize, type) => {
   return sequelize.define(
-    "persona",
+    "sucursal_medica",
     {
-      id_persona: {
+      id_sucursal_medica: {
         type: type.INTEGER,
         primaryKey: true,
         autoIncrement: true,
       },
-      cedula_persona: type.STRING,
-      nombres_persona: type.STRING,
-      apellidos_persona: type.STRING,
-      fecha_nacimiento_persona: type.STRING,
-      direccion_persona: type.STRING,
-      tel_persona: type.STRING,
-      estado_persona: {
+      nombre_sucursal_medica: type.STRING,
+      direccion_sucursal_medica: type.STRING,
+      estado_sucursal_medica: {
         type: type.BOOLEAN,
         defaultValue: true,
       },
-      creacionPersona: {
+      creacionSucursal_medica: {
         type: "TIMESTAMP",
         defaultValue: type.literal("CURRENT_TIMESTAMP"),
         allowNull: false,
       },
-      actualizacionPersona: {
+      actualizacionSucursal_medica: {
         type: "TIMESTAMP",
         defaultValue: type.literal("CURRENT_TIMESTAMP "),
         allowNull: false,
@@ -34,4 +30,4 @@ const persona = (sequelize, type) => {
   );
 };
 
-module.exports = persona;
+module.exports = sucursal_medica;

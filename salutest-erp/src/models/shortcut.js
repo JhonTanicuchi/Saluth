@@ -1,28 +1,24 @@
-const persona = (sequelize, type) => {
+const shortcut = (sequelize, type) => {
   return sequelize.define(
-    "persona",
+    "shortcut",
     {
-      id_persona: {
+      id_shortcut: {
         type: type.INTEGER,
         primaryKey: true,
         autoIncrement: true,
       },
-      cedula_persona: type.STRING,
-      nombres_persona: type.STRING,
-      apellidos_persona: type.STRING,
-      fecha_nacimiento_persona: type.STRING,
-      direccion_persona: type.STRING,
-      tel_persona: type.STRING,
-      estado_persona: {
+      nombre_shortcut: type.STRING,
+      ruta_shortcut: type.STRING,
+      estado_shortcut: {
         type: type.BOOLEAN,
         defaultValue: true,
       },
-      creacionPersona: {
+      creacionShortcut: {
         type: "TIMESTAMP",
         defaultValue: type.literal("CURRENT_TIMESTAMP"),
         allowNull: false,
       },
-      actualizacionPersona: {
+      actualizacionShortcut: {
         type: "TIMESTAMP",
         defaultValue: type.literal("CURRENT_TIMESTAMP "),
         allowNull: false,
@@ -34,4 +30,4 @@ const persona = (sequelize, type) => {
   );
 };
 
-module.exports = persona;
+module.exports = shortcut;

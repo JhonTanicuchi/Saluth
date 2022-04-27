@@ -8,13 +8,12 @@ cita_medica.mostrar = (req,res) => {
 };
 
 cita_medica.save =async (req, res) => {
-    const{   fecha_asignada, hora_inicio, hora_fin, virtual } =
+    const{   fecha_asignada, hora_inicio, hora_fin } =
         req.body;
     const nuevaCita ={
         fecha_asignada,
         hora_inicio,
-        hora_fin,
-        virtual,
+        hora_fin
     };
 
     await orm.cita_medica.create(nuevaCita);

@@ -2,14 +2,17 @@ const sintoma = (sequelize, type) => {
   return sequelize.define(
     "sintoma",
     {
-      id_enfermedad: {
+      id_sintoma: {
         type: type.INTEGER,
         primaryKey: true,
         autoIncrement: true,
       },
-      nombre: type.STRING,
-      descripcion: type.STRING,
-      vacuna: type.STRING,
+      nombre_sintoma: type.STRING,
+      descripcion_sintoma: type.STRING,
+      estado_sintoma: {
+        type: type.BOOLEAN,
+        defaultValue: true,
+      },
       creacionSintoma: {
         type: "TIMESTAMP",
         defaultValue: type.literal("CURRENT_TIMESTAMP"),

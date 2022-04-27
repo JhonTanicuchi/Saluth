@@ -1,22 +1,24 @@
-const chat = (sequelize, type) => {
+const modulo = (sequelize, type) => {
     return sequelize.define(
-      "chat",
+      "modulo",
       {
-        id_chat: {
+        id_modulo: {
           type: type.INTEGER,
           primaryKey: true,
           autoIncrement: true,
         },
-        estado_chat: {
-        type: type.BOOLEAN,
-        defaultValue: true,
-      },
-        creacionChat: {
+        nombre_modulo: type.STRING,
+        descripcion_modulo: type.STRING,
+        estado_modulo: {
+          type: type.BOOLEAN,
+          defaultValue: true,
+        },
+        creacionModulo: {
           type: "TIMESTAMP",
           defaultValue: type.literal("CURRENT_TIMESTAMP"),
           allowNull: false,
         },
-        actualizacionChat: {
+        actualizacionModulo: {
           type: "TIMESTAMP",
           defaultValue: type.literal("CURRENT_TIMESTAMP "),
           allowNull: false,
@@ -28,4 +30,4 @@ const chat = (sequelize, type) => {
     );
   };
   
-  module.exports = chat;
+  module.exports = modulo;

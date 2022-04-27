@@ -7,8 +7,11 @@ const sub_area = (sequelize, type) => {
         primaryKey: true,
         autoIncrement: true,
       },
-      nombre: type.STRING,
-      estado: type.STRING,
+      nombre_sub_area: type.STRING,
+      estado_sub_area: {
+        type: type.BOOLEAN,
+        defaultValue: true,
+      },
       creacionSub_area: {
         type: "TIMESTAMP",
         defaultValue: type.literal("CURRENT_TIMESTAMP"),

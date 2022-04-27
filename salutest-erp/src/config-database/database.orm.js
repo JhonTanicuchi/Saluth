@@ -30,7 +30,7 @@ const diagnostico_enfermedad_Modelo = require("../models/diagnostico_enfermedad"
 const area_Modelo = require("../models/area");
 const examen_Modelo = require("../models/examen");
 const mensaje_Modelo = require("../models/mensaje");
-const medicamento_Modelo = require("../models/medicamentos");
+const medicamento_Modelo = require("../models/medicamento");
 const horario_Modelo = require("../models/horario");
 const sala_Modelo = require("../models/sala");
 const sintoma_Modelo = require("../models/sintoma");
@@ -45,7 +45,6 @@ const area_especialidade_Modelo = require("../models/area_especialidad");
 const especialidad_Modelo = require("../models/especialidad");
 const cargo_Modelo = require("../models/cargo");
 const atencion_medica_Modelo = require("../models/atencion_medica");
-const tipo_examenes_Modelo = require("../models/tipo_examen");
 const receta_medica_Modelo = require("../models/receta_medica");
 const chat_Modelo = require("../models/chat");
 const empleado_cargo_Modelo = require("../models/empleado_cargo");
@@ -96,7 +95,6 @@ const diagnostico_enfermedad = diagnostico_enfermedad_Modelo(
   Sequelize
 );
 const area = area_Modelo(sequelize, Sequelize);
-const tipo_examen = tipo_examenes_Modelo(sequelize, Sequelize);
 const examen = examen_Modelo(sequelize, Sequelize);
 const mensaje = mensaje_Modelo(sequelize, Sequelize);
 const medicamento = medicamento_Modelo(sequelize, Sequelize);
@@ -149,7 +147,6 @@ module.exports = {
   diagnostico,
   diagnostico_enfermedad,
   area,
-  tipo_examen,
   examen,
   mensaje,
   medicamento,
