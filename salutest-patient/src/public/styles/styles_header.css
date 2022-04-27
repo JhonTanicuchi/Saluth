@@ -1,0 +1,67 @@
+.header_index {
+  height: 50px;
+  background: transparent;
+  position: relative;
+  margin-top: 50px;
+  padding: 0px 150px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  position: fixed;
+  width: 100%;
+  z-index: 500;
+  top: 0;
+  
+}
+.nav ul, .nav-two ul{
+  display: flex;
+  align-items: center;
+}
+
+.nav ul li{
+    margin-right: 50px;
+}
+
+.nav ul li a{
+  font-size: 16px;
+}
+
+.nav-two ul li{
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.nav-two ul li a i{
+  font-size: 19px;
+}
+
+.nav ul li a, .nav-two ul li a i{
+  color: #535a66b0;
+}
+
+.header_index div {
+  display: flex;
+  align-items: center;
+}
+
+.header_index img {
+  width: 40px;
+  display: inline;
+}
+
+.header_index h1 {
+  font-size: 14px;
+  display: inline;
+  text-shadow: 0px 3px 6px rgb(0, 0, 0, 16%);
+  margin: 0px 0px 0px 5px;
+  font-weight: bold;
+}
+
+.header_index p {
+  font-weight: lighter;
+  font-size: 14px;
+  opacity: 80%;
+}
+
+

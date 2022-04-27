@@ -1,0 +1,139 @@
+.certificado_medico_grid {
+	display: grid;
+	grid-template-columns: calc(80% - 1.5rem) 20%;
+	grid-column-gap: 1.5rem;
+  }
+  
+
+:root{
+	--white-text:#fff;
+	--background:#c8e8f1;
+	--black-text:rgb(68, 66, 66);	
+	--prueba: (180deg,#21c8f6,#637bff);
+}
+
+.background1-left-column{
+	background: rgb(83, 90, 102);
+    fill: rgb(83, 90, 102);
+
+}
+
+
+.background2-left-column{
+	background: linear-gradient(180deg ,#ebf6f4,#c5c5c5);
+}
+
+
+.container{
+    margin-bottom: 10%;
+    margin-left: 30%;
+	justify-content: center;
+	height: 10vh;
+    align-items: center;
+}
+
+.card {
+	background-color:var(--white-text);
+	border-radius: 1rem;
+    border: 1px solid rgb(157, 154, 154);
+	display: flex;	
+	margin: 1.5rem;
+	overflow: hidden;
+	width: 35em;
+	height: 38rem;
+}
+.card .cab_1{
+    margin-left: 9px;
+    font-size: 35px;
+    text-align: center;
+    color: red;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.card  h2 {
+	letter-spacing: .1rem;
+	color: var(--black-text);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.card h3{
+	color: var(--black-text);
+}
+.card h4{
+	color: var(--black-text);
+}
+
+.card h4.resul {
+    justify-content: center;
+    margin-left: 35%;
+	color: var(--black-text);
+}
+.card h6 {
+	opacity: 0.6;	
+	letter-spacing: .1rem;
+	text-transform: uppercase;
+}
+
+.card .lin{
+    margin-left: 27%;
+}
+
+
+.card .fin_2{
+    margin-left: 30%;
+}
+/*LA COLUMNA AZUL*/
+.left-column {	
+	color: var(--white-text);
+	padding: 2rem;
+	max-width: 10rem;
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.left-column h2{
+	color: var(--white-text);
+}
+
+.left-column i img {
+	font-size: 1rem;
+    height: 80px;
+}
+
+.right-column {
+	padding: 30px;
+	width: 100%;
+	display: flex;
+    flex-direction: column;
+}
+
+.right-column p{	
+	font-size: .9rem;
+	color: var(--black-text)
+}
+
+.button {
+	border-radius: 5px;
+	color: var(--white-text);
+	font-size: 1.2rem;
+	padding: .5rem 0.5rem;
+	letter-spacing: .1rem;
+    margin-left: 41%;
+    cursor: pointer;
+}
+
+.button:hover{
+    background: #686b6b;
+}
+/*media queries*/
+
+@media (max-width: 1030px) {
+	.container{
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		height:auto;
+	}
+  }

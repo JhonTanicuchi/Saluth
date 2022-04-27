@@ -1,0 +1,20 @@
+{{#if user}}
+<!-- HEADER -->
+<header class="header_app">
+    <div>
+        <div class="sign_out">
+            <span class="las la-sign-out-alt"></span>
+            <a href="/logout">
+                <h5>Cerrar Sesión</h5>
+            </a>
+        </div>
+    </div>
+    <div class="user_wrapper">
+        <div>
+            <h5>{{user.nombres_persona}} {{user.apellidos_persona}}</h5>
+            <p>{{user.nombre_rol}}</p>
+        </div>
+        <img src="/img/img_profile.png" alt="">
+    </div>
+</header>
+{{/if}}

@@ -1,0 +1,65 @@
+<!-- MAIN CONTECT -->
+<div class="main_contect">
+    <main class="main_app">
+        <section class="dash_title">
+            <h2 id="title_modules">Registro Citas</h2>
+            <a href="/home"><span class="far fa-times-circle"></span></a>
+        </section>
+
+        <!-- EN ESTE DIV VA SU CONTENIDO EN SECTIONS -->
+
+        <div class="record_citas_grid">
+            <section class="record_citas_wrapper">
+                <div class="record_citas_filter">
+                    <div>
+                        <span class="fas fa-search"></span>
+                        <input onkeyup="record_citas_filter()" id="record_citas_filter" type="text"
+                            placeholder="Filtrar por: especialidad, médico" />
+                    </div>
+                </div>
+                <div class="record_citas_contect">
+                    <table id="record_citas_table">
+                        <thead>
+                            <tr>
+                                <th>Médico</th>
+                                <th>Especialidad</th>
+                                <th>Fecha</th>
+                                <th>Hora inicio</th>
+                                <th>Hora fin</th>
+                                <th>Tipo cita</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {{#each citas_medicas}}
+                            <tr onclick="window.location='/certificado_medico/{{id_cita_medica}}'">
+                                <td>{{especialidad}}</td>
+                                <td>{{nombre}}</td>
+                                <td>{{fecha_asignada}}</td>
+                                <td>{{hora_inicio}}</td>
+                                <td>{{hora_fin}}</td>
+                            </tr>
+                            {{/each}}
+                        </tbody>
+                    </table>
+                    {{#unless citas_medicas}}
+                    <div class="container_record_citas_no_content">
+                        <h1>No hay citas registradas</h1>
+                    </div>
+                    {{/unless}}
+                </div>
+            </section>  
+
+            <section class="record_citas_info">
+                <div class="summary_card">
+                    <div class="summary_single">
+                        <div>
+                            <span class="fas fa-list"></span>
+                            <span>Totales</span>
+                        </div>
+                         <h5>{{length citas_medicas}}</h5>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+</div>

@@ -1,0 +1,199 @@
+.record_citas_grid {
+	display: grid;
+	grid-template-columns:  75% calc(25% - 1.5rem);
+	grid-column-gap: 1.5rem;
+	height: calc(100vh - 10rem - 30px);
+	color: var(--color_font_P);
+  }
+  
+  .record_citas_info > div {
+	background: white;
+	border-radius: 7px;
+  }
+  .users_card {
+	height: calc(100% - 224px - 1.5rem - 1.5rem);
+  }
+  
+  .container_record_citas_process_no_content {
+	height: calc(100% - 69.8px - 1.5rem);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+  }
+  
+  .container_record_citas_process_no_content h1 {
+	color: var(--color_font_P);
+	font-size: 15px;
+	opacity: 50%;
+	font-weight: normal;
+	width: 60%;
+	text-align: center;
+  }
+  
+  .user_header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border-bottom: 1px solid rgb(194, 194, 194);
+	padding: 1rem;
+  }
+  
+  .user_header h1 {
+	font-size: 20px;
+  }
+  
+  .user_single {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 1rem;
+  }
+  
+  .user_single .info {
+	display: flex;
+	align-items: center;
+  }
+  
+  .user_single .info img {
+	width: 30px;
+	border-radius: 50%;
+	margin-right: 1rem;
+  }
+  
+  .user_single .info .details {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	color: rgb(141, 141, 141);
+  }
+  
+  .user_single .info .details span {
+	margin-right: 0.2rem;
+  }
+  
+  .user_single .info h4 {
+	font-size: 0.8rem;
+	font-weight: 600;
+  }
+  
+  .user_single .info h5 {
+	font-weight: normal;
+	font-size: 0.7rem;
+  }
+  
+  .user_single .edit span {
+	font-size: 1.2rem;
+	display: inline-block;
+	margin-left: 0.5rem;
+	color: var(--color_dark_P);
+  }
+  
+  .record_citas_wrapper > div {
+	background: #fff;
+	border-radius: 7px;
+  }
+  
+  .record_citas_filter {
+	padding: 1rem;
+	display: flex;
+	align-items: center;
+  }
+  
+  .record_citas_filter div {
+	width: 100%;
+  }
+  .record_citas_filter input {
+	width: 95%;
+	padding-left: 7px;
+	border: none;
+	background: transparent;
+	font-size: 13px;
+  }
+  
+  .record_citas_contect {
+	margin-top: 1.5rem;
+	height: calc(100% - 56px - 1.5rem);
+  }
+  
+  .record_citas_contect table {
+	width: 100%;
+	border-collapse: collapse;
+  }
+  
+  .record_citas_contect thead {
+	text-align: left;
+	border-bottom: 1px solid rgb(194, 194, 194);
+  }
+  
+  .record_citas_contect th,
+  td {
+	font-size: 0.9rem;
+	padding: 1rem 1rem;
+  }
+  
+  .record_citas_contect td {
+	font-size: 0.8rem;
+	cursor: default;
+  }
+  
+  .record_citas_contect tbody tr:nth-child(even) {
+	background: #f8faff;
+  }
+  
+  .record_citas_contect tbody tr {
+	border-bottom: solid .1px #535a6623;
+  }
+  
+  .record_citas_contect tbody tr:hover {
+	background: #f2f5fd;
+  }
+  
+  .record_citas_contect tbody tr:nth-child(even):hover {
+	background: #f2f5fd;
+  }
+  
+  .container_record_citas_no_content {
+	height: calc(100% - 54px);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+  }
+  
+  .container_record_citas_no_content h1 {
+	color: var(--color_font_P);
+	font-size: 15px;
+	opacity: 50%;
+	font-weight: normal;
+  }
+  
+  .record_citas_info .summary_card {
+	margin-bottom: 1.5rem;
+  }
+  
+  .record_citas_info .summary_single {
+	padding: 1rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+  }
+  
+  .record_citas_info .summary_single div {
+	display: flex;
+	align-items: center;
+  }
+  
+  .record_citas_info .summary_single span:first-child {
+	font-size: 1.5rem;
+	color: var(--color_dark_N);
+	padding-right: 1rem;
+  }
+  
+  .record_citas_info .summary_single span:last-child {
+	font-size: 0.8rem;
+	color: rgb(119, 119, 119);
+  }
+  
+  .record_citas_info .summary_single h5 {
+	font-size: 1rem;
+  }
+  

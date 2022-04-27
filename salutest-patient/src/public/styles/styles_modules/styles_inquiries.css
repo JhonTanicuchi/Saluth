@@ -1,0 +1,174 @@
+.inquiries_grid {
+  display: grid;
+  grid-template-columns: calc(80% - 1.5rem) 20%;
+  grid-column-gap: 1.5rem;
+}
+
+.inquiries_grid .card_chat {
+  background: #fff;
+  border-radius: 7px;
+  height: calc(100vh - 10rem);
+}
+
+.inquiries_grid .chat_contect {
+  height: calc(100vh - 14rem);
+  display: grid;
+  grid-template-rows: 80% 20%;
+}
+
+
+.inquiries_grid .results {
+  display: grid;
+  grid-template-rows: 100%;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid rgb(194, 194, 194);
+}
+
+.inquiries_grid .results > div {
+  padding: 1rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inquiries_grid .results h5, a {
+  font-size: .9rem;
+  color: black;
+}
+
+.inquiries_grid .results span{
+  font-size: .8rem;
+  color: var(--color_dark_P);
+}
+
+.inquiries_grid .level div div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inquiries_grid .level span:last-child{
+  color: #E74C3C;
+  font-size: .5rem;
+  margin-left: .5rem;
+}
+
+.inquiries_grid .link_diagnosis div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inquiries_grid .link_diagnosis span{
+  font-size: 1.5rem;
+  color: var(--color_dark_P);
+  margin-left: .5rem;
+}
+
+
+.filter {
+  height: 64px;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid rgb(194, 194, 194);
+}
+
+.filter div {
+  width: 100%;
+}
+
+.filter input {
+  padding-left: 7px;
+  border: none;
+  background: transparent;
+  font-size: 13px;
+}
+
+.inquiries_grid .card_details {
+  display: grid;
+  grid-template-rows: calc(70% - 1.5rem) 30%;
+  grid-row-gap: 1.5rem;
+}
+
+.inquiries_grid .card_inquiries,
+.inquiries_grid .card_symptom {
+  border-radius: 7px;
+  background: white;
+}
+
+.inquiries_contect .card {
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 15% calc(85% - 0.5rem);
+  grid-column-gap: 0.5rem;
+  border-bottom: 1px solid rgb(194, 194, 194);
+}
+
+.card .profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card .profile img {
+  width: 100%;
+}
+
+.card .details div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card .details h5 {
+  font-size: 0.8rem;
+}
+
+.card .details h6 {
+  font-size: 0.55rem;
+  font-weight: normal;
+  color: rgb(168, 168, 168);
+}
+
+.card .details p {
+  font-size: 0.7rem;
+  color: rgb(168, 168, 168);
+}
+
+.inquiries_grid .symptom_header {
+  border-bottom: 1px solid rgb(194, 194, 194);
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.inquiries_grid .symptom_contect {
+  text-align: left;
+  height: calc(189px - 50px);
+  overflow-y: scroll;
+}
+
+.inquiries_grid .symptom_contect::-webkit-scrollbar {
+  display: none;
+}
+
+.inquiries_grid .symptom {
+  font-size: .9rem;
+  margin: .5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: #e8eef4c5;
+  border-radius: 5px;
+  padding: 0.5rem;
+  max-height: 30px;
+}
+
+input::placeholder {
+  opacity: 50%;
+}
