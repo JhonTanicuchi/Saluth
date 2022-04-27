@@ -1,0 +1,153 @@
+<div class="body_index">
+    <main class="main_index">
+        <div class="parentContainer">
+            <section class="container_solicitud">
+                <div class="title_solicitud">
+                    <h1 data-aos="fade-right" data-aos-offset="300" data-aos-duration="1000"
+                        data-aos-easing="ease-in-sine">Solicitud de Servicio</h1>
+                    <h3 data-aos="fade-right" data-aos-offset="300" data-aos-duration="800" data-aos-delay="200"
+                        data-aos-easing="ease-in-sine">Salutest-Pack</h3>
+                </div>
+
+                <div>
+                    <form class="form_solicitudes" id="form_solicitudes" action="/add" method="POST">
+                        <div class="data_form_solicitudes">
+
+                            <h3 class="subtitle_institucion">Información de la Institución</h3>
+
+                            <div class="form_institucion_medica">
+                                <div class="data_institucion_medica">
+                                    <label for="institucion_medica">Institución Medica</label>
+                                    <input name="nombre_institucion_medica" class="input" id="institucion_medica"
+                                        type="text" autocomplete="off" required />
+                                </div>
+                                {{!-- <div class="data_categoria_institucion">
+                                    <label for="categoria_institucion">Categoría</label>
+                                    <select name="categoria_institucion" class="input" id="categoria_institucion">
+                                        <option selected disabled value=""></option>
+                                        {{#each categoria_instituciones_medicas}}
+                                        <option value={{id_catalogo}}>{{valor_catalogo}}</option>
+                                        {{/each}}
+                                    </select>
+                                </div> --}}
+                                <div class="data_tipo_institucion">
+                                    <label for="tipo_institucion">Tipo de Institución</label>
+                                    <select name="tipo_institucion" class="input" id="tipo_institucion">
+                                        <option selected disabled value=""></option>
+                                        {{#each tipo_instituciones_medicas}}
+                                        <option value={{id_catalogo}}>{{valor_catalogo}}</option>
+                                        {{/each}}
+
+                                    </select>
+                                </div>
+                             {{!--    <div class="data_provincia">
+                                    <label for="provincia">Provincia</label>
+                                    <select name="provincia" class="input" id="provincia">
+                                        <option selected disabled value=""></option>
+                                        {{#each provincias}}
+                                        <option value={{id_provincia}}>{{nombre_provincia}}</option>
+                                        {{/each}}
+                                
+                                    </select>
+                                </div>
+                                <div class="data_canton">
+                                    <label for="canton">Canton</label>
+                                    <select name="canton" class="input" id="canton">
+                                        <option selected disabled value=""></option>
+                                        {{#each cantones}}
+                                        <option value={{id_canton}}>{{nombre_canton}}</option>
+                                        {{/each}}
+                                
+                                    </select>
+                                </div>
+                                <div class="data_parroquia">
+                                    <label for="parroquia">Parroquia</label>
+                                    <select name="parroquia" class="input" id="parroquia">
+                                        <option selected disabled value=""></option>
+                                        {{#each parroquias}}
+                                        <option value={{id_parroquia}}>{{nombre_parroquia}}</option>
+                                        {{/each}}
+                                
+                                    </select>
+                                </div> --}}
+                               {{!--  <div class="data_sucursales">
+                                    <label for="sucursales">¿Tiene sucursales?</label>
+                                    <div class="inputs_sucursales">
+                                        <select name="sucursales" class="input" id="sucursales"
+                                            onchange="input_sucursales()">
+                                            <option selected value="false">No</option>
+                                            <option value="true">Si</option>
+                                        </select>
+                                        <input name="n_sucursales" class="input" id="n_sucursales" type="text"
+                                            autocomplete="off" required disabled placeholder="N°" />
+                                    </div>
+                                </div> --}}
+                                
+                                <div class="data_logo">
+                                    <label for="logo">Logo o Imagen</label>
+                                    <input name="logo" class="input" id="logo" type="file" autocomplete="off" />
+                                </div>
+                                {{!-- <div class="data_direccion">
+                                    <label for="direccion">Dirección</label>
+                                    <input name="direccion" class="input" id="direccion" type="text" autocomplete="off"
+                                        required />
+                                </div> --}}
+                            </div>
+
+                            <h3 class="subtitle_contactos">Información de contacto</h3>
+                            <div class="form_informacion_contact">
+                                <div class="data_cedula">
+                                    <label for="cedula_contacto">Cédula</label>
+                                    <input name="cedula_contacto" class="input" id="cedula_contacto" type="text" autocomplete="off" required />
+                                </div>
+                                <div class="data_nombres">
+                                    <label for="nombres_contacto">Nombre</label>
+                                    <input name="nombres_contacto" class="input" id="nombres_contacto" type="text"
+                                        autocomplete="off" required />
+                                </div>
+                                {{!-- <div class="data_apellidos">
+                                    <label for="apellidos_contacto">Apellidos</label>
+                                    <input name="apellidos_contacto" class="input" id="apellidos_contacto" type="text" autocomplete="off" required />
+                                </div> --}}
+                                <div class="data_celular">
+                                    <label for="tel_contacto">Celular</label>
+                                    <input name="tel_contacto" class="input" id="tel_contacto" type="text" autocomplete="off" required />
+                                </div>
+                                <div class="data_correo">
+                                    <label for="email_contacto">Correo</label>
+                                    <input name="email_contacto" class="input" id="email_contacto" type="email"
+                                        autocomplete="off" required onchange="validator_gmail()" />
+                                </div>
+                                
+                            </div>
+
+
+                        </div>
+                        <div class="form_solicitudes_fotter">
+                            <p>
+                                Al continuar, aceptas las Condiciones del servicio y la Política
+                                de privacidad de Salutest.
+                            </p>
+                            <button class="btn btn_solicitudes_edit" type="submit">
+                                Enviar
+                            </button>
+                        </div>
+
+                    </form>
+                </div>
+            </section>
+
+            <section>
+
+                <div class="content_cogs">
+                    <div class="icon_cogs">
+                        <span class="fas fa-cog"></span>
+                        <span class="fas fa-cog"></span>
+                        <span class="fas fa-cog"></span>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+    </main>
+</div>
