@@ -1,0 +1,45 @@
+.btn_salutest{
+    color: var(--color_font);
+    font-size: 15px;
+    border: solid 1px black;
+    background: var(--color_background);
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+    box-shadow: 0px 3px 6px rgb(0, 0, 0, 0.15);
+}
+
+.btn_salutest a{
+    color: white;
+}
+.btn_salutest:hover{
+    border: none;
+    color: var(--color_font_H);
+    background: var(--color_background_H);
+    cursor: pointer;
+}
+
+
+.btn {
+    background: #535a66;
+    border-radius: 5px;
+    border: none;
+    width: 100%;
+    color: white;
+    padding: 10px;
+    margin: 10px 0px;
+    font-size: 12px;
+}
+  
+.btn:hover{
+    border: none;
+    background: var(--color_background_H);
+    cursor: pointer;
+}
+
+  
+  .btn_signup_edit{
+    width: 50% !important;
+    margin: 20px 0px;
+  }
+

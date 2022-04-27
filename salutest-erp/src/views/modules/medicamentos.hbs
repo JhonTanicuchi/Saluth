@@ -1,0 +1,65 @@
+<!-- MAIN CONTECT -->
+<div class="main_contect">
+    <div class="cuerpo_medicamentos">
+        <main class="main_app">
+            <section class="dash_title">
+                <h2 id="title_modules">Medicamentos</h2>
+                <a href="/home"><span class="far fa-times-circle"></span></a>
+            </section>
+
+            <table class="contenido_medicamentos">
+                    <tr>
+                        <td class="separador_medicamentos"> 
+                            <form onsubmit="event.preventDefault();onSubmit();" autocomplete="of">
+                                <div>
+                                    <div>
+                                        <label class="titulo_medicamentos" for="cod">Codigo del producto:</label>
+                                        <input class="texto_medicamentos" name="cod" class="input" id="cod" type="text" placeholder="Introduzca un codigo al producto" required>
+                                   
+                                    <div>
+                                        <label class="titulo_medicamentos" for="pro">Nombre del producto:</label>
+                                        <input class="texto_medicamentos" name="pro" class="input" id="pro" type="text" placeholder="Introduzca un nombre al producto" required>
+                                    </div>
+                                    <div>
+                                        <label class="titulo_medicamentos" for="peso">Peso en gramos:</label>
+                                        <input class="texto_medicamentos" name="peso" class="input" id="peso" type="Text" placeholder="Introduzca el peso del producto" required>
+                                    </div>
+                                    <div>
+                                        <label class="titulo_medicamentos" for="pre">Precio en dollares:</label>
+                                        <input class="precio_medicamentos" name="pre" class="input" id="pre" type="number" placeholder="Introduzca el precio del producto" required>
+                                    </div>
+                                    
+                                    <div>
+                                    <input class="submit_medicamentos" type="submit" value="Añadir">
+                                    </div>
+                                </div>
+                            </form>
+
+                            <td class="separador_medicamentos">
+                                <div class="contenedor_medicamentos">
+                                    <table class="tabla_medicamentos" id="tabla_medicamentos">
+                                        <div class="fuction"></div>
+                                        <thead>
+                                            <tr>
+                                                <th>Codigo</th>
+                                                <th>Nombre</th>
+                                                <th>Peso</th>
+                                                <th>Precio</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            {{#each medicamentos}}
+                                                <tr>
+                                                    <td>{{cod}}</td>
+                                                    <td>{{pro}}</td>
+                                                    <td>{{peso}}</td>
+                                                    <td>{{pre}}</td>
+                                                </tr>
+                                            {{/each}}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </td>
+                        </td>
+                    </tr>
+            </table>

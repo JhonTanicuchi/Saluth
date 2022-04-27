@@ -1,0 +1,49 @@
+/*Header*/
+body{
+    margin: 0;
+    padding: 50px;
+}
+form{
+    text-align: center;
+}
+.tablita{
+    display: inline-block;    
+}
+/*Tablaaaaaa Estilos*/
+.tabla{
+border-collapse: collapse; /*Esta propiedad hace que parezca mas una tabla*/
+font-family: 'Quicksand', sans-serif;
+}
+table tr th{
+    border: 1px solid #D5D9D9;
+    width: 100px;
+    height: 25px;
+    color: white;
+    background-color: #00438D;
+}
+/* Para el estilo de las nuevas celdas */
+td {
+    border: 1px solid #D5D9D9;
+    width: 100px;
+    height: 25px;
+}
+.caja{
+    display: block;
+}
+.caja label{
+    font-family: 'Quicksand', sans-serif;
+}
+.caja input{
+    width: 8em;
+    height: 2em;
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;  
+}
+.submit{
+    width: 8em;
+    height: 2em;
+    font-family: 'Quicksand', sans-serif;
+    color: white;
+    background-color: #00438D;
+    border: 2px solid white;
+}
