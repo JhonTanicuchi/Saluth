@@ -5,10 +5,10 @@ El objetivo de Saluth es dar el servicio de virtualizar todo aquello mínimo pro
 Salutest es un sistema completo que se divide en 3 aplicaciones:
 
   ### - Saluth Business
-  Este aplicativo permitirá a Salutest tener el control de todas las instituciones médicas que están usando el servicio y mantenimiento de estas.
+  Este aplicativo permitirá a Saluth tener el control de todas las instituciones médicas que están usando el servicio y mantenimiento de estas.
   
   ### - Saluth CRM
-  Este aplicativo permitirá gestionar los procesos internos y ventas de la Salutest.
+  Este aplicativo permitirá gestionar los procesos internos y ventas de la Saluth.
 
   ### - Saluth Management
   Este aplicativo permitirá a cualquier institución médica tener el control total de la distribucion y administracion de la institución médica.
