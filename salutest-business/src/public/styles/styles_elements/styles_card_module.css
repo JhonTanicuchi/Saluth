@@ -1,0 +1,39 @@
+.card_module_saluth {
+  background: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 7px;
+
+  position: relative;
+  transition: all 0.2s ease-in-out;
+  padding: 20px;
+}
+
+.card_module_saluth:hover {
+
+  cursor: pointer;
+  border: 1px solid #535a6686;
+  background: white;
+}
+
+.card_module_saluth > span {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 10px;
+  opacity: 30%;
+}
+
+.card_module_saluth .title {
+  text-align: center;
+}
+
+.card_module_saluth .title > span {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.card_module_saluth .title > h3 {
+  font-size: 15px;
+}

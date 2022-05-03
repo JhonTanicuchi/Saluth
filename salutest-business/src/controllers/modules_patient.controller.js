@@ -12,7 +12,7 @@ Handlebars.registerHelper("public", function (valor_catalogo) {
 });
 
 module_patient.mostrar = (req, res) => {
-  res.render("modules/modules_patient");
+  res.render("modules/modules/modules");
 };
 
 module_patient.list = async (req, res) => {
@@ -38,7 +38,7 @@ module_patient.list = async (req, res) => {
     modules_patient = modules_patient_totals;
   }
 
-  res.render("modules/modules_patient", {
+  res.render("modules/modules/modules", {
     modules_patient,
     modules_patient_totals,
     modules_patient_private,
