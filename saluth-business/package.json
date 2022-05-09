@@ -1,11 +1,11 @@
 {
-  "name": "Salutest",
-  "version": "2.0.0",
+  "name": "Saluth",
+  "version": "2.0.2",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "Salutest": "nodemon src/index.js",
+    "Saluth": "nodemon src/index.js",
     "start": "node src/index.js"
   },
   "keywords": [],

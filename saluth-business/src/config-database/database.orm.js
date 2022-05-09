@@ -1,7 +1,7 @@
 const Sequelize = require("sequelize");
 const mysql = require("mysql2/promise");
 
-const dbName = process.env.DB_SCHEMAS || "database_salutest";
+const dbName = process.env.DB_SCHEMAS || "Saluth";
 
 mysql
   .createConnection({
@@ -68,7 +68,7 @@ const canton_Modelo = require("../models/canton");
 const parroquia_Modelo = require("../models/parroquia");
 const modulo_catalogo_Modelo = require("../models/modulo_catalogo");
 
-const sequelize = new Sequelize("database_salutest", "root", "", {
+const sequelize = new Sequelize("Saluth", "root", "", {
   host: "localhost",
   dialect: "mysql",
   pool: {
