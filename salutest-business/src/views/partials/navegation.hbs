@@ -2,60 +2,161 @@
 <!-- SIDEBAR -->
 <div id="sidebar" class="sidebar">
     <div class="sidebar_header">
-        <h3 class="brand">
-            <img src="/img/icon_new_white.png" alt="logo">
-            <div class="title_nav">
-                <span>Salutest</span>
+        <div class="brand">
+            <img src="/img/Saluth_ligth.svg" alt="logo">
+            <div id="title_header_nav" class="title_nav">
+                <span>Saluth</span>
                 <span>Business</span>
             </div>
-        </h3>
-        <label id="toggle" class="las la-bars menu_toggle"></label>
+        </div>
+        <label id="toggle" class=" menu_toggle">
+            <i class="fa-solid fa-angle-left"></i>
+        </label>
     </div>
-
     <div class="sidebar_menu">
         <ul>
             <li class="list">
+                <a href="/home">
+                    <span class="las la-home"></span>
+                    <div id="title_modules_nav">
+                        <span class="title_modules">Home</span>
+                        <span id="point_nav" class="fas fa-circle"></span>
+                    </div>
+                </a>
+                <section class="hint">
+                    <span>Home</span>
+                </section>
+            </li>
+            <div class="subtitle_nav">
+                <div class="subtitle">
+                    <h2>ADMINISTRACIÓN</h2>
+                </div>
+            </div>
+            <li class="list">
                 <a href="/solicitudes">
                     <span class="las la-envelope"></span>
-                    <div>
-                        <span class="title">Solicitudes</span>
+                    <div id="title_modules_nav">
+                        <span class="title_modules">Solicitudes</span>
                         <span id="point_nav" class="fas fa-circle"></span>
                     </div>
                 </a>
+                <section class="hint">
+                    <span>Solicitudes</span>
+                </section>
             </li>
             <li class="list">
-                <a href="/instituciones_medicas">
+                <a href="/medical_institutions">
                     <span class="las la-hospital"></span>
-                    <div>
-                        <span class="title">Instituciones</span>
+                    <div id="title_modules_nav">
+                        <span class="title_modules">Instituciones</span>
                         <span id="point_nav" class="fas fa-circle"></span>
                     </div>
                 </a>
-
-
+                <section class="hint">
+                    <span>Instituciones</span>
+                </section>
             </li>
-
-        </ul>
-        <ul>
+            <div class="subtitle_nav">
+                <div class="subtitle">
+                    <h2>PANEL DE CONTROL</h2>
+                </div>
+            </div>
             <li class="list">
-                <a href="/menu_aplications">
-                    <span class="las la-window-maximize"></span>
-                    <div>
-                        <span class="title">Apps</span>
+                <a href="/menu_apps">
+                    <span class="las la-cubes"></span>
+                    <div id="title_modules_nav">
+                        <span class="title_modules">Apps Control</span>
                         <span id="point_nav" class="fas fa-circle"></span>
                     </div>
                 </a>
+                <section class="hint">
+                    <span>Apps Control</span>
+                </section>
             </li>
             <li class="list">
                 <a href="/control_panel">
-                    <span class="las la-sliders-h"></span>
-                    <div>
-                        <span class="title">Panel de Control</span>
+                    <span class="las la-database"></span>
+                    <div id="title_modules_nav">
+                        <span class="title_modules">Data Control</span>
                         <span id="point_nav" class="fas fa-circle"></span>
                     </div>
                 </a>
+                <section class="hint">
+                    <span>Data Control</span>
+                </section>
             </li>
         </ul>
+        <ul>
+            <li class="list">
+                <a href="/settings">
+                    <span class="las la-cog"></span>
+                    <div id="title_modules_nav">
+                        <span class="title_modules">Ajustes</span>
+                        <span id="point_nav" class="fas fa-circle"></span>
+                    </div>
+                </a>
+                <section class="hint">
+                    <span>Ajustes</span>
+                </section>
+            </li>
+        </ul>
+    </div>
+    
+    <div class="menu_profile visuallyhidden hidden" id="menu_profile">
+        <div id="menu_profile_sidebar_footer" class="sidebar_footer">
+            <h3 class="brand">
+                <div class="avatar">
+                    <div class="mask-squircle">
+                        <img src="/img/img_profile.jpg" alt="logo">
+                    </div>
+                </div>
+                <div class="title">
+                    <span>{{user.nombres_persona}} {{user.apellidos_persona}}</span>
+                    <span>{{user.nombre_rol}}</span>
+                </div>
+            </h3>
+        </div>
+        <div id="menu_profile_list" class="menu_profile_list">
+            <ul>
+                <li class="list">
+                    <a href="/profile">
+                        <span class="las la-user-circle"></span>
+                        <div>
+                            <span class="title_modules">Perfil</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="/logout">
+                        <span class="las la-sign-out-alt"></span>
+                        <div>
+                            <span class="title_modules">Cerrar Sesión</span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div id="menu_profile_footer" class="footer">
+            <span>Saluth ~ v2.0.2</span>
+        </div>
+    </div>
+
+    <div class="sidebar_footer">
+        <h3 class="brand">
+            <div class="avatar">
+                <div class="mask-squircle">
+                    <img id="img_toggle_menu_profile" src="/img/img_profile.jpg" alt="logo">
+                </div>
+                <div class="mask-squircle indicator">
+                    <div class="mask-squircle shader"></div>
+                </div>
+            </div>
+            <div class="title" id="title_footer_nav">
+                <span>{{user.nombres_persona}} {{user.apellidos_persona}}</span>
+                <span>{{user.nombre_rol}}</span>
+            </div>
+        </h3>
+        <label id="toggle_menu_profile" class="fa-solid fa-ellipsis-vertical toggle_menu_profile"></label>
     </div>
 </div>
 

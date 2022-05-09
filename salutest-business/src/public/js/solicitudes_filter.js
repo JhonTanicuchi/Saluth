@@ -1,7 +1,7 @@
 function solicitudes_filter() {
   // Declare variables
   var input, filter, table, tr, td, i, j, visible;
-  var input = document.getElementById("solicitudes_filter");
+  input = document.getElementById("solicitudes_filter");
   filter = input.value.toUpperCase();
   table = document.getElementById("solicitudes_table");
   tr = table.getElementsByTagName("tr");

@@ -8,7 +8,7 @@ const helpers = require("../lib/helpers");
 const solicitud = {};
 
 solicitud.mostrar = (req, res) => {
-  res.render("modules/solicitudes");
+  res.render("modules/solicitudes/solicitudes");
 };
 
 Handlebars.registerHelper("formatDate", function (date) {
@@ -50,7 +50,7 @@ solicitud.list = async (req, res) => {
     "SELECT * FROM solicituds WHERE estado_solicitud = 'cancelado'"
   );
 
-  res.render("modules/solicitudes", {
+  res.render("modules/solicitudes/solicitudes", {
     solicitudes,
     solicitudes_new,
     solicitudes_awaiting,
@@ -189,8 +189,8 @@ solicitud.read = async (req, res) => {
   const solicitudes_canceled = await sql.query(
     "SELECT * FROM solicituds WHERE estado_solicitud = 'cancelado'"
   );
-
-  res.render("modules/solicitud", {
+7
+  res.render("modules/solicitud/solicitudes", {
     solicitudes,
     solicitud_info,
     solicitudes_new,

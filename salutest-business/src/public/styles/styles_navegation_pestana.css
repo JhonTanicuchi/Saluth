@@ -1,8 +1,8 @@
 .navegation_pestanas{
-  top: 60px;
+  top: 0;
   left: 200px;
   width: calc(100% - 200px);
-  height: 30px;
+  height: 40px;
   z-index: -1000 !important;
   background: #fff;
   display: flex;

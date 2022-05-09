@@ -9,7 +9,6 @@ const especialidad = (sequelize, type) => {
       },
       nombre_especialidad: type.STRING,
       descripcion_especialidad: type.STRING,
-      fecha_creacion: type.STRING,
       estado_especialidad: {
         type: type.BOOLEAN,
         defaultValue: true,

@@ -1,7 +1,7 @@
 const profile = {}
 
 profile.mostrar = (req,res) => {
-    res.render ('modules/profile')
+    res.render ('users/profile')
 }
 
 module.exports = profile

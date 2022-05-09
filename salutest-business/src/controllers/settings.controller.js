@@ -1,7 +1,7 @@
 const settings = {}
 
 settings.mostrar = (req,res) => {
-    res.render ('modules/settings')
+    res.render ('users/settings')
 }
 
 module.exports = settings

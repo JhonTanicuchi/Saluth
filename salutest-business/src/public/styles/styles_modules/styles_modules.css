@@ -1,0 +1,15 @@
+.modules_grid {
+  display: grid;
+  grid-template-columns: 85% calc(15% - 1.5rem);
+  grid-column-gap: 1.5rem;
+  height: calc(100vh - 30px - 32px);
+
+}
+
+.modules_grid .modules_wrapper .list_modules_grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-gap: 1rem;
+  height: 100%;
+}
