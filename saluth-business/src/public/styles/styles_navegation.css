@@ -31,7 +31,7 @@
   right: -13px;
   bottom: -13px;
   background: #5fbdda;
-  border: 3px solid #f7f8fb;
+  border: 3px solid #ecf4ff;
   display: flex !important;
   align-items: center;
   justify-content: center;
@@ -51,7 +51,7 @@
   height: 20px;
   background: transparent;
   border-bottom-right-radius: 20px;
-  box-shadow: 11px 0px 0px 0px #f7f8fb;
+  box-shadow: 11px 0px 0px 0px #ecf4ff;
   z-index: -1;
   transition: all 0.2s ease;
 }
@@ -65,7 +65,7 @@
   height: 20px;
   background: transparent;
   border-top-right-radius: 20px;
-  box-shadow: 11px 0px 0px 0px #f7f8fb;
+  box-shadow: 11px 0px 0px 0px #ecf4ff;
   z-index: -1;
   transition: all 0.2s ease;
 }
@@ -91,10 +91,6 @@
 .sidebar.active .menu_toggle i {
   transform: rotate(180deg);
 }
-
-/* .menu_toggle:hover {
-  background: #535a66c1;
-} */
 
 .sidebar_header {
   height: 60px;
@@ -333,8 +329,8 @@
 }
 
 .sidebar_footer .mask-squircle {
-  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1782.77 1771.18'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bstroke:%23000;stroke-miterlimit:10;stroke-width:0.25px;%7D%3C/style%3E%3C/defs%3E%3Cg id='Capa_2' data-name='Capa 2'%3E%3Cg id='Apps'%3E%3Cg id='Saluth_ligth'%3E%3Cpath class='cls-1' d='M891.63,1771c-314-.14-552.23-.25-721.78-168.18C-3.33,1431.33-1.61,1187,.61,871.92c2.17-308.74,3.78-538.65,169.24-703.6C338.8-.12,577.48,0,891.63.13c315.11.15,552.78.25,721.77,168.19,169.25,168.18,169.25,405,169.25,717.27s0,549.08-169.25,717.27C1443.91,1771.29,1205,1771.18,891.63,1771Z'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1782.77 1771.18'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bstroke:%23000;stroke-miterlimit:10;stroke-width:0.25px;%7D%3C/style%3E%3C/defs%3E%3Cg id='Capa_2' data-name='Capa 2'%3E%3Cg id='Apps'%3E%3Cg id='Saluth_ligth'%3E%3Cpath class='cls-1' d='M891.63,1771c-314-.14-552.23-.25-721.78-168.18C-3.33,1431.33-1.61,1187,.61,871.92c2.17-308.74,3.78-538.65,169.24-703.6C338.8-.12,577.48,0,891.63.13c315.11.15,552.78.25,721.77,168.19,169.25,168.18,169.25,405,169.25,717.27s0,549.08-169.25,717.27C1443.91,1771.29,1205,1771.18,891.63,1771Z'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  mask-image: url("../img/mask-squircle.svg");
+  -webkit-mask-image: url("../img/mask-squircle.svg");
   -webkit-mask-size: contain;
   mask-size: contain;
   -webkit-mask-repeat: no-repeat;
@@ -465,7 +461,7 @@
 
 .main_app {
   padding: 1rem;
-  background: #f7f8fb;
+  background: #ecf4ff;
   min-height: 100vh;
   border-radius: 7px;
 }
@@ -538,7 +534,6 @@
   left: calc(200px + 0.3rem);
   bottom: -190px;
   z-index: -1;
-
 }
 
 .sidebar.active .menu_profile {
@@ -552,7 +547,7 @@
 
 .sidebar .menu_profile.menu_active {
   left: calc(200px + 0.3rem) !important;
-  bottom: 0.3rem
+  bottom: 0.3rem;
 }
 
 .sidebar .menu_profile .sidebar_footer {
@@ -560,11 +555,11 @@
   border-top: none;
 }
 
-.sidebar .sidebar_footer #img_toggle_menu_profile{
+.sidebar .sidebar_footer #img_toggle_menu_profile {
   pointer-events: none;
 }
 
-.sidebar.active .sidebar_footer #img_toggle_menu_profile{
+.sidebar.active .sidebar_footer #img_toggle_menu_profile {
   pointer-events: all;
 }
 
@@ -657,7 +652,7 @@
   transition: all 0.2s ease;
   opacity: 0;
 }
-.indicator .shader{
+.indicator .shader {
   width: 40px;
   height: 40px;
   background: #0b0e16;
@@ -666,6 +661,6 @@
   justify-content: center;
 }
 
-.sidebar.active .menu_profile.menu_active ~ .sidebar_footer .indicator{
+.sidebar.active .menu_profile.menu_active ~ .sidebar_footer .indicator {
   opacity: 1;
 }

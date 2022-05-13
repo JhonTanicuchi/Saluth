@@ -84,16 +84,7 @@ modules.list = async (req, res) => {
     view_modules = modules_apps;
   }
 
-  function SortArray(x, y) {
-    if (x.tipo > y.tipo) {
-      return -1;
-    }
-    if (x.tipo < y.tipo) {
-      return 1;
-    }
-    return 0;
-  }
-  list_types.sort(SortArray);
+  list_types = list_types.sort((a, b) => a.tipo - b.tipo);
 
   res.render("modules/modules/modules", {
     filter,

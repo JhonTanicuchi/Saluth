@@ -3,14 +3,44 @@
   <main class="main_app">
     <h2 id="title_view" class="hidden">Home</h2>
 
-    {{!-- <div class="home_grid">
+    <div class="home_grid">
 
       <section class="welcome_card">
-        <img src="/img/images.jpg" alt="" />
+        <div class="fondo_welcome_card"></div>
         <div class="container_welcome">
-          <h3>Hey <span>{{user.nombres_persona}},</span></h3>
-          <h1>Bienvenido a Salutest <span>Business</span></h1>
+          <h3>Hola <span>{{user.nombres_persona}},</span></h3>
+          <div>
+            <h1>Bienvenido a Saluth <span>Business</span></h1>
+            <h3 class="phrase">Administra cada paso de tu proyecto.</h3>
+          </div>
         </div>
+        <section class="section_container_apps">
+          <div class="container_cards_apps">
+            {{!-- {{#each aplications}} --}}
+            <div class="card_app_home">
+              <div>
+                <h6>Activo</h6>
+                <div><img src="/img/Saluth_ligth.svg" alt=""></div>
+                <h5>{{!-- {{nombre_aplicacion}} --}}Nombre App</h5>
+              </div>
+            </div>
+            <div class="card_app_home">
+              <div>
+                <h6>Activo</h6>
+                <div><img src="/img/Saluth_ligth.svg" alt=""></div>
+                <h5>{{!-- {{nombre_aplicacion}} --}}Nombre App</h5>
+              </div>
+            </div>
+            <div class="card_app_home">
+              <div>
+                <h6>Activo</h6>
+                <div><img src="/img/Saluth_ligth.svg" alt=""></div>
+                <h5>{{!-- {{nombre_aplicacion}} --}}Nombre App</h5>
+              </div>
+            </div>
+            {{!-- {{/each}} --}}
+          </div>
+        </section>
       </section>
 
       <section class="home_bootom">
@@ -55,16 +85,19 @@
             </div>
             <span class="fa-solid fa-paperclip"></span>
           </div>
-
-          <div class="card_shortcut plus">
+          {{!-- <div class="card_shortcut plus">
             <div class="title">
               <span class="fa fa-square-plus"></span>
             </div>
+          </div> --}}
+          {{#for (calc-shortcut num)}}
+          <div class="card_shortcut plus">
+            <div class="title">
+            </div>
           </div>
+          {{/for}}
         </section>
-
       </section>
-    </div> --}}
-    {{>working}}
+    </div>
   </main>
 </div>
