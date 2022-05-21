@@ -1,0 +1,71 @@
+<!-- MAIN CONTECT -->
+<div class="main_contect">
+    <main class="main_app">
+        <section>
+            <form action="/shortcut/link" method="post">
+            <h2 class="pestana hidden">Apps</h2>
+            <h2 id="title_view"  class="hidden">Módulos</h2>
+            <h2 id="title_pestaña" class="pestana hidden">Módulos</h2>
+            {{#each aplications}}
+            <a href="/modules/{{nombre_aplicacion}}">{{nombre_aplicacion}}</a>
+            {{/each}}
+            <input id="input_name_shortcut" class="hidden" name="nombre_shortcut" type="text">
+            <button type="submit"><i class="fa-solid fa-link"></i></button>
+            </form>
+        </section>
+        <div class="modules_grid">
+            <section class="modules_wrapper">
+                <div class="list_modules_grid">
+                    {{#each view_modules}}
+                    <div class="module_card_saluth">
+                        <div class="title">
+                            <span class="fa fa-layer-group"></span>
+                            <h3>{{nombre_modulo}}</h3>
+                        </div>
+                        {{#if (public valor_catalogo)}}
+                        <span class="fas fa-unlock"></span>
+                        {{else}}
+                        <span class="fas fa-lock"></span>
+                        {{/if}}
+                    </div>
+                    {{/each}}
+                </div>
+                {{#unless view_modules}}
+                <div class="container_instituciones_medicas_no_content">
+                    <h1>No hay módulos</h1>
+                </div>
+                {{/unless}}
+            </section>
+            <section class="side_summary">
+                <div class="summary_card">
+                    <div onclick="window.location='/modules/{{filter}}'" class="summary_single">
+                        <div>
+                            <span class="fas fa-list"></span>
+                            <span>Totales</span>
+                        </div>
+                        <h5>{{length modules_apps}}</h5>
+                    </div>
+                </div>
+                <div class="summary_card">
+                    {{#each list_types}}
+                    <div onclick="window.location='/modules/{{../filter}}/{{tipo}}'" class="summary_single">
+                        <div>
+                            <span class="fas fa-unlock"></span>
+                            <span>{{tipo}}</span>
+                        </div>
+                        <h5>{{cantidad}}</h5>
+                    </div>
+                    {{/each}}
+                </div>
+                <div class="summary_card">
+                    <div onclick="window.location='/modules/form'" class="summary_single new">
+                        <div>
+                            <span class="fas fa-square-plus"></span>
+                            <span>Nuevo</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+</div>

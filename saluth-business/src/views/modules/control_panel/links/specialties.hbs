@@ -1,0 +1,61 @@
+<div class="main_contect">
+  <main class="main_app">
+    <section class="dash_title">
+      <h2 id="title_view" class="pestana hidden">Panel de Control</h2>
+    </section>
+
+    <section class="dash_title">
+      <h2 class="pestana hidden">Especialidades</h2>
+    </section>
+
+    <div class="especialidades_grid">
+      <form action="/specialties/save" method="post" autocomplete="off">
+        <div class="tablita_especialidades">
+       <table class="tabla_especialidades" id="tabla">
+            <thead>
+              <tr>
+                <th>Id</th>
+                <th>Especialidad</th>
+                <th>Descripción</th>
+                <th>Fecha creacion</th>
+              </tr>
+            </thead>
+            <tbody>
+            {{#each specialties }}
+            <tr>
+              <td>{{id_especialidad}}</td>
+              <td>{{nombre_especialidad}}</td>
+              <td>{{descripcion_especialidad}}</td>
+              <td>{{formatDate creacionEspecialidad}}</td>
+            </tr>
+            {{/each}}
+
+            </tbody>
+          </table>
+        </div>
+        <br />
+        <br />
+        <div class="caja_especialidades">
+          <br><br>
+
+          <!--<label for="id_especialidad">ID</label> 
+                <input name="id_especialidad" readonly type="text" id="id_especialidad" autocomplete="off" > -->
+
+          <label for="nombre">Especialidad</label>
+          <input name="nombre_especialidad" type="text" id="nombre" placeholder="Escriba aqui" required>
+          <br><br>
+          <label for="descripcion">Descripción</label>
+          <input name="descripcion_especialidad" type="text" id="descripcion" placeholder="Escriba aqui" required>
+          <br><br>
+          <input class="submit" type="submit" value="Agregar">
+
+          
+
+          </tbody>
+        </div>
+
+      </form>
+
+    </div>
+  </main>
+</div>

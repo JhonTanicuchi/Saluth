@@ -1,0 +1,54 @@
+<!-- MAIN CONTECT -->
+<div class="main_contect">
+  <main class="main_app">
+    <h2 id="title_view" class="hidden">Home</h2>
+
+    <div class="home_grid">
+
+      <section class="welcome_card">
+        <div class="fondo_welcome_card"></div>
+        <div class="container_welcome">
+          <h3>Hola <span>{{user.nombres_persona}},</span></h3>
+          <div>
+            <h1>Bienvenido a Saluth <span>Business</span></h1>
+            <h3 class="phrase">Administra cada paso de tu proyecto.</h3>
+          </div>
+        </div>
+        <section class="section_container_apps">
+          <div class="container_cards_apps">
+            {{#each aplications}}
+            <div class="card_app_home">
+              <div>
+                <h6>Activo</h6>
+                <div><img src="/img/Saluth_ligth.svg" alt=""></div>
+                <h5>{{nombre_aplicacion}}</h5>
+              </div>
+            </div>
+            {{/each}}
+          </div>
+        </section>
+      </section>
+      <section class="home_bootom">
+        <section class="shortcut_grid">
+          {{#each shortcuts}}
+          <div id="card_shortcut{{id_shortcut}}" class="card_shortcut" onclick="window.location='{{ruta_shortcut}}'">
+            <div class="title">
+              <span class="fa fa-layer-group"></span>
+              <h3>{{nombre_shortcut}}</h3>
+            </div>
+            <a id="btn_unlink" onclick="sidebar_toggle({{id_shortcut}})" href="/shortcut/unlink/{{id_shortcut}}">
+              <span class="fa-solid fa-link"></span>
+            </a>
+          </div>
+          {{/each}}
+          {{#for (calc-shortcut shortcuts)}}
+          <div class="card_shortcut plus">
+            <div class="title">
+            </div>
+          </div>
+          {{/for}}
+        </section>
+      </section>
+    </div>
+  </main>
+</div>

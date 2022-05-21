@@ -1,0 +1,247 @@
+.home_grid {
+  display: grid;
+  grid-template-rows: 60% calc(40% - 1.5rem);
+  grid-row-gap: 1.5rem;
+  height: calc(100vh - 2rem);
+}
+
+.home_grid .welcome_card {
+  background: white;
+  border-radius: 7px;
+  z-index: 1;
+  color: white;
+  overflow: hidden;
+  display: grid;
+  background: #535a66;
+  background-image: url("../../img/Recurso 1.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  grid-template-columns: 50% 50%;
+  border-radius: 7px;
+  position: relative;
+}
+
+.fondo_welcome_card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    to top,
+    #161c2a,
+    #1f2635,
+    #29303f,
+    #333b4b,
+    #3d4656
+  );
+  opacity: 80%;
+  z-index: -1;
+}
+
+.home_grid .container_welcome {
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: baseline;
+}
+
+.home_grid .welcome_card span {
+  text-transform: capitalize;
+  color: #5fbdda;
+  font-weight: normal;
+}
+
+.home_grid .welcome_card h3 {
+  font-weight: normal;
+  font-size: 14px;
+}
+
+.home_grid .welcome_card h2 {
+  text-align: left;
+  color: var(--color_dark_P);
+}
+
+.home_grid .welcome_card h1 {
+  font-size: 20px;
+  font-weight: normal;
+}
+.home_grid .welcome_card .phrase {
+  opacity: 60%;
+  font-weight: lighter;
+}
+
+.home_grid .section_container_apps {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 2rem;
+}
+
+.home_grid .container_cards_apps {
+  width: 50%;
+  height: 100%;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(3, minmax(0, 1fr));
+  direction: rtl;
+}
+
+.home_grid .container_cards_apps .card_app_home {
+  grid-column: span 1 / span 1;
+  border-radius: 7px;
+  background: #ffffff;
+  color: #535a66;
+  text-align: center;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 90%;
+  transition: all 0.2s ease;
+}
+
+.home_grid .container_cards_apps .card_app_home:hover {
+  opacity: 100%;
+  box-shadow: rgba(117, 125, 144, 0.249) 0px 10px 50px;
+  transform: scale(1.02);
+  z-index: 2;
+}
+
+.home_grid .container_cards_apps .card_app_home > div {
+  width: 100%;
+}
+
+.home_grid .container_cards_apps .card_app_home h6 {
+  opacity: 50%;
+  text-align: left;
+  font-size: 10px;
+  font-weight: normal;
+}
+.home_grid .container_cards_apps .card_app_home img {
+  width: 60px;
+}
+.home_grid .container_cards_apps .card_app_home h5 {
+  font-size: 12px;
+  opacity: 80%;
+}
+
+.home_bootom .shortcut_grid {
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 1rem;
+}
+
+.home_bootom .shortcut_grid .card_shortcut {
+  background: rgba(255, 255, 255, 0.63);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 7px;
+  opacity: 70%;
+  position: relative;
+  transition: all 0.2s ease;
+  padding: 20px;
+  box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em,
+    rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+}
+
+.home_bootom .shortcut_grid .card_shortcut.plus {
+  background: transparent;
+  border: 1px dashed #535a6686;
+  box-shadow: none;
+  opacity: 100%;
+}
+
+.home_bootom .shortcut_grid .card_shortcut.plus:hover {
+  background: transparent;
+  cursor: default;
+  box-shadow: none;
+  transform: none;
+}
+
+.home_bootom .shortcut_grid .card_shortcut:hover {
+  opacity: 100%;
+  cursor: pointer;
+  background: white;
+  transform: scale(1.02);
+  z-index: 2;
+  box-shadow: rgba(50, 60, 93, 0.085) 0px 13px 27px -5px,
+    rgba(13, 16, 24, 0.096) 0px 8px 16px -8px;
+}
+
+.home_bootom .shortcut_grid .card_shortcut > a {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 5px;
+  opacity: 30%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.home_bootom .shortcut_grid .card_shortcut > a:hover {
+  background: #535a665a;
+  border-radius: 50%;
+  opacity: 50%;
+}
+
+.home_bootom .shortcut_grid .card_shortcut.unlink {
+  animation: scale-out-center 0.3s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+}
+
+@keyframes scale-out-center {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 1;
+  }
+}
+
+.home_bootom .shortcut_grid .card_shortcut .title {
+  text-align: center;
+}
+
+.home_bootom .shortcut_grid .card_shortcut .title > span {
+  font-size: 25px;
+  margin-bottom: 10px;
+  color: #0281a7;
+}
+
+.home_bootom .shortcut_grid .card_shortcut.plus .title > span {
+  margin: 0;
+  color: #535a66;
+}
+
+.home_bootom .shortcut_grid .card_shortcut .title > h3 {
+  font-size: 15px;
+  max-width: 164px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  transition: all 0.3s ease;
+}
+
+.sidebar.active
+  ~ .main_contect
+  .home_bootom
+  .shortcut_grid
+  .card_shortcut
+  .title
+  > h3 {
+  max-width: 185px;
+}

@@ -1,0 +1,49 @@
+.side_summary .summary_card {
+  background: white;
+  border-radius: 7px;
+  margin-bottom: 1rem;
+}
+
+.side_summary .summary_single {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-radius: 7px;
+}
+
+.side_summary .summary_single div {
+  display: flex;
+  align-items: center;
+}
+
+.side_summary .summary_single:hover {
+  padding-left: 40px;
+  background: var(--color_dark_N);
+  color: white;
+}
+
+.side_summary .summary_single:hover  span:first-child{
+  color: white;
+}
+
+.side_summary .summary_single:hover  span:last-child{
+  color: white;
+}
+
+.side_summary .summary_single span:first-child {
+  font-size: 1rem;
+  color: var(--color_dark_N);
+  padding-right: 1rem;
+}
+
+.side_summary .summary_single span:last-child {
+  font-size: .8rem;
+  color: rgb(119, 119, 119);
+}
+
+.side_summary .summary_single h5 {
+  font-size: .8rem;
+}

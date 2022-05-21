@@ -1,0 +1,35 @@
+<!-- MAIN CONTECT -->
+<div class="main_contect">
+  <main class="main_app">
+    <section>
+      <h2 id="title_view" class="hidden">Perfil</h2>
+      <h2 id="title_view_profile" class=" hidden">Seguridad</h2>
+    </section>
+
+    <div class="profile_grid">
+      <section class="profile_edit">
+      {{>profile/navegation}}
+        <div class="profile_settings">
+          <form action="/profile/update/credentials/{{user.id_usuario_business}}" method="POST">
+            <div class="data_username">
+              <label for="username">Username</label>
+              <input name="username" class="input" id="username" type="text" autocomplete="off"
+                required value="{{user.username}}"/>
+            </div>
+            <div class="data_password">
+              <label for="password">Password</label>
+              <input name="password" class="input" id="password" type="password" autocomplete="off"
+                required value="{{user.password}}"/>
+            </div>
+            <div class="data_correo">
+              <label for="correo">Correo electronico</label>
+              <input name="correo" class="input" id="correo" type="text" autocomplete="off" required value="{{user.correo}}" />
+            </div>
+            <button class="btn" type="submit">Guardar</button>
+            </form>
+        </div>
+      </section>
+      {{>profile/preview_profile}}
+    </div>
+  </main>
+</div>

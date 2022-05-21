@@ -1,0 +1,37 @@
+<section class="profile_preview">
+    <div class="general_data">
+        <div class="avatar">
+            <div class="mask-squircle">
+                <img src="/img/img_profile.jpg" alt="logo">
+            </div>
+        </div>
+        <div>
+            <h3>{{user.nombres_persona}} {{user.apellidos_persona}}</h3>
+            <span>{{user.correo}}</span>
+        </div>
+    </div>
+    <div class="personal_data">
+        <div class="personal_data_header">
+            <span>Datos Personales</span>
+        </div>
+        <div class="personal_data_contect">
+            <div class="card_data_single">
+                <h5>Cédula:</h5>
+                {{#if user.cedula_persona}}
+                <span>{{user.cedula_persona}}</span>
+                {{else}}
+                <span>NA</span>
+                {{/if}}
+            </div>
+
+            <div class="card_data_single">
+                <h5>Telefono:</h5>
+                {{#if user.tel_persona}}
+                <span>{{user.tel_persona}}</span>
+                {{else}}
+                <span>NA</span>
+                {{/if}}
+            </div>
+        </div>
+    </div>
+</section>
