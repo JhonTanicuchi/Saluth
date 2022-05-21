@@ -79,7 +79,7 @@ app.use(require("./routes/medical_institutions"));
 app.use(require("./routes/medical_branch"));
 app.use(require("./routes/menu_apps"));
 app.use(require("./routes/modules"));
-app.use(require("./routes/shortcut")); 
+app.use(require("./routes/shortcut"));
 
 app.use((req, res, next) => {
   res.status(404).render("404", { title404: "404" });
