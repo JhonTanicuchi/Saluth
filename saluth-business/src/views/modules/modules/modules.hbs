@@ -2,12 +2,16 @@
 <div class="main_contect">
     <main class="main_app">
         <section>
+            <form action="/shortcut/link" method="post">
             <h2 class="pestana hidden">Apps</h2>
-            <h2 id="title_view" class="hidden">Módulos</h2>
+            <h2 id="title_view"  class="hidden">Módulos</h2>
             <h2 id="title_pestaña" class="pestana hidden">Módulos</h2>
             {{#each aplications}}
-            <a  class="pestana hidden" href="/modules/{{nombre_aplicacion}}">{{nombre_aplicacion}}</a>
+            <a href="/modules/{{nombre_aplicacion}}">{{nombre_aplicacion}}</a>
             {{/each}}
+            <input id="input_name_shortcut" class="hidden" name="nombre_shortcut" type="text">
+            <button type="submit"><i class="fa-solid fa-link"></i></button>
+            </form>
         </section>
         <div class="modules_grid">
             <section class="modules_wrapper">

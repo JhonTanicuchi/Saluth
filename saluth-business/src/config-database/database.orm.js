@@ -16,7 +16,32 @@ mysql
     });
   });
 
+const sequelize = new Sequelize("Saluth", "root", "", {
+  host: "localhost",
+  dialect: "mysql",
+  pool: {
+    max: 5,
+    min: 0,
+    require: 30000,
+    idle: 10000,
+  },
+});
+
+sequelize
+  .authenticate()
+  .then(() => {
+    console.log("Conectado");
+  })
+  .catch((err) => {
+    console.log("No se conecto");
+  });
+
+sequelize.sync({ force: false }).then(() => {
+  console.log("Tablas sincronizadas");
+});
+
 const catalogo_Modelo = require("../models/catalogo");
+const shortcut_Modelo = require("../models/shortcut");
 const persona_Modelo = require("../models/persona");
 const empleado_business_Modelo = require("../models/empleado_business");
 const usuario_business_Modelo = require("../models/usuario_business");
@@ -66,33 +91,9 @@ const contrato_Modelo = require("../models/contrato");
 const provincia_Modelo = require("../models/provincia");
 const canton_Modelo = require("../models/canton");
 const parroquia_Modelo = require("../models/parroquia");
-const modulo_catalogo_Modelo = require("../models/modulo_catalogo");
-
-const sequelize = new Sequelize("Saluth", "root", "", {
-  host: "localhost",
-  dialect: "mysql",
-  pool: {
-    max: 5,
-    min: 0,
-    require: 30000,
-    idle: 10000,
-  },
-});
-
-sequelize
-  .authenticate()
-  .then(() => {
-    console.log("Conectado");
-  })
-  .catch((err) => {
-    console.log("No se conecto");
-  });
-
-sequelize.sync({ force: false }).then(() => {
-  console.log("Tablas sincronizadas");
-});
 
 const catalogo = catalogo_Modelo(sequelize, Sequelize);
+const shortcut = shortcut_Modelo(sequelize, Sequelize);
 const persona = persona_Modelo(sequelize, Sequelize);
 const empleado_business = empleado_business_Modelo(sequelize, Sequelize);
 const usuario_business = usuario_business_Modelo(sequelize, Sequelize);
@@ -103,15 +104,9 @@ const usuario_paciente = usuarioPaciente_Modelo(sequelize, Sequelize);
 const enfermedad = enfermedad_Modelo(sequelize, Sequelize);
 const cita_medica = cita_medica_Modelo(sequelize, Sequelize);
 const area_empleado = area_empleado_Modelo(sequelize, Sequelize);
-const atencionMedica_citaMedica = atencionMedica_citaMedica_Modelo(
-  sequelize,
-  Sequelize
-);
+const atencionMedica_citaMedica = atencionMedica_citaMedica_Modelo(sequelize, Sequelize);
 const diagnostico = diagnostico_Modelo(sequelize, Sequelize);
-const diagnostico_enfermedad = diagnostico_enfermedad_Modelo(
-  sequelize,
-  Sequelize
-);
+const diagnostico_enfermedad = diagnostico_enfermedad_Modelo(sequelize, Sequelize);
 const area = area_Modelo(sequelize, Sequelize);
 const examen = examen_Modelo(sequelize, Sequelize);
 const mensaje = mensaje_Modelo(sequelize, Sequelize);
@@ -133,19 +128,13 @@ const especialidad = especialidad_Modelo(sequelize, Sequelize);
 const cargo = cargo_Modelo(sequelize, Sequelize);
 const empleado_cargo = empleado_cargo_Modelo(sequelize, Sequelize);
 const chat = chat_Modelo(sequelize, Sequelize);
-const especialidad_empleado = especialidad_empleado_Modelo(
-  sequelize,
-  Sequelize
-);
+const especialidad_empleado = especialidad_empleado_Modelo(sequelize, Sequelize);
 const subArea_empleado = subArea_empleado_Modelo(sequelize, Sequelize);
 const area_citaMedica = area_citaMedica_Modelo(sequelize, Sequelize);
 const atencion_medica = atencion_medica_Modelo(sequelize, Sequelize);
 const historia_clinica = historia_clinica_Modelo(sequelize, Sequelize);
 const solicitud = solicitud_Modelo(sequelize, Sequelize);
-const solicitudes_componentes = solicitudes_componentes_Modelo(
-  sequelize,
-  Sequelize
-);
+const solicitudes_componentes = solicitudes_componentes_Modelo(sequelize, Sequelize);
 const institucion_medica = institucion_medica_Modelo(sequelize, Sequelize);
 const modulo = modulo_Modelo(sequelize, Sequelize);
 const aplicacion = aplicacion_Modelo(sequelize, Sequelize);
@@ -154,8 +143,6 @@ const contrato = contrato_Modelo(sequelize, Sequelize);
 const provincia = provincia_Modelo(sequelize, Sequelize);
 const canton = canton_Modelo(sequelize, Sequelize);
 const parroquia = parroquia_Modelo(sequelize, Sequelize);
-const modulo_catalogo = modulo_catalogo_Modelo(sequelize, Sequelize);
-
 
 //relaciones
 
@@ -186,14 +173,18 @@ usuario_paciente.belongsTo(paciente);
 rol.hasMany(usuario_paciente);
 usuario_paciente.belongsTo(rol);
 
-
-
 rol.belongsToMany(permiso, {
   through: rol_permiso,
 });
 permiso.belongsToMany(rol, {
   through: rol_permiso,
 });
+
+usuario_business.hasMany(shortcut);
+shortcut.belongsTo(usuario_business);
+
+usuario_empleado.hasMany(shortcut);
+shortcut.belongsTo(usuario_empleado);
 
 institucion_medica.hasMany(solicitud);
 solicitud.belongsTo(institucion_medica);
@@ -208,17 +199,17 @@ institucion_medica.hasMany(empleado);
 empleado.belongsTo(institucion_medica);
 
 catalogo.belongsToMany(institucion_medica, {
-  through: 'institucion_catalogo',
+  through: "institucion_catalogo",
 });
 institucion_medica.belongsToMany(catalogo, {
-  through: 'institucion_catalogo',
+  through: "institucion_catalogo",
 });
 
 catalogo.belongsToMany(modulo, {
-  through: modulo_catalogo,
+  through: "modulo_catalogo",
 });
 modulo.belongsToMany(catalogo, {
-  through: modulo_catalogo,
+  through: "modulo_catalogo",
 });
 
 provincia.hasMany(canton);
@@ -278,5 +269,5 @@ module.exports = {
   provincia,
   canton,
   parroquia,
-  modulo_catalogo,
+  shortcut,
 };

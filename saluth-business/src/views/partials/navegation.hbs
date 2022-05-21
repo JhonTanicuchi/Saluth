@@ -27,64 +27,30 @@
                     <span>Home</span>
                 </section>
             </li>
+            {{#each categoria_modulos}}
             <div class="subtitle_nav">
                 <div class="subtitle">
-                    <h2>ADMINISTRACIÓN</h2>
+                    <h2>{{valor_catalogo}}</h2>
                 </div>
             </div>
+            {{#each ../app_modules}}
+            {{#if (tipos_modulos valor_catalogo ../valor_catalogo nombre_catalogo)}}
             <li class="list">
-                <a href="/solicitudes">
-                    <span class="las la-envelope"></span>
+                <a href={{url_modulo}}>
+                    <span class="las la-{{icono_modulo}}"></span>
                     <div id="title_modules_nav">
-                        <span class="title_modules">Solicitudes</span>
+                        <span class="title_modules">{{nombre_modulo}}</span>
                         <span id="point_nav" class="fas fa-circle"></span>
                     </div>
                 </a>
                 <section class="hint">
-                    <span>Solicitudes</span>
+                    <span>{{nombre_modulo}}</span>
                 </section>
             </li>
-            <li class="list">
-                <a href="/medical_institutions">
-                    <span class="las la-hospital"></span>
-                    <div id="title_modules_nav">
-                        <span class="title_modules">Instituciones</span>
-                        <span id="point_nav" class="fas fa-circle"></span>
-                    </div>
-                </a>
-                <section class="hint">
-                    <span>Instituciones</span>
-                </section>
-            </li>
-            <div class="subtitle_nav">
-                <div class="subtitle">
-                    <h2>PANEL DE CONTROL</h2>
-                </div>
-            </div>
-            <li class="list">
-                <a href="/menu_apps">
-                    <span class="las la-cubes"></span>
-                    <div id="title_modules_nav">
-                        <span class="title_modules">Apps Control</span>
-                        <span id="point_nav" class="fas fa-circle"></span>
-                    </div>
-                </a>
-                <section class="hint">
-                    <span>Apps Control</span>
-                </section>
-            </li>
-            <li class="list">
-                <a href="/control_panel">
-                    <span class="las la-database"></span>
-                    <div id="title_modules_nav">
-                        <span class="title_modules">Data Control</span>
-                        <span id="point_nav" class="fas fa-circle"></span>
-                    </div>
-                </a>
-                <section class="hint">
-                    <span>Data Control</span>
-                </section>
-            </li>
+            {{/if}}
+            {{/each}}
+            {{/each}}
+
         </ul>
         <ul>
             <li class="list">
@@ -101,7 +67,7 @@
             </li>
         </ul>
     </div>
-    
+
     <div class="menu_profile visuallyhidden hidden" id="menu_profile">
         <div id="menu_profile_sidebar_footer" class="sidebar_footer">
             <h3 class="brand">
@@ -119,10 +85,11 @@
         <div id="menu_profile_list" class="menu_profile_list">
             <ul>
                 <li class="list">
-                    <a href="/profile">
+                    <a href="/profile/general">
                         <span class="las la-user-circle"></span>
                         <div>
                             <span class="title_modules">Perfil</span>
+                            <span id="point_nav" class="fas fa-circle"></span>
                         </div>
                     </a>
                 </li>

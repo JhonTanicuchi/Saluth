@@ -22,15 +22,19 @@ modules.form = async (req, res) => {
   const types_modules = await sql.query(
     "SELECT * FROM catalogos WHERE nombre_catalogo = 'tipo_modulo'"
   );
-  res.render("modules/modules/modules_form", { aplications, types_modules });
+  const categorias_modulo = await sql.query(
+    "SELECT * FROM catalogos WHERE nombre_catalogo = 'categoria_modulo'"
+  );
+  res.render("modules/modules/modules_form", { aplications, types_modules, categorias_modulo });
 };
 
 /* Allows you to save the created module in the database, with the parameters of the view inputs. */
 modules.save = async (req, res) => {
-  const { nombre_modulo, tipo_modulo, id_aplicacion } = req.body;
+  const { nombre_modulo, tipo_modulo, id_aplicacion, url_modulo, icono_modulo, id_categoria } =
+    req.body;
   await sql.query(
-    "INSERT INTO modulos (nombre_modulo,aplicacionIdAplicacion) VALUES (?,?)",
-    [nombre_modulo, id_aplicacion]
+    "INSERT INTO modulos (nombre_modulo,aplicacionIdAplicacion,url_modulo,icono_modulo) VALUES (?,?,?,?)",
+    [nombre_modulo, id_aplicacion, url_modulo, icono_modulo]
   );
 
   const id_module = await sql.query(
@@ -38,11 +42,21 @@ modules.save = async (req, res) => {
     [nombre_modulo]
   );
 
+  const rote_app = await sql.query("SELECT * FROM aplicacions WHERE id_aplicacion = ?", [
+    id_aplicacion,
+  ]);
+
   await sql.query(
-    "INSERT INTO modulo_catalogos (catalogoIdCatalogo,moduloIdModulo) VALUES (?,?)",
+    "INSERT INTO modulo_catalogo (catalogoIdCatalogo,moduloIdModulo) VALUES (?,?)",
     [tipo_modulo, id_module[0].id_modulo]
   );
-  res.redirect("/modules");
+
+   await sql.query("INSERT INTO modulo_catalogo (catalogoIdCatalogo,moduloIdModulo) VALUES (?,?)", [
+     id_categoria,
+     id_module[0].id_modulo,
+   ]); 
+  
+  res.redirect("/modules/" + rote_app[0].nombre_aplicacion);
 };
 
 /* Allows you to filter the modules and display them in the view.*/
@@ -59,7 +73,7 @@ modules.list = async (req, res) => {
 
   types.forEach(async (element) => {
     let modules_type = await sql.query(
-      "SELECT * FROM modulos m JOIN aplicacions a on m.aplicacionIdAplicacion = a.id_aplicacion JOIN modulo_catalogos mc on mc.moduloIdModulo = m.id_modulo join catalogos c on c.id_catalogo = mc.catalogoIdCatalogo WHERE a.nombre_aplicacion = ? and c.valor_catalogo = ?",
+      "SELECT * FROM modulos m JOIN aplicacions a on m.aplicacionIdAplicacion = a.id_aplicacion JOIN modulo_catalogo mc on mc.moduloIdModulo = m.id_modulo join catalogos c on c.id_catalogo = mc.catalogoIdCatalogo WHERE nombre_catalogo = 'tipo_modulo' AND a.nombre_aplicacion = ? and c.valor_catalogo = ?",
       [filter, element.valor_catalogo]
     );
     list_types.push({
@@ -69,12 +83,12 @@ modules.list = async (req, res) => {
   });
 
   const modules_apps = await sql.query(
-    "SELECT * FROM modulos m JOIN aplicacions a ON m.aplicacionIdAplicacion = a.id_aplicacion JOIN modulo_catalogos mc ON mc.moduloIdModulo = m.id_modulo JOIN catalogos c ON c.id_catalogo = mc.catalogoIdCatalogo WHERE a.nombre_aplicacion = ?",
+    "SELECT * FROM modulos m JOIN aplicacions a ON m.aplicacionIdAplicacion = a.id_aplicacion JOIN modulo_catalogo mc ON mc.moduloIdModulo = m.id_modulo JOIN catalogos c ON c.id_catalogo = mc.catalogoIdCatalogo WHERE nombre_catalogo = 'tipo_modulo' AND a.nombre_aplicacion = ?",
     [filter]
   );
 
   const modules_type = await sql.query(
-    "SELECT * FROM modulos m JOIN aplicacions a on m.aplicacionIdAplicacion = a.id_aplicacion JOIN modulo_catalogos mc on mc.moduloIdModulo = m.id_modulo join catalogos c on c.id_catalogo = mc.catalogoIdCatalogo WHERE a.nombre_aplicacion = ? and c.valor_catalogo = ?",
+    "SELECT * FROM modulos m JOIN aplicacions a on m.aplicacionIdAplicacion = a.id_aplicacion JOIN modulo_catalogo mc on mc.moduloIdModulo = m.id_modulo join catalogos c on c.id_catalogo = mc.catalogoIdCatalogo WHERE nombre_catalogo = 'tipo_modulo' AND a.nombre_aplicacion = ? and c.valor_catalogo = ?",
     [filter, type]
   );
 
@@ -99,7 +113,7 @@ modules.list = async (req, res) => {
 modules.unlock = async (req, res) => {
   const id_module_patient = req.params.id;
   await sql.query(
-    "UPDATE modulo_catalogos SET catalogoIdCatalogo = (SELECT id_catalogo FROM catalogos WHERE valor_catalogo = 'Público') WHERE moduloIdModulo = ?",
+    "UPDATE modulo_catalogo SET catalogoIdCatalogo = (SELECT id_catalogo FROM catalogos WHERE valor_catalogo = 'Público') WHERE moduloIdModulo = ?",
     [id_module_patient]
   );
 
@@ -110,7 +124,7 @@ modules.unlock = async (req, res) => {
 modules.lock = async (req, res) => {
   const id_module_patient = req.params.id;
   await sql.query(
-    "UPDATE modulo_catalogos SET catalogoIdCatalogo = (SELECT id_catalogo FROM catalogos WHERE valor_catalogo = 'Privado') WHERE moduloIdModulo = ?",
+    "UPDATE modulo_catalogo SET catalogoIdCatalogo = (SELECT id_catalogo FROM catalogos WHERE valor_catalogo = 'Privado') WHERE moduloIdModulo = ?",
     [id_module_patient]
   );
 

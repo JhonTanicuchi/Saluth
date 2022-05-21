@@ -9,6 +9,8 @@ const modulo = (sequelize, type) => {
         },
         nombre_modulo: type.STRING,
         descripcion_modulo: type.STRING,
+        url_modulo: type.STRING,
+        icono_modulo: type.STRING,
         estado_modulo: {
           type: type.BOOLEAN,
           defaultValue: true,

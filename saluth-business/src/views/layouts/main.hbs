@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saluth Business</title>
+    <title>Saluth Business {{#if title404}}{{title404}}{{/if}}</title>
     <link rel="icon" href="/img/Saluth_ligth.svg" type="image/gif">
 
     <!-- STYLES WEB -->
@@ -21,19 +21,22 @@
     <link rel="stylesheet" href="/styles/styles_elements/styles_module_card.css">
     <link rel="stylesheet" href="/styles/styles_elements/styles_side_summary.css">
     <link rel="stylesheet" href="/styles/styles_working.css">
+    <link rel="stylesheet" href="/styles/styles_404.css">
 
     <!-- STYLES MODULES -->
+    <link rel="stylesheet" href="/styles/styles_login.css">
     <link rel="stylesheet" href="/styles/styles_navegation.css">
     <link rel="stylesheet" href="/styles/styles_message.css">
-    <link rel="stylesheet" href="/styles/styles_modules/styles_home.css">
-    <link rel="stylesheet" href="/styles/styles_modules/styles_profile.css">
+    <link rel="stylesheet" href="/styles/styles_home.css">
+    <link rel="stylesheet" href="/styles/styles_profile.css">
     <link rel="stylesheet" href="/styles/styles_modules/styles_solicitudes.css">
     <link rel="stylesheet" href="/styles/styles_modules/styles_medical_institutions.css">
     <link rel="stylesheet" href="/styles/styles_modules/styles_medical_branch.css">
     <link rel="stylesheet" href="/styles/styles_modules/styles_specialties.css">
     <link rel="stylesheet" href="/styles/styles_modules/styles_menu_apps.css">
     <link rel="stylesheet" href="/styles/styles_modules/styles_modules.css">
-    <link rel="stylesheet" href="/styles/styles_navegation_pestana.css">
+    <link rel="stylesheet" href="/styles/styles_modules/styles_modules_form.css">
+
 
     <!-- SCRIPTS -->
     <script src="https://unpkg.com/feather-icons"></script>
@@ -47,18 +50,17 @@
 </head>
 
 <body>
-    {{!-- {{>loader}} --}}
+    {{>loader}}
     {{>navegation}}
-    {{!-- {{>header}} --}}
-    {{!-- {{>navegation_pestañas}} --}}
     {{{body}}}
 </body>
 
 <!-- SCRIPTS -->
-<script src="/js/navegation_pestañas.js"></script>
 <script src="/js/loader.js"></script>
 <script src="/js/solicitudes_filter.js"></script>
 <script src="/js/navegation_active.js"></script>
+<script src="/js/icons_module.js"></script>
+<script src="/js/shortcut.js"></script>
 <script>
     feather.replace()
 </script>

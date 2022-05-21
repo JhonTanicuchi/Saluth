@@ -224,3 +224,15 @@ function countElement(parent) {
     return listNodes;
   }
 }
+
+
+/* NAV PROFILE LI ACTIVA */
+var list_li_profile = document.querySelectorAll(".list_profile");
+var list_title_profile = document.getElementsByClassName("title_li_profile");
+var title_view_profile = document.getElementById("title_view_profile");
+
+for (let i = 0; i < list_li.length; i++) {
+  if (list_title_profile[i].textContent == title_view_profile.textContent) {
+    list_li_profile[i].className = "list active";
+  }
+}

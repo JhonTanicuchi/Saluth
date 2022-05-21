@@ -166,7 +166,7 @@
   box-shadow: none;
   transform: none;
 }
- 
+
 .home_bootom .shortcut_grid .card_shortcut:hover {
   opacity: 100%;
   cursor: pointer;
@@ -177,7 +177,7 @@
     rgba(13, 16, 24, 0.096) 0px 8px 16px -8px;
 }
 
-.home_bootom .shortcut_grid .card_shortcut > span {
+.home_bootom .shortcut_grid .card_shortcut > a {
   position: absolute;
   top: 0;
   right: 0;
@@ -191,10 +191,25 @@
   transition: all 0.2s ease;
 }
 
-.home_bootom .shortcut_grid .card_shortcut > span:hover {
+.home_bootom .shortcut_grid .card_shortcut > a:hover {
   background: #535a665a;
   border-radius: 50%;
   opacity: 50%;
+}
+
+.home_bootom .shortcut_grid .card_shortcut.unlink {
+  animation: scale-out-center 0.3s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+}
+
+@keyframes scale-out-center {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 1;
+  }
 }
 
 .home_bootom .shortcut_grid .card_shortcut .title {

@@ -1,0 +1,36 @@
+.error_404_grid {
+  height: calc(100vh - 2rem);
+  width: 100%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.width_full{
+margin-left: 0 !important;
+}
+
+.animation_404 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.info_404 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #535a66;
+}
+
+.info_404 h1 {
+  font-size: 80px;
+}
+
+.info_404 h2 {
+  opacity: 80%;
+}
+
+.info_404 p {
+  font-size: 15px;
+  margin-bottom: 20px;
+}

@@ -1,0 +1,67 @@
+<!-- MAIN CONTECT -->
+<div class="main_contect">
+  <main class="main_app">
+    <section>
+      <h2 id="title_view" class="hidden">Perfil</h2>
+      <h2 id="title_view_profile" class=" hidden">General</h2>
+    </section>
+
+    <div class="profile_grid">
+      <section class="profile_edit">
+        {{>profile/navegation}}
+        <div class="profile_settings">
+          <form action="/profile/update/general/{{user.id_persona}}" method="POST">
+          <div class="data_nombres_persona">
+            <label for="nombres_persona">Nombres</label>
+            <input name="nombres_persona" class="input" id="nombres_persona" type="text" autocomplete="off"
+              required value="{{user.nombres_persona}}"/>
+          </div>
+          <div class="data_apellidos_persona">
+            <label for="apellidos_persona">Apellidos</label>
+            <input name="apellidos_persona" class="input" id="apellidos_persona" type="text" autocomplete="off"
+              required value="{{user.apellidos_persona}}"/>
+          </div>
+          <div class="data_cedula_persona">
+            <label for="cedula_persona">Cédula</label>
+            <input name="cedula_persona" class="input" id="cedula_persona" type="text" autocomplete="off" required
+              value="{{user.cedula_persona}}" />
+          </div>
+          <div class="data_tel_persona">
+            <label for="tel_persona">Telefono</label>
+            <input name="tel_persona" class="input" id="tel_persona" type="text" autocomplete="off" required
+              value="{{user.tel_persona}}" />
+          </div>
+          <div class="data_fecha_nacimiento_persona">
+            <label for="fecha_nacimiento_persona">Fecha Nacimeinto</label>
+            <input name="fecha_nacimiento_persona" class="input" id="fecha_nacimiento_persona" type="text" autocomplete="off"
+              required value="{{user.fecha_nacimiento_persona}}"/>
+          </div>
+          <div class="data_direccion_persona">
+            <label for="direccion_persona">Direccion</label>
+            <input name="direccion_persona" class="input" id="direccion_persona" type="text" autocomplete="off"
+              required value="{{user.direccion_persona}}"/>
+          </div>
+         {{!--  <div class="data_provincia">
+            <label for="provincia">Provincia</label>
+            <input name="provincia" class="input" id="provincia" type="text" autocomplete="off"
+              required value="{{user.provincia}}"/>
+          </div>
+          <div class="data_canton">
+            <label for="canton">Canton</label>
+            <input name="canton" class="input" id="canton" type="text" autocomplete="off"
+              required value="{{user.canton}}"/>
+          </div>
+          <div class="data_parroquia">
+            <label for="parroquia">Parroquia</label>
+            <input name="parroquia" class="input" id="parroquia" type="text" autocomplete="off"
+              required value="{{user.parroquia}}"/>
+          </div> --}}
+          
+          <button class="btn" type="submit">Guardar</button>
+          </form>
+        </div>
+      </section>
+      {{>profile/preview_profile}}
+    </div>
+  </main>
+</div>

@@ -1,10 +1,9 @@
 const sql = require("../config-database/database.sql");
 const Handlebars = require("handlebars");
-const control_panel = {}
+const home = {};
 
-Handlebars.registerHelper("calc-shortcut", function (length) {
-    return -(length - 12);
-    
+Handlebars.registerHelper("calc-shortcut", function (list) {
+  return -(list.length - 12);
 });
 
 Handlebars.registerHelper("for", function (n, block) {
@@ -13,10 +12,14 @@ Handlebars.registerHelper("for", function (n, block) {
   return accum;
 });
 
-control_panel.mostrar = async(req, res) => {
-    const aplications = await sql.query("SELECT * FROM aplicacions");
-    const num = 5;
-    res.render("home", { aplications, num });
-}
+home.mostrar = async (req, res) => {
+  const aplications = await sql.query(
+    "SELECT * FROM aplicacions WHERE nombre_aplicacion != 'Saluth Business'"
+  );
+  const shortcuts = await sql.query(
+    "SELECT * FROM shortcuts WHERE estado_shortcut = 1"
+  );
+  res.render("home", { aplications, shortcuts });
+};
 
-module.exports = control_panel
+module.exports = home;

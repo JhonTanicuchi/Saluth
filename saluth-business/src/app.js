@@ -7,6 +7,7 @@ const passport = require("passport");
 const flash = require("connect-flash");
 const mysqlstore = require("express-mysql-session")(session);
 const bodyparser = require("body-parser");
+const navegationController = require("./controllers/navegation.controller");
 
 const { database } = require("./keys");
 
@@ -59,6 +60,7 @@ app.use((req, res, next) => {
   app.locals.user = req.user;
   next();
 });
+app.use(navegationController.nav);
 //varible globales
 
 //public
@@ -77,5 +79,9 @@ app.use(require("./routes/medical_institutions"));
 app.use(require("./routes/medical_branch"));
 app.use(require("./routes/menu_apps"));
 app.use(require("./routes/modules"));
+app.use(require("./routes/shortcut")); 
 
+app.use((req, res, next) => {
+  res.status(404).render("404", { title404: "404" });
+});
 module.exports = app;

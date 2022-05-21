@@ -1,19 +1,29 @@
 <!-- MAIN CONTECT -->
 <div class="main_contect">
     <main class="main_app">
-        <section class="dash_title">
-            <h2 id="title_view" class="pestana hidden">Nuevo Modulo</h2>
-            <h2 class="pestana hidden">Modulos</h2>
-        </section>
-        <div class="componente_grid">
+
+            <h2 id="title_view" class="hidden">Modulos</h2>
+       
+        <div class="modules_form_grid">
             <div>
                 <div class="title">Nuevo Módulo</div>
                 <form action="/modules/save" method="post">
                     <div class="user-details">
                         <div class="">
-                            <span class="details">Nombre</span>
+                            <span class="nombre_modulo">Nombre</span>
                             <input class="input" name="nombre_modulo" type="text" placeholder="Nombre del módulo"
                                 required>
+                        </div>
+                        <div class="">
+                            <span class="details">URL</span>
+                            <input class="input" name="url_modulo" type="text" placeholder="URL del módulo" required>
+                        </div>
+                        <div class="">
+                            <span class="details">Icono</span>
+                            <div>
+                                <input class="input" name="icono_modulo" id="icono_modulo" onkeyup="icons_filter()" type="text" placeholder="Icono del módulo" required>
+                                <span id="view_icon_module"></span>
+                            </div>
                         </div>
                         <div class="">
                             <span class="details">Aplicaciones </span>
@@ -21,6 +31,15 @@
                                 <option selected disabled value="">Selecciona una aplicación</option>
                                 {{#each aplications}}
                                 <option value={{id_aplicacion}}>{{nombre_aplicacion}}</option>
+                                {{/each}}
+                            </select>
+                        </div>
+                        <div class="">
+                            <span class="details">Categoria </span>
+                            <select name="id_categoria" class="input" id="categoria">
+                                <option selected disabled value="">Selecciona una categoria</option>
+                                {{#each categorias_modulo}}
+                                <option value={{id_catalogo}}>{{valor_catalogo}}</option>
                                 {{/each}}
                             </select>
                         </div>
