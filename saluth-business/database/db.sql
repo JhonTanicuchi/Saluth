@@ -17,7 +17,7 @@ INSERT INTO
 VALUES
     ('Saluth Patient'),
     ('Saluth ERP'),
-    ('Saluth Patient'),
+    ('Saluth Management'),
     ('Saluth Business');
 
 INSERT INTO
@@ -351,13 +351,25 @@ VALUES
                 cedula_persona = '0110000100'
         )
     );
+
+INSERT INTO
+    usuario_businesses (
+        filename ,
+        path ,
+        originalname ,
+        mimetype ,
+        size ,
+    )
+VALUES('a7bf9961-a29f-428b-8a11-9bf45362710d.jpg','/img/uploads/profile/a7bf9961-a29f-428b-8a11-9bf45362710d.jpg','58fe5a39aeb5d1d37e7803fa31894509.jpg','image/jpeg',28843)
+
     INSERT INTO
     usuario_businesses (
         username,
         password,
         correo,
         empleadoBusinessIdEmpleadoBusiness,
-        rolIdRol
+        rolIdRol,
+        imageIdImage 
     )
 VALUES(
         'admin_saluth',
@@ -377,7 +389,14 @@ VALUES(
                 rols
             WHERE
                 nombre_rol = 'Administrador'
-        )
+        ),(
+    SELECT
+        id_image
+    FROM
+        images
+    WHERE
+        filename = 'a7bf9961-a29f-428b-8a11-9bf45362710d.jpg'
+)
     );
 
 

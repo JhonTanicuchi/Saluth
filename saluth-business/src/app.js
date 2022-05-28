@@ -1,5 +1,7 @@
 const express = require("express");
 const morgan = require("morgan");
+const multer = require("multer");
+const { v4: uuidv4 } = require("uuid");
 const path = require("path");
 const exphbs = require("express-handlebars");
 const session = require("express-session");
@@ -51,6 +53,16 @@ app.use(
 app.use(flash());
 app.use(passport.initialize());
 app.use(passport.session());
+
+
+
+const storage = multer.diskStorage({
+  destination: path.join(__dirname, 'public/img/uploads/profile'),
+  filename: (req, file, cb, filename) => {
+    cb(null, uuidv4() + path.extname(file.originalname));
+  }
+});
+app.use(multer({ storage: storage }).single("avatar_img"));
 //midlewars
 
 //varible globales

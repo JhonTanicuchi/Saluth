@@ -6,7 +6,6 @@ const {check_login} = require('../lib/auth');
 
 routes.get("/profile/general", check_login, profileController.general);
 routes.get("/profile/security", check_login, profileController.security);
-routes.get("/profile/subscription", check_login, profileController.subscription);
 routes.post("/profile/update/general/:id", check_login, profileController.update_general);
 routes.post("/profile/update/credentials/:id", check_login, profileController.update_credentials);
 

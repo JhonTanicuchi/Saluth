@@ -91,6 +91,7 @@ const contrato_Modelo = require("../models/contrato");
 const provincia_Modelo = require("../models/provincia");
 const canton_Modelo = require("../models/canton");
 const parroquia_Modelo = require("../models/parroquia");
+const image_Modelo = require("../models/image");
 
 const catalogo = catalogo_Modelo(sequelize, Sequelize);
 const shortcut = shortcut_Modelo(sequelize, Sequelize);
@@ -143,6 +144,7 @@ const contrato = contrato_Modelo(sequelize, Sequelize);
 const provincia = provincia_Modelo(sequelize, Sequelize);
 const canton = canton_Modelo(sequelize, Sequelize);
 const parroquia = parroquia_Modelo(sequelize, Sequelize);
+const image = image_Modelo(sequelize, Sequelize);
 
 //relaciones
 
@@ -182,6 +184,9 @@ permiso.belongsToMany(rol, {
 
 usuario_business.hasMany(shortcut);
 shortcut.belongsTo(usuario_business);
+
+image.hasMany(usuario_business);
+usuario_business.belongsTo(image);
 
 usuario_empleado.hasMany(shortcut);
 shortcut.belongsTo(usuario_empleado);
@@ -270,4 +275,5 @@ module.exports = {
   canton,
   parroquia,
   shortcut,
+  image,
 };

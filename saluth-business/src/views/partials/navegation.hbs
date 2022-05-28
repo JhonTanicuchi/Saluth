@@ -73,7 +73,7 @@
             <h3 class="brand">
                 <div class="avatar">
                     <div class="mask-squircle">
-                        <img src="/img/img_profile.jpg" alt="logo">
+                        <img src={{user.path}} alt="logo">
                     </div>
                 </div>
                 <div class="title">
@@ -87,7 +87,7 @@
                 <li class="list">
                     <a href="/profile/general">
                         <span class="las la-user-circle"></span>
-                        <div>
+                        <div id="title_modules_nav">
                             <span class="title_modules">Perfil</span>
                             <span id="point_nav" class="fas fa-circle"></span>
                         </div>
@@ -112,7 +112,7 @@
         <h3 class="brand">
             <div class="avatar">
                 <div class="mask-squircle">
-                    <img id="img_toggle_menu_profile" src="/img/img_profile.jpg" alt="logo">
+                    <img id="img_toggle_menu_profile" src={{user.path}} alt="logo">
                 </div>
                 <div class="mask-squircle indicator">
                     <div class="mask-squircle shader"></div>

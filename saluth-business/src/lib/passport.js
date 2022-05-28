@@ -15,12 +15,12 @@ passport.use(
     },
     async (req, username, password, done) => {
       const person_rows = await sql.query(
-        "SELECT * FROM usuario_businesses u join empleado_businesses e on u.id_usuario_business = e.id_empleado_business join personas p on e.personaIdPersona = p.id_persona join rols r on r.id_rol = u.rolIdRol WHERE u.username =?",
+        "SELECT * FROM usuario_businesses u join empleado_businesses e on u.id_usuario_business = e.id_empleado_business join personas p on e.personaIdPersona = p.id_persona join rols r on r.id_rol = u.rolIdRol join images i on i.id_image = u.imageIdImage WHERE u.username =?",
         [username]
       );
       if (person_rows.length > 0) {
         const user = person_rows[0];
-        console.log(user.nombres_persona);
+        console.log(user);
 
         const validPassword = await helpers.matchPassword(
           password,

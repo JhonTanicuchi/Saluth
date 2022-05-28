@@ -11,10 +11,6 @@ profile.security = (req, res) => {
   res.render("users/profile/security");
 };
 
-profile.subscription = (req, res) => {
-  res.render("users/profile/subscription");
-};
-
 profile.update_general = async (req, res) => {
   const id_persona = req.params.id;
   const {
@@ -25,8 +21,18 @@ profile.update_general = async (req, res) => {
     direccion_persona,
     tel_persona,
   } = req.body;
+
+  const { filename, path, originalname, mimetype, size } = req.file;
+
   await sql.query(
-    "UPDATE personas SET cedula_persona = ?,nombres_persona= ?,apellidos_persona= ?,fecha_nacimiento_persona= ?,direccion_persona= ?,tel_persona= ? WHERE id_persona = ?",
+    "INSERT INTO images (filename,path,originalname,mimetype,size) VALUES (?,?,?,?,?)",
+    [filename, "/img/uploads/profile/" + filename, originalname, mimetype, size]
+  );
+
+  const id_image = await sql.query("SELECT id_image FROM images WHERE filename = ?", [filename]);
+
+  await sql.query(
+    "UPDATE personas SET cedula_persona = ?,nombres_persona= ?,apellidos_persona= ?,fecha_nacimiento_persona= ?,direccion_persona= ?,tel_persona= ?  WHERE id_persona = ?",
     [
       cedula_persona,
       nombres_persona,
@@ -37,6 +43,15 @@ profile.update_general = async (req, res) => {
       id_persona,
     ]
   );
+
+  await sql.query("UPDATE usuario_businesses SET imageIdImage = ? WHERE id_usuario_business = ?", [
+    id_image[0].id_image,
+    id_persona,
+  ]);
+
+  
+
+  console.log(req.file);
 
   res.redirect(req.get("referer"));
 };
