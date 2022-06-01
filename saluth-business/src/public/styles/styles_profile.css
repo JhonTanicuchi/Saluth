@@ -1,7 +1,7 @@
 .profile_grid {
   display: grid;
   height: calc(100vh - 2rem);
-  grid-template-columns:  calc(80% - 1rem) 20%;
+  grid-template-columns: calc(80% - 1rem) 20%;
   grid-column-gap: 1rem;
   color: #535a66;
 }
@@ -9,7 +9,7 @@
 .profile_preview {
   padding: 1.5rem;
   border-radius: 7px;
-  background: #535A66;
+  background: #535a66;
 }
 
 .general_data {
@@ -120,7 +120,6 @@
   font-size: 20px;
 }
 
-
 .sidebar_profile_header h1 {
   margin-left: 0.5rem;
   font-size: 13px;
@@ -134,7 +133,6 @@
   padding: 0.5rem;
   opacity: 90%;
   border-radius: 10px;
-
 }
 
 .sidebar_profile_contect li:hover {
@@ -178,7 +176,6 @@
   }
 }
 
-
 .sidebar_profile_contect div {
   width: 100%;
   display: flex;
@@ -202,34 +199,239 @@
 }
 
 ::-webkit-scrollbar {
-display: none;
+  display: none;
 }
 
-.section_form_profile{
+.section_form_profile {
   display: grid;
   grid-template-columns: 150px auto;
   grid-column-gap: 2rem;
   padding-bottom: 1rem;
   margin-bottom: 1rem;
-  border-bottom: 1px solid #535a6637;
+  border-bottom: 1px solid #535a6621;
+}
+
+.section_form_profile .title_section_form h5 {
+  text-align: left;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.section_form_profile .container_inputs {
+  display: grid;
+  grid-column-gap: 2rem;
+  grid-row-gap: 0.5rem;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+.section_form_profile .data_cedula_persona {
+  grid-column: span 2 / span 2;
+}
+.section_form_profile .data_nombres_persona {
+  grid-column: span 3 / span 3;
+  grid-row-start: 2;
+}
+
+.section_form_profile .data_apellidos_persona {
+  grid-column: span 3 / span 3;
+  grid-row-start: 2;
+}
+
+.section_form_profile .data_fecha_nacimiento_persona {
+  grid-column: span 2 / span 2;
+  grid-row-start: 3;
+}
+
+.section_form_profile .data_tel_persona {
+  grid-column: span 2 / span 2;
+
+  grid-row-start: 3;
+}
+
+.section_form_profile .data_direccion_persona {
+  grid-column: span 6 / span 6;
+}
+
+.section_form_profile .data_provincia {
+  grid-column: span 2 / span 2;
+}
+
+.section_form_profile .data_canton {
+  grid-column: span 2 / span 2;
+}
+
+.section_form_profile .data_parroquia {
+  grid-column: span 2 / span 2;
+}
+
+.section_form_profile .data_username {
+  grid-column: span 3 / span 3;
+}
+
+.section_form_profile .data_correo {
+  grid-column: span 4 / span 4;
 
 }
 
-.section_form_profile .title_section_form h5{
-  text-align: left;
+.section_form_profile .data_password {
+ grid-column: span 3 / span 3;
+}
+
+.section_form_profile .data_new_password {
+ grid-column: span 3 / span 3;
+  grid-row-start: 2;
+
+}
+
+.section_form_profile .data_confirm_password {
+ grid-column: span 3 / span 3;
+  grid-row-start: 2;
+
+}
+
+.data_img_avatar {
+  border: 1px #535a6665 dashed;
+  border-radius: 7px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: baseline;
+  cursor: pointer;
+  transition: all 0.1s ease;
+  height: 104px;
+}
+
+.data_img_avatar.input_active {
+  background: #5fbdda19;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.data_img_avatar:hover {
+  background: #535a6612;
+}
+
+.data_img_avatar:active {
+  transform: scale(1.02);
+}
+
+.section_form_profile .data_img_avatar .container_avatar {
+  position: relative;
+}
+
+.section_form_profile .data_img_avatar .avatar {
+  position: relative;
+  width: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section_form_profile .data_img_avatar .avatar > div {
+  display: block;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+}
+
+.section_form_profile .data_img_avatar .mask-squircle {
+  mask-image: url("../img/mask-squircle.svg");
+  -webkit-mask-image: url("../img/mask-squircle.svg");
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+}
+
+.section_form_profile .data_img_avatar img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.section_form_profile .data_img_avatar .icon_edit_avatar .avatar {
+  position: absolute;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: -5px;
+  right: -5px;
+}
+
+.section_form_profile .data_img_avatar .icon_edit_avatar .avatar > div {
+  display: block;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  background: white;
+  padding: 5px;
+}
+
+.section_form_profile .data_img_avatar .icon_edit_avatar .mask-squircle {
+  mask-image: url("../img/mask-squircle.svg");
+  -webkit-mask-image: url("../img/mask-squircle.svg");
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+}
+
+.section_form_profile .data_img_avatar .icon_edit_avatar span {
+  font-size: 15px;
+}
+
+.profile_settings .data_img_avatar .text {
+  margin-left: 20px;
+}
+
+.data_img_avatar.input_active .text,
+.data_img_avatar.input_active .avatar {
+  display: none;
+}
+
+.profile_settings .data_img_avatar .text h6 {
   font-size: 13px;
   font-weight: 500;
 }
-
-.section_form_profile .container_inputs{
-  display: grid;
-  grid-column-gap: 2rem;
-  grid-row-gap: .5rem;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+.profile_settings .data_img_avatar .text p {
+  font-size: 12px;
+  font-weight: 400;
 }
 
-.profile_settings form .btn{
- 	width:100px;
+.profile_settings .data_img_avatar .text p span {
+  color: #5fbdda;
+}
+
+.profile_settings .data_img_avatar .text .error_avatar {
+  display: flex;
+  align-items: center;
+  color: #ff6961;
+  opacity: 75%;
+  display: none;
+}
+
+.profile_settings .data_img_avatar .text .error_avatar.err {
+  display: flex;
+}
+
+.profile_settings .data_img_avatar .text .error_avatar p {
+  margin-left: 5px;
+}
+
+.profile_settings .data_img_avatar .text_drag {
+  display: none;
+}
+
+.profile_settings .data_img_avatar.input_active .text_drag {
+  display: block;
+}
+
+.profile_settings .data_img_avatar .text_drag h6 {
+  font-size: 13px;
+  font-weight: 500;
 }
 
 .profile_settings .section_right {
@@ -248,26 +450,6 @@ display: none;
   display: grid;
   grid-template-columns: 30% 70%;
   border-bottom: 1px solid rgb(233, 233, 233);
-}
-
-.general_settings h1 {
-  text-transform: capitalize;
-}
-
-.general_settings img {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  border: 2px solid #35405c;
-}
-
-.general_settings input{
-  width: 0.1px;
- height: 0.1px;
- opacity: 0;
- overflow: hidden;
- position: absolute;
- z-index: -1;
 }
 
 .general_settings .section_left {
@@ -321,3 +503,14 @@ display: none;
   color: #a0a0a0;
 }
 
+.profile_settings .buttons_form_profile {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.profile_settings form .btn {
+  width: 100px;
+  margin-left: 10px;
+}

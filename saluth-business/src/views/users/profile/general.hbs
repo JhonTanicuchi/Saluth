@@ -15,16 +15,34 @@
               <div class="title_section_form">
                 <h5>Foto de perfil:</h5>
               </div>
-              <div class="container_inputs">
-                <div class="data_cedula_persona">
+              <label for="inputFile_avatar" class="data_img_avatar" id="data_img_avatar">
+                <div class="container_avatar">
                   <div class="avatar">
                     <div class="mask-squircle">
-                      <img src={{user.path}} alt="logo">
+                      <img id="img_avatar" src={{user.path}} alt="logo">
                     </div>
                   </div>
-                  <input type="file" name="avatar_img">
+                  <div class="icon_edit_avatar">
+                    <div class="avatar">
+                      <div class="mask-squircle">
+                        <span class="fas fa-camera"></span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </div>
+                <div class="text">
+                  <h6>Suelte su archivo aquí o seleccione una imagen</h6>
+                  <p>Solo se permiten formatos: <span>JPEG</span>, <span>JPG</span> y <span>PNG</span>.</p>
+                  <h6 id="error_avatar" class="error_avatar"><span class="fas fa-triangle-exclamation"></span>
+                    <p id="error_avatar_text">Error</p>
+                  </h6>
+                </div>
+                <div class="text_drag">
+                  <h6>Suelta la imagen para subir...</h6>
+                </div>
+                <input id="inputFile_avatar" type="file" name="avatar_img" hidden>
+              </label>
+
             </section>
             <section class="section_form_profile">
               <div class="title_section_form">
@@ -48,12 +66,12 @@
                 </div>
                 <div class="data_fecha_nacimiento_persona">
                   <label for="fecha_nacimiento_persona">Fecha Nacimeinto</label>
-                  <input name="fecha_nacimiento_persona" class="input" id="fecha_nacimiento_persona" type="text"
+                  <input name="fecha_nacimiento_persona" class="input" id="fecha_nacimiento_persona" type="date"
                     autocomplete="off" required value="{{user.fecha_nacimiento_persona}}" />
                 </div>
                 <div class="data_tel_persona">
                   <label for="tel_persona">Telefono</label>
-                  <input name="tel_persona" class="input" id="tel_persona" type="text" autocomplete="off" required
+                  <input name="tel_persona" class="input" id="tel_persona" type="tel" autocomplete="off" required
                     value="{{user.tel_persona}}" />
                 </div>
               </div>
@@ -86,8 +104,10 @@
                 </div>
               </div>
             </section>
-            <button class="btn">Cancelar</button>
-            <button class="btn" type="submit">Guardar</button>
+            <div class="buttons_form_profile">
+              <button class="btn">Cancelar</button>
+              <button class="btn" type="submit" disabled>Guardar</button>
+            </div>
           </form>
         </div>
       </section>

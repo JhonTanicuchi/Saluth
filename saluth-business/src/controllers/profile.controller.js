@@ -1,9 +1,23 @@
 const sql = require("../config-database/database.sql");
-const profile = {};
+const Handlebars = require("handlebars");
 const express = require("express");
 const app = express();
+const cookieParser = require("cookie-parser");
+app.use(cookieParser());
+const profile = {};
 
-profile.general = (req, res) => {
+Handlebars.registerHelper("formatDatej", function (date) {
+  return date.toLocaleDateString() + "jj";
+});
+
+
+profile.general = async(req, res) => {
+  const provincias = await sql.query("SELECT * FROM provincia ");
+ app.use("/", function (req, res) {
+   res.cookie("name", "111111");
+   console.log(req.cookies);
+   res.send("ok");
+ });
   res.render("users/profile/general");
 };
 

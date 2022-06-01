@@ -8,25 +8,52 @@
 
     <div class="profile_grid">
       <section class="profile_edit">
-      {{>profile/navegation}}
+        {{>profile/navegation}}
         <div class="profile_settings">
           <form action="/profile/update/credentials/{{user.id_usuario_business}}" method="POST">
-            <div class="data_username">
-              <label for="username">Username</label>
-              <input name="username" class="input" id="username" type="text" autocomplete="off"
-                required value="{{user.username}}"/>
+            <section class="section_form_profile">
+              <div class="title_section_form">
+                <h5>Cuenta:</h5>
+              </div>
+              <div class="container_inputs">
+                <div class="data_username">
+                  <label for="username">Usuario</label>
+                  <input name="username" class="input" id="username" type="text" autocomplete="off" required
+                    value="{{user.username}}" />
+                </div>
+                <div class="data_correo">
+                  <label for="correo">Correo electronico</label>
+                  <input name="correo" class="input" id="correo" type="email" autocomplete="off" required
+                    value="{{user.correo}}" />
+                </div>
+              </div>
+            </section>
+
+            <section class="section_form_profile">
+              <div class="title_section_form">
+                <h5>Cambiar Contraseña:</h5>
+              </div>
+              <div class="container_inputs">
+                <div class="data_password">
+                  <label for="password">Contraseña Actual</label>
+                  <input name="password" class="input" id="password" type="password" autocomplete="off"  />
+                </div>
+                <div class="data_new_password">
+                  <label for="password">Nueva Contraseña</label>
+                  <input name="password" class="input" id="password" type="password" autocomplete="off"  />
+                </div>
+                <div class="data_confirm_password">
+                  <label for="password">Confirmar Contraseña</label>
+                  <input name="password" class="input" id="password" type="password" autocomplete="off"  />
+                </div>
+              </div>
+            </section>
+
+            <div class="buttons_form_profile">
+              <button class="btn">Cancelar</button>
+              <button class="btn" type="submit" disabled>Guardar</button>
             </div>
-            <div class="data_password">
-              <label for="password">Password</label>
-              <input name="password" class="input" id="password" type="password" autocomplete="off"
-                required value="{{user.password}}"/>
-            </div>
-            <div class="data_correo">
-              <label for="correo">Correo electronico</label>
-              <input name="correo" class="input" id="correo" type="text" autocomplete="off" required value="{{user.correo}}" />
-            </div>
-            <button class="btn" type="submit">Guardar</button>
-            </form>
+          </form>
         </div>
       </section>
       {{>profile/preview_profile}}

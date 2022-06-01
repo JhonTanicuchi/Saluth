@@ -322,7 +322,6 @@ VALUES
         )
     );
 
-
 INSERT INTO
     personas (
         cedula_persona,
@@ -335,10 +334,11 @@ VALUES(
         '0110000100',
         'Admin',
         'Saluth',
-        '01/07/2019',
+        '2019-07-01',
         'Saluth'
     );
-    INSERT INTO
+
+INSERT INTO
     empleado_businesses (personaIdPersona)
 VALUES
     (
@@ -353,23 +353,29 @@ VALUES
     );
 
 INSERT INTO
-    usuario_businesses (
-        filename ,
-        path ,
-        originalname ,
-        mimetype ,
-        size ,
+    images (
+        filename,
+        path,
+        originalname,
+        mimetype,
+        size
     )
-VALUES('a7bf9961-a29f-428b-8a11-9bf45362710d.jpg','/img/uploads/profile/a7bf9961-a29f-428b-8a11-9bf45362710d.jpg','58fe5a39aeb5d1d37e7803fa31894509.jpg','image/jpeg',28843)
+VALUES(
+        'a7bf9961-a29f-428b-8a11-9bf45362710d.jpg',
+        '/img/uploads/profile/a7bf9961-a29f-428b-8a11-9bf45362710d.jpg',
+        '58fe5a39aeb5d1d37e7803fa31894509.jpg',
+        'image/jpeg',
+        28843
+    );
 
-    INSERT INTO
+INSERT INTO
     usuario_businesses (
         username,
         password,
         correo,
         empleadoBusinessIdEmpleadoBusiness,
         rolIdRol,
-        imageIdImage 
+        imageIdImage
     )
 VALUES(
         'admin_saluth',
@@ -390,16 +396,14 @@ VALUES(
             WHERE
                 nombre_rol = 'Administrador'
         ),(
-    SELECT
-        id_image
-    FROM
-        images
-    WHERE
-        filename = 'a7bf9961-a29f-428b-8a11-9bf45362710d.jpg'
-)
+            SELECT
+                id_image
+            FROM
+                images
+            WHERE
+                filename = 'a7bf9961-a29f-428b-8a11-9bf45362710d.jpg'
+        )
     );
-
-
 
 INSERT INTO
     provincia (numero_provincia, nombre_provincia)
