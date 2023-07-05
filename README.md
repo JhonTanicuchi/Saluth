@@ -94,4 +94,20 @@ La estructura del proyecto se muestra a continuación:
 2. Explora las diferentes aplicaciones de Saluth y accede a la información correspondiente.
 3. Utiliza Saluth Business para gestionar las instituciones médicas y su mantenimiento.
 4. Utiliza Saluth CRM para gestionar los procesos internos y ventas de Saluth.
-5. Utiliza Saluth Management para tener
+5. Utiliza Saluth Management para tener el control total de la distribución y administración de una institución médica.
+6. Utiliza Saluth ERP para gestionar los procesos internos de la institución médica.
+
+Utiliza Saluth Patient, una aplicación general para pacientes, para tener el control de tu salud y de todos los detalles relacionados con tu atención médica.
+Accede a Saluth Web para tener acceso a todas las aplicaciones de Saluth y obtener información detallada sobre cada una de ellas.
+Contribución
+¡Gracias por considerar contribuir a este proyecto! Si deseas enviar una solicitud de extracción, asegúrate de seguir estas pautas:
+
+Crea una rama específica para tu contribución.
+Asegúrate de que todas las pruebas pasen antes de enviar la solicitud de extracción.
+Describe claramente los cambios realizados y explica su propósito.
+Mantén las líneas de código dentro de los límites de estilo establecidos en el proyecto.
+Contacto
+Si tienes alguna pregunta o comentario sobre el proyecto, no dudes en ponerte en contacto con nosotros a través de la siguiente dirección de correo electrónico: correo electrónico de contacto.
+
+Licencia
+Este proyecto está bajo la Licencia MIT. Consulta el archivo LICENSE para obtener más información.
